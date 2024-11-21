@@ -21,17 +21,17 @@
 
         cmd {
             bindings = <&kp LEFT_WIN>;
-            key-positions = <37 38>;
+            key-positions = <37 36>;
         };
 
         alt {
             bindings = <&kp LEFT_ALT>;
-            key-positions = <40 39>;
+            key-positions = <40 39 14 15>;
         };
 
         shift {
             bindings = <&kp LEFT_SHIFT>;
-            key-positions = <8 9>;
+            key-positions = <2 3>;
         };
 
         caps_word {
@@ -42,6 +42,11 @@
         delete {
             bindings = <&kp DEL>;
             key-positions = <32 33>;
+        };
+
+        tg_layer_3 {
+            bindings = <&tog 3>;
+            key-positions = <41 40>;
         };
     };
 
