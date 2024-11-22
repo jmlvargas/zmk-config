@@ -151,10 +151,19 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&kp GRAVE  &kp EXCL  &kp AT  &kp HASH  &kp DLLR  &kp PRCNT    &kp CARET  &kp AMPS   &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp ASTERISK  &kp BSLH
-&trans     &kp N1    &kp N2  &kp N3    &kp N4    &kp N5       &kp MINUS  &kp EQUAL  &kp LBKT              &kp RBKT               &kp GRAVE     &kp TILDE
-&trans     &kp N6    &kp N7  &kp N8    &kp N9    &kp N0       &kp UNDER  &kp PLUS   &kp LBRC              &kp RBRC               &kp PIPE      &kp LEFT_ALT
-                             &trans    &trans    &trans       &trans     &trans     &trans
+&kp GRAVE  &kp EXCL   &kp AT     &kp HASH   &kp DLLR   &kp PRCNT    &kp CARET  &kp AMPS   &kp SPACE  &kp SPACE  &kp SPACE  &kp BSLH
+&trans     &kp SPACE  &kp SPACE  &kp SPACE  &kp SPACE  &kp SPACE    &kp SPACE  &kp SPACE  &kp SPACE  &kp SPACE  &kp GRAVE  &kp TILDE
+&trans     &kp SPACE  &kp SPACE  &kp SPACE  &kp SPACE  &kp SPACE    &kp UNDER  &kp SPACE  &kp SPACE  &kp SPACE  &kp PIPE   &kp LEFT_ALT
+                                 &trans     &trans     &trans       &trans     &trans     &trans
+            >;
+        };
+
+        layer_3 {
+            bindings = <
+&kp GRAVE  &kp EXCL  &kp AT      &kp POUND    &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS    &kp EQUAL   &kp N7  &kp N8  &kp N9  &kp KP_MULTIPLY  &trans
+&kp        &kp AMPS  &kp DOLLAR  &kp PERCENT  &kp LEFT_BRACE        &kp RIGHT_BRACE          &kp N0      &kp N4  &kp N5  &kp N6  &kp KP_PLUS      &kp KP_SUBTRACT
+&kp        &kp       &kp CARET   &kp          &kp LEFT_BRACKET      &kp RIGHT_BRACKET        &kp KP_DOT  &kp N1  &kp N2  &kp N3  &kp KP_DIVIDE    &kp KP_ENTER
+                                 &trans       &trans                &trans                   &trans      &trans  &trans
             >;
         };
 
