@@ -127,7 +127,7 @@
 
             bindings = <
 &kp ESC    &kp Q            &kp W              &kp E                &kp R            &kp T        &kp Y      &kp U             &kp I                 &kp O               &kp P                &kp BACKSPACE
-&kp TAB    &hml LEFT_ALT A  &hml LEFT_SHIFT S  &hml LEFT_CONTROL D  &hml LEFT_WIN F  &kp G        &kp H      &hml RIGHT_GUI J  &hmr RIGHT_CONTROL K  &hml RIGHT_SHIFT L  &hml RIGHT_ALT SEMI  &kp SQT
+&kp TAB    &hml LEFT_ALT A  &hml LEFT_SHIFT S  &hml LEFT_CONTROL D  &hml LEFT_WIN F  &kp G        &kp H      &hmr RIGHT_GUI J  &hmr RIGHT_CONTROL K  &hmr RIGHT_SHIFT L  &hmr RIGHT_ALT SEMI  &kp SQT
 &kp LSHFT  &kp Z            &kp X              &kp C                &kp V            &kp B        &kp N      &kp M             &kp COMMA             &kp DOT             &kp FSLH             &kp BACKSLASH
                                                &mo 3                &mo 1            &kp SPACE    &kp ENTER  &mo 2             &mo 3
             >;
@@ -165,8 +165,8 @@
 
         numpad {
             bindings = <
-&trans  &kp F1  &kp F2   &kp F3   &kp F4   &trans    &kp KP_MINUS  &kp KP_N7  &kp KP_N8  &kp KP_N9  &kp KP_MULTIPLY  &trans
-&trans  &kp F5  &kp F6   &kp F7   &kp F8   &trans    &kp KP_PLUS   &kp KP_N4  &kp KP_N5  &kp KP_N6  &kp KP_DIVIDE    &trans
+&trans  &kp F1  &kp F2   &kp F3   &kp F4   &trans    &kp KP_MINUS  &kp KP_N7  &kp KP_N8  &kp KP_N9  &kp KP_MULTIPLY  &kp BACKSPACE
+&trans  &kp F5  &kp F6   &kp F7   &kp F8   &trans    &kp KP_PLUS   &kp KP_N4  &kp KP_N5  &kp KP_N6  &kp KP_DIVIDE    &kp LOCKING_NUM
 &trans  &kp F9  &kp F10  &kp F11  &kp F12  &trans    &kp KP_N0     &kp KP_N1  &kp KP_N2  &kp KP_N3  &kp KP_DOT       &trans
                          &trans   &trans   &trans    &trans        &trans     &trans
             >;
