@@ -145,9 +145,9 @@
 
         numpad {
             bindings = <
-&trans  &kp F1  &kp F2   &kp F3   &kp F4   &trans    &kp KP_MINUS  &kp KP_N7        &kp KP_N8               &kp KP_N9                &kp KP_MULTIPLY      &kp BACKSPACE
-&trans  &kp F5  &kp F6   &kp F7   &kp F8   &trans    &kp KP_PLUS   &hmr RGUI KP_N4  &hmr RCTRL KP_NUMBER_5  &hmr RSHIFT KP_NUMBER_6  &hmr RALT KP_DIVIDE  &kp KP_NUMLOCK
-&trans  &kp F9  &kp F10  &kp F11  &kp F12  &trans    &kp KP_N0     &kp KP_N1        &kp KP_N2               &kp KP_N3                &kp KP_DOT           &kp DEL
+&trans  &kp F1  &kp F2   &kp F3   &kp F4   &trans    &kp KP_MINUS  &kp KP_N7        &kp KP_N8               &kp KP_N9                &kp KP_MULTIPLY   &kp BACKSPACE
+&trans  &kp F5  &kp F6   &kp F7   &kp F8   &trans    &kp KP_PLUS   &hmr RGUI KP_N4  &hmr RCTRL KP_NUMBER_5  &hmr RSHIFT KP_NUMBER_6  &hmr LALT KP_DOT  &kp KP_NUMLOCK
+&trans  &kp F9  &kp F10  &kp F11  &kp F12  &trans    &kp KP_N0     &kp KP_N1        &kp KP_N2               &kp KP_N3                &kp KP_DIVIDE     &trans
                          &trans   &mo 2    &trans    &trans        &mo 3            &trans
             >;
         };
