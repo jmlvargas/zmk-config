@@ -145,9 +145,9 @@
 
         fnum {
             bindings = <
-&kp F1  &kp F2        &kp F3            &kp F4                &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS    &kp EQUAL   &kp N7          &kp N8                 &kp N9            &kp KP_MULTIPLY    &kp ESC
+&trans  &kp F2        &kp F3            &kp F4                &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS    &kp EQUAL   &kp N7          &kp N8                 &kp N9            &kp KP_MULTIPLY    &kp ESC
 &trans  &hml LWIN F5  &hml LEFT_ALT F8  &hml LEFT_CONTROL F9  &hml LSHIFT LBRC      &kp RIGHT_BRACE          &kp N0      &hmr RSHIFT N4  &hmr RIGHT_CONTROL N5  &hmr LEFT_ALT N6  &hmr RWIN KP_PLUS  &kp KP_SUBTRACT
-&trans  &kp F10       &kp F11           &kp F12               &kp LEFT_BRACKET      &kp RIGHT_BRACKET        &kp KP_DOT  &kp N1          &kp N2                 &kp N3            &kp KP_DIVIDE      &kp LEFT_ALT
+&trans  &kp F10       &kp F11           &tog 1                &kp LEFT_BRACKET      &kp RIGHT_BRACKET        &kp KP_DOT  &kp N1          &kp N2                 &kp N3            &kp KP_DIVIDE      &kp LEFT_ALT
                                         &trans                &mo 2                 &trans                   &trans      &trans          &trans
             >;
         };
