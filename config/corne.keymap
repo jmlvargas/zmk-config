@@ -57,7 +57,7 @@
         };
 
         tg_kp_layer {
-            bindings = <&tog 1>;
+            bindings = <&tog 0>;
             key-positions = <40 41>;
         };
     };
@@ -110,7 +110,9 @@
             #binding-cells = <2>;
             tapping-term-ms = <200>;
             hold-trigger-key-positions = <6 7 8 9 10 11 18 19 20 21 22 23 30 31 32 33 34 35 39 40 41>;
-            flavor = "tap-preferred";
+            flavor = "balanced";
+            quick-tap-ms = <200>;
+            require-prior-idle-ms = <125>;
         };
 
         hmr: homewrow_mods_right {
@@ -121,7 +123,9 @@
             #binding-cells = <2>;
             tapping-term-ms = <200>;
             hold-trigger-key-positions = <0 1 2 3 4 5 12 13 14 15 16 17 24 25 26 27 28 29 36 37 38>;
-            flavor = "tap-preferred";
+            flavor = "balanced";
+            quick-tap-ms = <200>;
+            require-prior-idle-ms = <125>;
         };
     };
 
@@ -136,19 +140,19 @@
             //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
 
             bindings = <
-&kp ESC    &kp Q              &kp W            &kp E                &kp R            &kp T        &kp Y      &kp U             &kp I                 &kp O                 &kp P             &kp BACKSPACE
-&kp TAB    &hml LEFT_SHIFT A  &hml LEFT_ALT S  &hml LEFT_CONTROL D  &hml LEFT_WIN F  &kp G        &kp H      &hmr RIGHT_GUI J  &hmr RIGHT_CONTROL K  &hmr LA(RIGHT_ALT) L  &hmr RSHIFT SEMI  &kp SQT
-&kp LSHFT  &kp Z              &kp X            &kp C                &kp V            &kp B        &kp N      &kp M             &kp COMMA             &kp DOT               &kp FSLH          &kp BACKSLASH
-                                               &mo 1                &mo 2            &kp SPACE    &kp ENTER  &mo 3             &mo 1
+&kp TAB           &kp Q  &kp W            &kp E                &kp R          &kp T        &kp Y      &kp U          &kp I                 &kp O                 &kp P     &kp ESCAPE
+&sk LEFT_CONTROL  &kp A  &hml LEFT_ALT S  &hml LEFT_CONTROL D  &hml LSHIFT F  &kp G        &kp H      &hmr RSHIFT J  &hmr RIGHT_CONTROL K  &hmr LA(RIGHT_ALT) L  &kp SEMI  &kp SQT
+&sk LSHFT         &kp Z  &kp X            &kp C                &kp V          &kp B        &kp N      &kp M          &kp COMMA             &kp DOT               &kp FSLH  &kp LEFT_ALT
+                                          &kp LCMD             &mo 2          &kp ENTER    &kp SPACE  &kp BACKSPACE  &mo 1
             >;
         };
 
-        numpad {
+        fnum {
             bindings = <
-&trans  &kp F1  &kp F2   &kp F3   &kp F4   &trans    &kp KP_MINUS  &kp KP_N7        &kp KP_N8               &kp KP_N9                &kp KP_MULTIPLY   &kp BACKSPACE
-&trans  &kp F5  &kp F6   &kp F7   &kp F8   &trans    &kp KP_PLUS   &hmr RGUI KP_N4  &hmr RCTRL KP_NUMBER_5  &hmr RSHIFT KP_NUMBER_6  &hmr LALT KP_DOT  &kp KP_NUMLOCK
-&trans  &kp F9  &kp F10  &kp F11  &kp F12  &trans    &kp KP_N0     &kp KP_N1        &kp KP_N2               &kp KP_N3                &kp KP_DIVIDE     &trans
-                         &trans   &mo 2    &trans    &trans        &mo 3            &trans
+&trans  &kp F2        &kp F3            &kp F4                &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS    &kp EQUAL  &kp N7          &kp N8                 &kp N9            &kp KP_PLUS      &kp ESC
+&trans  &hml LWIN F5  &hml LEFT_ALT F8  &hml LEFT_CONTROL F9  &hml LSHIFT LBRC      &kp RIGHT_BRACE          &kp N0     &hmr RSHIFT N4  &hmr RIGHT_CONTROL N5  &hmr LEFT_ALT N6  &hmr RWIN MINUS  &kp KP_ASTERISK
+&trans  &kp F10       &kp F11           &kp F12               &kp LEFT_BRACKET      &kp RIGHT_BRACKET        &kp DOT    &kp N1          &kp N2                 &kp N3            &kp KP_DIVIDE    &kp LEFT_ALT
+                                        &trans                &mo 2                 &trans                   &trans     &trans          &trans
             >;
         };
 
@@ -160,25 +164,10 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&trans  &kp EXCL  &kp AT  &kp HASH  &kp DLLR  &kp PRCNT    &kp CARET  &kp AMPS   &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp ASTERISK  &kp DELETE
-&trans  &trans    &trans  &trans    &trans    &trans       &kp MINUS  &kp EQUAL  &kp LBKT              &kp RBKT               &kp BSLH      &kp GRAVE
-&trans  &trans    &trans  &trans    &trans    &trans       &kp UNDER  &kp PLUS   &kp LBRC              &kp RBRC               &kp PIPE      &kp TILDE
-                          &trans    &trans    &trans       &trans     &trans     &trans
-            >;
-        };
-
-        cursor {
-            // -----------------------------------------------------------------------------------------
-            // |  TAB |  1  |  2  |  3  |  4  |  5  |   |  6  |  7  |  8  |  9  |  0  | BSPC |
-            // | BTCLR| BT1 | BT2 | BT3 | BT4 | BT5 |   | LFT | DWN |  UP | RGT |     |      |
-            // | SHFT |     |     |     |     |     |   |     |     |     |     |     |      |
-            //                    | GUI |     | SPC |   | ENT |     | ALT |
-
-            bindings = <
-&trans      &kp N1        &kp N2        &kp N3        &kp N4        &kp N5           &kp N6       &kp N7         &kp N8    &kp N9     &kp N0  &kp DELETE
-&bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4     &kp LEFT     &kp DOWN       &kp UP    &kp RIGHT  &trans  &trans
-&trans      &trans        &trans        &trans        &trans        &trans           &kp PAGE_UP  &kp PAGE_DOWN  &kp HOME  &kp END    &trans  &trans
-                                        &trans        &trans        &kp BACKSPACE    &trans       &trans         &trans
+&kp GRAVE   &kp EXCL      &kp AT        &kp HASH          &kp DLLR      &kp PRCNT       &kp RA(CARET)  &kp AMPS     &kp ASTRK     &kp MINUS  &kp PLUS       &kp PIPE
+&none       &kp RA(N1)    &kp LEFT_ALT  &kp LEFT_CONTROL  &kp LSHIFT    &none           &kp LEFT       &kp DOWN     &kp UP_ARROW  &kp RIGHT  &kp UNDER      &kp TILDE
+&bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2      &bt BT_SEL 3  &bt BT_SEL 4    &kp PAGE_DOWN  &kp PAGE_UP  &kp HOME      &kp END    &kp BACKSLASH  &kp RA(SLASH)
+                                        &trans            &trans        &trans          &trans         &kp DEL      &trans
             >;
         };
     };
