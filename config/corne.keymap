@@ -136,19 +136,19 @@
             //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
 
             bindings = <
-&kp TAB           &kp Q              &kp W            &kp E                &kp R            &kp T        &kp Y      &kp U             &kp I                 &kp O                 &kp P             &kp ESCAPE
-&kp LEFT_CONTROL  &hml LEFT_SHIFT A  &hml LEFT_ALT S  &hml LEFT_CONTROL D  &hml LEFT_WIN F  &kp G        &kp H      &hmr RIGHT_GUI J  &hmr RIGHT_CONTROL K  &hmr LA(RIGHT_ALT) L  &hmr RSHIFT SEMI  &kp SQT
-&kp LSHFT         &kp Z              &kp X            &kp C                &kp V            &kp B        &kp N      &kp M             &kp COMMA             &kp DOT               &kp FSLH          &kp LEFT_ALT
-                                                      &kp LCMD             &mo 2            &kp ENTER    &kp SPACE  &kp BACKSPACE     &mo 0
+&kp TAB           &kp Q        &kp W            &kp E                &kp R          &kp T        &kp Y      &kp U          &kp I                 &kp O                 &kp P                &kp ESCAPE
+&kp LEFT_CONTROL  &hml LWIN A  &hml LEFT_ALT S  &hml LEFT_CONTROL D  &hml LSHIFT F  &kp G        &kp H      &hmr RSHIFT J  &hmr RIGHT_CONTROL K  &hmr LA(RIGHT_ALT) L  &hmr SEMICOLON RWIN  &kp SQT
+&kp LSHFT         &kp Z        &kp X            &kp C                &kp V          &kp B        &kp N      &kp M          &kp COMMA             &kp DOT               &kp FSLH             &kp LEFT_ALT
+                                                &kp LCMD             &mo 2          &kp ENTER    &kp SPACE  &kp BACKSPACE  &mo 1
             >;
         };
 
         fnum {
             bindings = <
-&kp F1  &kp F2   &kp F3   &kp F4   &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS    &kp EQUAL   &kp N7  &kp N8  &kp N9  &kp KP_MULTIPLY  &trans
-&kp F5  &kp F6   &kp F7   &kp F8   &kp LEFT_BRACE        &kp RIGHT_BRACE          &kp N0      &kp N4  &kp N5  &kp N6  &kp KP_PLUS      &kp KP_SUBTRACT
-&kp F9  &kp F10  &kp F11  &kp F12  &kp LEFT_BRACKET      &kp RIGHT_BRACKET        &kp KP_DOT  &kp N1  &kp N2  &kp N3  &kp KP_DIVIDE    &kp KP_ENTER
-                          &trans   &trans                &trans                   &trans      &trans  &trans
+&kp F1  &kp F2        &kp F3            &kp F4                &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS    &kp EQUAL   &kp N7          &kp N8                 &kp N9            &kp KP_MULTIPLY    &kp ESC
+&kp F5  &hml LWIN F6  &hml LEFT_ALT F7  &hml LEFT_CONTROL F8  &hml LSHIFT LBRC      &kp RIGHT_BRACE          &kp N0      &hmr RSHIFT N4  &hmr RIGHT_CONTROL N5  &hmr LEFT_ALT N6  &hmr RWIN KP_PLUS  &kp KP_SUBTRACT
+&kp F9  &kp F10       &kp F11           &kp F12               &kp LEFT_BRACKET      &kp RIGHT_BRACKET        &kp KP_DOT  &kp N1          &kp N2                 &kp N3            &kp KP_DIVIDE      &kp LEFT_ALT
+                                        &trans                &trans                &trans                   &trans      &trans          &trans
             >;
         };
 
@@ -163,22 +163,7 @@
 &kp GRAVE   &kp EXCL      &kp AT        &kp HASH          &kp DLLR      &kp PRCNT       &kp CARET      &kp AMPS     &kp ASTRK     &kp MINUS  &kp PLUS       &kp PIPE
 &none       &kp LEFT_GUI  &kp LEFT_ALT  &kp LEFT_CONTROL  &kp LSHIFT    &none           &kp LEFT       &kp DOWN     &kp UP_ARROW  &kp RIGHT  &kp UNDER      &kp TILDE
 &bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2      &bt BT_SEL 3  &bt BT_SEL 4    &kp PAGE_DOWN  &kp PAGE_UP  &kp HOME      &kp END    &kp BACKSLASH  &none
-                                        &trans            &trans        &trans          &trans         &trans       &trans
-            >;
-        };
-
-        cursor {
-            // -----------------------------------------------------------------------------------------
-            // |  TAB |  1  |  2  |  3  |  4  |  5  |   |  6  |  7  |  8  |  9  |  0  | BSPC |
-            // | BTCLR| BT1 | BT2 | BT3 | BT4 | BT5 |   | LFT | DWN |  UP | RGT |     |      |
-            // | SHFT |     |     |     |     |     |   |     |     |     |     |     |      |
-            //                    | GUI |     | SPC |   | ENT |     | ALT |
-
-            bindings = <
-&trans      &kp SPACE     &kp SPACE     &kp SPACE     &kp SPACE     &kp SPACE        &kp SPACE    &kp SPACE      &kp SPACE  &kp SPACE  &kp SPACE  &trans
-&bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4     &kp LEFT     &kp DOWN       &kp UP     &kp RIGHT  &trans     &kp TILDE
-&trans      &trans        &trans        &trans        &trans        &trans           &kp PAGE_UP  &kp PAGE_DOWN  &kp HOME   &kp END    &trans     &trans
-                                        &trans        &trans        &kp BACKSPACE    &trans       &trans         &trans
+                                        &trans            &trans        &trans          &trans         &kp DEL      &trans
             >;
         };
     };
