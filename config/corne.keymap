@@ -30,7 +30,7 @@
 
         tg_kp_layer {
             bindings = <&tog 1>;
-            key-positions = <10 20>;
+            key-positions = <20 30>;
         };
 
         tgcurlayer {
