@@ -240,10 +240,10 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&kp GRAVE  &ssw RA(N1) EXCL  &kp AT        &kp HASH          &kp DLLR    &kp PRCNT    &kp RA(CARET)  &kp AMPS     &kp ASTRK     &ssw RIGHT_PARENTHESIS LEFT_PARENTHESIS  &kp PLUS                 &kp PIPE
-&trans     &kp LEFT_GUI      &kp LEFT_ALT  &kp LEFT_CONTROL  &kp LSHIFT  &none        &kp LEFT       &kp DOWN     &kp UP_ARROW  &kp RIGHT                                &ssw MINUS UNDER         &kp TILDE
-&trans     &none             &none         &none             &none       &none        &kp PAGE_DOWN  &kp PAGE_UP  &kp HOME      &kp END                                  &ssw RA(SLASH) QUESTION  &kp LEFT_ALT
-                                           &trans            &trans      &trans       &trans         &kp DEL      &trans
+&kp GRAVE  &ssw RA(N1) EXCL        &kp AT                  &kp HASH          &kp DLLR    &kp PRCNT     &kp RA(CARET)  &kp AMPS     &kp ASTRK     &ssw RIGHT_PARENTHESIS LEFT_PARENTHESIS  &kp PLUS                 &kp PIPE
+&trans     &kp LEFT_GUI            &kp LEFT_ALT            &kp LEFT_CONTROL  &kp LSHIFT  &none         &kp LEFT       &kp DOWN     &kp UP_ARROW  &kp RIGHT                                &ssw MINUS UNDER         &kp TILDE
+&trans     &ssw NUMBER_2 NUMBER_1  &ssw NUMBER_4 NUMBER_3  &ssw NUMBER_6 N5  &ssw N8 N7  &ssw N9 N0    &kp PAGE_DOWN  &kp PAGE_UP  &kp HOME      &kp END                                  &ssw RA(SLASH) QUESTION  &kp LEFT_ALT
+                                                           &trans            &trans      &trans        &trans         &kp DEL      &trans
             >;
         };
 
