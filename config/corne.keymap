@@ -23,7 +23,7 @@
 
         delete {
             bindings = <&kp DEL>;
-            key-positions = <32 33>;
+            key-positions = <40 39>;
             timeout-ms = <30>;
             require-prior-idle-ms = <100>;
         };
@@ -40,6 +40,83 @@
             key-positions = <20 22>;
             timeout-ms = <30>;
             require-prior-idle-ms = <100>;
+        };
+
+        up {
+            bindings = <&kp UP_ARROW>;
+            key-positions = <9 8>;
+            timeout-ms = <30>;
+            require-prior-idle-ms = <100>;
+        };
+
+        down {
+            bindings = <&kp DOWN>;
+            key-positions = <32 33>;
+            timeout-ms = <30>;
+            require-prior-idle-ms = <100>;
+        };
+
+        left {
+            bindings = <&kp LEFT>;
+            key-positions = <20 19>;
+            timeout-ms = <30>;
+            require-prior-idle-ms = <100>;
+        };
+
+        right {
+            bindings = <&kp RIGHT>;
+            key-positions = <20 21>;
+            timeout-ms = <30>;
+            require-prior-idle-ms = <100>;
+        };
+
+        page_up {
+            bindings = <&kp PAGE_UP>;
+            key-positions = <7 8 9>;
+            timeout-ms = <30>;
+            require-prior-idle-ms = <100>;
+        };
+
+        page_down {
+            bindings = <&kp PAGE_DOWN>;
+            key-positions = <31 32 33>;
+            timeout-ms = <30>;
+            require-prior-idle-ms = <100>;
+        };
+
+        home {
+            bindings = <&kp HOME>;
+            key-positions = <7 8>;
+            timeout-ms = <30>;
+            require-prior-idle-ms = <100>;
+        };
+
+        end {
+            bindings = <&kp END>;
+            key-positions = <31 32>;
+            timeout-ms = <30>;
+            require-prior-idle-ms = <100>;
+        };
+
+        print_screen {
+            bindings = <&kp PRINTSCREEN>;
+            key-positions = <10 11>;
+            timeout-ms = <30>;
+            require-prior-idle-ms = <100>;
+            layers = <0 1>;
+        };
+
+        pause {
+            bindings = <&kp PRINTSCREEN>;
+            key-positions = <10 11>;
+            timeout-ms = <30>;
+            require-prior-idle-ms = <100>;
+            layers = <2>;
+        };
+
+        insert {
+            bindings = <&kp INSERT>;
+            key-positions = <8 6>;
         };
     };
 
@@ -139,19 +216,19 @@
             //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
 
             bindings = <
-&kp TAB           &kp Q            &kp W            &kp E                &kp R          &kp T        &kp Y      &kp U          &kp I                 &kp O        &kp P                 &kp ESCAPE
-&sk LEFT_CONTROL  &hml LEFT_GUI A  &hml LEFT_ALT S  &hml LEFT_CONTROL D  &hml LSHIFT F  &kp G        &kp H      &hmr RSHIFT J  &hmr RIGHT_CONTROL K  &hmr LALT L  &kp SEMI              &kp SQT
-&sk LSHFT         &kp Z            &kp X            &kp C                &kp V          &kp B        &kp N      &kp M          &kp COMMA             &kp DOT      &hmr RA(SLASH) SLASH  &kp RALT
+&kp TAB           &kp Q            &kp W            &kp E                &kp R          &kp T        &kp Y      &kp U          &kp I                 &kp O        &kp P                     &kp ESCAPE
+&sk LEFT_CONTROL  &hml LEFT_GUI A  &hml LEFT_ALT S  &hml LEFT_CONTROL D  &hml LSHIFT F  &kp G        &kp H      &hmr RSHIFT J  &hmr RIGHT_CONTROL K  &hmr LALT L  &kp SEMI                  &kp SQT
+&sk LSHFT         &kp Z            &kp X            &kp C                &kp V          &kp B        &kp N      &kp M          &kp COMMA             &kp DOT      &hmr RA(BACKSLASH) SLASH  &kp RALT
                                                     &kp LCMD             &mo 2          &kp ENTER    &kp SPACE  &kp BACKSPACE  &mo 1
             >;
         };
 
         fnum {
             bindings = <
-&trans  &kp F2        &kp F3            &kp F4                &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS    &kp EQUAL  &kp N7          &kp N8                 &kp N9            &kp PLUS         &kp ESC
-&trans  &hml LWIN F5  &hml LEFT_ALT F8  &hml LEFT_CONTROL F9  &hml LSHIFT LBRC      &kp RIGHT_BRACE          &kp N0     &hmr RSHIFT N4  &hmr RIGHT_CONTROL N5  &hmr LEFT_ALT N6  &hmr RWIN MINUS  &kp ASTRK
-&trans  &kp F10       &kp F11           &kp F12               &kp LEFT_BRACKET      &kp RIGHT_BRACKET        &kp DOT    &kp N1          &kp N2                 &kp N3            &kp SLASH        &trans
-                                        &trans                &mo 2                 &trans                   &trans     &trans          &trans
+&trans  &kp F2        &kp F3            &kp F4                &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS    &kp EQUAL     &kp N7          &kp N8                 &kp N9            &kp PLUS             &kp ESC
+&trans  &hml LWIN F5  &hml LEFT_ALT F8  &hml LEFT_CONTROL F9  &hml LSHIFT LBRC      &kp RIGHT_BRACE          &kp PERIOD    &hmr RSHIFT N4  &hmr RIGHT_CONTROL N5  &hmr LEFT_ALT N6  &kp MINUS            &kp ASTRK
+&trans  &kp F10       &kp F11           &kp F12               &kp LEFT_BRACKET      &kp RIGHT_BRACKET        &kp NUMBER_0  &kp N1          &kp N2                 &kp N3            &hmr QUESTION SLASH  &trans
+                                        &trans                &mo 2                 &trans                   &trans        &trans          &trans
             >;
         };
 
@@ -163,9 +240,9 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&kp GRAVE   &hml RA(N1) EXCL  &kp AT        &kp HASH          &kp DLLR      &kp PRCNT       &kp RA(CARET)  &kp AMPS     &kp ASTRK     &kp MINUS  &kp PLUS        &kp BACKSLASH
-&trans      &kp LEFT_GUI      &kp LEFT_ALT  &kp LEFT_CONTROL  &kp LSHIFT    &none           &kp LEFT       &kp DOWN     &kp UP_ARROW  &kp RIGHT  &kp UNDERSCORE  &kp TILDE
-&bt BT_CLR  &bt BT_SEL 0      &bt BT_SEL 1  &bt BT_SEL 2      &bt BT_SEL 3  &bt BT_SEL 4    &kp PAGE_DOWN  &kp PAGE_UP  &kp HOME      &kp END    &es_qst         &trans
+&kp GRAVE   &hml RA(N1) EXCL  &kp AT        &kp HASH          &kp DLLR      &kp PRCNT       &kp RA(CARET)  &kp AMPS     &kp ASTRK     &hmr RIGHT_PARENTHESIS LEFT_PARENTHESIS  &kp PLUS                    &hmr BACKSLASH PIPE
+&trans      &kp LEFT_GUI      &kp LEFT_ALT  &kp LEFT_CONTROL  &kp LSHIFT    &none           &kp LEFT       &kp DOWN     &kp UP_ARROW  &kp RIGHT                                &hmr MINUS UNDER            &kp TILDE
+&bt BT_CLR  &bt BT_SEL 0      &bt BT_SEL 1  &bt BT_SEL 2      &bt BT_SEL 3  &bt BT_SEL 4    &kp PAGE_DOWN  &kp PAGE_UP  &kp HOME      &kp END                                  &hmr RA(QUESTION) QUESTION  &trans
                                             &trans            &trans        &trans          &trans         &kp DEL      &trans
             >;
         };
