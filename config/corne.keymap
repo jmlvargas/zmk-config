@@ -28,14 +28,18 @@
             require-prior-idle-ms = <100>;
         };
 
-        tg_kp_layer {
+        tg_fn_layer {
             bindings = <&tog 1>;
             key-positions = <20 30>;
+            timeout-ms = <30>;
+            require-prior-idle-ms = <100>;
         };
 
-        tgcurlayer {
+        tg_sym_layer {
             bindings = <&tog 2>;
             key-positions = <20 22>;
+            timeout-ms = <30>;
+            require-prior-idle-ms = <100>;
         };
     };
 
