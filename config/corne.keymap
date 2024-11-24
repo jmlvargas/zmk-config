@@ -35,7 +35,7 @@
 
         tgcurlayer {
             bindings = <&tog 2>;
-            key-positions = <32 33>;
+            key-positions = <20 22>;
         };
     };
 
@@ -135,9 +135,9 @@
             //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
 
             bindings = <
-&kp TAB           &kp Q            &kp W            &kp E                &kp R          &kp T        &kp Y      &kp U          &kp I                 &kp O        &kp P     &kp ESCAPE
-&sk LEFT_CONTROL  &hml A LEFT_GUI  &hml LEFT_ALT S  &hml LEFT_CONTROL D  &hml LSHIFT F  &kp G        &kp H      &hmr RSHIFT J  &hmr RIGHT_CONTROL K  &hmr LALT L  &kp SEMI  &kp SQT
-&sk LSHFT         &kp Z            &kp X            &kp C                &kp V          &kp B        &kp N      &kp M          &kp COMMA             &kp DOT      &es_qst   &kp RALT
+&kp TAB           &kp Q            &kp W            &kp E                &kp R          &kp T        &kp Y      &kp U          &kp I                 &kp O        &kp P                 &kp ESCAPE
+&sk LEFT_CONTROL  &hml A LEFT_GUI  &hml LEFT_ALT S  &hml LEFT_CONTROL D  &hml LSHIFT F  &kp G        &kp H      &hmr RSHIFT J  &hmr RIGHT_CONTROL K  &hmr LALT L  &kp SEMI              &kp SQT
+&sk LSHFT         &kp Z            &kp X            &kp C                &kp V          &kp B        &kp N      &kp M          &kp COMMA             &kp DOT      &hmr SLASH RA(SLASH)  &kp RALT
                                                     &kp LCMD             &mo 2          &kp ENTER    &kp SPACE  &kp BACKSPACE  &mo 1
             >;
         };
@@ -159,10 +159,10 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&kp GRAVE   &es_exc       &kp AT        &kp HASH          &kp DLLR      &kp PRCNT       &kp RA(CARET)  &kp AMPS     &kp ASTRK     &kp MINUS  &kp PLUS        &kp BACKSLASH
-&trans      &kp LEFT_GUI  &kp LEFT_ALT  &kp LEFT_CONTROL  &kp LSHIFT    &none           &kp LEFT       &kp DOWN     &kp UP_ARROW  &kp RIGHT  &kp UNDERSCORE  &kp TILDE
-&bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2      &bt BT_SEL 3  &bt BT_SEL 4    &kp PAGE_DOWN  &kp PAGE_UP  &kp HOME      &kp END    &es_qst         &trans
-                                        &trans            &trans        &trans          &trans         &kp DEL      &trans
+&kp GRAVE   &hml EXCL RA(N1)  &kp AT        &kp HASH          &kp DLLR      &kp PRCNT       &kp RA(CARET)  &kp AMPS     &kp ASTRK     &kp MINUS  &kp PLUS        &kp BACKSLASH
+&trans      &kp LEFT_GUI      &kp LEFT_ALT  &kp LEFT_CONTROL  &kp LSHIFT    &none           &kp LEFT       &kp DOWN     &kp UP_ARROW  &kp RIGHT  &kp UNDERSCORE  &kp TILDE
+&bt BT_CLR  &bt BT_SEL 0      &bt BT_SEL 1  &bt BT_SEL 2      &bt BT_SEL 3  &bt BT_SEL 4    &kp PAGE_DOWN  &kp PAGE_UP  &kp HOME      &kp END    &es_qst         &trans
+                                            &trans            &trans        &trans          &trans         &kp DEL      &trans
             >;
         };
     };
