@@ -14,34 +14,6 @@
     combos {
         compatible = "zmk,combos";
 
-        ctrl {
-            bindings = <&kp LEFT_CONTROL>;
-            key-positions = <26 27>;
-            require-prior-idle-ms = <100>;
-            timeout-ms = <30>;
-        };
-
-        cmd {
-            bindings = <&kp LEFT_WIN>;
-            key-positions = <37 36>;
-            timeout-ms = <30>;
-            require-prior-idle-ms = <100>;
-        };
-
-        alt {
-            bindings = <&kp LEFT_ALT>;
-            key-positions = <14 15>;
-            timeout-ms = <30>;
-            require-prior-idle-ms = <100>;
-        };
-
-        shift {
-            bindings = <&kp LEFT_SHIFT>;
-            key-positions = <2 3>;
-            timeout-ms = <30>;
-            require-prior-idle-ms = <100>;
-        };
-
         caps_word {
             bindings = <&caps_word>;
             key-positions = <17 18>;
@@ -58,7 +30,7 @@
 
         tg_kp_layer {
             bindings = <&tog 0>;
-            key-positions = <40 41>;
+            key-positions = <21 10>;
         };
     };
 
@@ -158,10 +130,10 @@
             //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
 
             bindings = <
-&kp TAB           &kp Q  &kp W            &kp E                &kp R          &kp T        &kp Y      &kp U          &kp I                 &kp O                 &kp P     &kp ESCAPE
-&sk LEFT_CONTROL  &kp A  &hml LEFT_ALT S  &hml LEFT_CONTROL D  &hml LSHIFT F  &kp G        &kp H      &hmr RSHIFT J  &hmr RIGHT_CONTROL K  &hmr LA(RIGHT_ALT) L  &kp SEMI  &kp SQT
-&sk LSHFT         &kp Z  &kp X            &kp C                &kp V          &kp B        &kp N      &kp M          &kp COMMA             &kp DOT               &es_qst   &kp RALT
-                                          &kp LCMD             &mo 2          &kp ENTER    &kp SPACE  &kp BACKSPACE  &mo 1
+&kp TAB           &kp Q            &kp W            &kp E                &kp R          &kp T        &kp Y      &kp U          &kp I                 &kp O        &kp P     &kp ESCAPE
+&sk LEFT_CONTROL  &hml A LEFT_GUI  &hml LEFT_ALT S  &hml LEFT_CONTROL D  &hml LSHIFT F  &kp G        &kp H      &hmr RSHIFT J  &hmr RIGHT_CONTROL K  &hmr LALT L  &kp SEMI  &kp SQT
+&sk LSHFT         &kp Z            &kp X            &kp C                &kp V          &kp B        &kp N      &kp M          &kp COMMA             &kp DOT      &es_qst   &kp RALT
+                                                    &kp LCMD             &mo 2          &kp ENTER    &kp SPACE  &kp BACKSPACE  &mo 1
             >;
         };
 
