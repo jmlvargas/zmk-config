@@ -116,7 +116,7 @@
 
         insert {
             bindings = <&kp INSERT>;
-            key-positions = <8 6>;
+            key-positions = <8 30>;
         };
     };
 
