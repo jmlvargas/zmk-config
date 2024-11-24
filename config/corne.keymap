@@ -240,9 +240,9 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&kp GRAVE   &hml RA(N1) EXCL  &kp AT        &kp HASH          &kp DLLR      &kp PRCNT       &kp RA(CARET)  &kp AMPS     &kp ASTRK     &hmr RIGHT_PARENTHESIS LEFT_PARENTHESIS  &kp PLUS                    &hmr BACKSLASH PIPE
-&trans      &kp LEFT_GUI      &kp LEFT_ALT  &kp LEFT_CONTROL  &kp LSHIFT    &none           &kp LEFT       &kp DOWN     &kp UP_ARROW  &kp RIGHT                                &hmr MINUS UNDER            &kp TILDE
-&bt BT_CLR  &bt BT_SEL 0      &bt BT_SEL 1  &bt BT_SEL 2      &bt BT_SEL 3  &bt BT_SEL 4    &kp PAGE_DOWN  &kp PAGE_UP  &kp HOME      &kp END                                  &hmr RA(QUESTION) QUESTION  &trans
+&kp GRAVE   &hml RA(N1) EXCL  &kp AT        &kp HASH          &kp DLLR      &kp PRCNT       &kp RA(CARET)  &kp AMPS     &kp ASTRK     &hmr RIGHT_PARENTHESIS LEFT_PARENTHESIS  &kp PLUS                 &hmr BACKSLASH PIPE
+&trans      &kp LEFT_GUI      &kp LEFT_ALT  &kp LEFT_CONTROL  &kp LSHIFT    &none           &kp LEFT       &kp DOWN     &kp UP_ARROW  &kp RIGHT                                &hmr MINUS UNDER         &kp TILDE
+&bt BT_CLR  &bt BT_SEL 0      &bt BT_SEL 1  &bt BT_SEL 2      &bt BT_SEL 3  &bt BT_SEL 4    &kp PAGE_DOWN  &kp PAGE_UP  &kp HOME      &kp END                                  &hmr RA(SLASH) QUESTION  &trans
                                             &trans            &trans        &trans          &trans         &kp DEL      &trans
             >;
         };
