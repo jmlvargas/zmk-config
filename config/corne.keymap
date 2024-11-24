@@ -117,6 +117,13 @@
         insert {
             bindings = <&kp INSERT>;
             key-positions = <8 30>;
+            timeout-ms = <30>;
+            require-prior-idle-ms = <100>;
+        };
+
+        to_syst_layer {
+            bindings = <&to 3>;
+            key-positions = <4 5 14>;
         };
     };
 
@@ -218,14 +225,14 @@
 
         fnum {
             bindings = <
-&trans  &kp F2        &kp F3            &kp F4                &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS    &kp EQUAL     &kp N7          &kp N8                 &kp N9            &kp PLUS             &kp ESC
-&trans  &hml LWIN F5  &hml LEFT_ALT F8  &hml LEFT_CONTROL F9  &hml LSHIFT LBRC      &kp RIGHT_BRACE          &kp PERIOD    &hmr RSHIFT N4  &hmr RIGHT_CONTROL N5  &hmr LEFT_ALT N6  &kp MINUS            &kp ASTRK
-&trans  &kp F10       &kp F11           &kp F12               &kp LEFT_BRACKET      &kp RIGHT_BRACKET        &kp NUMBER_0  &kp N1          &kp N2                 &kp N3            &ssw QUESTION SLASH  &trans
-                                        &trans                &mo 2                 &trans                   &trans        &trans          &trans
+&trans  &kp F1        &kp F2            &kp F3                &kp F4          &ssw RIGHT_PARENTHESIS LEFT_PARENTHESIS    &kp EQUAL     &kp N7          &kp N8                 &kp N9            &kp PLUS             &kp ESC
+&trans  &hml LWIN F5  &hml LEFT_ALT F6  &hml LEFT_CONTROL F7  &hml LSHIFT F8  &ssw RIGHT_BRACE LEFT_BRACE                &kp PERIOD    &hmr RSHIFT N4  &hmr RIGHT_CONTROL N5  &hmr LEFT_ALT N6  &kp MINUS            &kp ASTRK
+&trans  &kp F9        &kp F10           &kp F11               &kp F12         &ssw RIGHT_BRACKET LEFT_BRACKET            &kp NUMBER_0  &kp N1          &kp N2                 &kp N3            &ssw QUESTION SLASH  &kp LEFT_ALT
+                                        &trans                &mo 2           &trans                                     &trans        &trans          &trans
             >;
         };
 
-        symbols {
+        symb {
             // -----------------------------------------------------------------------------------------
             // |  TAB |  !  |  @  |  #  |  $  |  %  |   |  ^  |  &  |  *  |  (  |  )  | BSPC |
             // | CTRL |     |     |     |     |     |   |  -  |  =  |  [  |  ]  |  \  |  `   |
@@ -233,10 +240,19 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&kp GRAVE   &ssw RA(N1) EXCL  &kp AT        &kp HASH          &kp DLLR      &kp PRCNT       &kp RA(CARET)  &kp AMPS     &kp ASTRK     &ssw RIGHT_PARENTHESIS LEFT_PARENTHESIS  &kp PLUS                 &kp PIPE
-&trans      &kp LEFT_GUI      &kp LEFT_ALT  &kp LEFT_CONTROL  &kp LSHIFT    &none           &kp LEFT       &kp DOWN     &kp UP_ARROW  &kp RIGHT                                &ssw MINUS UNDER         &kp TILDE
-&bt BT_CLR  &bt BT_SEL 0      &bt BT_SEL 1  &bt BT_SEL 2      &bt BT_SEL 3  &bt BT_SEL 4    &kp PAGE_DOWN  &kp PAGE_UP  &kp HOME      &kp END                                  &ssw RA(SLASH) QUESTION  &trans
-                                            &trans            &trans        &trans          &trans         &kp DEL      &trans
+&kp GRAVE  &ssw RA(N1) EXCL  &kp AT        &kp HASH          &kp DLLR    &kp PRCNT    &kp RA(CARET)  &kp AMPS     &kp ASTRK     &ssw RIGHT_PARENTHESIS LEFT_PARENTHESIS  &kp PLUS                 &kp PIPE
+&trans     &kp LEFT_GUI      &kp LEFT_ALT  &kp LEFT_CONTROL  &kp LSHIFT  &none        &kp LEFT       &kp DOWN     &kp UP_ARROW  &kp RIGHT                                &ssw MINUS UNDER         &kp TILDE
+&trans     &none             &none         &none             &none       &none        &kp PAGE_DOWN  &kp PAGE_UP  &kp HOME      &kp END                                  &ssw RA(SLASH) QUESTION  &kp LEFT_ALT
+                                           &trans            &trans      &trans       &trans         &kp DEL      &trans
+            >;
+        };
+
+        syst {
+            bindings = <
+&to 0       &none         &none         &none         &sys_reset    &none          &none  &sys_reset  &none  &none  &none  &to 0
+&none       &none         &none         &trans        &none         &none          &none  &none       &none  &none  &none  &none
+&bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bootloader    &none  &none       &none  &none  &none  &none
+                                        &none         &none         &none          &none  &none       &none
             >;
         };
     };
