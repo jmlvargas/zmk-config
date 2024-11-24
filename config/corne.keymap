@@ -72,28 +72,28 @@
 
         page_up {
             bindings = <&kp PAGE_UP>;
-            key-positions = <7 8 9>;
+            key-positions = <6 8>;
             timeout-ms = <30>;
             require-prior-idle-ms = <100>;
         };
 
         page_down {
             bindings = <&kp PAGE_DOWN>;
-            key-positions = <31 32 33>;
+            key-positions = <30 32>;
             timeout-ms = <30>;
             require-prior-idle-ms = <100>;
         };
 
         home {
             bindings = <&kp HOME>;
-            key-positions = <7 8>;
+            key-positions = <31 32>;
             timeout-ms = <30>;
             require-prior-idle-ms = <100>;
         };
 
         end {
             bindings = <&kp END>;
-            key-positions = <31 32>;
+            key-positions = <33 34>;
             timeout-ms = <30>;
             require-prior-idle-ms = <100>;
         };
