@@ -108,7 +108,7 @@
 
         pause {
             bindings = <&kp PRINTSCREEN>;
-            key-positions = <10 11>;
+            key-positions = <10 9>;
             timeout-ms = <30>;
             require-prior-idle-ms = <100>;
             layers = <2>;
