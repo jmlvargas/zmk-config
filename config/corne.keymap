@@ -29,8 +29,13 @@
         };
 
         tg_kp_layer {
-            bindings = <&tog 0>;
-            key-positions = <21 10>;
+            bindings = <&tog 1>;
+            key-positions = <10 20>;
+        };
+
+        tgcurlayer {
+            bindings = <&tog 2>;
+            key-positions = <32 33>;
         };
     };
 
