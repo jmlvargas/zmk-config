@@ -227,7 +227,7 @@
         fnum {
             bindings = <
 &trans  &kp F1        &kp F2            &kp F3                &kp F4          &ssw RIGHT_BRACKET LEFT_BRACKET            &kp EQUAL     &kp N7          &kp N8                 &kp N9            &kp PLUS             &kp ESC
-&trans  &hml LWIN F5  &hml LEFT_ALT F6  &hml LEFT_CONTROL F7  &hml LSHIFT F8  &ssw RIGHT_PARENTHESIS LEFT_PARENTHESIS    &kp PERIOD    &hmr RSHIFT N4  &hmr RIGHT_CONTROL N5  &hmr LEFT_ALT N6  &kp MINUS            &kp ASTRK
+&trans  &hml LWIN F5  &hml LEFT_ALT F6  &hml LEFT_CONTROL F7  &hml LSHIFT F8  &ssw RIGHT_PARENTHESIS LEFT_PARENTHESIS    &kp PERIOD    &hmr RSHIFT N4  &hmr RIGHT_CONTROL N5  &hmr LEFT_ALT N6  &ssw UNDER MINUS     &kp ASTRK
 &trans  &kp F9        &kp F10           &kp F11               &kp F12         &ssw RIGHT_BRACE LEFT_BRACE                &kp NUMBER_0  &kp N1          &kp N2                 &kp N3            &ssw QUESTION SLASH  &kp LEFT_ALT
                                         &trans                &mo 2           &trans                                     &trans        &trans          &trans
             >;
@@ -242,7 +242,7 @@
 
             bindings = <
 &kp GRAVE  &ssw RA(N1) EXCL        &kp AT                  &kp HASH             &kp DLLR              &kp PRCNT    &kp RA(CARET)  &kp AMPS     &kp ASTRK     &kp EQUAL  &kp PLUS                 &kp PIPE
-&trans     &hml LEFT_GUI NUMBER_1  &hml LEFT_ALT NUMBER_2  &hml LCTRL NUMBER_3  &hml LSHIFT NUMBER_4  &kp N5       &kp LEFT       &kp DOWN     &kp UP_ARROW  &kp RIGHT  &ssw MINUS UNDER         &kp TILDE
+&trans     &hml LEFT_GUI NUMBER_1  &hml LEFT_ALT NUMBER_2  &hml LCTRL NUMBER_3  &hml LSHIFT NUMBER_4  &kp N5       &kp LEFT       &kp DOWN     &kp UP_ARROW  &kp RIGHT  &ssw UNDERSCORE MINUS    &kp TILDE
 &trans     &kp NUMBER_6            &kp N7                  &kp N8               &kp N9                &kp N0       &kp PAGE_DOWN  &kp PAGE_UP  &kp HOME      &kp END    &ssw RA(SLASH) QUESTION  &kp LEFT_ALT
                                                            &trans               &trans                &trans       &trans         &kp DEL      &trans
             >;
