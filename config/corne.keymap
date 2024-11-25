@@ -240,10 +240,10 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&kp GRAVE  &ssw RA(N1) EXCL        &kp AT            &kp HASH          &kp DLLR          &kp PRCNT                                  &kp RA(CARET)  &kp AMPS     &kp ASTRK     &kp EQUAL  &kp PLUS                 &kp PIPE
-&trans     &kp LEFT_GUI            &kp LEFT_ALT      &kp LEFT_CONTROL  &kp LSHIFT        &ssw RIGHT_PARENTHESIS LEFT_PARENTHESIS    &kp LEFT       &kp DOWN     &kp UP_ARROW  &kp RIGHT  &ssw MINUS UNDER         &kp TILDE
-&trans     &ssw NUMBER_6 NUMBER_1  &ssw N7 NUMBER_2  &ssw N8 NUMBER_3  &ssw N9 NUMBER_4  &ssw N0 N5                                 &kp PAGE_DOWN  &kp PAGE_UP  &kp HOME      &kp END    &ssw RA(SLASH) QUESTION  &kp LEFT_ALT
-                                                     &trans            &trans            &trans                                     &trans         &kp DEL      &trans
+&kp GRAVE  &ssw RA(N1) EXCL        &kp AT                  &kp HASH             &kp DLLR              &kp PRCNT    &kp RA(CARET)  &kp AMPS     &kp ASTRK     &kp EQUAL  &kp PLUS                 &kp PIPE
+&trans     &hml LEFT_GUI NUMBER_1  &hml LEFT_ALT NUMBER_2  &hml LCTRL NUMBER_3  &hml LSHIFT NUMBER_4  &kp N5       &kp LEFT       &kp DOWN     &kp UP_ARROW  &kp RIGHT  &ssw MINUS UNDER         &kp TILDE
+&trans     &kp NUMBER_6            &kp N7                  &kp N8               &kp N9                &kp N0       &kp PAGE_DOWN  &kp PAGE_UP  &kp HOME      &kp END    &ssw RA(SLASH) QUESTION  &kp LEFT_ALT
+                                                           &trans               &trans                &trans       &trans         &kp DEL      &trans
             >;
         };
 
