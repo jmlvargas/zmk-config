@@ -114,7 +114,7 @@
 
         base_layer {
             bindings = <&to 0>;
-            key-positions = <12 24>;
+            key-positions = <11 21>;
         };
     };
 
