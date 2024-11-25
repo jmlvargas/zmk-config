@@ -111,6 +111,11 @@
             bindings = <&to 3>;
             key-positions = <4 5 14>;
         };
+
+        base_layer {
+            bindings = <&to 0>;
+            key-positions = <12 24>;
+        };
     };
 
     macros {
