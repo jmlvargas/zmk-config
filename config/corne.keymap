@@ -79,7 +79,7 @@
 
         end {
             bindings = <&kp END>;
-            key-positions = <33 32>;
+            key-positions = <33 34>;
             timeout-ms = <30>;
             require-prior-idle-ms = <100>;
         };
