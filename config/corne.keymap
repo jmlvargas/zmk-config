@@ -109,12 +109,12 @@
 
         syst_layer {
             bindings = <&to 3>;
-            key-positions = <14 21>;
+            key-positions = <14 21 12>;
         };
 
         base_layer {
             bindings = <&to 0>;
-            key-positions = <21 29>;
+            key-positions = <21 29 12>;
         };
     };
 
