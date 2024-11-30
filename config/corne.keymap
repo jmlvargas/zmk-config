@@ -37,7 +37,7 @@
 
         down {
             bindings = <&kp DOWN>;
-            key-positions = <32 33>;
+            key-positions = <20 21>;
             timeout-ms = <30>;
             require-prior-idle-ms = <100>;
         };
@@ -51,21 +51,21 @@
 
         right {
             bindings = <&kp RIGHT>;
-            key-positions = <20 21>;
+            key-positions = <21 22>;
             timeout-ms = <30>;
             require-prior-idle-ms = <100>;
         };
 
         page_up {
             bindings = <&kp PAGE_UP>;
-            key-positions = <6 8>;
+            key-positions = <8 7 9>;
             timeout-ms = <30>;
             require-prior-idle-ms = <100>;
         };
 
         page_down {
             bindings = <&kp PAGE_DOWN>;
-            key-positions = <30 32>;
+            key-positions = <19 20 21>;
             timeout-ms = <30>;
             require-prior-idle-ms = <100>;
         };
@@ -86,7 +86,7 @@
 
         print_screen {
             bindings = <&kp PRINTSCREEN>;
-            key-positions = <10 11>;
+            key-positions = <10 14>;
             timeout-ms = <30>;
             require-prior-idle-ms = <100>;
             layers = <0 1>;
@@ -94,7 +94,7 @@
 
         pause {
             bindings = <&kp PRINTSCREEN>;
-            key-positions = <10 9>;
+            key-positions = <10 11>;
             timeout-ms = <30>;
             require-prior-idle-ms = <100>;
             layers = <2>;
@@ -107,14 +107,14 @@
             require-prior-idle-ms = <100>;
         };
 
-        to_syst_layer {
+        syst_layer {
             bindings = <&to 3>;
-            key-positions = <4 5 14>;
+            key-positions = <14 21>;
         };
 
         base_layer {
             bindings = <&to 0>;
-            key-positions = <11 21>;
+            key-positions = <21 29>;
         };
     };
 
