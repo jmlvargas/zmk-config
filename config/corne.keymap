@@ -220,7 +220,7 @@
 &kp TAB           &kp Q            &kp W          &kp E                &kp R            &kp T        &kp Y      &kp U            &kp I                 &kp O          &kp P                 &kp ESCAPE
 &sk LEFT_CONTROL  &hml LEFT_GUI A  &hml LSHIFT S  &hml LEFT_CONTROL D  &hml LEFT_ALT F  &kp G        &kp H      &hmr LEFT_ALT J  &hmr RIGHT_CONTROL K  &hmr RSHIFT L  &kp SEMI              &kp SQT
 &sk LSHFT         &kp Z            &kp X          &kp C                &kp V            &kp B        &kp N      &kp M            &kp COMMA             &kp DOT        &ssw BACKSLASH SLASH  &kp RALT
-                                                  &kp LCMD             &lsm 2 2         &kp ENTER    &kp SPACE  &lsm 1 1         &kp BACKSPACE
+                                                  &kp LCMD             &mo 2            &kp ENTER    &kp SPACE  &mo 1            &kp BACKSPACE
             >;
         };
 
