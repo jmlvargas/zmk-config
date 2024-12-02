@@ -217,10 +217,10 @@
             //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
 
             bindings = <
-&kp TAB           &kp Q            &kp W            &kp E                &kp R          &kp T        &kp Y      &kp U          &kp I                 &kp O        &kp P                 &kp ESCAPE
-&sk LEFT_CONTROL  &hml LEFT_GUI A  &hml LEFT_ALT S  &hml LEFT_CONTROL D  &hml LSHIFT F  &kp G        &kp H      &hmr RSHIFT J  &hmr RIGHT_CONTROL K  &hmr LALT L  &kp SEMI              &kp SQT
-&sk LSHFT         &kp Z            &kp X            &kp C                &kp V          &kp B        &kp N      &kp M          &kp COMMA             &kp DOT      &ssw BACKSLASH SLASH  &kp RALT
-                                                    &kp LCMD             &lsm 2 2       &kp ENTER    &kp SPACE  &lsm 1 1       &kp BACKSPACE
+&kp TAB           &kp Q  &kp W          &kp E                &kp R            &kp T        &kp Y      &kp U            &kp I                 &kp O          &kp P                 &kp ESCAPE
+&sk LEFT_CONTROL  &kp A  &hml LSHIFT S  &hml LEFT_CONTROL D  &hml LEFT_ALT F  &kp G        &kp H      &hmr LEFT_ALT J  &hmr RIGHT_CONTROL K  &hmr RSHIFT L  &kp SEMI              &kp SQT
+&sk LSHFT         &kp Z  &kp X          &kp C                &kp V            &kp B        &kp N      &kp M            &kp COMMA             &kp DOT        &ssw BACKSLASH SLASH  &kp RALT
+                                        &kp LCMD             &lsm 2 2         &kp ENTER    &kp SPACE  &lsm 1 1         &kp BACKSPACE
             >;
         };
 
@@ -241,10 +241,10 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&kp GRAVE  &ssw RA(N1) EXCL        &kp AT                  &kp HASH             &kp DLLR              &kp PRCNT    &kp RA(CARET)  &kp AMPS       &kp ASTRK     &kp EQUAL  &kp PLUS                 &kp PIPE
-&trans     &hml LEFT_GUI NUMBER_1  &hml LEFT_ALT NUMBER_2  &hml LCTRL NUMBER_3  &hml LSHIFT NUMBER_4  &kp N5       &kp LEFT       &kp DOWN       &kp UP_ARROW  &kp RIGHT  &ssw UNDERSCORE MINUS    &kp TILDE
-&trans     &kp NUMBER_6            &kp N7                  &kp N8               &kp N9                &kp N0       &kp PAGE_UP    &kp PAGE_DOWN  &kp HOME      &kp END    &ssw RA(SLASH) QUESTION  &kp LEFT_ALT
-                                                           &trans               &trans                &trans       &trans         &trans         &kp DEL
+&kp GRAVE  &ssw RA(N1) EXCL  &kp AT                &kp HASH             &kp DLLR                &kp PRCNT    &kp RA(CARET)  &kp AMPS       &kp ASTRK     &kp EQUAL  &kp PLUS                 &kp PIPE
+&trans     &kp NUMBER_1      &hml LSHIFT NUMBER_2  &hml LCTRL NUMBER_3  &hml LEFT_ALT NUMBER_4  &kp N5       &kp LEFT       &kp DOWN       &kp UP_ARROW  &kp RIGHT  &ssw UNDERSCORE MINUS    &kp TILDE
+&trans     &kp NUMBER_6      &kp N7                &kp N8               &kp N9                  &kp N0       &kp PAGE_UP    &kp PAGE_DOWN  &kp HOME      &kp END    &ssw RA(SLASH) QUESTION  &kp LEFT_ALT
+                                                   &trans               &trans                  &trans       &trans         &trans         &kp DEL
             >;
         };
 
