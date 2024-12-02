@@ -23,7 +23,7 @@
 
         delete {
             bindings = <&kp DEL>;
-            key-positions = <40 39>;
+            key-positions = <39 41>;
             timeout-ms = <30>;
             require-prior-idle-ms = <100>;
         };
