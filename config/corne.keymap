@@ -108,13 +108,18 @@
         };
 
         syst_layer {
-            bindings = <&to 3>;
+            bindings = <&tog 3>;
             key-positions = <14 21 12>;
         };
 
         base_layer {
             bindings = <&to 0>;
             key-positions = <21 29 12>;
+        };
+
+        tog_fnum_layer {
+            bindings = <&tog 1>;
+            key-positions = <12 30 21>;
         };
     };
 
