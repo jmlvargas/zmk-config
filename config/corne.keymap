@@ -233,7 +233,7 @@
         fnum {
             bindings = <
 &trans  &kp F1            &kp F2          &kp F3                &kp F4            &ssw RIGHT_BRACKET LEFT_BRACKET            &kp CARET  &ssw AMPS N7      &ssw ASTRK N8          &ssw EQUAL N9         &ssw PLUS N0         &kp ESC
-&trans  &hml LEFT_GUI F5  &hml LSHIFT F6  &hml LEFT_CONTROL F7  &hml LEFT_ALT F8  &ssw RIGHT_PARENTHESIS LEFT_PARENTHESIS    &none      &hmr LEFT_ALT N4  &hmr RIGHT_CONTROL N5  &hmr RSHIFT N6        &ssw UNDER MINUS     &trans
+&trans  &hml LEFT_GUI F5  &hml LSHIFT F6  &hml LEFT_CONTROL F7  &hml LEFT_ALT F8  &ssw RIGHT_PARENTHESIS LEFT_PARENTHESIS    &none      &hmr LEFT_ALT N4  &hmr RIGHT_CONTROL N5  &hmr RSHIFT N6        &ssw UNDER MINUS     &kp DOUBLE_QUOTES
 &trans  &kp F9            &kp F10         &kp F11               &kp F12           &ssw RIGHT_BRACE LEFT_BRACE                &none      &kp N1            &ssw COMMA NUMBER_2    &ssw PERIOD NUMBER_3  &ssw QUESTION SLASH  &kp LEFT_ALT
                                           &trans                &mo 2             &trans                                     &trans     &trans            &trans
             >;
