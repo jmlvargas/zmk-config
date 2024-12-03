@@ -30,56 +30,42 @@
 
         up {
             bindings = <&kp UP_ARROW>;
-            key-positions = <9 8>;
+            key-positions = <9 8 7>;
             timeout-ms = <30>;
             require-prior-idle-ms = <100>;
         };
 
         down {
             bindings = <&kp DOWN>;
-            key-positions = <32 33>;
+            key-positions = <32 33 31>;
             timeout-ms = <30>;
             require-prior-idle-ms = <100>;
         };
 
         left {
             bindings = <&kp LEFT>;
-            key-positions = <20 19>;
+            key-positions = <20 19 21>;
             timeout-ms = <30>;
             require-prior-idle-ms = <100>;
         };
 
         right {
             bindings = <&kp RIGHT>;
-            key-positions = <21 20>;
-            timeout-ms = <30>;
-            require-prior-idle-ms = <100>;
-        };
-
-        page_up {
-            bindings = <&kp PAGE_UP>;
-            key-positions = <8 7 9>;
-            timeout-ms = <30>;
-            require-prior-idle-ms = <100>;
-        };
-
-        page_down {
-            bindings = <&kp PAGE_DOWN>;
-            key-positions = <31 32 33>;
+            key-positions = <21 20 22>;
             timeout-ms = <30>;
             require-prior-idle-ms = <100>;
         };
 
         home {
             bindings = <&kp HOME>;
-            key-positions = <31 32>;
+            key-positions = <6 7 8>;
             timeout-ms = <30>;
             require-prior-idle-ms = <100>;
         };
 
         end {
             bindings = <&kp END>;
-            key-positions = <33 34>;
+            key-positions = <32 30 31>;
             timeout-ms = <30>;
             require-prior-idle-ms = <100>;
         };
@@ -129,12 +115,12 @@
 
         backspace {
             bindings = <&kp BACKSPACE>;
-            key-positions = <2 3 4>;
+            key-positions = <26 27 28>;
         };
 
         ldelete {
             bindings = <&kp DELETE>;
-            key-positions = <28 27 26>;
+            key-positions = <2 3 4>;
         };
     };
 
