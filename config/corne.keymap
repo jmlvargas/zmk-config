@@ -121,6 +121,21 @@
             bindings = <&tog 1>;
             key-positions = <12 30 21>;
         };
+
+        space {
+            bindings = <&kp SPACE>;
+            key-positions = <16 15 14>;
+        };
+
+        backspace {
+            bindings = <&kp BACKSPACE>;
+            key-positions = <2 3 4>;
+        };
+
+        ldelete {
+            bindings = <&kp DELETE>;
+            key-positions = <28 27 26>;
+        };
     };
 
     macros {
