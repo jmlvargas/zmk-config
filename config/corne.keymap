@@ -223,19 +223,19 @@
             //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
 
             bindings = <
-&kp TAB           &kp Q            &kp W          &kp E                &kp R            &kp T        &kp Y      &kp U            &kp I                 &kp O          &kp P                 &kp ESCAPE
-&sk LEFT_CONTROL  &hml LEFT_GUI A  &hml LSHIFT S  &hml LEFT_CONTROL D  &hml LEFT_ALT F  &kp G        &kp H      &hmr LEFT_ALT J  &hmr RIGHT_CONTROL K  &hmr RSHIFT L  &kp SEMI              &ssw TILDE SQT
-&sk LSHFT         &kp Z            &kp X          &kp C                &kp V            &kp B        &kp N      &kp M            &kp COMMA             &kp DOT        &ssw BACKSLASH SLASH  &kp RALT
+&kp TAB           &kp Q            &kp W          &kp E                &kp R            &kp T        &kp Y      &kp U            &kp I                 &kp O          &kp P                  &kp ESCAPE
+&sk LEFT_CONTROL  &hml LEFT_GUI A  &hml LSHIFT S  &hml LEFT_CONTROL D  &hml LEFT_ALT F  &kp G        &kp H      &hmr LEFT_ALT J  &hmr RIGHT_CONTROL K  &hmr RSHIFT L  &kp SEMI               &kp LEFT_BRACKET
+&sk LSHFT         &kp Z            &kp X          &kp C                &kp V            &kp B        &kp N      &kp M            &kp COMMA             &kp DOT        &ssw RA(MINUS) LS(N7)  &kp RALT
                                                   &kp LCMD             &mo 2            &kp ENTER    &kp SPACE  &mo 1            &kp BACKSPACE
             >;
         };
 
         fnum {
             bindings = <
-&trans  &kp F1            &kp F2          &kp F3                &kp F4            &ssw RIGHT_BRACKET LEFT_BRACKET            &kp RA(CARET)  &ssw AMPS N7      &ssw ASTRK N8          &ssw EQUAL N9         &ssw PLUS N0         &kp ESC
-&trans  &hml LEFT_GUI F5  &hml LSHIFT F6  &hml LEFT_CONTROL F7  &hml LEFT_ALT F8  &ssw RIGHT_PARENTHESIS LEFT_PARENTHESIS    &none          &hmr LEFT_ALT N4  &hmr RIGHT_CONTROL N5  &hmr RSHIFT N6        &ssw UNDER MINUS     &ssw RA(SINGLE_QUOTE) RA(DOUBLE_QUOTES)
-&trans  &kp F9            &kp F10         &kp F11               &kp F12           &ssw RIGHT_BRACE LEFT_BRACE                &none          &kp N1            &ssw COMMA NUMBER_2    &ssw PERIOD NUMBER_3  &ssw QUESTION SLASH  &kp LEFT_ALT
-                                          &trans                &mo 2             &trans                                     &trans         &trans            &trans
+&trans  &kp F1            &kp F2          &kp F3                &kp F4            &ssw LS(BACKSLASH) LS(SINGLE_QUOTE)    &kp RA(SINGLE_QUOTE)  &ssw LS(NUMBER_6) N7  &ssw LS(RIGHT_BRACKET) N8  &ssw LS(N0) N9        &ssw RIGHT_BRACKET N0  &kp ESC
+&trans  &hml LEFT_GUI F5  &hml LSHIFT F6  &hml LEFT_CONTROL F7  &hml LEFT_ALT F8  &ssw LS(N9) LS(N8)                     &none                 &hmr LEFT_ALT N4      &hmr RIGHT_CONTROL N5      &hmr RSHIFT N6        &ssw LS(SLASH) SLASH   &ssw MINUS LS(NUMBER_2)
+&trans  &kp F9            &kp F10         &kp F11               &kp F12           &ssw BACKSLASH SINGLE_QUOTE            &none                 &kp N1                &ssw COMMA NUMBER_2        &ssw PERIOD NUMBER_3  &ssw LS(MINUS) LS(N7)  &kp LEFT_ALT
+                                          &trans                &mo 2             &trans                                 &trans                &trans                &trans
             >;
         };
 
