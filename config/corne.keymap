@@ -233,7 +233,7 @@
         fnum {
             bindings = <
 &trans  &kp F1            &kp F2          &kp F3                &kp F4            &ssw LS(BACKSLASH) LS(SINGLE_QUOTE)    &kp RA(SINGLE_QUOTE)          &ssw LS(NUMBER_6) N7  &ssw LS(RIGHT_BRACKET) N8  &ssw LS(N0) N9        &ssw RIGHT_BRACKET N0  &kp ESC
-&trans  &hml LEFT_GUI F5  &hml LSHIFT F6  &hml LEFT_CONTROL F7  &hml LEFT_ALT F8  &ssw LS(N9) LS(N8)                     &none                         &hmr LEFT_ALT N4      &hmr RIGHT_CONTROL N5      &hmr RSHIFT N6        &ssw LS(SLASH) SLASH   &ssw MINUS LS(NUMBER_2)
+&trans  &hml LEFT_GUI F5  &hml LSHIFT F6  &hml LEFT_CONTROL F7  &hml LEFT_ALT F8  &ssw LS(N9) LS(N8)                     &ssw LS(BACKSLASH) BACKSLASH  &hmr LEFT_ALT N4      &hmr RIGHT_CONTROL N5      &hmr RSHIFT N6        &ssw LS(SLASH) SLASH   &ssw MINUS LS(NUMBER_2)
 &trans  &kp F9            &kp F10         &kp F11               &kp F12           &ssw BACKSLASH SINGLE_QUOTE            &ssw LS(BACKSLASH) BACKSLASH  &kp N1                &ssw COMMA NUMBER_2        &ssw PERIOD NUMBER_3  &ssw LS(MINUS) LS(N7)  &kp LEFT_ALT
                                           &trans                &mo 2             &trans                                 &trans                        &trans                &trans
             >;
@@ -248,7 +248,7 @@
 
             bindings = <
 &ssw RA(TILDE) RA(GRAVE)  &ssw LS(EQUAL) EXCL     &kp RA(Q)             &kp HASH             &kp DLLR                &kp PRCNT    &kp RA(SINGLE_QUOTE)  &kp LS(NUMBER_6)  &kp LS(RIGHT_BRACKET)  &kp LS(N0)  &kp RIGHT_BRACKET     &kp GRAVE
-&trans                    &hml LEFT_GUI NUMBER_1  &hml LSHIFT NUMBER_2  &hml LCTRL NUMBER_3  &hml LEFT_ALT NUMBER_4  &kp N5       &kp LEFT              &kp DOWN          &kp UP_ARROW           &kp RIGHT   &trans                &trans
+&trans                    &hml LEFT_GUI NUMBER_1  &hml LSHIFT NUMBER_2  &hml LCTRL NUMBER_3  &hml LEFT_ALT NUMBER_4  &kp N5       &kp LEFT              &kp DOWN          &kp UP_ARROW           &kp RIGHT   &trans                &ssw MINUS LS(NUMBER_2)
 &trans                    &kp NUMBER_6            &kp N7                &kp N8               &kp N9                  &kp N0       &kp PAGE_UP           &kp PAGE_DOWN     &kp HOME               &kp END     &ssw EQUAL LS(MINUS)  &kp LEFT_ALT
                                                                         &trans               &trans                  &trans       &trans                &trans            &kp DEL
             >;
