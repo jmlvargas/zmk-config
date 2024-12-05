@@ -19,13 +19,7 @@
             key-positions = <17 18>;
             timeout-ms = <30>;
             require-prior-idle-ms = <100>;
-        };
-
-        delete {
-            bindings = <&kp DEL>;
-            key-positions = <39 41>;
-            timeout-ms = <30>;
-            require-prior-idle-ms = <100>;
+            layers = <0>;
         };
 
         up {
@@ -33,6 +27,7 @@
             key-positions = <9 8 7>;
             timeout-ms = <30>;
             require-prior-idle-ms = <100>;
+            layers = <0>;
         };
 
         down {
@@ -40,6 +35,7 @@
             key-positions = <32 33 31>;
             timeout-ms = <30>;
             require-prior-idle-ms = <100>;
+            layers = <0>;
         };
 
         left {
@@ -47,6 +43,7 @@
             key-positions = <20 19 21>;
             timeout-ms = <30>;
             require-prior-idle-ms = <100>;
+            layers = <0>;
         };
 
         right {
@@ -54,6 +51,7 @@
             key-positions = <21 20 22>;
             timeout-ms = <30>;
             require-prior-idle-ms = <100>;
+            layers = <0>;
         };
 
         home {
@@ -61,6 +59,7 @@
             key-positions = <6 7 8>;
             timeout-ms = <30>;
             require-prior-idle-ms = <100>;
+            layers = <0>;
         };
 
         end {
@@ -68,14 +67,7 @@
             key-positions = <32 30 31>;
             timeout-ms = <30>;
             require-prior-idle-ms = <100>;
-        };
-
-        print_screen {
-            bindings = <&kp PRINTSCREEN>;
-            key-positions = <10 14>;
-            timeout-ms = <30>;
-            require-prior-idle-ms = <100>;
-            layers = <0 1>;
+            layers = <0>;
         };
 
         pause {
@@ -83,44 +75,69 @@
             key-positions = <10 11>;
             timeout-ms = <30>;
             require-prior-idle-ms = <100>;
-            layers = <2>;
         };
 
         insert {
             bindings = <&kp INSERT>;
-            key-positions = <8 30>;
+            key-positions = <6 7>;
             timeout-ms = <30>;
             require-prior-idle-ms = <100>;
+            layers = <0>;
         };
 
         syst_layer {
             bindings = <&tog 3>;
-            key-positions = <14 21 12>;
+            key-positions = <35 23 11>;
+            timeout-ms = <30>;
+            require-prior-idle-ms = <100>;
+            layers = <0>;
         };
 
         base_layer {
             bindings = <&to 0>;
-            key-positions = <21 29 12>;
+            key-positions = <11 35>;
+            timeout-ms = <30>;
+            require-prior-idle-ms = <100>;
         };
 
         tog_fnum_layer {
             bindings = <&tog 1>;
-            key-positions = <12 30 21>;
+            key-positions = <23 35>;
+            timeout-ms = <30>;
+            require-prior-idle-ms = <100>;
+            layers = <0>;
         };
 
         space {
             bindings = <&kp SPACE>;
-            key-positions = <16 15 14>;
+            key-positions = <28 29>;
+            timeout-ms = <30>;
+            require-prior-idle-ms = <100>;
+            layers = <0>;
         };
 
         backspace {
             bindings = <&kp BACKSPACE>;
-            key-positions = <26 27 28>;
+            key-positions = <16 17>;
+            timeout-ms = <30>;
+            require-prior-idle-ms = <100>;
+            layers = <0>;
         };
 
-        ldelete {
+        delete {
             bindings = <&kp DELETE>;
-            key-positions = <2 3 4>;
+            key-positions = <4 5>;
+            timeout-ms = <30>;
+            require-prior-idle-ms = <100>;
+            layers = <0>;
+        };
+
+        pscrn {
+            bindings = <&kp PRINTSCREEN>;
+            key-positions = <11 10 14>;
+            layers = <0>;
+            timeout-ms = <30>;
+            require-prior-idle-ms = <100>;
         };
     };
 
