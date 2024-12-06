@@ -42,7 +42,7 @@
             key-positions = <28 29>;
             timeout-ms = <30>;
             require-prior-idle-ms = <100>;
-            layers = <0>;
+            layers = <3>;
         };
 
         backspace {
@@ -50,7 +50,7 @@
             key-positions = <16 17>;
             timeout-ms = <30>;
             require-prior-idle-ms = <100>;
-            layers = <0>;
+            layers = <3>;
         };
 
         delete {
@@ -58,7 +58,7 @@
             key-positions = <4 5>;
             timeout-ms = <30>;
             require-prior-idle-ms = <100>;
-            layers = <0>;
+            layers = <3>;
         };
     };
 
@@ -168,9 +168,9 @@
             >;
         };
 
-        fn2 {
+        fctl {
             bindings = <
-&none   &kp PRINTSCREEN  &caps_word  &kp INS           &none         &ssw LS(BACKSLASH) LS(SINGLE_QUOTE)    &kp F1    &kp F2          &kp F3        &kp F4     &kp F5   &kp PAUSE_BREAK
+&trans  &kp PRINTSCREEN  &caps_word  &kp INS           &none         &ssw LS(BACKSLASH) LS(SINGLE_QUOTE)    &kp F1    &kp F2          &kp F3        &kp F4     &kp F5   &kp PAUSE_BREAK
 &trans  &none            &kp LSHIFT  &kp LEFT_CONTROL  &kp LEFT_ALT  &ssw LS(N9) LS(N8)                     &kp LEFT  &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT  &kp F11  &kp F12
 &trans  &none            &kp LC(X)   &kp LC(C)         &kp LC(V)     &ssw BACKSLASH SINGLE_QUOTE            &kp F6    &kp F7          &kp F8        &kp F9     &kp F10  &kp LEFT_ALT
                                      &trans            &mo 3         &trans                                 &trans    &trans          &kp DELETE
