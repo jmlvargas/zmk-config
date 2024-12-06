@@ -89,6 +89,20 @@
 
             label = "AS";
         };
+
+        mssw: mssw {
+            compatible = "zmk,behavior-macro-two-param";
+            #binding-cells = <2>;
+            bindings =
+                <&macro_press>,
+                <&macro_param_1to1 &kp MACRO_PLACEHOLDER>,
+                <&macro_tap>,
+                <&macro_param_2to1 &kp MACRO_PLACEHOLDER>,
+                <&macro_release>,
+                <&macro_param_1to1 &kp MACRO_PLACEHOLDER>;
+
+            label = "MSSW";
+        };
     };
 
     behaviors {
@@ -203,10 +217,10 @@
 
         syst {
             bindings = <
-&to 0       &none         &none         &none         &sys_reset    &none          &none        &sys_reset  &none  &none  &none  &to 0
-&none       &none         &none         &trans        &none         &none          &none        &none       &none  &none  &none  &none
-&bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bootloader    &bootloader  &none       &none  &none  &none  &none
-                                        &none         &none         &none          &none        &none       &none
+&to 0                      &none         &none         &none         &sys_reset    &none          &none        &sys_reset  &none  &none  &none  &to 0
+&mssw LEFT_SHIFT NUMBER_2  &none         &none         &trans        &none         &none          &none        &none       &none  &none  &none  &none
+&bt BT_CLR                 &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bootloader    &bootloader  &none       &none  &none  &none  &none
+                                                       &none         &none         &none          &none        &none       &none
             >;
         };
     };
