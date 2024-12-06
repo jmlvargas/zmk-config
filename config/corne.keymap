@@ -39,7 +39,7 @@
 
         space {
             bindings = <&kp SPACE>;
-            key-positions = <28 29>;
+            key-positions = <16 17>;
             timeout-ms = <30>;
             require-prior-idle-ms = <100>;
             layers = <3>;
@@ -47,7 +47,7 @@
 
         backspace {
             bindings = <&kp BACKSPACE>;
-            key-positions = <16 17>;
+            key-positions = <28 29>;
             timeout-ms = <30>;
             require-prior-idle-ms = <100>;
             layers = <3>;
@@ -55,7 +55,7 @@
 
         delete {
             bindings = <&kp DELETE>;
-            key-positions = <4 5>;
+            key-positions = <5 4>;
             timeout-ms = <30>;
             require-prior-idle-ms = <100>;
             layers = <3>;
