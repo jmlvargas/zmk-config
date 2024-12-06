@@ -279,5 +279,23 @@
                                         &none         &none         &none          &none        &none       &none
             >;
         };
+
+        fn2 {
+            bindings = <
+&trans  &trans  &trans      &trans            &trans        &trans    &kp F1    &kp F2          &kp F3        &kp F4     &kp F5   &trans
+&trans  &trans  &kp LSHIFT  &kp LEFT_CONTROL  &kp LEFT_ALT  &trans    &kp LEFT  &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT  &kp F11  &kp F12
+&trans  &trans  &trans      &trans            &trans        &trans    &kp F6    &kp F7          &kp F8        &kp F9     &kp F10  &trans
+                            &trans            &trans        &trans    &trans    &trans          &trans
+            >;
+        };
+
+        sym2 {
+            bindings = <
+&ssw RA(TILDE) RA(GRAVE)  &ssw LS(EQUAL) EXCL  &kp RA(Q)     &kp HASH      &kp DLLR      &kp PRCNT    &kp RA(SINGLE_QUOTE)  &kp LS(NUMBER_6)  &kp LS(RIGHT_BRACKET)  &kp LS(N0)                &kp RIGHT_BRACKET     &kp GRAVE
+&trans                    &kp NUMBER_1         &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4  &kp N5       &kp HOME              &kp PAGE_DOWN     &kp PAGE_UP            &kp END                   &ssw LS(SLASH) SLASH  &ssw MINUS LS(NUMBER_2)
+&trans                    &kp NUMBER_6         &kp N7        &kp N8        &kp N9        &kp N0       &none                 &none             &kp NON_US_BACKSLASH   &kp LS(NON_US_BACKSLASH)  &ssw EQUAL LS(MINUS)  &trans
+                                                             &trans        &trans        &trans       &trans                &trans            &kp DEL
+            >;
+        };
     };
 };
