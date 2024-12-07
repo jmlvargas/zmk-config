@@ -364,6 +364,24 @@
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
+
+        paren_bracket_o: paren_bracket_o {
+            compatible = "zmk,behavior-mod-morph";
+            label = "PAREN_BRACKET_O";
+            bindings = <&paren_o>, <&bracket_o>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        paren_bracket_c: paren_bracket_c {
+            compatible = "zmk,behavior-mod-morph";
+            label = "PAREN_BRACKET_C";
+            bindings = <&paren_c>, <&bracket_c>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
     };
 
     keymap {
@@ -410,9 +428,9 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&gravetilde  &kp RA(Q)     &kp HASH              &kp DOLLAR     &kp PERCENT   &mcaret      &kp LS(NUMBER_6)  &kp LS(RIGHT_BRACKET)  &kp LS(N0)      &kp RIGHT_BRACKET  &exclm     &kp GRAVE
-&trans       &kp NUMBER_1  &hml LSHIFT NUMBER_2  &kp NUMBER_3   &kp NUMBER_4  &kp N5       &paren_o          &paren_c               &brace_o        &brace_c           &kp SLASH  &quotes
-&trans       &kp NUMBER_6  &kp N7                &kp N8         &kp N9        &kp N0       &kp HOME          &kp END                &less_bracketo  &great_bracketc    &questm    &kp LEFT_ALT
+&gravetilde  &kp RA(Q)     &kp HASH              &kp DOLLAR     &kp PERCENT   &mcaret      &kp LS(NUMBER_6)  &kp LS(RIGHT_BRACKET)  &kp LS(N0)  &kp RIGHT_BRACKET  &exclm     &kp GRAVE
+&trans       &kp NUMBER_1  &hml LSHIFT NUMBER_2  &kp NUMBER_3   &kp NUMBER_4  &kp N5       &paren_bracket_o  &paren_bracket_c       &brace_o    &brace_c           &kp SLASH  &quotes
+&trans       &kp NUMBER_6  &kp N7                &kp N8         &kp N9        &kp N0       &kp HOME          &kp END                &less       &great             &questm    &kp LEFT_ALT
                                                  &kp BACKSPACE  &trans        &kp SPACE    &trans            &trans                 &kp DEL
             >;
         };
