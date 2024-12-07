@@ -141,6 +141,62 @@
             bindings = <&kp RA(RIGHT_BRACKET) &kp SPACE>;
             label = "MTILDE";
         };
+
+        paren_o: mparenopen {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LS(N8)>;
+            label = "MPARENOPEN";
+        };
+
+        paren_c: mparencl {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LS(N9)>;
+            label = "MPARENCL";
+        };
+
+        brace_o: mbraceo {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp APOS>;
+            label = "MBRACEO";
+        };
+
+        brace_c: mbracec {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp BACKSLASH>;
+            label = "MBRACEC";
+        };
+
+        bracket_o: bracketo {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LS(APOS)>;
+            label = "BRACKETO";
+        };
+
+        bracket_c: bracketc {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LS(BACKSLASH)>;
+            label = "BRACKETC";
+        };
+
+        less: mlessthan {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp NON_US_BACKSLASH>;
+            label = "MLESSTHAN";
+        };
+
+        great: mgreat {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LS(NON_US_BACKSLASH)>;
+            label = "MGREAT";
+        };
     };
 
     behaviors {
@@ -290,6 +346,24 @@
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
+
+        less_bracketo: less_bracketo {
+            compatible = "zmk,behavior-mod-morph";
+            label = "LESS_BRACKETO";
+            bindings = <&less>, <&bracket_o>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        great_bracketc: great_bracketc {
+            compatible = "zmk,behavior-mod-morph";
+            label = "GREAT_BRACKETC";
+            bindings = <&great>, <&bracket_c>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
     };
 
     keymap {
@@ -336,9 +410,9 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&gravetilde  &kp RA(Q)     &kp HASH              &kp DOLLAR     &kp PERCENT   &mcaret      &kp LS(NUMBER_6)  &kp LS(RIGHT_BRACKET)  &kp LS(N0)            &kp RIGHT_BRACKET         &exclm     &kp GRAVE
-&trans       &kp NUMBER_1  &hml LSHIFT NUMBER_2  &kp NUMBER_3   &kp NUMBER_4  &kp N5       &none             &parnts                &braces               &brckts                   &kp SLASH  &quotes
-&trans       &kp NUMBER_6  &kp N7                &kp N8         &kp N9        &kp N0       &kp HOME          &kp END                &kp NON_US_BACKSLASH  &kp LS(NON_US_BACKSLASH)  &questm    &kp LEFT_ALT
+&gravetilde  &kp RA(Q)     &kp HASH              &kp DOLLAR     &kp PERCENT   &mcaret      &kp LS(NUMBER_6)  &kp LS(RIGHT_BRACKET)  &kp LS(N0)      &kp RIGHT_BRACKET  &exclm     &kp GRAVE
+&trans       &kp NUMBER_1  &hml LSHIFT NUMBER_2  &kp NUMBER_3   &kp NUMBER_4  &kp N5       &paren_o          &paren_c               &brace_o        &brace_c           &kp SLASH  &quotes
+&trans       &kp NUMBER_6  &kp N7                &kp N8         &kp N9        &kp N0       &kp HOME          &kp END                &less_bracketo  &great_bracketc    &questm    &kp LEFT_ALT
                                                  &kp BACKSPACE  &trans        &kp SPACE    &trans            &trans                 &kp DEL
             >;
         };
