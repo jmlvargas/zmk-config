@@ -95,12 +95,12 @@
             #binding-cells = <2>;
             bindings =
                 <&macro_press>,
-                <&macro_param_1to1 &kp MODIFIER_PLACEHOLDER>,
+                <&macro_param_1to1 &kp MACRO_PLACEHOLDER>,
                 <&macro_tap>,
-                <&macro_param_2to1 &kp KEY_PLACEHOLDER>,
+                <&macro_param_2to1 &kp MACRO_PLACEHOLDER>,
                 <&macro_wait_time 80>,
                 <&macro_release>,
-                <&macro_param_1to1 &kp MODIFIER_PLACEHOLDER>;
+                <&macro_param_1to1 &kp MACRO_PLACEHOLDER>;
 
             label = "MSSW";
         };
