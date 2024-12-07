@@ -288,6 +288,24 @@
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
+
+        m2comma: m2comma {
+            compatible = "zmk,behavior-mod-morph";
+            label = "M2COMMA";
+            bindings = <&kp NUMBER_2>, <&kp COMMA>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        m3dot: m3dot {
+            compatible = "zmk,behavior-mod-morph";
+            label = "M3DOT";
+            bindings = <&kp NUMBER_3>, <&kp DOT>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
     };
 
     keymap {
@@ -313,16 +331,16 @@
 &trans  &kp PRINTSCREEN  &caps_word  &kp INS           &kp LS(SINGLE_QUOTE)  &kp LS(BACKSLASH)    &kp F1     &kp F2          &kp F3        &kp F4     &kp F5   &kp PAUSE_BREAK
 &trans  &none            &kp LSHIFT  &kp LEFT_CONTROL  &hml LEFT_ALT LS(N8)  &kp LS(N9)           &kp LEFT   &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT  &kp F11  &kp F12
 &trans  &none            &kp LC(X)   &kp LC(C)         &kp SINGLE_QUOTE      &kp BACKSLASH        &kp F6     &kp F7          &kp F8        &kp F9     &kp F10  &kp LEFT_ALT
-                                     &trans            &mo 3                 &trans               &kp ENTER  &trans          &kp DELETE
+                                     &trans            &mo 3                 &kp SPACE            &kp ENTER  &trans          &kp DELETE
             >;
         };
 
         kpad {
             bindings = <
-&trans  &kp F1  &kp F2          &kp F3                &kp F4            &ssw LS(BACKSLASH) LS(SINGLE_QUOTE)    &kp RA(SINGLE_QUOTE)  &ssw LS(NUMBER_6) N7  &ssw LS(RIGHT_BRACKET) N8  &ssw LS(N0) N9        &ssw RIGHT_BRACKET N0  &kp ESCAPE
-&trans  &kp F5  &hml LSHIFT F6  &hml LEFT_CONTROL F7  &hml LEFT_ALT F8  &ssw LS(N9) LS(N8)                     &none                 &hmr LEFT_ALT N4      &hmr RIGHT_CONTROL N5      &hmr RSHIFT N6        &kp SLASH              &quotes
-&trans  &kp F9  &kp F10         &kp F11               &kp F12           &ssw BACKSLASH SINGLE_QUOTE            &none                 &kp N1                &ssw COMMA NUMBER_2        &ssw PERIOD NUMBER_3  &none                  &trans
-                                &trans                &mo 3             &trans                                 &trans                &trans                &trans
+&trans  &none  &none           &kp F2            &trans  &trans    &none   &kp N7        &kp N8    &kp N9        &kp N0  &kp ESCAPE
+&trans  &none  &kp LEFT_SHIFT  &kp LEFT_CONTROL  &trans  &trans    &none   &kp NUMBER_4  &kp N5    &kp NUMBER_6  &none   &none
+&trans  &none  &none           &none             &trans  &trans    &none   &kp N1        &m2comma  &m3dot        &none   &trans
+                               &trans            &mo 3   &trans    &trans  &trans        &trans
             >;
         };
 
@@ -334,10 +352,10 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&gravetilde  &kp RA(Q)     &kp HASH              &kp DOLLAR           &kp PERCENT             &mcaret      &kp LS(NUMBER_6)  &kp LS(RIGHT_BRACKET)  &kp LS(N0)            &kp RIGHT_BRACKET         &exclm     &kp GRAVE
-&trans       &kp NUMBER_1  &hml LSHIFT NUMBER_2  &hml LCTRL NUMBER_3  &hml LEFT_ALT NUMBER_4  &kp N5       &kp LEFT          &kp DOWN               &kp UP_ARROW          &kp RIGHT                 &kp SLASH  &quotes
-&trans       &kp NUMBER_6  &kp N7                &kp N8               &kp N9                  &kp N0       &none             &none                  &kp NON_US_BACKSLASH  &kp LS(NON_US_BACKSLASH)  &questm    &kp LEFT_ALT
-                                                 &kp BACKSPACE        &trans                  &kp SPACE    &trans            &trans                 &kp DEL
+&gravetilde  &kp RA(Q)     &kp HASH      &kp DOLLAR     &kp PERCENT   &mcaret      &kp LS(NUMBER_6)  &kp LS(RIGHT_BRACKET)  &kp LS(N0)            &kp RIGHT_BRACKET         &exclm     &kp GRAVE
+&trans       &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3   &kp NUMBER_4  &kp N5       &none             &none                  &none                 &none                     &kp SLASH  &quotes
+&trans       &kp NUMBER_6  &kp N7        &kp N8         &kp N9        &kp N0       &none             &none                  &kp NON_US_BACKSLASH  &kp LS(NON_US_BACKSLASH)  &questm    &kp LEFT_ALT
+                                         &kp BACKSPACE  &trans        &kp SPACE    &trans            &trans                 &kp DEL
             >;
         };
 
