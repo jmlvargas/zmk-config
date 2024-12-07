@@ -108,7 +108,7 @@
         mcaret: mcaret {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp RA(SINGLE_QUOTE) &kp LA(SINGLE_QUOTE)>;
+            bindings = <&kp RA(SINGLE_QUOTE) &kp SPACE>;
             label = "MCARET";
         };
     };
