@@ -76,22 +76,6 @@
             require-prior-idle-ms = <100>;
             layers = <1 3>;
         };
-
-        gohome {
-            bindings = <&kp HOME>;
-            key-positions = <31 32>;
-            timeout-ms = <30>;
-            require-prior-idle-ms = <100>;
-            layers = <1 3>;
-        };
-
-        goend {
-            bindings = <&kp END>;
-            key-positions = <32 33>;
-            timeout-ms = <30>;
-            require-prior-idle-ms = <100>;
-            layers = <1 3>;
-        };
     };
 
     macros {
@@ -354,7 +338,7 @@
             bindings = <
 &gravetilde  &kp RA(Q)     &kp HASH              &kp DOLLAR     &kp PERCENT   &mcaret      &kp LS(NUMBER_6)  &kp LS(RIGHT_BRACKET)  &kp LS(N0)            &kp RIGHT_BRACKET         &exclm     &kp GRAVE
 &trans       &kp NUMBER_1  &hml LSHIFT NUMBER_2  &kp NUMBER_3   &kp NUMBER_4  &kp N5       &none             &parnts                &braces               &brckts                   &kp SLASH  &quotes
-&trans       &kp NUMBER_6  &kp N7                &kp N8         &kp N9        &kp N0       &mtilde           &none                  &kp NON_US_BACKSLASH  &kp LS(NON_US_BACKSLASH)  &questm    &kp LEFT_ALT
+&trans       &kp NUMBER_6  &kp N7                &kp N8         &kp N9        &kp N0       &kp HOME          &kp END                &kp NON_US_BACKSLASH  &kp LS(NON_US_BACKSLASH)  &questm    &kp LEFT_ALT
                                                  &kp BACKSPACE  &trans        &kp SPACE    &trans            &trans                 &kp DEL
             >;
         };
