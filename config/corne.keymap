@@ -196,6 +196,15 @@
             flavor = "balanced";
             quick-tap-ms = <250>;
         };
+
+        mph_quotes: mph_quotes {
+            compatible = "zmk,behavior-mod-morph";
+            label = "MPH_QUOTES";
+            bindings = <&dmkp LEFT_SHIFT NUMBER_2>, <&kp MINUS>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
     };
 
     keymap {
@@ -228,7 +237,7 @@
         kpad {
             bindings = <
 &trans  &kp F1  &kp F2          &kp F3                &kp F4            &ssw LS(BACKSLASH) LS(SINGLE_QUOTE)    &kp RA(SINGLE_QUOTE)  &ssw LS(NUMBER_6) N7  &ssw LS(RIGHT_BRACKET) N8  &ssw LS(N0) N9        &ssw RIGHT_BRACKET N0  &kp ESCAPE
-&trans  &kp F5  &hml LSHIFT F6  &hml LEFT_CONTROL F7  &hml LEFT_ALT F8  &ssw LS(N9) LS(N8)                     &none                 &hmr LEFT_ALT N4      &hmr RIGHT_CONTROL N5      &hmr RSHIFT N6        &kp SLASH              &ssw MINUS LS(NUMBER_2)
+&trans  &kp F5  &hml LSHIFT F6  &hml LEFT_CONTROL F7  &hml LEFT_ALT F8  &ssw LS(N9) LS(N8)                     &none                 &hmr LEFT_ALT N4      &hmr RIGHT_CONTROL N5      &hmr RSHIFT N6        &kp SLASH              &mph_quotes
 &trans  &kp F9  &kp F10         &kp F11               &kp F12           &ssw BACKSLASH SINGLE_QUOTE            &none                 &kp N1                &ssw COMMA NUMBER_2        &ssw PERIOD NUMBER_3  &trans                 &trans
                                 &trans                &mo 3             &trans                                 &trans                &trans                &trans
             >;
