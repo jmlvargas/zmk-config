@@ -276,7 +276,7 @@
         tildegrave: tildegrave {
             compatible = "zmk,behavior-mod-morph";
             label = "TILDEGRAVE";
-            bindings = <&mgrave>, <&kp RA(NUMBER_4)>;
+            bindings = <&mgrave>, <&kp RA(N4)>;
 
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
