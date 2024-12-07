@@ -352,10 +352,10 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&gravetilde  &kp RA(Q)     &kp HASH      &kp DOLLAR     &kp PERCENT   &mcaret      &kp LS(NUMBER_6)  &kp LS(RIGHT_BRACKET)  &kp LS(N0)            &kp RIGHT_BRACKET         &exclm     &kp GRAVE
-&trans       &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3   &kp NUMBER_4  &kp N5       &none             &none                  &none                 &none                     &kp SLASH  &quotes
-&trans       &kp NUMBER_6  &kp N7        &kp N8         &kp N9        &kp N0       &none             &none                  &kp NON_US_BACKSLASH  &kp LS(NON_US_BACKSLASH)  &questm    &kp LEFT_ALT
-                                         &kp BACKSPACE  &trans        &kp SPACE    &trans            &trans                 &kp DEL
+&gravetilde  &kp RA(Q)     &kp HASH              &kp DOLLAR     &kp PERCENT   &mcaret      &kp LS(NUMBER_6)  &kp LS(RIGHT_BRACKET)  &kp LS(N0)            &kp RIGHT_BRACKET         &exclm     &kp GRAVE
+&trans       &kp NUMBER_1  &hml LSHIFT NUMBER_2  &kp NUMBER_3   &kp NUMBER_4  &kp N5       &none             &parnts                &braces               &brckts                   &kp SLASH  &quotes
+&trans       &kp NUMBER_6  &kp N7                &kp N8         &kp N9        &kp N0       &mtilde           &none                  &kp NON_US_BACKSLASH  &kp LS(NON_US_BACKSLASH)  &questm    &kp LEFT_ALT
+                                                 &kp BACKSPACE  &trans        &kp SPACE    &trans            &trans                 &kp DEL
             >;
         };
 
