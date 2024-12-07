@@ -143,6 +143,13 @@
             bindings = <&kp RA(SINGLE_QUOTE) &kp SPACE>;
             label = "MCARET";
         };
+
+        mgrave: tildegrave {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp RA(BACKSLASH) &kp SPACE>;
+            label = "TILDEGRAVE";
+        };
     };
 
     behaviors {
@@ -265,6 +272,15 @@
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
+
+        tildegrave: tildegrave {
+            compatible = "zmk,behavior-mod-morph";
+            label = "TILDEGRAVE";
+            bindings = <&mgrave>, <&kp RA(NUMBER_4)>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
     };
 
     keymap {
@@ -311,10 +327,10 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&kp RA(NUMBER_4)  &kp RA(Q)     &kp HASH              &kp DOLLAR           &kp PERCENT             &mcaret      &kp LS(NUMBER_6)  &kp LS(RIGHT_BRACKET)  &kp LS(N0)            &kp RIGHT_BRACKET         &exclm     &kp GRAVE
-&trans            &kp NUMBER_1  &hml LSHIFT NUMBER_2  &hml LCTRL NUMBER_3  &hml LEFT_ALT NUMBER_4  &kp N5       &kp LEFT          &kp DOWN               &kp UP_ARROW          &kp RIGHT                 &kp SLASH  &quotes
-&trans            &kp NUMBER_6  &kp N7                &kp N8               &kp N9                  &kp N0       &none             &none                  &kp NON_US_BACKSLASH  &kp LS(NON_US_BACKSLASH)  &questm    &kp LEFT_ALT
-                                                      &kp BACKSPACE        &trans                  &kp SPACE    &trans            &trans                 &kp DEL
+&tildegrave  &kp RA(Q)     &kp HASH              &kp DOLLAR           &kp PERCENT             &mcaret      &kp LS(NUMBER_6)  &kp LS(RIGHT_BRACKET)  &kp LS(N0)            &kp RIGHT_BRACKET         &exclm     &kp GRAVE
+&trans       &kp NUMBER_1  &hml LSHIFT NUMBER_2  &hml LCTRL NUMBER_3  &hml LEFT_ALT NUMBER_4  &kp N5       &kp LEFT          &kp DOWN               &kp UP_ARROW          &kp RIGHT                 &kp SLASH  &quotes
+&trans       &kp NUMBER_6  &kp N7                &kp N8               &kp N9                  &kp N0       &none             &none                  &kp NON_US_BACKSLASH  &kp LS(NON_US_BACKSLASH)  &questm    &kp LEFT_ALT
+                                                 &kp BACKSPACE        &trans                  &kp SPACE    &trans            &trans                 &kp DEL
             >;
         };
 
