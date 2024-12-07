@@ -90,7 +90,7 @@
             label = "AS";
         };
 
-        mssw: mssw {
+        dmodkp: delayed_modkp {
             compatible = "zmk,behavior-macro-two-param";
             #binding-cells = <2>;
             bindings =
@@ -102,7 +102,7 @@
                 <&macro_release>,
                 <&macro_param_1to1 &kp MACRO_PLACEHOLDER>;
 
-            label = "MSSW";
+            label = "DELAYED_MODKP";
         };
     };
 
@@ -143,9 +143,9 @@
             require-prior-idle-ms = <125>;
         };
 
-        ssw: symbol_switch {
+        ssw_kk: symbol_switch_kk {
             compatible = "zmk,behavior-hold-tap";
-            label = "SYMBOL_SWITCH";
+            label = "SYMBOL_SWITCH_KK";
             bindings = <&kp>, <&kp>;
 
             #binding-cells = <2>;
@@ -163,6 +163,39 @@
             tapping-term-ms = <160>;
             flavor = "hold-preferred";
         };
+
+        ssw_km: symbol_switch_km {
+            compatible = "zmk,behavior-hold-tap";
+            label = "SYMBOL_SWITCH_KM";
+            bindings = <&dmodkp>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <165>;
+            flavor = "balanced";
+            quick-tap-ms = <250>;
+        };
+
+        ssw_mk: symbol_switch_mk {
+            compatible = "zmk,behavior-hold-tap";
+            label = "SYMBOL_SWITCH_MK";
+            bindings = <&kp>, <&dmodkp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <165>;
+            flavor = "balanced";
+            quick-tap-ms = <250>;
+        };
+
+        ssw_mm: symbol_switch_mm {
+            compatible = "zmk,behavior-hold-tap";
+            label = "SYMBOL_SWITCH_MM";
+            bindings = <&dmodkp>, <&dmodkp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <165>;
+            flavor = "balanced";
+            quick-tap-ms = <250>;
+        };
     };
 
     keymap {
@@ -176,28 +209,28 @@
             //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
 
             bindings = <
-&kp TAB           &kp Q  &kp W          &kp E                &kp R            &kp T        &kp Y      &kp U            &kp I                 &kp O          &kp P                  &kp ESCAPE
-&sk LEFT_CONTROL  &kp A  &hml LSHIFT S  &hml LEFT_CONTROL D  &hml LEFT_ALT F  &kp G        &kp H      &hmr LEFT_ALT J  &hmr RIGHT_CONTROL K  &hmr RSHIFT L  &kp SEMI               &ssw MINUS LEFT_BRACKET
-&sk LSHFT         &kp Z  &kp X          &kp C                &kp V            &kp B        &kp N      &kp M            &kp COMMA             &kp DOT        &ssw RA(MINUS) LS(N7)  &kp RALT
+&kp TAB           &kp Q  &kp W          &kp E                &kp R            &kp T        &kp Y      &kp U            &kp I                 &kp O          &kp P                     &kp ESCAPE
+&sk LEFT_CONTROL  &kp A  &hml LSHIFT S  &hml LEFT_CONTROL D  &hml LEFT_ALT F  &kp G        &kp H      &hmr LEFT_ALT J  &hmr RIGHT_CONTROL K  &hmr RSHIFT L  &kp SEMI                  &ssw_kk MINUS LEFT_BRACKET
+&sk LSHFT         &kp Z  &kp X          &kp C                &kp V            &kp B        &kp N      &kp M            &kp COMMA             &kp DOT        &ssw_kk RA(MINUS) LS(N7)  &kp RALT
                                         &kp LCMD             &mo 3            &kp ENTER    &kp SPACE  &mo 1            &kp BACKSPACE
             >;
         };
 
         fctl {
             bindings = <
-&trans  &kp PRINTSCREEN  &caps_word  &kp INS           &none         &ssw LS(BACKSLASH) LS(SINGLE_QUOTE)    &kp F1    &kp F2          &kp F3        &kp F4     &kp F5   &kp PAUSE_BREAK
-&trans  &none            &kp LSHIFT  &kp LEFT_CONTROL  &kp LEFT_ALT  &ssw LS(N9) LS(N8)                     &kp LEFT  &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT  &kp F11  &kp F12
-&trans  &none            &kp LC(X)   &kp LC(C)         &kp LC(V)     &ssw BACKSLASH SINGLE_QUOTE            &kp F6    &kp F7          &kp F8        &kp F9     &kp F10  &kp LEFT_ALT
-                                     &trans            &mo 3         &trans                                 &trans    &trans          &kp DELETE
+&trans  &kp PRINTSCREEN  &caps_word  &kp INS           &none         &ssw_kk LS(BACKSLASH) LS(SINGLE_QUOTE)    &kp F1    &kp F2          &kp F3        &kp F4     &kp F5   &kp PAUSE_BREAK
+&trans  &none            &kp LSHIFT  &kp LEFT_CONTROL  &kp LEFT_ALT  &ssw_kk LS(N9) LS(N8)                     &kp LEFT  &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT  &kp F11  &kp F12
+&trans  &none            &kp LC(X)   &kp LC(C)         &kp LC(V)     &ssw_kk BACKSLASH SINGLE_QUOTE            &kp F6    &kp F7          &kp F8        &kp F9     &kp F10  &kp LEFT_ALT
+                                     &trans            &mo 3         &trans                                    &trans    &trans          &kp DELETE
             >;
         };
 
         kpad {
             bindings = <
-&trans  &kp F1  &kp F2          &kp F3                &kp F4            &ssw LS(BACKSLASH) LS(SINGLE_QUOTE)    &kp RA(SINGLE_QUOTE)  &ssw LS(NUMBER_6) N7  &ssw LS(RIGHT_BRACKET) N8  &ssw LS(N0) N9        &ssw RIGHT_BRACKET N0  &kp ESCAPE
-&trans  &kp F5  &hml LSHIFT F6  &hml LEFT_CONTROL F7  &hml LEFT_ALT F8  &ssw LS(N9) LS(N8)                     &none                 &hmr LEFT_ALT N4      &hmr RIGHT_CONTROL N5      &hmr RSHIFT N6        &ssw LS(SLASH) SLASH   &ssw MINUS LS(NUMBER_2)
-&trans  &kp F9  &kp F10         &kp F11               &kp F12           &ssw BACKSLASH SINGLE_QUOTE            &none                 &kp N1                &ssw COMMA NUMBER_2        &ssw PERIOD NUMBER_3  &trans                 &trans
-                                &trans                &mo 3             &trans                                 &trans                &trans                &trans
+&trans  &kp F1  &kp F2          &kp F3                &kp F4            &ssw_kk LS(BACKSLASH) LS(SINGLE_QUOTE)    &kp RA(SINGLE_QUOTE)  &ssw_kk LS(NUMBER_6) N7  &ssw_kk LS(RIGHT_BRACKET) N8  &ssw_kk LS(N0) N9        &ssw_kk RIGHT_BRACKET N0  &kp ESCAPE
+&trans  &kp F5  &hml LSHIFT F6  &hml LEFT_CONTROL F7  &hml LEFT_ALT F8  &ssw_kk LS(N9) LS(N8)                     &none                 &hmr LEFT_ALT N4         &hmr RIGHT_CONTROL N5         &hmr RSHIFT N6           &ssw_kk LS(SLASH) SLASH   &ssw_kk MINUS LS(NUMBER_2)
+&trans  &kp F9  &kp F10         &kp F11               &kp F12           &ssw_kk BACKSLASH SINGLE_QUOTE            &none                 &kp N1                   &ssw_kk COMMA NUMBER_2        &ssw_kk PERIOD NUMBER_3  &trans                    &trans
+                                &trans                &mo 3             &trans                                    &trans                &trans                   &trans
             >;
         };
 
@@ -209,19 +242,19 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&ssw RA(NUMBER_4) LS(GRAVE)  &ssw LS(EQUAL) EXCL  &kp RA(Q)             &kp HASH             &kp DLLR                &kp PRCNT    &kp RA(SINGLE_QUOTE)  &kp LS(NUMBER_6)    &kp LS(RIGHT_BRACKET)  &kp LS(N0)                &kp RIGHT_BRACKET     &kp GRAVE
-&trans                       &kp NUMBER_1         &hml LSHIFT NUMBER_2  &hml LCTRL NUMBER_3  &hml LEFT_ALT NUMBER_4  &kp N5       &kp LEFT              &kp DOWN            &kp UP_ARROW           &kp RIGHT                 &ssw LS(SLASH) SLASH  &ssw MINUS LS(NUMBER_2)
-&trans                       &kp NUMBER_6         &kp N7                &kp N8               &kp N9                  &kp N0       &ssw PAGE_UP HOME     &ssw PAGE_DOWN END  &kp NON_US_BACKSLASH   &kp LS(NON_US_BACKSLASH)  &ssw EQUAL LS(MINUS)  &kp LEFT_ALT
-                                                                        &trans               &trans                  &trans       &trans                &trans              &kp DEL
+&ssw_kk RA(NUMBER_4) LS(GRAVE)  &ssw_kk LS(EQUAL) EXCL  &kp RA(Q)             &kp HASH             &kp DLLR                &kp PRCNT    &kp RA(SINGLE_QUOTE)  &kp LS(NUMBER_6)       &kp LS(RIGHT_BRACKET)  &kp LS(N0)                &kp RIGHT_BRACKET        &kp GRAVE
+&trans                          &kp NUMBER_1            &hml LSHIFT NUMBER_2  &hml LCTRL NUMBER_3  &hml LEFT_ALT NUMBER_4  &kp N5       &kp LEFT              &kp DOWN               &kp UP_ARROW           &kp RIGHT                 &ssw_kk LS(SLASH) SLASH  &ssw_kk MINUS LS(NUMBER_2)
+&trans                          &kp NUMBER_6            &kp N7                &kp N8               &kp N9                  &kp N0       &ssw_kk PAGE_UP HOME  &ssw_kk PAGE_DOWN END  &kp NON_US_BACKSLASH   &kp LS(NON_US_BACKSLASH)  &ssw_kk EQUAL LS(MINUS)  &kp LEFT_ALT
+                                                                              &trans               &trans                  &trans       &trans                &trans                 &kp DEL
             >;
         };
 
         syst {
             bindings = <
-&to 0                      &none         &none         &none         &sys_reset    &none          &none        &sys_reset  &none  &none  &none  &to 0
-&mssw LEFT_SHIFT NUMBER_2  &none         &none         &trans        &none         &none          &none        &none       &none  &none  &none  &none
-&bt BT_CLR                 &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bootloader    &bootloader  &none       &none  &none  &none  &none
-                                                       &none         &none         &none          &none        &none       &none
+&to 0                        &none         &none         &none         &sys_reset    &none          &none        &sys_reset  &none  &none  &none  &to 0
+&dmodkp LEFT_SHIFT NUMBER_2  &none         &none         &trans        &none         &none          &none        &none       &none  &none  &none  &none
+&bt BT_CLR                   &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bootloader    &bootloader  &none       &none  &none  &none  &none
+                                                         &none         &none         &none          &none        &none       &none
             >;
         };
     };
