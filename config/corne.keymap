@@ -273,6 +273,13 @@
             bindings = <&kp LS(COMMA)>;
             label = "LA_SCOLON";
         };
+
+        la_dblqt: la_double_quote {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LS(NUMBER_2)>;
+            label = "LA_DOUBLE_QUOTE";
+        };
     };
 
     behaviors {
@@ -336,7 +343,7 @@
         quotes: quotes {
             compatible = "zmk,behavior-mod-morph";
             label = "QUOTES";
-            bindings = <&dmkp LEFT_SHIFT NUMBER_2>, <&kp MINUS>;
+            bindings = <&la_apost>, <&la_dblqt>;
 
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
@@ -423,19 +430,19 @@
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
-        less_bracketo: less_bracketo {
+        la_comma_lesst: la_comma_lesst {
             compatible = "zmk,behavior-mod-morph";
-            label = "LESS_BRACKETO";
-            bindings = <&la_less>, <&la_brkt_o>;
+            label = "LA_COMMA_LESST";
+            bindings = <&kp COMMA>, <&la_less>;
 
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
-        great_bracketc: great_bracketc {
+        la_dot_great: la_dot_great {
             compatible = "zmk,behavior-mod-morph";
-            label = "GREAT_BRACKETC";
-            bindings = <&la_great>, <&la_brkt_c>;
+            label = "LA_DOT_GREAT";
+            bindings = <&kp LC(DOT)>, <&la_great>;
 
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
