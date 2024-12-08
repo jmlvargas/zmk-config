@@ -280,6 +280,13 @@
             bindings = <&kp LS(NUMBER_2)>;
             label = "LA_DOUBLE_QUOTE";
         };
+
+        la_expon: la_exponente {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp RA(SINGLE_QUOTE)>;
+            label = "LA_EXPONENTE";
+        };
     };
 
     behaviors {
@@ -522,7 +529,7 @@
             bindings = <
 &gravetilde  &la_at        &kp HASH              &kp DOLLAR    &kp PERCENT   &la_caret    &la_amp           &la_astsk         &la_equal   &la_plus    &exclm     &la_pipe
 &trans       &kp NUMBER_1  &hml LSHIFT NUMBER_2  &kp NUMBER_3  &kp NUMBER_4  &kp N5       &paren_bracket_o  &paren_bracket_c  &la_brce_o  &la_brce_c  &la_minus  &quotes
-&trans       &kp NUMBER_6  &kp N7                &kp N8        &kp N9        &kp N0       &la_ntild         &none             &la_less    &la_great   &questm    &kp LEFT_ALT
+&trans       &kp NUMBER_6  &kp N7                &kp N8        &kp N9        &kp N0       &la_ntild         &la_expon         &la_less    &la_great   &questm    &kp LEFT_ALT
                                                  &kp DEL       &trans        &kp SPACE    &trans            &trans            &kp DEL
             >;
         };
