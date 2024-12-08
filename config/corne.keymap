@@ -16,7 +16,7 @@
 
         syst_layer {
             bindings = <&tog 4>;
-            key-positions = <35 23 11>;
+            key-positions = <23 11 35>;
             timeout-ms = <30>;
             require-prior-idle-ms = <100>;
             layers = <0>;
@@ -37,44 +37,36 @@
             layers = <0>;
         };
 
-        space {
-            bindings = <&kp SPACE>;
-            key-positions = <16 17>;
-            timeout-ms = <30>;
-            require-prior-idle-ms = <100>;
-            layers = <3>;
-        };
-
-        backspace {
-            bindings = <&kp BACKSPACE>;
-            key-positions = <28 29>;
-            timeout-ms = <30>;
-            require-prior-idle-ms = <100>;
-            layers = <3>;
-        };
-
-        delete {
-            bindings = <&kp DELETE>;
-            key-positions = <5 4>;
-            timeout-ms = <30>;
-            require-prior-idle-ms = <100>;
-            layers = <3>;
-        };
-
         pageup {
             bindings = <&kp PAGE_UP>;
-            key-positions = <8 9>;
+            key-positions = <8 7>;
             timeout-ms = <30>;
             require-prior-idle-ms = <100>;
-            layers = <1 3>;
+            layers = <1>;
         };
 
         pagedown {
             bindings = <&kp PAGE_DOWN>;
+            key-positions = <20 19>;
+            timeout-ms = <30>;
+            require-prior-idle-ms = <100>;
+            layers = <1>;
+        };
+
+        gohome {
+            bindings = <&kp HOME>;
+            key-positions = <8 9>;
+            timeout-ms = <30>;
+            require-prior-idle-ms = <100>;
+            layers = <1>;
+        };
+
+        goend {
+            bindings = <&kp END>;
             key-positions = <20 21>;
             timeout-ms = <30>;
             require-prior-idle-ms = <100>;
-            layers = <1 3>;
+            layers = <1>;
         };
     };
 
@@ -474,19 +466,19 @@
 
         fctl {
             bindings = <
-&trans  &kp PRINTSCREEN  &caps_word  &kp INS           &la_brkt_o  &la_brkt_c    &kp F1     &kp F2          &kp F3        &kp F4     &kp F5   &kp PAUSE_BREAK
-&trans  &none            &kp LSHIFT  &kp LEFT_CONTROL  &la_parn_o  &la_parn_c    &kp LEFT   &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT  &kp F11  &kp F12
-&trans  &none            &kp LC(X)   &kp LC(C)         &la_brce_o  &la_brce_c    &kp F6     &kp F7          &kp F8        &kp F9     &kp F10  &kp LEFT_ALT
-                                     &trans            &mo 3       &kp SPACE     &kp ENTER  &trans          &kp DELETE
+&trans  &kp PRINTSCREEN  &caps_word  &none             &none         &none        &kp F1     &kp F2          &kp F3        &kp F4     &kp F5   &kp PAUSE_BREAK
+&trans  &none            &kp LSHIFT  &kp LEFT_CONTROL  &kp LEFT_ALT  &none        &kp LEFT   &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT  &kp F11  &kp F12
+&trans  &kp INS          &kp LC(X)   &kp LC(C)         &kp LC(V)     &none        &kp F6     &kp F7          &kp F8        &kp F9     &kp F10  &kp LEFT_ALT
+                                     &trans            &mo 3         &kp SPACE    &kp ENTER  &trans          &kp DELETE
             >;
         };
 
         kpad {
             bindings = <
-&trans  &none  &none           &kp F2            &trans  &trans    &none   &kp N7        &kp N8    &kp N9        &kp N0  &kp ESCAPE
-&trans  &none  &kp LEFT_SHIFT  &kp LEFT_CONTROL  &trans  &trans    &none   &kp NUMBER_4  &kp N5    &kp NUMBER_6  &none   &none
-&trans  &none  &none           &none             &trans  &trans    &none   &kp N1        &m2comma  &m3dot        &none   &trans
-                               &trans            &mo 3   &trans    &trans  &trans        &trans
+&trans  &none  &none           &kp F2            &trans        &trans    &none   &kp N7        &kp N8    &kp N9        &kp N0  &kp ESCAPE
+&trans  &none  &kp LEFT_SHIFT  &kp LEFT_CONTROL  &kp LEFT_ALT  &trans    &none   &kp NUMBER_4  &kp N5    &kp NUMBER_6  &none   &none
+&trans  &none  &none           &none             &trans        &trans    &none   &kp N1        &m2comma  &m3dot        &none   &trans
+                               &trans            &mo 3         &trans    &trans  &trans        &trans
             >;
         };
 
@@ -498,10 +490,10 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&gravetilde  &la_at        &kp HASH              &kp DOLLAR     &kp PERCENT   &la_caret    &la_amp           &la_astsk         &la_equal   &la_plus    &exclm     &la_pipe
-&trans       &kp NUMBER_1  &hml LSHIFT NUMBER_2  &kp NUMBER_3   &kp NUMBER_4  &kp N5       &paren_bracket_o  &paren_bracket_c  &la_brce_o  &la_brce_c  &la_minus  &quotes
-&trans       &kp NUMBER_6  &kp N7                &kp N8         &kp N9        &kp N0       &kp HOME          &kp END           &la_less    &la_great   &questm    &kp LEFT_ALT
-                                                 &kp BACKSPACE  &trans        &kp SPACE    &trans            &trans            &kp DEL
+&gravetilde  &la_at        &kp HASH              &kp DOLLAR    &kp PERCENT   &la_caret    &la_amp           &la_astsk         &la_equal   &la_plus    &exclm     &la_pipe
+&trans       &kp NUMBER_1  &hml LSHIFT NUMBER_2  &kp NUMBER_3  &kp NUMBER_4  &kp N5       &paren_bracket_o  &paren_bracket_c  &la_brce_o  &la_brce_c  &la_minus  &quotes
+&trans       &kp NUMBER_6  &kp N7                &kp N8        &kp N9        &kp N0       &la_brkt_o        &la_brkt_c        &la_less    &la_great   &questm    &kp LEFT_ALT
+                                                 &kp DEL       &trans        &kp SPACE    &trans            &trans            &kp DEL
             >;
         };
 
