@@ -259,6 +259,20 @@
             bindings = <&kp SEMICOLON>;
             label = "LA_NTILD";
         };
+
+        la_colon: la_colon {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LS(DOT)>;
+            label = "LA_COLON";
+        };
+
+        la_semic: la_scolon {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LS(COMMA)>;
+            label = "LA_SCOLON";
+        };
     };
 
     behaviors {
@@ -444,6 +458,15 @@
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
+
+        semic_colon: semic_colon {
+            compatible = "zmk,behavior-mod-morph";
+            label = "SEMIC_COLON";
+            bindings = <&la_semic>, <&la_colon>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
     };
 
     keymap {
@@ -457,9 +480,9 @@
             //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
 
             bindings = <
-&kp TAB           &kp Q  &kp W          &kp E                &kp R            &kp T        &kp Y      &kp U            &kp I                 &kp O          &kp P      &kp ESCAPE
-&sk LEFT_CONTROL  &kp A  &hml LSHIFT S  &hml LEFT_CONTROL D  &hml LEFT_ALT F  &kp G        &kp H      &hmr LEFT_ALT J  &hmr RIGHT_CONTROL K  &hmr RSHIFT L  &la_ntild  &la_tilde
-&sk LSHFT         &kp Z  &kp X          &kp C                &kp V            &kp B        &kp N      &kp M            &kp COMMA             &kp DOT        &slashes   &kp RALT
+&kp TAB           &kp Q  &kp W          &kp E                &kp R            &kp T        &kp Y      &kp U            &kp I                 &kp O          &kp P         &kp ESCAPE
+&sk LEFT_CONTROL  &kp A  &hml LSHIFT S  &hml LEFT_CONTROL D  &hml LEFT_ALT F  &kp G        &kp H      &hmr LEFT_ALT J  &hmr RIGHT_CONTROL K  &hmr RSHIFT L  &semic_colon  &la_tilde
+&sk LSHFT         &kp Z  &kp X          &kp C                &kp V            &kp B        &kp N      &kp M            &kp COMMA             &kp DOT        &slashes      &kp RALT
                                         &kp LCMD             &mo 3            &kp ENTER    &kp SPACE  &mo 1            &kp BACKSPACE
             >;
         };
@@ -492,7 +515,7 @@
             bindings = <
 &gravetilde  &la_at        &kp HASH              &kp DOLLAR    &kp PERCENT   &la_caret    &la_amp           &la_astsk         &la_equal   &la_plus    &exclm     &la_pipe
 &trans       &kp NUMBER_1  &hml LSHIFT NUMBER_2  &kp NUMBER_3  &kp NUMBER_4  &kp N5       &paren_bracket_o  &paren_bracket_c  &la_brce_o  &la_brce_c  &la_minus  &quotes
-&trans       &kp NUMBER_6  &kp N7                &kp N8        &kp N9        &kp N0       &la_brkt_o        &la_brkt_c        &la_less    &la_great   &questm    &kp LEFT_ALT
+&trans       &kp NUMBER_6  &kp N7                &kp N8        &kp N9        &kp N0       &la_ntild         &none             &la_less    &la_great   &questm    &kp LEFT_ALT
                                                  &kp DEL       &trans        &kp SPACE    &trans            &trans            &kp DEL
             >;
         };
