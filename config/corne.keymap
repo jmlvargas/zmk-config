@@ -476,7 +476,7 @@
             bindings = <
 &trans  &kp PRINTSCREEN  &caps_word  &kp INS           &la_brkt_o  &la_brkt_c    &kp F1     &kp F2          &kp F3        &kp F4     &kp F5   &kp PAUSE_BREAK
 &trans  &none            &kp LSHIFT  &kp LEFT_CONTROL  &la_parn_o  &la_parn_c    &kp LEFT   &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT  &kp F11  &kp F12
-&trans  &none            &kp LC(X)   &kp LC(C)         &la_brce_o  &la_brkt_c    &kp F6     &kp F7          &kp F8        &kp F9     &kp F10  &kp LEFT_ALT
+&trans  &none            &kp LC(X)   &kp LC(C)         &la_brce_o  &la_brce_c    &kp F6     &kp F7          &kp F8        &kp F9     &kp F10  &kp LEFT_ALT
                                      &trans            &mo 3       &kp SPACE     &kp ENTER  &trans          &kp DELETE
             >;
         };
@@ -508,7 +508,7 @@
         syst {
             bindings = <
 &to 0                      &none         &none         &none         &sys_reset    &none          &none        &sys_reset  &none  &none  &none  &to 0
-&dmkp LEFT_SHIFT NUMBER_2  &none         &none         &trans        &none         &none          &none        &none       &none  &none  &none  &none
+&dmkp LEFT_SHIFT NUMBER_2  &none         &none         &none         &none         &none          &none        &none       &none  &none  &none  &none
 &bt BT_CLR                 &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bootloader    &bootloader  &none       &none  &none  &none  &none
                                                        &none         &none         &none          &none        &none       &none
             >;
