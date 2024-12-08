@@ -135,11 +135,11 @@
             label = "TILDEGRAVE";
         };
 
-        la_tilde: mtilde {
+        la_oblt: la_oblique_tilde {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&kp RA(RIGHT_BRACKET) &kp SPACE>;
-            label = "MTILDE";
+            label = "LA_OBLIQUE_TILDE";
         };
 
         la_parn_o: mparenopen {
@@ -245,6 +245,27 @@
             #binding-cells = <0>;
             bindings = <&kp GRAVE>;
             label = "LA_PIPE";
+        };
+
+        la_tilde: la_tilde {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LEFT_BRACKET>;
+            label = "LA_TILDE";
+        };
+
+        la_apost: la_apost {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp MINUS>;
+            label = "LA_APOST";
+        };
+
+        la_ntild: la_ntild {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp SEMICOLON>;
+            label = "LA_NTILD";
         };
     };
 
@@ -372,7 +393,7 @@
         gravetilde: gravetilde {
             compatible = "zmk,behavior-mod-morph";
             label = "GRAVETILDE";
-            bindings = <&la_grave>, <&la_tilde>;
+            bindings = <&la_grave>, <&la_oblt>;
 
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
@@ -444,9 +465,9 @@
             //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
 
             bindings = <
-&kp TAB           &kp Q  &kp W          &kp E                &kp R            &kp T        &kp Y      &kp U            &kp I                 &kp O          &kp P     &kp ESCAPE
-&sk LEFT_CONTROL  &kp A  &hml LSHIFT S  &hml LEFT_CONTROL D  &hml LEFT_ALT F  &kp G        &kp H      &hmr LEFT_ALT J  &hmr RIGHT_CONTROL K  &hmr RSHIFT L  &kp SEMI  &ssw MINUS LEFT_BRACKET
-&sk LSHFT         &kp Z  &kp X          &kp C                &kp V            &kp B        &kp N      &kp M            &kp COMMA             &kp DOT        &slashes  &kp RALT
+&kp TAB           &kp Q  &kp W          &kp E                &kp R            &kp T        &kp Y      &kp U            &kp I                 &kp O          &kp P      &kp ESCAPE
+&sk LEFT_CONTROL  &kp A  &hml LSHIFT S  &hml LEFT_CONTROL D  &hml LEFT_ALT F  &kp G        &kp H      &hmr LEFT_ALT J  &hmr RIGHT_CONTROL K  &hmr RSHIFT L  &la_ntild  &la_tilde
+&sk LSHFT         &kp Z  &kp X          &kp C                &kp V            &kp B        &kp N      &kp M            &kp COMMA             &kp DOT        &slashes   &kp RALT
                                         &kp LCMD             &mo 3            &kp ENTER    &kp SPACE  &mo 1            &kp BACKSPACE
             >;
         };
