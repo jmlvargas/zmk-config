@@ -121,81 +121,130 @@
             label = "DELAYED_MODKP";
         };
 
-        mcaret: mcaret {
+        la_caret: mcaret {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&kp RA(SINGLE_QUOTE) &kp SPACE>;
             label = "MCARET";
         };
 
-        mgrave: tildegrave {
+        la_grave: tildegrave {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&kp RA(BACKSLASH) &kp SPACE>;
             label = "TILDEGRAVE";
         };
 
-        mtilde: mtilde {
+        la_tilde: mtilde {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&kp RA(RIGHT_BRACKET) &kp SPACE>;
             label = "MTILDE";
         };
 
-        paren_o: mparenopen {
+        la_parn_o: mparenopen {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&kp LS(N8)>;
             label = "MPARENOPEN";
         };
 
-        paren_c: mparencl {
+        la_parn_c: mparencl {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&kp LS(N9)>;
             label = "MPARENCL";
         };
 
-        brace_o: mbraceo {
+        la_brce_o: mbraceo {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&kp APOS>;
             label = "MBRACEO";
         };
 
-        brace_c: mbracec {
+        la_brce_c: mbracec {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&kp BACKSLASH>;
             label = "MBRACEC";
         };
 
-        bracket_o: bracketo {
+        la_brkt_o: bracketo {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&kp LS(APOS)>;
             label = "BRACKETO";
         };
 
-        bracket_c: bracketc {
+        la_brkt_c: bracketc {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&kp LS(BACKSLASH)>;
             label = "BRACKETC";
         };
 
-        less: mlessthan {
+        la_less: mlessthan {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&kp NON_US_BACKSLASH>;
             label = "MLESSTHAN";
         };
 
-        great: mgreat {
+        la_great: mgreat {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&kp LS(NON_US_BACKSLASH)>;
             label = "MGREAT";
+        };
+
+        la_at: arroba {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp RA(Q)>;
+            label = "ARROBA";
+        };
+
+        la_amp: amp {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LS(NUMBER_6)>;
+            label = "AMP";
+        };
+
+        la_astsk: astersk {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LS(RIGHT_BRACKET)>;
+            label = "ASTERSK";
+        };
+
+        la_equal: la_equal {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LS(NUMBER_0)>;
+            label = "LA_EQUAL";
+        };
+
+        la_plus: la_plus {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp RIGHT_BRACKET>;
+            label = "LA_PLUS";
+        };
+
+        la_minus: la_minus {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp SLASH>;
+            label = "LA_MINUS";
+        };
+
+        la_pipe: la_pipe {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp GRAVE>;
+            label = "LA_PIPE";
         };
     };
 
@@ -323,7 +372,7 @@
         gravetilde: gravetilde {
             compatible = "zmk,behavior-mod-morph";
             label = "GRAVETILDE";
-            bindings = <&mgrave>, <&mtilde>;
+            bindings = <&la_grave>, <&la_tilde>;
 
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
@@ -350,7 +399,7 @@
         less_bracketo: less_bracketo {
             compatible = "zmk,behavior-mod-morph";
             label = "LESS_BRACKETO";
-            bindings = <&less>, <&bracket_o>;
+            bindings = <&la_less>, <&la_brkt_o>;
 
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
@@ -359,7 +408,7 @@
         great_bracketc: great_bracketc {
             compatible = "zmk,behavior-mod-morph";
             label = "GREAT_BRACKETC";
-            bindings = <&great>, <&bracket_c>;
+            bindings = <&la_great>, <&la_brkt_c>;
 
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
@@ -368,7 +417,7 @@
         paren_bracket_o: paren_bracket_o {
             compatible = "zmk,behavior-mod-morph";
             label = "PAREN_BRACKET_O";
-            bindings = <&paren_o>, <&bracket_o>;
+            bindings = <&la_parn_o>, <&la_brkt_o>;
 
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
@@ -377,7 +426,7 @@
         paren_bracket_c: paren_bracket_c {
             compatible = "zmk,behavior-mod-morph";
             label = "PAREN_BRACKET_C";
-            bindings = <&paren_c>, <&bracket_c>;
+            bindings = <&la_parn_c>, <&la_brkt_c>;
 
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
@@ -404,10 +453,10 @@
 
         fctl {
             bindings = <
-&trans  &kp PRINTSCREEN  &caps_word  &kp INS           &kp LS(SINGLE_QUOTE)  &kp LS(BACKSLASH)    &kp F1     &kp F2          &kp F3        &kp F4     &kp F5   &kp PAUSE_BREAK
-&trans  &none            &kp LSHIFT  &kp LEFT_CONTROL  &hml LEFT_ALT LS(N8)  &kp LS(N9)           &kp LEFT   &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT  &kp F11  &kp F12
-&trans  &none            &kp LC(X)   &kp LC(C)         &kp SINGLE_QUOTE      &kp BACKSLASH        &kp F6     &kp F7          &kp F8        &kp F9     &kp F10  &kp LEFT_ALT
-                                     &trans            &mo 3                 &kp SPACE            &kp ENTER  &trans          &kp DELETE
+&trans  &kp PRINTSCREEN  &caps_word  &kp INS           &la_brkt_o  &la_brkt_c    &kp F1     &kp F2          &kp F3        &kp F4     &kp F5   &kp PAUSE_BREAK
+&trans  &none            &kp LSHIFT  &kp LEFT_CONTROL  &la_parn_o  &la_parn_c    &kp LEFT   &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT  &kp F11  &kp F12
+&trans  &none            &kp LC(X)   &kp LC(C)         &la_brce_o  &la_brkt_c    &kp F6     &kp F7          &kp F8        &kp F9     &kp F10  &kp LEFT_ALT
+                                     &trans            &mo 3       &kp SPACE     &kp ENTER  &trans          &kp DELETE
             >;
         };
 
@@ -428,10 +477,10 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&gravetilde  &kp RA(Q)     &kp HASH              &kp DOLLAR     &kp PERCENT   &mcaret      &kp LS(NUMBER_6)  &kp LS(RIGHT_BRACKET)  &kp LS(N0)  &kp RIGHT_BRACKET  &exclm     &kp GRAVE
-&trans       &kp NUMBER_1  &hml LSHIFT NUMBER_2  &kp NUMBER_3   &kp NUMBER_4  &kp N5       &paren_bracket_o  &paren_bracket_c       &brace_o    &brace_c           &kp SLASH  &quotes
-&trans       &kp NUMBER_6  &kp N7                &kp N8         &kp N9        &kp N0       &kp HOME          &kp END                &less       &great             &questm    &kp LEFT_ALT
-                                                 &kp BACKSPACE  &trans        &kp SPACE    &trans            &trans                 &kp DEL
+&gravetilde  &la_at        &kp HASH              &kp DOLLAR     &kp PERCENT   &la_caret    &la_amp           &la_astsk         &la_equal   &la_plus    &exclm     &la_pipe
+&trans       &kp NUMBER_1  &hml LSHIFT NUMBER_2  &kp NUMBER_3   &kp NUMBER_4  &kp N5       &paren_bracket_o  &paren_bracket_c  &la_brce_o  &la_brce_c  &la_minus  &quotes
+&trans       &kp NUMBER_6  &kp N7                &kp N8         &kp N9        &kp N0       &kp HOME          &kp END           &la_less    &la_great   &questm    &kp LEFT_ALT
+                                                 &kp BACKSPACE  &trans        &kp SPACE    &trans            &trans            &kp DEL
             >;
         };
 
