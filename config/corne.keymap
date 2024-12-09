@@ -390,33 +390,6 @@
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
-        braces: braces {
-            compatible = "zmk,behavior-mod-morph";
-            label = "BRACES";
-            bindings = <&kp SINGLE_QUOTE>, <&kp BACKSLASH>;
-
-            #binding-cells = <0>;
-            mods = <(MOD_LSFT|MOD_RSFT)>;
-        };
-
-        parnts: parnts {
-            compatible = "zmk,behavior-mod-morph";
-            label = "PARNTS";
-            bindings = <&kp LS(N8)>, <&kp LS(N9)>;
-
-            #binding-cells = <0>;
-            mods = <(MOD_LSFT|MOD_RSFT)>;
-        };
-
-        brckts: brckts {
-            compatible = "zmk,behavior-mod-morph";
-            label = "BRCKTS";
-            bindings = <&kp LS(SINGLE_QUOTE)>, <&kp LS(BACKSLASH)>;
-
-            #binding-cells = <0>;
-            mods = <(MOD_LSFT|MOD_RSFT)>;
-        };
-
         gravetilde: gravetilde {
             compatible = "zmk,behavior-mod-morph";
             label = "GRAVETILDE";
@@ -439,24 +412,6 @@
             compatible = "zmk,behavior-mod-morph";
             label = "M3DOT";
             bindings = <&kp NUMBER_3>, <&kp DOT>;
-
-            #binding-cells = <0>;
-            mods = <(MOD_LSFT|MOD_RSFT)>;
-        };
-
-        la_comma_lesst: la_comma_lesst {
-            compatible = "zmk,behavior-mod-morph";
-            label = "LA_COMMA_LESST";
-            bindings = <&kp COMMA>, <&la_less>;
-
-            #binding-cells = <0>;
-            mods = <(MOD_LSFT|MOD_RSFT)>;
-        };
-
-        la_dot_great: la_dot_great {
-            compatible = "zmk,behavior-mod-morph";
-            label = "LA_DOT_GREAT";
-            bindings = <&kp LC(DOT)>, <&la_great>;
 
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
