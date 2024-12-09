@@ -287,6 +287,13 @@
             bindings = <&kp RA(SINGLE_QUOTE)>;
             label = "LA_EXPONENTE";
         };
+
+        la_excl_o: la_exclamation_open {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LS(EQUAL)>;
+            label = "LA_EXCLAMATION_OPEN";
+        };
     };
 
     behaviors {
@@ -350,7 +357,7 @@
         quotes: quotes {
             compatible = "zmk,behavior-mod-morph";
             label = "QUOTES";
-            bindings = <&la_apost>, <&la_dblqt>;
+            bindings = <&la_dblqt>, <&la_apost>;
 
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
@@ -368,7 +375,7 @@
         exclm: exclm {
             compatible = "zmk,behavior-mod-morph";
             label = "EXCLM";
-            bindings = <&kp EXCL>, <&kp LS(EQUAL)>;
+            bindings = <&kp EXCL>, <&la_excl_o>;
 
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
