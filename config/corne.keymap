@@ -551,7 +551,7 @@
 &kp TAB           &kp Q  &kp W          &kp E                &kp R            &kp T        &kp Y      &kp U            &kp I                 &kp O           &kp P                    &kp ESCAPE
 &sk LEFT_CONTROL  &kp A  &hml LSHIFT S  &hml LEFT_CONTROL D  &hml LEFT_ALT F  &kp G        &kp H      &hmr LEFT_ALT J  &hmr RIGHT_CONTROL K  &hmr RSHIFT L   &hmr_base_sc LEFT_GUI 0  &la_tilde
 &sk LSHFT         &kp Z  &kp X          &kp C                &kp V            &kp B        &kp N      &kp M            &mrp_comma_less       &mrp_dot_great  &mrp_slashes             &kp RALT
-                                        &kp LCMD             &mo 3            &kp ENTER    &kp SPACE  &mo 1            &kp BACKSPACE
+                                        &kp LCMD             &mo 3            &kp SPACE    &kp SPACE  &mo 1            &kp BACKSPACE
             >;
         };
 
@@ -560,16 +560,16 @@
 &trans  &kp PRINTSCREEN  &caps_word  &none             &la_par_o               &la_par_c      &kp F1     &kp F2          &kp F3        &kp F4     &kp F5   &kp PAUSE_BREAK
 &trans  &kp LEFT_GUI     &kp LSHIFT  &kp LEFT_CONTROL  &hml_fnav_f LEFT_ALT 0  &la_brace_c    &kp LEFT   &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT  &kp F11  &kp F12
 &trans  &kp INS          &kp LC(X)   &kp LC(C)         &la_brack_o             &la_brack_c    &kp F6     &kp F7          &kp F8        &kp F9     &kp F10  &kp LEFT_ALT
-                                     &trans            &mo 3                   &trans         &kp ENTER  &trans          &kp DELETE
+                                     &trans            &mo 3                   &kp ENTER      &kp ENTER  &trans          &kp DELETE
             >;
         };
 
         kpad {
             bindings = <
-&trans  &none  &none           &kp F2            &trans        &trans    &none   &kp N7        &kp N8        &kp N9        &kp N0  &kp ESCAPE
-&trans  &none  &kp LEFT_SHIFT  &kp LEFT_CONTROL  &kp LEFT_ALT  &trans    &none   &kp NUMBER_4  &kp N5        &kp NUMBER_6  &none   &none
-&trans  &none  &none           &none             &trans        &trans    &none   &kp N1        &mrp_m2comma  &mrp_m3dot    &none   &trans
-                               &trans            &mo 3         &trans    &trans  &trans        &trans
+&trans  &none  &none           &kp F2            &trans        &trans    &none      &kp N7        &kp N8         &kp N9        &kp N0  &kp ESCAPE
+&trans  &none  &kp LEFT_SHIFT  &kp LEFT_CONTROL  &kp LEFT_ALT  &trans    &none      &kp NUMBER_4  &kp N5         &kp NUMBER_6  &none   &none
+&trans  &none  &none           &none             &trans        &trans    &none      &kp N1        &mrp_m2comma   &mrp_m3dot    &none   &trans
+                               &trans            &mo 3         &trans    &kp ENTER  &mo 3         &kp BACKSPACE
             >;
         };
 
@@ -584,7 +584,7 @@
 &mrp_gravetilde  &la_at        &kp HASH              &kp DOLLAR    &kp PERCENT   &la_caret    &la_amp         &la_astsk  &la_equal     &la_plus   &mrp_exclm   &la_pipe
 &trans           &kp NUMBER_1  &hml LSHIFT NUMBER_2  &kp NUMBER_3  &kp NUMBER_4  &kp N5       &kp LEFT_ARROW  &kp DOWN   &kp UP_ARROW  &kp RIGHT  &la_minus    &mrp_quotes
 &trans           &kp NUMBER_6  &kp N7                &kp N8        &kp N9        &kp N0       &la_ntild       &la_exp    &kp HOME      &kp END    &mrp_questm  &kp RALT
-                                                     &kp DEL       &trans        &kp SPACE    &trans          &trans     &kp DEL
+                                                     &kp DEL       &trans        &kp ENTER    &kp ENTER       &trans     &kp DEL
             >;
         };
 
