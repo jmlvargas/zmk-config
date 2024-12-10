@@ -456,6 +456,28 @@
             quick-tap-ms = <250>;
             require-prior-idle-ms = <125>;
         };
+
+        ssw_tilde_aps: ssw_tilde_apostr {
+            compatible = "zmk,behavior-hold-tap";
+            label = "SSW_TILDE_APOSTR";
+            bindings = <&la_apost>, <&la_tilde>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <165>;
+            flavor = "balanced";
+            quick-tap-ms = <250>;
+        };
+
+        new_behavior: new_behavior {
+            compatible = "zmk,behavior-hold-tap";
+            label = "NEW_BEHAVIOR";
+            bindings = <&la_apost>, <&la_tilde>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <165>;
+            flavor = "balanced";
+            quick-tap-ms = <250>;
+        };
     };
 
     keymap {
@@ -470,7 +492,7 @@
 
             bindings = <
 &kp TAB           &kp Q  &kp W          &kp E                &kp R            &kp T        &kp Y      &kp U            &kp I                 &kp O          &kp P             &kp ESCAPE
-&sk LEFT_CONTROL  &kp A  &hml LSHIFT S  &hml LEFT_CONTROL D  &hml LEFT_ALT F  &kp G        &kp H      &hmr LEFT_ALT J  &hmr RIGHT_CONTROL K  &hmr RSHIFT L  &hmsc LEFT_GUI 0  &la_tilde
+&sk LEFT_CONTROL  &kp A  &hml LSHIFT S  &hml LEFT_CONTROL D  &hml LEFT_ALT F  &kp G        &kp H      &hmr LEFT_ALT J  &hmr RIGHT_CONTROL K  &hmr RSHIFT L  &hmsc LEFT_GUI 0  &ssw_tilde_aps 0 0
 &sk LSHFT         &kp Z  &kp X          &kp C                &kp V            &kp B        &kp N      &kp M            &kp COMMA             &kp DOT        &slashes          &kp RALT
                                         &kp LCMD             &mo 3            &kp ENTER    &kp SPACE  &mo 1            &kp BACKSPACE
             >;
