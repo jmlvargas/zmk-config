@@ -581,10 +581,10 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&mrp_gravetilde  &la_at        &kp HASH              &kp DOLLAR                  &kp PERCENT   &la_caret    &la_amp         &la_astsk  &la_equal     &la_plus   &mrp_exclm   &la_pipe
-&trans           &kp NUMBER_1  &hml LSHIFT NUMBER_2  &hml LEFT_CONTROL NUMBER_3  &kp NUMBER_4  &kp N5       &kp LEFT_ARROW  &kp DOWN   &kp UP_ARROW  &kp RIGHT  &la_minus    &mrp_quotes
-&trans           &kp NUMBER_6  &kp N7                &kp N8                      &kp N9        &kp N0       &la_ntild       &la_exp    &kp HOME      &kp END    &mrp_questm  &kp RALT
-                                                     &kp DEL                     &trans        &kp ENTER    &kp ENTER       &trans     &kp DEL
+&mrp_gravetilde  &la_at                  &kp HASH              &kp DOLLAR                  &kp PERCENT             &la_caret    &la_amp         &la_astsk  &la_equal     &la_plus   &mrp_exclm   &la_pipe
+&trans           &hml LEFT_GUI NUMBER_1  &hml LSHIFT NUMBER_2  &hml LEFT_CONTROL NUMBER_3  &hml LEFT_ALT NUMBER_4  &kp N5       &kp LEFT_ARROW  &kp DOWN   &kp UP_ARROW  &kp RIGHT  &la_minus    &mrp_quotes
+&trans           &kp NUMBER_6            &kp N7                &kp N8                      &kp N9                  &kp N0       &la_ntild       &la_exp    &kp HOME      &kp END    &mrp_questm  &kp RALT
+                                                               &kp DEL                     &trans                  &kp ENTER    &kp ENTER       &trans     &kp DEL
             >;
         };
 
