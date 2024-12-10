@@ -513,6 +513,33 @@
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
+
+        parenth: parenth {
+            compatible = "zmk,behavior-mod-morph";
+            label = "PARENTH";
+            bindings = <&la_parn_o>, <&la_parn_c>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        brackets: brackets {
+            compatible = "zmk,behavior-mod-morph";
+            label = "BRACKETS";
+            bindings = <&la_brkt_o>, <&la_brkt_c>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        braces: braces {
+            compatible = "zmk,behavior-mod-morph";
+            label = "BRACES";
+            bindings = <&la_brce_o>, <&la_brce_c>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
     };
 
     keymap {
@@ -535,10 +562,10 @@
 
         fnav {
             bindings = <
-&trans  &kp PRINTSCREEN  &caps_word  &none             &none         &none     &kp F1     &kp F2          &kp F3        &kp F4     &kp F5   &kp PAUSE_BREAK
-&trans  &kp LEFT_GUI     &kp LSHIFT  &kp LEFT_CONTROL  &kp LEFT_ALT  &none     &kp LEFT   &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT  &kp F11  &kp F12
-&trans  &kp INS          &kp LC(X)   &kp LC(C)         &kp LC(V)     &none     &kp F6     &kp F7          &kp F8        &kp F9     &kp F10  &kp LEFT_ALT
-                                     &trans            &mo 3         &trans    &kp ENTER  &trans          &kp DELETE
+&trans  &kp PRINTSCREEN  &caps_word  &none             &none         &parenth     &kp F1     &kp F2          &kp F3        &kp F4     &kp F5   &kp PAUSE_BREAK
+&trans  &kp LEFT_GUI     &kp LSHIFT  &kp LEFT_CONTROL  &kp LEFT_ALT  &braces      &kp LEFT   &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT  &kp F11  &kp F12
+&trans  &kp INS          &kp LC(X)   &kp LC(C)         &kp LC(V)     &brackets    &kp F6     &kp F7          &kp F8        &kp F9     &kp F10  &kp LEFT_ALT
+                                     &trans            &mo 3         &trans       &kp ENTER  &trans          &kp DELETE
             >;
         };
 
@@ -559,10 +586,10 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&gravetilde  &la_at        &kp HASH              &kp DOLLAR    &kp PERCENT   &la_caret    &la_amp           &la_astsk               &la_equal                   &la_plus                  &exclm     &la_pipe
-&trans       &kp NUMBER_1  &hml LSHIFT NUMBER_2  &kp NUMBER_3  &kp NUMBER_4  &kp N5       &paren_bracket_o  &hmr_symb_j LEFT_ALT 0  &hmr_symb_k LEFT_CONTROL 0  &hmr_symb_l LEFT_SHIFT 0  &la_minus  &quotes
-&trans       &kp NUMBER_6  &kp N7                &kp N8        &kp N9        &kp N0       &la_ntild         &la_expon               &kp HOME                    &kp END                   &questm    &kp RALT
-                                                 &kp DEL       &trans        &kp SPACE    &trans            &trans                  &kp DEL
+&gravetilde  &la_at        &kp HASH              &kp DOLLAR    &kp PERCENT   &la_caret    &la_amp         &la_astsk  &la_equal     &la_plus   &exclm     &la_pipe
+&trans       &kp NUMBER_1  &hml LSHIFT NUMBER_2  &kp NUMBER_3  &kp NUMBER_4  &kp N5       &kp LEFT_ARROW  &kp DOWN   &kp UP_ARROW  &kp RIGHT  &la_minus  &quotes
+&trans       &kp NUMBER_6  &kp N7                &kp N8        &kp N9        &kp N0       &la_ntild       &la_expon  &kp HOME      &kp END    &questm    &kp RALT
+                                                 &kp DEL       &trans        &kp SPACE    &trans          &trans     &kp DEL
             >;
         };
 
