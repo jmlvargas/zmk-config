@@ -481,7 +481,7 @@
 
             bindings = <
 &kp TAB           &kp Q  &kp W          &kp E                &kp R            &kp T        &kp Y      &kp U            &kp I                 &kp O          &kp P             &kp ESCAPE
-&sk LEFT_CONTROL  &kp A  &hml LSHIFT S  &hml LEFT_CONTROL D  &hml LEFT_ALT F  &kp G        &kp H      &hmr LEFT_ALT J  &hmr RIGHT_CONTROL K  &hmr RSHIFT L  &hmsc LEFT_GUI 0  &ssw_tilde_aps 0 0
+&sk LEFT_CONTROL  &kp A  &hml LSHIFT S  &hml LEFT_CONTROL D  &hml LEFT_ALT F  &kp G        &kp H      &hmr LEFT_ALT J  &hmr RIGHT_CONTROL K  &hmr RSHIFT L  &hmsc LEFT_GUI 0  &la_tilde
 &sk LSHFT         &kp Z  &kp X          &kp C                &kp V            &kp B        &kp N      &kp M            &kp COMMA             &kp DOT        &slashes          &kp RALT
                                         &kp LCMD             &mo 3            &kp ENTER    &kp SPACE  &mo 1            &kp BACKSPACE
             >;
