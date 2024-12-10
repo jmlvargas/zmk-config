@@ -495,6 +495,24 @@
             quick-tap-ms = <250>;
             require-prior-idle-ms = <125>;
         };
+
+        comma_less: comma_less {
+            compatible = "zmk,behavior-mod-morph";
+            label = "COMMA_LESS";
+            bindings = <&kp COMMA>, <&la_less>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        dot_great: dot_great {
+            compatible = "zmk,behavior-mod-morph";
+            label = "DOT_GREAT";
+            bindings = <&kp DOT>, <&la_great>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
     };
 
     keymap {
@@ -510,7 +528,7 @@
             bindings = <
 &kp TAB           &kp Q  &kp W          &kp E                &kp R            &kp T        &kp Y      &kp U            &kp I                 &kp O          &kp P             &kp ESCAPE
 &sk LEFT_CONTROL  &kp A  &hml LSHIFT S  &hml LEFT_CONTROL D  &hml LEFT_ALT F  &kp G        &kp H      &hmr LEFT_ALT J  &hmr RIGHT_CONTROL K  &hmr RSHIFT L  &hmsc LEFT_GUI 0  &la_tilde
-&sk LSHFT         &kp Z  &kp X          &kp C                &kp V            &kp B        &kp N      &kp M            &kp COMMA             &kp DOT        &slashes          &kp RALT
+&sk LSHFT         &kp Z  &kp X          &kp C                &kp V            &kp B        &kp N      &kp M            &comma_less           &dot_great     &slashes          &kp RALT
                                         &kp LCMD             &mo 3            &kp ENTER    &kp SPACE  &mo 1            &kp BACKSPACE
             >;
         };
@@ -543,7 +561,7 @@
             bindings = <
 &gravetilde  &la_at        &kp HASH              &kp DOLLAR    &kp PERCENT   &la_caret    &la_amp           &la_astsk               &la_equal                   &la_plus                  &exclm     &la_pipe
 &trans       &kp NUMBER_1  &hml LSHIFT NUMBER_2  &kp NUMBER_3  &kp NUMBER_4  &kp N5       &paren_bracket_o  &hmr_symb_j LEFT_ALT 0  &hmr_symb_k LEFT_CONTROL 0  &hmr_symb_l LEFT_SHIFT 0  &la_minus  &quotes
-&trans       &kp NUMBER_6  &kp N7                &kp N8        &kp N9        &kp N0       &la_ntild         &la_expon               &la_less                    &la_great                 &questm    &kp RALT
+&trans       &kp NUMBER_6  &kp N7                &kp N8        &kp N9        &kp N0       &la_ntild         &la_expon               &kp HOME                    &kp END                   &questm    &kp RALT
                                                  &kp DEL       &trans        &kp SPACE    &trans            &trans                  &kp DEL
             >;
         };
