@@ -314,7 +314,7 @@
 
             #binding-cells = <2>;
             tapping-term-ms = <165>;
-            hold-trigger-key-positions = <6 7 8 9 10 11 18 19 20 21 22 23 30 31 32 33 34 35 39 40 41>;
+            hold-trigger-key-positions = <6 7 8 9 10 11 18 19 20 21 22 23 30 31 32 33 34 35 39 40 41 0>;
             flavor = "tap-preferred";
             quick-tap-ms = <250>;
             require-prior-idle-ms = <125>;
@@ -327,7 +327,7 @@
 
             #binding-cells = <2>;
             tapping-term-ms = <165>;
-            hold-trigger-key-positions = <0 1 2 3 4 5 12 13 14 15 16 17 24 25 26 27 28 29 36 37 38>;
+            hold-trigger-key-positions = <0 1 2 3 4 5 12 13 14 15 16 17 24 25 26 27 28 29 36 37 38 11>;
             flavor = "tap-preferred";
             quick-tap-ms = <250>;
             require-prior-idle-ms = <125>;
@@ -455,17 +455,6 @@
             flavor = "tap-preferred";
             quick-tap-ms = <250>;
             require-prior-idle-ms = <125>;
-        };
-
-        ssw_tilde_aps: ssw_tilde_apostr {
-            compatible = "zmk,behavior-hold-tap";
-            label = "SSW_TILDE_APOSTR";
-            bindings = <&la_apost>, <&la_tilde>;
-
-            #binding-cells = <2>;
-            tapping-term-ms = <165>;
-            flavor = "balanced";
-            quick-tap-ms = <250>;
         };
     };
 
