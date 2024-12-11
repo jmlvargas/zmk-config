@@ -568,7 +568,7 @@
             bindings = <
 &trans  &kp PRINTSCREEN  &caps_word  &none             &la_par_o               &la_par_c      &kp F1     &kp F2          &kp F3        &kp F4     &kp F5   &kp PAUSE_BREAK
 &trans  &kp LEFT_GUI     &kp LSHIFT  &kp LEFT_CONTROL  &hml_fnav_f LEFT_ALT 0  &la_brace_c    &kp LEFT   &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT  &kp F11  &kp F12
-&trans  &kp INS          &kp LC(X)   &kp LC(C)         &la_brack_o             &la_brack_c    &kp F6     &kp F7          &kp F8        &kp F9     &kp F10  &kp LEFT_ALT
+&trans  &kp INS          &kp LC(X)   &kp LC(C)         &la_brack_o             &la_brack_c    &kp F6     &kp F7          &kp F8        &kp F9     &kp F10  &sk LEFT_ALT
                                      &trans            &kp DELETE              &kp ENTER      &kp ENTER  &kp DELETE      &trans
             >;
         };
@@ -583,7 +583,7 @@
             bindings = <
 &mrp_gravetilde  &la_at                  &kp HASH              &kp DOLLAR                  &kp PERCENT             &la_caret    &la_amp         &la_astsk   &la_equal     &la_plus   &mrp_exclm   &la_pipe
 &trans           &hml LEFT_GUI NUMBER_1  &hml LSHIFT NUMBER_2  &hml LEFT_CONTROL NUMBER_3  &hml LEFT_ALT NUMBER_4  &kp N5       &kp LEFT_ARROW  &kp DOWN    &kp UP_ARROW  &kp RIGHT  &la_minus    &mrp_quotes
-&trans           &kp NUMBER_6            &kp N7                &kp N8                      &kp N9                  &kp N0       &la_ntild       &la_exp     &kp HOME      &kp END    &mrp_questm  &kp RALT
+&trans           &kp NUMBER_6            &kp N7                &kp N8                      &kp N9                  &kp N0       &la_ntild       &la_exp     &kp HOME      &kp END    &mrp_questm  &sk RALT
                                                                &kp DELETE                  &trans                  &kp ENTER    &kp ENTER       &kp DELETE  &trans
             >;
         };
