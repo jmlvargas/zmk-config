@@ -54,7 +54,7 @@
         };
 
         goend {
-            bindings = <&kp PAGE_DOWN>;
+            bindings = <&kp END>;
             key-positions = <20 21>;
             timeout-ms = <30>;
             require-prior-idle-ms = <100>;
@@ -62,7 +62,7 @@
         };
 
         gohome {
-            bindings = <&kp PAGE_UP>;
+            bindings = <&kp HOME>;
             key-positions = <8 9>;
             timeout-ms = <30>;
             require-prior-idle-ms = <100>;
