@@ -52,6 +52,22 @@
             require-prior-idle-ms = <100>;
             layers = <2>;
         };
+
+        goend {
+            bindings = <&kp PAGE_DOWN>;
+            key-positions = <20 21>;
+            timeout-ms = <30>;
+            require-prior-idle-ms = <100>;
+            layers = <2>;
+        };
+
+        gohome {
+            bindings = <&kp PAGE_UP>;
+            key-positions = <8 9>;
+            timeout-ms = <30>;
+            require-prior-idle-ms = <100>;
+            layers = <2>;
+        };
     };
 
     macros {
