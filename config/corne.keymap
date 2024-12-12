@@ -15,7 +15,7 @@
         compatible = "zmk,combos";
 
         syst_layer {
-            bindings = <&tog 4>;
+            bindings = <&tog 5>;
             key-positions = <23 11 35>;
             timeout-ms = <30>;
             require-prior-idle-ms = <100>;
@@ -594,6 +594,15 @@
 &trans           &hml LEFT_GUI NUMBER_1  &hml LSHIFT NUMBER_2  &hml LEFT_CONTROL NUMBER_3  &hml LEFT_ALT NUMBER_4  &kp N5         &kp LEFT_ARROW  &kp DOWN    &kp UP_ARROW  &kp RIGHT  &la_minus     &mrp_quotes
 &trans           &kp NUMBER_6            &kp N7                &kp N8                      &kp N9                  &kp N0         &la_ntild       &none       &kp HOME      &kp END    &mrp_slashes  &sk RALT
                                                                &kp DELETE                  &trans                  &kp ENTER      &kp ENTER       &kp DELETE  &trans
+            >;
+        };
+
+        sym2 {
+            bindings = <
+&none       &la_at              &kp N7                &kp N8                &kp N9                  &mrp_carets    &kp PERCENT     &la_amp     &la_equal     &la_pipe   &mrp_exclm    &mrp_gravetilde
+&trans      &hml LEFT_GUI PLUS  &hml LSHIFT NUMBER_4  &hml LEFT_CONTROL N5  &hml LEFT_ALT NUMBER_6  &kp DOLLAR     &kp LEFT_ARROW  &kp DOWN    &kp UP_ARROW  &kp RIGHT  &la_minus     &mrp_quotes
+&kp PERIOD  &kp N0              &kp NUMBER_1          &kp NUMBER_2          &kp NUMBER_3            &kp POUND      &la_ntild       &la_astsk   &kp HOME      &kp END    &mrp_slashes  &sk RALT
+                                                      &kp DELETE            &trans                  &kp ENTER      &kp ENTER       &kp DELETE  &trans
             >;
         };
 
