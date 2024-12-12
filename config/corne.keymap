@@ -545,9 +545,9 @@
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
-        hml_sym_plus: hml_sym_plus {
+        hml_sym_a: hml_sym_a {
             compatible = "zmk,behavior-hold-tap";
-            label = "HML_SYM_PLUS";
+            label = "HML_SYM_A";
             bindings = <&kp>, <&la_plus>;
 
             #binding-cells = <2>;
@@ -588,10 +588,10 @@
 
         sym {
             bindings = <
-&none       &la_at    &kp N7                &kp N8                &kp N9                  &mrp_carets    &kp PERCENT     &la_amp     &la_equal     &la_pipe   &mrp_exclm   &mrp_gravetilde
-&trans      &la_plus  &hml LSHIFT NUMBER_4  &hml LEFT_CONTROL N5  &hml LEFT_ALT NUMBER_6  &kp DOLLAR     &kp LEFT_ARROW  &kp DOWN    &kp UP_ARROW  &kp RIGHT  &la_minus    &mrp_quotes
-&kp PERIOD  &kp N0    &kp NUMBER_1          &kp NUMBER_2          &kp NUMBER_3            &kp POUND      &la_ntild       &la_astsk   &kp HOME      &kp END    &mrp_questm  &sk RALT
-                                            &kp DELETE            &trans                  &kp ENTER      &kp ENTER       &kp DELETE  &kp LEFT_GUI
+&none       &la_at                 &kp N7                &kp N8                &kp N9                  &mrp_carets    &kp PERCENT     &la_amp     &la_equal     &la_pipe   &mrp_exclm   &mrp_gravetilde
+&trans      &hml_sym_a LEFT_GUI 0  &hml LSHIFT NUMBER_4  &hml LEFT_CONTROL N5  &hml LEFT_ALT NUMBER_6  &kp DOLLAR     &kp LEFT_ARROW  &kp DOWN    &kp UP_ARROW  &kp RIGHT  &la_minus    &mrp_quotes
+&kp PERIOD  &kp N0                 &kp NUMBER_1          &kp NUMBER_2          &kp NUMBER_3            &kp POUND      &la_ntild       &la_astsk   &kp HOME      &kp END    &mrp_questm  &sk RALT
+                                                         &kp DELETE            &trans                  &kp ENTER      &kp ENTER       &kp DELETE  &kp LEFT_GUI
             >;
         };
 
