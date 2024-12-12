@@ -559,7 +559,7 @@
             bindings = <
 &kp TAB           &kp Q  &kp W          &kp E                &kp R            &kp T        &kp Y      &kp U            &kp I                 &kp O           &kp P                    &kp ESCAPE
 &sk LEFT_CONTROL  &kp A  &hml LSHIFT S  &hml LEFT_CONTROL D  &hml LEFT_ALT F  &kp G        &kp H      &hmr LEFT_ALT J  &hmr RIGHT_CONTROL K  &hmr RSHIFT L   &hmr_base_sc LEFT_GUI 0  &la_tilde
-&caps_word        &kp Z  &kp X          &kp C                &kp V            &kp B        &kp N      &kp M            &mrp_comma_less       &mrp_dot_great  &mrp_slashes             &sk RALT
+&caps_word        &kp Z  &kp X          &kp C                &kp V            &kp B        &kp N      &kp M            &mrp_comma_less       &mrp_dot_great  &mrp_questm              &sk RALT
                                         &mo 2                &mo 3            &kp SPACE    &kp SPACE  &kp BACKSPACE    &mo 2
             >;
         };
@@ -590,9 +590,9 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&mrp_gravetilde  &la_at                  &kp HASH              &kp DOLLAR                  &kp PERCENT             &mrp_carets    &la_amp         &la_astsk   &la_equal     &la_plus   &mrp_exclm   &la_pipe
-&trans           &hml LEFT_GUI NUMBER_1  &hml LSHIFT NUMBER_2  &hml LEFT_CONTROL NUMBER_3  &hml LEFT_ALT NUMBER_4  &kp N5         &kp LEFT_ARROW  &kp DOWN    &kp UP_ARROW  &kp RIGHT  &la_minus    &mrp_quotes
-&trans           &kp NUMBER_6            &kp N7                &kp N8                      &kp N9                  &kp N0         &la_ntild       &none       &kp HOME      &kp END    &mrp_questm  &sk RALT
+&mrp_gravetilde  &la_at                  &kp HASH              &kp DOLLAR                  &kp PERCENT             &mrp_carets    &la_amp         &la_astsk   &la_equal     &la_plus   &mrp_exclm    &la_pipe
+&trans           &hml LEFT_GUI NUMBER_1  &hml LSHIFT NUMBER_2  &hml LEFT_CONTROL NUMBER_3  &hml LEFT_ALT NUMBER_4  &kp N5         &kp LEFT_ARROW  &kp DOWN    &kp UP_ARROW  &kp RIGHT  &la_minus     &mrp_quotes
+&trans           &kp NUMBER_6            &kp N7                &kp N8                      &kp N9                  &kp N0         &la_ntild       &none       &kp HOME      &kp END    &mrp_slashes  &sk RALT
                                                                &kp DELETE                  &trans                  &kp ENTER      &kp ENTER       &kp DELETE  &trans
             >;
         };
