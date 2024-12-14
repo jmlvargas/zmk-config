@@ -33,14 +33,6 @@
             require-prior-idle-ms = <100>;
         };
 
-        tog_num_layer {
-            bindings = <&tog 0>;
-            key-positions = <23 35>;
-            timeout-ms = <30>;
-            require-prior-idle-ms = <100>;
-            layers = <0>;
-        };
-
         pageup {
             bindings = <&kp PAGE_UP>;
             key-positions = <8 7>;
