@@ -8,119 +8,69 @@
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
 
-&sk { /delete-property/ ignore-modifiers; };
+&sk {
+    /delete-property/ ignore-modifiers;
+
+    release-after-ms = <1500>;
+};
 
 / {
     combos {
         compatible = "zmk,combos";
 
-        caps_word {
-            bindings = <&caps_word>;
-            key-positions = <17 18>;
-            timeout-ms = <30>;
-            require-prior-idle-ms = <100>;
-        };
-
-        delete {
-            bindings = <&kp DEL>;
-            key-positions = <39 41>;
-            timeout-ms = <30>;
-            require-prior-idle-ms = <100>;
-        };
-
-        up {
-            bindings = <&kp UP_ARROW>;
-            key-positions = <9 8 7>;
-            timeout-ms = <30>;
-            require-prior-idle-ms = <100>;
-        };
-
-        down {
-            bindings = <&kp DOWN>;
-            key-positions = <32 33 31>;
-            timeout-ms = <30>;
-            require-prior-idle-ms = <100>;
-        };
-
-        left {
-            bindings = <&kp LEFT>;
-            key-positions = <20 19 21>;
-            timeout-ms = <30>;
-            require-prior-idle-ms = <100>;
-        };
-
-        right {
-            bindings = <&kp RIGHT>;
-            key-positions = <21 20 22>;
-            timeout-ms = <30>;
-            require-prior-idle-ms = <100>;
-        };
-
-        home {
-            bindings = <&kp HOME>;
-            key-positions = <6 7 8>;
-            timeout-ms = <30>;
-            require-prior-idle-ms = <100>;
-        };
-
-        end {
-            bindings = <&kp END>;
-            key-positions = <32 30 31>;
-            timeout-ms = <30>;
-            require-prior-idle-ms = <100>;
-        };
-
-        print_screen {
-            bindings = <&kp PRINTSCREEN>;
-            key-positions = <10 14>;
-            timeout-ms = <30>;
-            require-prior-idle-ms = <100>;
-            layers = <0 1>;
-        };
-
-        pause {
-            bindings = <&kp PRINTSCREEN>;
-            key-positions = <10 11>;
-            timeout-ms = <30>;
-            require-prior-idle-ms = <100>;
-            layers = <2>;
-        };
-
-        insert {
-            bindings = <&kp INSERT>;
-            key-positions = <8 30>;
-            timeout-ms = <30>;
-            require-prior-idle-ms = <100>;
-        };
-
         syst_layer {
             bindings = <&tog 3>;
-            key-positions = <14 21 12>;
+            key-positions = <23 11 35>;
+            timeout-ms = <30>;
+            require-prior-idle-ms = <100>;
+            layers = <0>;
         };
 
         base_layer {
             bindings = <&to 0>;
-            key-positions = <21 29 12>;
+            key-positions = <11 35>;
+            timeout-ms = <30>;
+            require-prior-idle-ms = <100>;
         };
 
-        tog_fnum_layer {
-            bindings = <&tog 1>;
-            key-positions = <12 30 21>;
+        tog_num_layer {
+            bindings = <&tog 0>;
+            key-positions = <23 35>;
+            timeout-ms = <30>;
+            require-prior-idle-ms = <100>;
+            layers = <0>;
         };
 
-        space {
-            bindings = <&kp SPACE>;
-            key-positions = <16 15 14>;
+        pageup {
+            bindings = <&kp PAGE_UP>;
+            key-positions = <8 7>;
+            timeout-ms = <30>;
+            require-prior-idle-ms = <100>;
+            layers = <1>;
         };
 
-        backspace {
-            bindings = <&kp BACKSPACE>;
-            key-positions = <26 27 28>;
+        pagedown {
+            bindings = <&kp PAGE_DOWN>;
+            key-positions = <20 19>;
+            timeout-ms = <30>;
+            require-prior-idle-ms = <100>;
+            layers = <1>;
         };
 
-        ldelete {
-            bindings = <&kp DELETE>;
-            key-positions = <2 3 4>;
+        goend {
+            bindings = <&kp END>;
+            key-positions = <20 21>;
+            timeout-ms = <30>;
+            require-prior-idle-ms = <100>;
+            layers = <1>;
+        };
+
+        gohome {
+            bindings = <&kp HOME>;
+            key-positions = <8 9>;
+            timeout-ms = <30>;
+            require-prior-idle-ms = <100>;
+            layers = <1>;
         };
     };
 
@@ -151,6 +101,203 @@
 
             label = "AS";
         };
+
+        dmkp: delayed_modkp {
+            compatible = "zmk,behavior-macro-two-param";
+            #binding-cells = <2>;
+            bindings =
+                <&macro_press>,
+                <&macro_param_1to1 &kp MACRO_PLACEHOLDER>,
+                <&macro_tap>,
+                <&macro_param_2to1 &kp MACRO_PLACEHOLDER>,
+                <&macro_wait_time 80>,
+                <&macro_release>,
+                <&macro_param_1to1 &kp MACRO_PLACEHOLDER>;
+
+            label = "DELAYED_MODKP";
+        };
+
+        la_caret: mcaret {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp RA(SINGLE_QUOTE) &kp SPACE>;
+            label = "MCARET";
+        };
+
+        la_grave: tildegrave {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp RA(BACKSLASH) &kp SPACE>;
+            label = "TILDEGRAVE";
+        };
+
+        la_otilde: la_oblique_tilde {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp RA(RIGHT_BRACKET) &kp SPACE>;
+            label = "LA_OBLIQUE_TILDE";
+        };
+
+        la_par_o: mparenopen {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LS(N8)>;
+            label = "MPARENOPEN";
+        };
+
+        la_par_c: mparencl {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LS(N9)>;
+            label = "MPARENCL";
+        };
+
+        la_brace_o: mbraceo {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp APOS>;
+            label = "MBRACEO";
+        };
+
+        la_brace_c: mbracec {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp BACKSLASH>;
+            label = "MBRACEC";
+        };
+
+        la_brack_o: bracketo {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LS(APOS)>;
+            label = "BRACKETO";
+        };
+
+        la_brack_c: bracketc {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LS(BACKSLASH)>;
+            label = "BRACKETC";
+        };
+
+        la_less: mlessthan {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp NON_US_BACKSLASH>;
+            label = "MLESSTHAN";
+        };
+
+        la_great: mgreat {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LS(NON_US_BACKSLASH)>;
+            label = "MGREAT";
+        };
+
+        la_at: arroba {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp RA(Q)>;
+            label = "ARROBA";
+        };
+
+        la_amp: amp {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LS(NUMBER_6)>;
+            label = "AMP";
+        };
+
+        la_astsk: astersk {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LS(RIGHT_BRACKET)>;
+            label = "ASTERSK";
+        };
+
+        la_equal: la_equal {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LS(NUMBER_0)>;
+            label = "LA_EQUAL";
+        };
+
+        la_plus: la_plus {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp RIGHT_BRACKET>;
+            label = "LA_PLUS";
+        };
+
+        la_minus: la_minus {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp SLASH>;
+            label = "LA_MINUS";
+        };
+
+        la_pipe: la_pipe {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp GRAVE>;
+            label = "LA_PIPE";
+        };
+
+        la_tilde: la_tilde {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LEFT_BRACKET>;
+            label = "LA_TILDE";
+        };
+
+        la_apost: la_apost {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp MINUS>;
+            label = "LA_APOST";
+        };
+
+        la_ntild: la_ntild {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp SEMICOLON>;
+            label = "LA_NTILD";
+        };
+
+        la_colon: la_colon {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LS(DOT)>;
+            label = "LA_COLON";
+        };
+
+        la_scol: la_scolon {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LS(COMMA)>;
+            label = "LA_SCOLON";
+        };
+
+        la_quo: la_double_quote {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LS(NUMBER_2)>;
+            label = "LA_DOUBLE_QUOTE";
+        };
+
+        la_exp: la_exponente {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp RA(SINGLE_QUOTE)>;
+            label = "LA_EXPONENTE";
+        };
+
+        la_exc_o: la_exclamation_open {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LS(EQUAL)>;
+            label = "LA_EXCLAMATION_OPEN";
+        };
     };
 
     behaviors {
@@ -171,7 +318,7 @@
 
             #binding-cells = <2>;
             tapping-term-ms = <165>;
-            hold-trigger-key-positions = <6 7 8 9 10 11 18 19 20 21 22 23 30 31 32 33 34 35 39 40 41>;
+            hold-trigger-key-positions = <6 7 8 9 10 11 18 19 20 21 22 23 30 31 32 33 34 35 39 40 41 0>;
             flavor = "tap-preferred";
             quick-tap-ms = <250>;
             require-prior-idle-ms = <125>;
@@ -184,7 +331,7 @@
 
             #binding-cells = <2>;
             tapping-term-ms = <165>;
-            hold-trigger-key-positions = <0 1 2 3 4 5 12 13 14 15 16 17 24 25 26 27 28 29 36 37 38>;
+            hold-trigger-key-positions = <0 1 2 3 4 5 12 13 14 15 16 17 24 25 26 27 28 29 36 37 38 11>;
             flavor = "tap-preferred";
             quick-tap-ms = <250>;
             require-prior-idle-ms = <125>;
@@ -210,6 +357,221 @@
             tapping-term-ms = <160>;
             flavor = "hold-preferred";
         };
+
+        mrp_quotes: mrp_quotes {
+            compatible = "zmk,behavior-mod-morph";
+            label = "MRP_QUOTES";
+            bindings = <&la_quo>, <&la_apost>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        mrp_slashes: mrp_slashes {
+            compatible = "zmk,behavior-mod-morph";
+            label = "MRP_SLASHES";
+            bindings = <&kp LS(N7)>, <&kp RA(MINUS)>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        mrp_exclm: mrp_exclm {
+            compatible = "zmk,behavior-mod-morph";
+            label = "MRP_EXCLM";
+            bindings = <&kp EXCL>, <&la_exc_o>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        mrp_questm: mrp_questm {
+            compatible = "zmk,behavior-mod-morph";
+            label = "MRP_QUESTM";
+            bindings = <&kp LS(MINUS)>, <&kp EQUAL>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        mrp_gravetilde: mrp_gravetilde {
+            compatible = "zmk,behavior-mod-morph";
+            label = "MRP_GRAVETILDE";
+            bindings = <&la_grave>, <&la_otilde>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        mrp_m2comma: mrp_m2comma {
+            compatible = "zmk,behavior-mod-morph";
+            label = "MRP_M2COMMA";
+            bindings = <&kp NUMBER_2>, <&kp COMMA>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        mrp_m3dot: mrp_m3dot {
+            compatible = "zmk,behavior-mod-morph";
+            label = "MRP_M3DOT";
+            bindings = <&kp NUMBER_3>, <&kp DOT>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        mrp_semic_colon: mrp_semic_colon {
+            compatible = "zmk,behavior-mod-morph";
+            label = "MRP_SEMIC_COLON";
+            bindings = <&la_scol>, <&la_colon>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        hmr_base_sc: homerow_mods_semicolon {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HOMEROW_MODS_SEMICOLON";
+            bindings = <&kp>, <&mrp_semic_colon>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <165>;
+            hold-trigger-key-positions = <0 1 2 3 4 5 12 13 14 15 16 17 24 25 26 27 28 29 36 37 38>;
+            flavor = "tap-preferred";
+            quick-tap-ms = <250>;
+            require-prior-idle-ms = <125>;
+        };
+
+        hmr_symb_k: homerow_mod_symb_k {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HOMEROW_MOD_SYMB_K";
+            bindings = <&kp>, <&la_brace_o>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <165>;
+            hold-trigger-key-positions = <13 14 15 16 17 25 26 27 28 29>;
+            flavor = "tap-preferred";
+            quick-tap-ms = <250>;
+            require-prior-idle-ms = <125>;
+        };
+
+        hmr_symb_j: homerow_mod_symb_j {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HOMEROW_MOD_SYMB_J";
+            bindings = <&kp>, <&la_par_c>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <165>;
+            hold-trigger-key-positions = <13 14 15 16 17 25 26 27 28 29>;
+            flavor = "tap-preferred";
+            quick-tap-ms = <250>;
+            require-prior-idle-ms = <125>;
+        };
+
+        hmr_symb_l: homerow_mod_symb_l {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HOMEROW_MOD_SYMB_L";
+            bindings = <&kp>, <&la_brace_c>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <165>;
+            hold-trigger-key-positions = <13 14 15 16 17 25 26 27 28 29>;
+            flavor = "tap-preferred";
+            quick-tap-ms = <250>;
+            require-prior-idle-ms = <125>;
+        };
+
+        mrp_comma_less: mrp_comma_less {
+            compatible = "zmk,behavior-mod-morph";
+            label = "MRP_COMMA_LESS";
+            bindings = <&kp COMMA>, <&la_less>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        mrp_dot_great: mrp_dot_great {
+            compatible = "zmk,behavior-mod-morph";
+            label = "MRP_DOT_GREAT";
+            bindings = <&kp DOT>, <&la_great>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        mrp_par: mrp_par {
+            compatible = "zmk,behavior-mod-morph";
+            label = "MRP_PAR";
+            bindings = <&la_par_o>, <&la_par_c>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        mrp_brack: mrp_brack {
+            compatible = "zmk,behavior-mod-morph";
+            label = "MRP_BRACK";
+            bindings = <&la_brack_o>, <&la_brack_c>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        mrp_brace: mrp_brace {
+            compatible = "zmk,behavior-mod-morph";
+            label = "MRP_BRACE";
+            bindings = <&la_brace_o>, <&la_brace_c>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        hml_fnav_f: homerow_mod_fnav_f {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HOMEROW_MOD_FNAV_F";
+            bindings = <&kp>, <&la_brace_o>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <165>;
+            hold-trigger-key-positions = <6 7 8 6 7 8 9 10 30 31 32 33 34 18 19 20 21 22>;
+            flavor = "tap-preferred";
+            quick-tap-ms = <250>;
+            require-prior-idle-ms = <125>;
+        };
+
+        mrp_carets: mrp_carets {
+            compatible = "zmk,behavior-mod-morph";
+            label = "MRP_CARETS";
+            bindings = <&la_caret>, <&la_exp>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        hml_sym_a: hml_sym_a {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HML_SYM_A";
+            bindings = <&kp>, <&la_plus>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <165>;
+            hold-trigger-key-positions = <6 7 8 6 7 8 9 10 30 31 32 33 34 18 19 20 21 22>;
+            flavor = "tap-preferred";
+            quick-tap-ms = <250>;
+            require-prior-idle-ms = <125>;
+        };
+
+        ssw_tildes: ssw_tilde_apostrophe {
+            compatible = "zmk,behavior-hold-tap";
+            label = "SSW_TILDE_APOSTROPHE";
+            bindings = <&la_apost>, <&la_tilde>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <165>;
+            flavor = "balanced";
+            quick-tap-ms = <250>;
+        };
     };
 
     keymap {
@@ -223,43 +585,37 @@
             //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
 
             bindings = <
-&kp TAB           &kp Q            &kp W          &kp E                &kp R            &kp T        &kp Y      &kp U            &kp I                 &kp O          &kp P                 &kp ESCAPE
-&sk LEFT_CONTROL  &hml LEFT_GUI A  &hml LSHIFT S  &hml LEFT_CONTROL D  &hml LEFT_ALT F  &kp G        &kp H      &hmr LEFT_ALT J  &hmr RIGHT_CONTROL K  &hmr RSHIFT L  &kp SEMI              &ssw TILDE SQT
-&sk LSHFT         &kp Z            &kp X          &kp C                &kp V            &kp B        &kp N      &kp M            &kp COMMA             &kp DOT        &ssw BACKSLASH SLASH  &kp RALT
-                                                  &kp LCMD             &mo 2            &kp ENTER    &kp SPACE  &mo 1            &kp BACKSPACE
+&kp TAB     &kp Q  &kp W          &kp E                &kp R            &kp T        &kp Y      &kp U            &kp I                 &kp O           &kp P                    &kp BACKSPACE
+&caps_word  &kp A  &hml LSHIFT S  &hml LEFT_CONTROL D  &hml LEFT_ALT F  &kp G        &kp H      &hmr LEFT_ALT J  &hmr RIGHT_CONTROL K  &hmr RSHIFT L   &hmr_base_sc LEFT_GUI 0  &ssw_tildes 0 0
+&kp ESCAPE  &kp Z  &kp X          &kp C                &kp V            &kp B        &kp N      &kp M            &mrp_comma_less       &mrp_dot_great  &mrp_slashes             &sk RALT
+                                  &kp LEFT_GUI         &mo 2            &kp SPACE    &kp ENTER  &mo 1            &kp DELETE
             >;
         };
 
-        fnum {
+        fun {
             bindings = <
-&trans  &kp F1            &kp F2          &kp F3                &kp F4            &ssw RIGHT_BRACKET LEFT_BRACKET            &kp RA(CARET)  &ssw AMPS N7      &ssw ASTRK N8          &ssw EQUAL N9         &ssw PLUS N0         &kp ESC
-&trans  &hml LEFT_GUI F5  &hml LSHIFT F6  &hml LEFT_CONTROL F7  &hml LEFT_ALT F8  &ssw RIGHT_PARENTHESIS LEFT_PARENTHESIS    &none          &hmr LEFT_ALT N4  &hmr RIGHT_CONTROL N5  &hmr RSHIFT N6        &ssw UNDER MINUS     &ssw RA(SINGLE_QUOTE) RA(DOUBLE_QUOTES)
-&trans  &kp F9            &kp F10         &kp F11               &kp F12           &ssw RIGHT_BRACE LEFT_BRACE                &none          &kp N1            &ssw COMMA NUMBER_2    &ssw PERIOD NUMBER_3  &ssw QUESTION SLASH  &kp LEFT_ALT
-                                          &trans                &mo 2             &trans                                     &trans         &trans            &trans
+&none  &kp PRINTSCREEN  &none       &none             &la_par_o               &la_par_c      &kp F1     &kp F2          &kp F3        &kp F4     &kp F5   &kp PAUSE_BREAK
+&none  &kp LEFT_GUI     &kp LSHIFT  &kp LEFT_CONTROL  &hml_fnav_f LEFT_ALT 0  &la_brace_c    &kp LEFT   &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT  &kp F6   &kp F7
+&none  &kp INS          &none       &none             &la_brack_o             &la_brack_c    &kp F8     &kp F9          &kp F10       &kp F11    &kp F12  &sk LEFT_ALT
+                                    &trans            &trans                  &trans         &kp SPACE  &trans          &kp LEFT_GUI
             >;
         };
 
-        symb {
-            // -----------------------------------------------------------------------------------------
-            // |  TAB |  !  |  @  |  #  |  $  |  %  |   |  ^  |  &  |  *  |  (  |  )  | BSPC |
-            // | CTRL |     |     |     |     |     |   |  -  |  =  |  [  |  ]  |  \  |  `   |
-            // | SHFT |     |     |     |     |     |   |  _  |  +  |  {  |  }  | "|" |  ~   |
-            //                    | GUI |     | SPC |   | ENT |     | ALT |
-
+        sym {
             bindings = <
-&ssw RA(TILDE) RA(GRAVE)  &ssw RA(N1) EXCL        &kp AT                &kp HASH             &kp DLLR                &kp PRCNT    &kp RA(CARET)  &kp AMPS       &kp ASTRK     &kp EQUAL  &kp PLUS                 &kp PIPE
-&trans                    &hml LEFT_GUI NUMBER_1  &hml LSHIFT NUMBER_2  &hml LCTRL NUMBER_3  &hml LEFT_ALT NUMBER_4  &kp N5       &kp LEFT       &kp DOWN       &kp UP_ARROW  &kp RIGHT  &ssw UNDERSCORE MINUS    &ssw RA(SINGLE_QUOTE) RA(DOUBLE_QUOTES)
-&trans                    &kp NUMBER_6            &kp N7                &kp N8               &kp N9                  &kp N0       &kp PAGE_UP    &kp PAGE_DOWN  &kp HOME      &kp END    &ssw RA(SLASH) QUESTION  &kp LEFT_ALT
-                                                                        &trans               &trans                  &trans       &trans         &trans         &kp DEL
+&mrp_gravetilde  &la_at                 &kp N7                &kp N8                &kp N9                  &mrp_carets    &kp PERCENT     &la_amp    &la_equal     &la_pipe   &mrp_exclm   &kp LC(BACKSPACE)
+&none            &hml_sym_a LEFT_GUI 0  &hml LSHIFT NUMBER_4  &hml LEFT_CONTROL N5  &hml LEFT_ALT NUMBER_6  &kp DOLLAR     &kp LEFT_ARROW  &kp DOWN   &kp UP_ARROW  &kp RIGHT  &la_minus    &mrp_quotes
+&kp PERIOD       &kp N0                 &kp NUMBER_1          &kp NUMBER_2          &kp NUMBER_3            &kp POUND      &la_ntild       &la_astsk  &kp HOME      &kp END    &mrp_questm  &sk LEFT_ALT
+                                                              &kp DELETE            &trans                  &kp ENTER      &trans          &trans     &trans
             >;
         };
 
-        syst {
+        sys {
             bindings = <
-&to 0       &none         &none         &none         &sys_reset    &none          &none        &sys_reset  &none  &none  &none  &to 0
-&none       &none         &none         &trans        &none         &none          &none        &none       &none  &none  &none  &none
-&bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bootloader    &bootloader  &none       &none  &none  &none  &none
-                                        &none         &none         &none          &none        &none       &none
+&to 0                      &none         &none         &none         &sys_reset    &none          &none        &sys_reset  &none  &none  &none  &to 0
+&dmkp LEFT_SHIFT NUMBER_2  &none         &none         &none         &none         &none          &none        &none       &none  &none  &none  &none
+&bt BT_CLR                 &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bootloader    &bootloader  &none       &none  &none  &none  &none
+                                                       &none         &none         &none          &none        &none       &none
             >;
         };
     };
