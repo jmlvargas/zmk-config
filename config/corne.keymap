@@ -586,19 +586,19 @@
 
         fun {
             bindings = <
-&none  &kp PRINTSCREEN  &none       &none             &la_par_o               &la_par_c      &kp F1     &kp F2          &kp F3        &kp F4     &kp F5   &kp PAUSE_BREAK
-&none  &kp LEFT_GUI     &kp LSHIFT  &kp LEFT_CONTROL  &hml_fnav_f LEFT_ALT 0  &la_brace_c    &kp LEFT   &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT  &kp F6   &kp F7
-&none  &kp INS          &none       &none             &la_brack_o             &la_brack_c    &kp F8     &kp F9          &kp F10       &kp F11    &kp F12  &sk LEFT_ALT
-                                    &trans            &trans                  &trans         &kp SPACE  &trans          &kp LEFT_GUI
+&none             &kp PRINTSCREEN  &none       &none             &la_par_o               &la_par_c      &kp F1     &kp F2          &kp F3        &kp F4     &kp F5   &kp PAUSE_BREAK
+&kp LEFT_CONTROL  &kp LEFT_GUI     &kp LSHIFT  &kp LEFT_CONTROL  &hml_fnav_f LEFT_ALT 0  &la_brace_c    &kp LEFT   &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT  &kp F6   &kp F7
+&none             &kp INS          &kp LA(F4)  &kp K_CALCULATOR  &la_brack_o             &la_brack_c    &kp F8     &kp F9          &kp F10       &kp F11    &kp F12  &sk LEFT_ALT
+                                               &trans            &trans                  &trans         &kp SPACE  &trans          &kp LEFT_GUI
             >;
         };
 
         sym {
             bindings = <
-&mrp_gravetilde  &la_at                 &kp N7                &kp N8                &kp N9                  &mrp_carets    &kp PERCENT     &la_amp    &la_equal     &la_pipe   &mrp_exclm   &kp LC(BACKSPACE)
-&none            &hml_sym_a LEFT_GUI 0  &hml LSHIFT NUMBER_4  &hml LEFT_CONTROL N5  &hml LEFT_ALT NUMBER_6  &kp DOLLAR     &kp LEFT_ARROW  &kp DOWN   &kp UP_ARROW  &kp RIGHT  &la_minus    &mrp_quotes
-&kp PERIOD       &kp N0                 &kp NUMBER_1          &kp NUMBER_2          &kp NUMBER_3            &kp POUND      &la_ntild       &la_astsk  &kp HOME      &kp END    &mrp_questm  &sk LEFT_ALT
-                                                              &kp DELETE            &trans                  &kp ENTER      &trans          &trans     &trans
+&mrp_gravetilde   &la_at                 &kp N7                &kp N8                &kp N9                  &mrp_carets    &kp PERCENT     &la_amp    &la_equal     &la_pipe   &mrp_exclm   &kp LC(BACKSPACE)
+&kp LEFT_CONTROL  &hml_sym_a LEFT_GUI 0  &hml LSHIFT NUMBER_4  &hml LEFT_CONTROL N5  &hml LEFT_ALT NUMBER_6  &kp DOLLAR     &kp LEFT_ARROW  &kp DOWN   &kp UP_ARROW  &kp RIGHT  &la_minus    &mrp_quotes
+&kp PERIOD        &kp N0                 &kp NUMBER_1          &kp NUMBER_2          &kp NUMBER_3            &kp POUND      &la_ntild       &la_astsk  &kp HOME      &kp END    &mrp_questm  &sk LEFT_ALT
+                                                               &kp DELETE            &trans                  &kp ENTER      &trans          &trans     &trans
             >;
         };
 
