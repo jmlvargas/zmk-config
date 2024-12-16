@@ -586,10 +586,10 @@
 
         fun {
             bindings = <
-&none             &kp PRINTSCREEN  &kp K_WWW   &kp C_MUTE        &la_par_o               &la_par_c      &kp F1     &kp F2          &kp F3        &kp F4     &kp F5   &kp PAUSE_BREAK
-&kp LEFT_CONTROL  &kp LEFT_GUI     &kp LSHIFT  &kp LEFT_CONTROL  &hml_fnav_f LEFT_ALT 0  &la_brace_c    &kp LEFT   &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT  &kp F6   &kp F7
-&none             &kp INS          &kp LA(F4)  &kp K_CALCULATOR  &la_brack_o             &la_brack_c    &kp F8     &kp F9          &kp F10       &kp F11    &kp F12  &sk LEFT_ALT
-                                               &trans            &trans                  &trans         &kp SPACE  &trans          &kp LEFT_GUI
+&none             &kp PRINTSCREEN  &kp K_WWW   &kp C_MUTE        &la_par_o               &la_par_c        &kp F1     &kp F2          &kp F3        &kp F4     &kp F5   &kp PAUSE_BREAK
+&kp LEFT_CONTROL  &kp LEFT_GUI     &kp LSHIFT  &kp LEFT_CONTROL  &hml_fnav_f LEFT_ALT 0  &la_brace_c      &kp LEFT   &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT  &kp F6   &kp F7
+&none             &kp INS          &kp LA(F4)  &kp K_CALCULATOR  &la_brack_o             &la_brack_c      &kp F8     &kp F9          &kp F10       &kp F11    &kp F12  &sk LEFT_ALT
+                                               &trans            &trans                  &kp BACKSPACE    &kp SPACE  &trans          &kp LEFT_GUI
             >;
         };
 
