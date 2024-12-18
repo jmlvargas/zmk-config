@@ -18,21 +18,6 @@
     combos {
         compatible = "zmk,combos";
 
-        syst_layer {
-            bindings = <&tog 3>;
-            key-positions = <23 11 35>;
-            timeout-ms = <30>;
-            require-prior-idle-ms = <100>;
-            layers = <0>;
-        };
-
-        base_layer {
-            bindings = <&to 0>;
-            key-positions = <11 35>;
-            timeout-ms = <30>;
-            require-prior-idle-ms = <100>;
-        };
-
         pageup {
             bindings = <&kp PAGE_UP>;
             key-positions = <8 7>;
