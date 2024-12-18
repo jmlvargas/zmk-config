@@ -486,19 +486,19 @@
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
-        mrp_brack: mrp_brack {
+        mrp_brack_o_less: mrp_brack_o_less {
             compatible = "zmk,behavior-mod-morph";
-            label = "MRP_BRACK";
-            bindings = <&la_brack_o>, <&la_brack_c>;
+            label = "MRP_BRACK_O_LESS";
+            bindings = <&la_brack_o>, <&la_less>;
 
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
-        mrp_brace: mrp_brace {
+        mrp_brack_c_great: mrp_brack_c_great {
             compatible = "zmk,behavior-mod-morph";
-            label = "MRP_BRACE";
-            bindings = <&la_brace_o>, <&la_brace_c>;
+            label = "MRP_BRACK_C_GREAT";
+            bindings = <&la_brack_c>, <&la_great>;
 
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
@@ -562,19 +562,19 @@
             //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
 
             bindings = <
-&kp TAB     &kp Q  &kp W          &kp E                &kp R            &kp T        &kp Y      &kp U            &kp I                 &kp O           &kp P             &kp BACKSPACE
-&kp ESCAPE  &kp A  &hml LSHIFT S  &hml LEFT_CONTROL D  &hml LEFT_ALT F  &kp G        &kp H      &hmr LEFT_ALT J  &hmr RIGHT_CONTROL K  &hmr RSHIFT L   &mrp_semic_colon  &ssw_tildes 0 0
-&caps_word  &kp Z  &kp X          &kp C                &kp V            &kp B        &kp N      &kp M            &mrp_comma_less       &mrp_dot_great  &mrp_slashes      &mo 3
+&kp TAB     &kp Q  &kp W          &kp E                &kp R            &kp T        &kp Y      &kp U            &kp I                 &kp O          &kp P         &kp BACKSPACE
+&kp ESCAPE  &kp A  &hml LSHIFT S  &hml LEFT_CONTROL D  &hml LEFT_ALT F  &kp G        &kp H      &hmr LEFT_ALT J  &hmr RIGHT_CONTROL K  &hmr RSHIFT L  &la_ntild     &ssw_tildes 0 0
+&caps_word  &kp Z  &kp X          &kp C                &kp V            &kp B        &kp N      &kp M            &kp COMMA             &kp PERIOD     &mrp_slashes  &mo 3
                                   &kp LEFT_GUI         &mo 1            &kp SPACE    &kp ENTER  &mo 2            &kp DELETE
             >;
         };
 
         sym {
             bindings = <
-&mrp_gravetilde   &la_at    &kp N7        &kp N8        &kp N9        &mrp_carets    &kp PERCENT  &la_amp    &la_equal  &la_pipe  &mrp_exclm   &kp LC(BACKSPACE)
-&sk LEFT_CONTROL  &la_plus  &kp NUMBER_4  &kp N5        &kp NUMBER_6  &kp DOLLAR     &none        &none      &none      &none     &la_minus    &mrp_quotes
-&kp PERIOD        &kp N0    &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp POUND      &la_ntild    &la_astsk  &none      &none     &mrp_questm  &sk LEFT_ALT
-                                          &kp DELETE    &trans        &kp ENTER      &none        &none      &none
+&mrp_gravetilde   &la_at    &kp N7                &kp N8        &kp N9        &mrp_carets    &kp PERCENT  &la_amp    &la_equal          &la_pipe            &mrp_exclm   &kp LC(BACKSPACE)
+&sk LEFT_CONTROL  &la_plus  &hml LSHIFT NUMBER_4  &kp N5        &kp NUMBER_6  &kp DOLLAR     &la_par_o    &la_par_c  &la_brace_o        &la_brace_c         &la_minus    &mrp_quotes
+&kp PERIOD        &kp N0    &kp NUMBER_1          &kp NUMBER_2  &kp NUMBER_3  &kp POUND      &none        &la_astsk  &mrp_brack_o_less  &mrp_brack_c_great  &mrp_questm  &sk LEFT_ALT
+                                                  &kp DELETE    &trans        &kp ENTER      &none        &none      &none
             >;
         };
 
