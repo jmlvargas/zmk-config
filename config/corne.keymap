@@ -580,10 +580,10 @@
 
         fun {
             bindings = <
-&kp F12  &none         &none       &none             &la_par_o               &la_par_c        &kp F2     &kp F3          &kp F4        &kp F5     &kp F6   &kp F7
-&none    &kp LEFT_GUI  &kp LSHIFT  &kp LEFT_CONTROL  &hml_fnav_f LEFT_ALT 0  &la_brace_c      &kp LEFT   &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT  &kp F10  &kp F11
-&none    &none         &none       &none             &la_brack_o             &la_brack_c      &kp F8     &kp F9          &kp HOME      &kp END    &kp F1   &sk LEFT_ALT
-                                   &none             &none                   &kp BACKSPACE    &kp SPACE  &trans          &kp LEFT_GUI
+&kp F12  &none         &none       &none             &none         &none            &kp F2     &kp F3          &kp F4        &kp F5     &kp F6   &kp F7
+&none    &kp LEFT_GUI  &kp LSHIFT  &kp LEFT_CONTROL  &kp LEFT_ALT  &none            &kp LEFT   &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT  &kp F10  &kp F11
+&none    &none         &none       &none             &none         &none            &kp F8     &kp F9          &kp HOME      &kp END    &kp F1   &sk LEFT_ALT
+                                   &none             &none         &kp BACKSPACE    &kp SPACE  &trans          &kp LEFT_GUI
             >;
         };
 
