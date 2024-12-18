@@ -574,7 +574,7 @@
 &mrp_gravetilde   &la_at    &kp N7        &kp N8        &kp N9        &mrp_carets    &kp PERCENT  &la_amp    &la_equal  &la_pipe  &mrp_exclm   &kp LC(BACKSPACE)
 &sk LEFT_CONTROL  &la_plus  &kp NUMBER_4  &kp N5        &kp NUMBER_6  &kp DOLLAR     &none        &none      &none      &none     &la_minus    &mrp_quotes
 &kp PERIOD        &kp N0    &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp POUND      &la_ntild    &la_astsk  &none      &none     &mrp_questm  &sk LEFT_ALT
-                                          &kp DELETE    &trans        &kp ENTER      &trans       &trans     &trans
+                                          &kp DELETE    &trans        &kp ENTER      &none        &none      &none
             >;
         };
 
@@ -583,7 +583,7 @@
 &kp F12  &none         &none       &none             &la_par_o               &la_par_c        &kp F2     &kp F3          &kp F4        &kp F5     &kp F6   &kp F7
 &none    &kp LEFT_GUI  &kp LSHIFT  &kp LEFT_CONTROL  &hml_fnav_f LEFT_ALT 0  &la_brace_c      &kp LEFT   &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT  &kp F10  &kp F11
 &none    &none         &none       &none             &la_brack_o             &la_brack_c      &kp F8     &kp F9          &kp HOME      &kp END    &kp F1   &sk LEFT_ALT
-                                   &trans            &trans                  &kp BACKSPACE    &kp SPACE  &trans          &kp LEFT_GUI
+                                   &none             &none                   &kp BACKSPACE    &kp SPACE  &trans          &kp LEFT_GUI
             >;
         };
 
