@@ -420,40 +420,40 @@
             require-prior-idle-ms = <125>;
         };
 
-        hmr_symb_k: homerow_mod_symb_k {
+        hm_brace_o: homerow_mod_symb_k {
             compatible = "zmk,behavior-hold-tap";
             label = "HOMEROW_MOD_SYMB_K";
             bindings = <&kp>, <&la_brace_o>;
 
             #binding-cells = <2>;
             tapping-term-ms = <165>;
-            hold-trigger-key-positions = <13 14 15 16 17 25 26 27 28 29>;
+            hold-trigger-key-positions = <14 15 16 26 27 28 2 3 4 25>;
             flavor = "tap-preferred";
             quick-tap-ms = <250>;
             require-prior-idle-ms = <125>;
         };
 
-        hmr_symb_j: homerow_mod_symb_j {
+        hm_par_c: homerow_mod_symb_j {
             compatible = "zmk,behavior-hold-tap";
             label = "HOMEROW_MOD_SYMB_J";
             bindings = <&kp>, <&la_par_c>;
 
             #binding-cells = <2>;
             tapping-term-ms = <165>;
-            hold-trigger-key-positions = <13 14 15 16 17 25 26 27 28 29>;
+            hold-trigger-key-positions = <14 15 16 26 27 28 2 3 4 25>;
             flavor = "tap-preferred";
             quick-tap-ms = <250>;
             require-prior-idle-ms = <125>;
         };
 
-        hmr_symb_l: homerow_mod_symb_l {
+        hm_brace_c: homerow_mod_symb_l {
             compatible = "zmk,behavior-hold-tap";
             label = "HOMEROW_MOD_SYMB_L";
             bindings = <&kp>, <&la_brace_c>;
 
             #binding-cells = <2>;
             tapping-term-ms = <165>;
-            hold-trigger-key-positions = <13 14 15 16 17 25 26 27 28 29>;
+            hold-trigger-key-positions = <14 15 16 25 26 27 28 2 3 4>;
             flavor = "tap-preferred";
             quick-tap-ms = <250>;
             require-prior-idle-ms = <125>;
@@ -571,10 +571,10 @@
 
         sym {
             bindings = <
-&mrp_gravetilde   &la_at    &kp N7                &kp N8        &kp N9        &mrp_carets    &kp PERCENT  &la_amp    &la_equal          &la_pipe            &mrp_exclm   &kp LC(BACKSPACE)
-&sk LEFT_CONTROL  &la_plus  &hml LSHIFT NUMBER_4  &kp N5        &kp NUMBER_6  &kp DOLLAR     &la_par_o    &la_par_c  &la_brace_o        &la_brace_c         &la_minus    &mrp_quotes
-&kp PERIOD        &kp N0    &kp NUMBER_1          &kp NUMBER_2  &kp NUMBER_3  &kp POUND      &none        &la_astsk  &mrp_brack_o_less  &mrp_brack_c_great  &mrp_questm  &sk LEFT_ALT
-                                                  &kp DELETE    &trans        &kp ENTER      &none        &none      &none
+&mrp_gravetilde   &la_at    &kp N7                &kp N8        &kp N9        &mrp_carets    &kp PERCENT  &la_amp               &la_equal                   &la_pipe                  &mrp_exclm   &kp LC(BACKSPACE)
+&sk LEFT_CONTROL  &la_plus  &hml LSHIFT NUMBER_4  &kp N5        &kp NUMBER_6  &kp DOLLAR     &la_par_o    &hm_par_c LEFT_ALT 0  &hm_brace_o LEFT_CONTROL 0  &hm_brace_c LEFT_SHIFT 0  &la_minus    &mrp_quotes
+&kp PERIOD        &kp N0    &kp NUMBER_1          &kp NUMBER_2  &kp NUMBER_3  &kp POUND      &none        &la_astsk             &mrp_brack_o_less           &mrp_brack_c_great        &mrp_questm  &sk LEFT_ALT
+                                                  &kp DELETE    &trans        &kp ENTER      &none        &none                 &none
             >;
         };
 
