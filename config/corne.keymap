@@ -573,7 +573,7 @@
             bindings = <
 &mrp_gravetilde   &la_at    &kp N7                &kp N8        &kp N9        &mrp_carets    &kp PERCENT  &la_amp               &la_equal                   &la_pipe                  &mrp_exclm   &kp LC(BACKSPACE)
 &sk LEFT_CONTROL  &la_plus  &hml LSHIFT NUMBER_4  &kp N5        &kp NUMBER_6  &kp DOLLAR     &la_par_o    &hm_par_c LEFT_ALT 0  &hm_brace_o LEFT_CONTROL 0  &hm_brace_c LEFT_SHIFT 0  &la_minus    &mrp_quotes
-&kp PERIOD        &kp N0    &kp NUMBER_1          &kp NUMBER_2  &kp NUMBER_3  &kp POUND      &none        &la_astsk             &mrp_brack_o_less           &mrp_brack_c_great        &mrp_questm  &sk LEFT_ALT
+&kp PERIOD        &kp N0    &kp NUMBER_1          &kp NUMBER_2  &kp NUMBER_3  &kp POUND      &none        &la_astsk             &la_less                    &la_great                 &mrp_questm  &sk LEFT_ALT
                                                   &kp DELETE    &trans        &kp ENTER      &none        &none                 &none
             >;
         };
