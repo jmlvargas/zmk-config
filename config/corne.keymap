@@ -312,6 +312,13 @@
             bindings = <&kp LS(EQUAL)>;
             label = "LA_EXCLAMATION_OPEN";
         };
+
+        la_undersc: la_undersc {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LS(SLASH)>;
+            label = "LA_UNDERSC";
+        };
     };
 
     behaviors {
@@ -384,7 +391,7 @@
         mrp_slashes: mrp_slashes {
             compatible = "zmk,behavior-mod-morph";
             label = "MRP_SLASHES";
-            bindings = <&kp LS(N7)>, <&kp RA(MINUS)>;
+            bindings = <&kp KP_DIVIDE>, <&kp RA(MINUS)>;
 
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
@@ -586,6 +593,15 @@
             flavor = "balanced";
             quick-tap-ms = <250>;
         };
+
+        mrp_minus_undersc: mrp_minus_undersc {
+            compatible = "zmk,behavior-mod-morph";
+            label = "MRP_MINUS_UNDERSC";
+            bindings = <&kp KP_MINUS>, <&la_undersc>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
     };
 
     keymap {
@@ -608,10 +624,10 @@
 
         sym {
             bindings = <
-&mrp_tillde_grave  &la_at    &kp N7                &kp N8                &kp N9        &mrp_carets    &kp PERCENT  &la_amp               &la_equal                   &la_pipe                  &mrp_exclm   &none
-&sk LEFT_CONTROL   &la_plus  &hml LSHIFT NUMBER_4  &hml LEFT_CONTROL N5  &kp NUMBER_6  &kp DOLLAR     &la_par_o    &hm_par_c LEFT_ALT 0  &hm_brace_o LEFT_CONTROL 0  &hm_brace_c LEFT_SHIFT 0  &la_minus    &mrp_quotes
-&kp PERIOD         &kp N0    &kp NUMBER_1          &kp NUMBER_2          &kp NUMBER_3  &kp POUND      &none        &la_astsk             &la_less                    &la_great                 &mrp_questm  &none
-                                                   &kp DELETE            &trans        &kp ENTER      &none        &none                 &none
+&mrp_tillde_grave  &la_at       &kp N7                &kp N8                &kp N9        &mrp_carets    &kp PERCENT  &la_amp               &la_equal                   &la_pipe                  &mrp_exclm          &none
+&sk LEFT_CONTROL   &kp KP_PLUS  &hml LSHIFT NUMBER_4  &hml LEFT_CONTROL N5  &kp NUMBER_6  &kp DOLLAR     &la_par_o    &hm_par_c LEFT_ALT 0  &hm_brace_o LEFT_CONTROL 0  &hm_brace_c LEFT_SHIFT 0  &mrp_minus_undersc  &mrp_quotes
+&kp PERIOD         &kp N0       &kp NUMBER_1          &kp NUMBER_2          &kp NUMBER_3  &kp POUND      &none        &kp KP_MULTIPLY       &la_less                    &la_great                 &mrp_questm         &none
+                                                      &kp DELETE            &trans        &kp ENTER      &none        &none                 &none
             >;
         };
 
