@@ -624,19 +624,19 @@
 
         sym {
             bindings = <
-&mrp_tillde_grave  &la_at       &kp N7                &kp N8                &kp N9        &mrp_carets    &kp PERCENT  &la_amp               &la_equal                   &la_pipe                  &mrp_exclm          &none
-&sk LEFT_CONTROL   &kp KP_PLUS  &hml LSHIFT NUMBER_4  &hml LEFT_CONTROL N5  &kp NUMBER_6  &kp DOLLAR     &la_par_o    &hm_par_c LEFT_ALT 0  &hm_brace_o LEFT_CONTROL 0  &hm_brace_c LEFT_SHIFT 0  &mrp_minus_undersc  &mrp_quotes
-&kp PERIOD         &kp N0       &kp NUMBER_1          &kp NUMBER_2          &kp NUMBER_3  &kp POUND      &none        &kp KP_MULTIPLY       &la_less                    &la_great                 &mrp_questm         &none
-                                                      &kp DELETE            &trans        &kp ENTER      &none        &none                 &none
+&mrp_tillde_grave  &la_at       &kp N7                &kp N8                &kp N9        &mrp_carets      &kp PERCENT  &la_amp               &la_equal                   &la_pipe                  &mrp_exclm          &none
+&sk LEFT_CONTROL   &kp KP_PLUS  &hml LSHIFT NUMBER_4  &hml LEFT_CONTROL N5  &kp NUMBER_6  &kp DOLLAR       &la_par_o    &hm_par_c LEFT_ALT 0  &hm_brace_o LEFT_CONTROL 0  &hm_brace_c LEFT_SHIFT 0  &mrp_minus_undersc  &mrp_quotes
+&kp PERIOD         &kp N0       &kp NUMBER_1          &kp NUMBER_2          &kp NUMBER_3  &kp POUND        &none        &kp KP_MULTIPLY       &la_less                    &la_great                 &mrp_questm         &none
+                                                      &kp ENTER             &trans        &kp BACKSPACE    &none        &none                 &none
             >;
         };
 
         fun {
             bindings = <
-&kp F12  &none         &none       &none             &none         &none            &kp F2     &kp F3          &kp F4        &kp F5     &kp F6   &kp F7
-&none    &kp LEFT_GUI  &kp LSHIFT  &kp LEFT_CONTROL  &kp LEFT_ALT  &none            &kp LEFT   &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT  &kp F10  &kp F11
-&none    &none         &kp LC(X)   &kp LC(C)         &kp LC(V)     &none            &kp F8     &kp F9          &kp HOME      &kp END    &kp F1   &sk LEFT_ALT
-                                   &none             &none         &kp BACKSPACE    &kp SPACE  &trans          &kp LEFT_GUI
+&kp F12  &none  &none       &none             &none         &none            &kp F2     &kp F3          &kp F4        &kp F5     &kp F6   &kp F7
+&none    &none  &kp LSHIFT  &kp LEFT_CONTROL  &kp LEFT_ALT  &none            &kp LEFT   &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT  &kp F10  &kp F11
+&none    &none  &kp LC(X)   &kp LC(C)         &kp LC(V)     &none            &kp F8     &kp F9          &kp HOME      &kp END    &kp F1   &sk LEFT_ALT
+                            &kp LEFT_GUI      &none         &kp BACKSPACE    &kp SPACE  &trans          &none
             >;
         };
 
