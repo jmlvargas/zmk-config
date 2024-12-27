@@ -28,7 +28,6 @@
             key-positions = <8 9>;
             timeout-ms = <30>;
             require-prior-idle-ms = <100>;
-            layers = <2>;
         };
 
         pagedown {
@@ -36,7 +35,6 @@
             key-positions = <20 21>;
             timeout-ms = <30>;
             require-prior-idle-ms = <100>;
-            layers = <2>;
         };
 
         bootldr_l {
@@ -44,7 +42,6 @@
             key-positions = <24 29>;
             timeout-ms = <30>;
             require-prior-idle-ms = <100>;
-            layers = <3>;
         };
 
         bootldr_r {
@@ -52,7 +49,6 @@
             key-positions = <30 35>;
             timeout-ms = <30>;
             require-prior-idle-ms = <100>;
-            layers = <3>;
         };
 
         reset_l {
@@ -60,7 +56,6 @@
             key-positions = <0 5>;
             timeout-ms = <30>;
             require-prior-idle-ms = <100>;
-            layers = <3>;
         };
 
         reset_r {
@@ -68,7 +63,6 @@
             key-positions = <6 11>;
             timeout-ms = <30>;
             require-prior-idle-ms = <100>;
-            layers = <3>;
         };
     };
 
@@ -399,9 +393,9 @@
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
-        mrp_tillde_grave: mrp_tillde_grave {
+        mrp_tilde_grave: mrp_tilde_grave {
             compatible = "zmk,behavior-mod-morph";
-            label = "MRP_TILLDE_GRAVE";
+            label = "MRP_TILDE_GRAVE";
             bindings = <&la_otilde>, <&la_grave>;
 
             #binding-cells = <0>;
@@ -608,28 +602,28 @@
 
         sym {
             bindings = <
-&mrp_tillde_grave  &mrp_exclm   &la_at                &kp POUND             &kp DOLLAR    &kp PERCENT      &la_amp    &la_amp               &la_caret                   &la_pipe                  &kp KP_MULTIPLY     &la_equal
-&sk LEFT_CONTROL   &kp KP_PLUS  &hml LSHIFT NUMBER_4  &hml LEFT_CONTROL N5  &kp NUMBER_6  &kp SPACE        &la_par_o  &hm_par_c LEFT_ALT 0  &hm_brace_o LEFT_CONTROL 0  &hm_brace_c LEFT_SHIFT 0  &mrp_minus_undersc  &mrp_quotes
-&kp PERIOD         &kp N0       &kp NUMBER_1          &kp NUMBER_2          &kp NUMBER_3  &kp POUND        &none      &kp KP_MULTIPLY       &la_less                    &la_great                 &mrp_questm         &none
-                                                      &kp ENTER             &trans        &kp BACKSPACE    &none      &none                 &none
+&mrp_tilde_grave  &mrp_exclm  &la_at                &kp POUND             &kp DOLLAR  &kp PERCENT      &la_amp     &none                 &la_caret                   &la_pipe                  &kp KP_MULTIPLY  &la_equal
+&sk LEFT_CONTROL  &none       &hml LSHIFT NUMBER_4  &hml LEFT_CONTROL N5  &none       &kp SPACE        &la_par_o   &hm_par_c LEFT_ALT 0  &hm_brace_o LEFT_CONTROL 0  &hm_brace_c LEFT_SHIFT 0  &la_undersc      &mrp_quotes
+&kp PERIOD        &none       &none                 &none                 &none       &none            &mrp_exclm  &kp KP_MULTIPLY       &la_less                    &la_great                 &mrp_questm      &none
+                                                    &kp ENTER             &trans      &kp BACKSPACE    &none       &none                 &none
             >;
         };
 
-        fun {
+        ckp {
+            bindings = <
+&none       &none         &none           &kp INSERT        &none         &kp C_VOLUME_UP    &trans  &kp NUMBER_7  &kp N8        &kp N9        &trans        &trans
+&none       &none         &kp LEFT_SHIFT  &kp LEFT_CONTROL  &kp LEFT_ALT  &kp C_VOL_DN       &kp N0  &kp NUMBER_4  &kp N5        &kp NUMBER_6  &kp KP_MINUS  &kp KP_PLUS
+&bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1    &kp C_AL_CALC     &none         &kp C_MUTE         &trans  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &trans        &none
+                                          &kp LEFT_GUI      &trans        &none              &none   &trans        &none
+            >;
+        };
+
+        fnv {
             bindings = <
 &kp F12  &none  &none       &none             &none         &none              &kp F2     &kp F3          &kp F4        &kp F5     &kp F6   &kp F7
 &none    &none  &kp LSHIFT  &kp LEFT_CONTROL  &kp LEFT_ALT  &none              &kp LEFT   &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT  &kp F10  &kp F11
 &none    &none  &kp LC(X)   &kp LC(C)         &kp LC(V)     &kp PAUSE_BREAK    &kp F8     &kp F9          &kp HOME      &kp END    &kp F1   &sk LEFT_ALT
                             &kp LEFT_GUI      &none         &kp BACKSPACE      &kp SPACE  &trans          &trans
-            >;
-        };
-
-        sys {
-            bindings = <
-&none       &none         &none           &kp INSERT        &kp SPACE     &kp C_VOLUME_UP    &mrp_carets  &kp NUMBER_7  &kp N8        &kp N9        &kp KP_MULTIPLY  &la_equal
-&none       &none         &kp LEFT_SHIFT  &kp LEFT_CONTROL  &kp LEFT_ALT  &kp C_VOL_DN       &kp N0       &kp NUMBER_4  &kp N5        &kp NUMBER_6  &kp KP_MINUS     &kp KP_PLUS
-&bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1    &kp C_AL_CALC     &kp SPACE     &kp C_MUTE         &none        &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp KP_DIVIDE    &kp SPACE
-                                          &kp LEFT_GUI      &trans        &none              &none        &trans        &none
             >;
         };
     };
