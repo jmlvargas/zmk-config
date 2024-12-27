@@ -303,6 +303,27 @@
             bindings = <&kp LS(SLASH)>;
             label = "LA_UNDERSC";
         };
+
+        la_backslash: la_backslash {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp RA(MINUS)>;
+            label = "LA_BACKSLASH";
+        };
+
+        la_quest_o: la_quest_o {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LS(MINUS)>;
+            label = "LA_QUEST_O";
+        };
+
+        la_quest_c: la_quest_c {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp EQUAL>;
+            label = "LA_QUEST_C";
+        };
     };
 
     behaviors {
@@ -586,6 +607,24 @@
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
+
+        mrp_tilde_apost: mrp_tilde_apost {
+            compatible = "zmk,behavior-mod-morph";
+            label = "MRP_TILDE_APOST";
+            bindings = <&la_tilde>, <&la_apost>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        mrp_slash_quest_o: mrp_slash_quest_o {
+            compatible = "zmk,behavior-mod-morph";
+            label = "MRP_SLASH_QUEST_O";
+            bindings = <&kp KP_DIVIDE>, <&la_quest_o>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
     };
 
     keymap {
@@ -599,19 +638,19 @@
             //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
 
             bindings = <
-&kp ESCAPE  &kp Q  &kp W          &kp E                &kp R            &kp T        &kp Y      &kp U            &kp I                 &kp O          &kp P         &kp BACKSPACE
-&kp TAB     &kp A  &hml LSHIFT S  &hml LEFT_CONTROL D  &hml LEFT_ALT F  &kp G        &kp H      &hmr LEFT_ALT J  &hmr RIGHT_CONTROL K  &hmr RSHIFT L  &la_ntild     &ssw_tildes 0 0
-&caps_word  &kp Z  &kp X          &kp C                &kp V            &kp B        &kp N      &kp M            &kp COMMA             &kp PERIOD     &mrp_slashes  &kp DEL
+&kp ESCAPE  &kp Q  &kp W          &kp E                &kp R            &kp T        &kp Y      &kp U            &kp I                 &kp O          &kp P               &kp BACKSPACE
+&kp TAB     &kp A  &hml LSHIFT S  &hml LEFT_CONTROL D  &hml LEFT_ALT F  &kp G        &kp H      &hmr LEFT_ALT J  &hmr RIGHT_CONTROL K  &hmr RSHIFT L  &la_ntild           &mrp_tilde_apost
+&caps_word  &kp Z  &kp X          &kp C                &kp V            &kp B        &kp N      &kp M            &kp COMMA             &kp PERIOD     &mrp_slash_quest_o  &kp DEL
                                   &kp LEFT_GUI         &mo 1            &kp SPACE    &kp ENTER  &mo 3            &mo 2
             >;
         };
 
         sym {
             bindings = <
-&mrp_tilde_grave  &mrp_exclm  &la_at      &kp POUND         &kp DOLLAR  &kp PERCENT      &la_amp    &none                 &la_caret                   &la_pipe                  &kp KP_MULTIPLY     &la_equal
-&sk LEFT_CONTROL  &none       &kp LSHIFT  &kp LEFT_CONTROL  &none       &none            &la_par_o  &hm_par_c LEFT_ALT 0  &hm_brace_o LEFT_CONTROL 0  &hm_brace_c LEFT_SHIFT 0  &mrp_minus_undersc  &mrp_quotes
-&none             &none       &none       &none             &none       &none            &none      &kp KP_MULTIPLY       &la_less                    &la_great                 &mrp_questm         &mrp_exclm
-                                          &kp ENTER         &trans      &kp BACKSPACE    &none      &none                 &none
+&la_otilde  &kp EXCL   &la_at      &kp POUND         &kp DOLLAR   &kp PERCENT      &la_amp    &none        &la_caret    &la_pipe     &kp KP_MULTIPLY  &la_equal
+&la_grave   &la_exc_o  &kp LSHIFT  &kp LEFT_CONTROL  &la_quest_c  &none            &la_par_o  &la_par_c    &la_brace_o  &la_brace_c  &kp KP_MINUS     &la_quo
+&none       &none      &none       &none             &la_quest_o  &none            &none      &la_undersc  &la_less     &la_great    &kp KP_DIVIDE    &la_backslash
+                                   &kp ENTER         &trans       &kp BACKSPACE    &none      &none        &none
             >;
         };
 
@@ -619,7 +658,7 @@
             bindings = <
 &kp PRINTSCREEN  &none         &none           &kp INSERT        &none         &none                &none   &kp NUMBER_7  &kp N8        &kp N9        &kp KP_MULTIPLY  &la_equal
 &none            &none         &kp LEFT_SHIFT  &kp LEFT_CONTROL  &kp LEFT_ALT  &kp C_VOLUME_UP      &kp N0  &kp NUMBER_4  &kp N5        &kp NUMBER_6  &kp KP_MINUS     &kp KP_PLUS
-&bt BT_CLR       &bt BT_SEL 0  &bt BT_SEL 1    &kp C_AL_CALC     &kp C_MUTE    &kp C_VOLUME_DOWN    &none   &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp KP_DIVIDE    &none
+&bt BT_CLR       &bt BT_SEL 0  &bt BT_SEL 1    &kp C_AL_CALC     &kp C_MUTE    &kp C_VOLUME_DOWN    &none   &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp KP_DIVIDE    &la_backslash
                                                &kp LEFT_GUI      &trans        &none                &none   &trans        &none
             >;
         };
