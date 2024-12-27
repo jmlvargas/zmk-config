@@ -374,210 +374,9 @@
             quick-tap-ms = <250>;
         };
 
-        lsm: layer_switch_mods {
+        hml_quest_c: hml_quest_c {
             compatible = "zmk,behavior-hold-tap";
-            label = "LAYER_SWITCH_MODS";
-            bindings = <&mo>, <&tog>;
-
-            #binding-cells = <2>;
-            tapping-term-ms = <160>;
-            flavor = "hold-preferred";
-        };
-
-        mrp_quotes: mrp_quotes {
-            compatible = "zmk,behavior-mod-morph";
-            label = "MRP_QUOTES";
-            bindings = <&la_quo>, <&la_apost>;
-
-            #binding-cells = <0>;
-            mods = <(MOD_LSFT|MOD_RSFT)>;
-        };
-
-        mrp_slashes: mrp_slashes {
-            compatible = "zmk,behavior-mod-morph";
-            label = "MRP_SLASHES";
-            bindings = <&kp KP_DIVIDE>, <&kp RA(MINUS)>;
-
-            #binding-cells = <0>;
-            mods = <(MOD_LSFT|MOD_RSFT)>;
-        };
-
-        mrp_exclm: mrp_exclm {
-            compatible = "zmk,behavior-mod-morph";
-            label = "MRP_EXCLM";
-            bindings = <&kp EXCL>, <&la_exc_o>;
-
-            #binding-cells = <0>;
-            mods = <(MOD_LSFT|MOD_RSFT)>;
-        };
-
-        mrp_questm: mrp_questm {
-            compatible = "zmk,behavior-mod-morph";
-            label = "MRP_QUESTM";
-            bindings = <&kp LS(MINUS)>, <&kp EQUAL>;
-
-            #binding-cells = <0>;
-            mods = <(MOD_LSFT|MOD_RSFT)>;
-        };
-
-        mrp_tilde_grave: mrp_tilde_grave {
-            compatible = "zmk,behavior-mod-morph";
-            label = "MRP_TILDE_GRAVE";
-            bindings = <&la_otilde>, <&la_grave>;
-
-            #binding-cells = <0>;
-            mods = <(MOD_LSFT|MOD_RSFT)>;
-        };
-
-        mrp_m2comma: mrp_m2comma {
-            compatible = "zmk,behavior-mod-morph";
-            label = "MRP_M2COMMA";
-            bindings = <&kp NUMBER_2>, <&kp COMMA>;
-
-            #binding-cells = <0>;
-            mods = <(MOD_LSFT|MOD_RSFT)>;
-        };
-
-        mrp_m3dot: mrp_m3dot {
-            compatible = "zmk,behavior-mod-morph";
-            label = "MRP_M3DOT";
-            bindings = <&kp NUMBER_3>, <&kp DOT>;
-
-            #binding-cells = <0>;
-            mods = <(MOD_LSFT|MOD_RSFT)>;
-        };
-
-        mrp_semic_colon: mrp_semic_colon {
-            compatible = "zmk,behavior-mod-morph";
-            label = "MRP_SEMIC_COLON";
-            bindings = <&la_scol>, <&la_colon>;
-
-            #binding-cells = <0>;
-            mods = <(MOD_LSFT|MOD_RSFT)>;
-        };
-
-        hmr_base_sc: homerow_mods_semicolon {
-            compatible = "zmk,behavior-hold-tap";
-            label = "HOMEROW_MODS_SEMICOLON";
-            bindings = <&kp>, <&mrp_semic_colon>;
-
-            #binding-cells = <2>;
-            tapping-term-ms = <165>;
-            hold-trigger-key-positions = <0 1 2 3 4 5 12 13 14 15 16 17 24 25 26 27 28 29 36 37 38>;
-            flavor = "tap-preferred";
-            quick-tap-ms = <250>;
-            require-prior-idle-ms = <125>;
-        };
-
-        hm_brace_o: homerow_mod_symb_k {
-            compatible = "zmk,behavior-hold-tap";
-            label = "HOMEROW_MOD_SYMB_K";
-            bindings = <&kp>, <&la_brace_o>;
-
-            #binding-cells = <2>;
-            tapping-term-ms = <165>;
-            hold-trigger-key-positions = <14 15 16 26 27 28 2 3 4 25 13>;
-            flavor = "tap-preferred";
-            quick-tap-ms = <250>;
-            require-prior-idle-ms = <125>;
-        };
-
-        hm_par_c: homerow_mod_symb_j {
-            compatible = "zmk,behavior-hold-tap";
-            label = "HOMEROW_MOD_SYMB_J";
-            bindings = <&kp>, <&la_par_c>;
-
-            #binding-cells = <2>;
-            tapping-term-ms = <165>;
-            hold-trigger-key-positions = <14 15 16 26 27 28 2 3 4 25>;
-            flavor = "tap-preferred";
-            quick-tap-ms = <250>;
-            require-prior-idle-ms = <125>;
-        };
-
-        hm_brace_c: homerow_mod_symb_l {
-            compatible = "zmk,behavior-hold-tap";
-            label = "HOMEROW_MOD_SYMB_L";
-            bindings = <&kp>, <&la_brace_c>;
-
-            #binding-cells = <2>;
-            tapping-term-ms = <165>;
-            hold-trigger-key-positions = <14 15 16 25 26 27 28 2 3 4 0>;
-            flavor = "tap-preferred";
-            quick-tap-ms = <250>;
-            require-prior-idle-ms = <125>;
-        };
-
-        mrp_comma_less: mrp_comma_less {
-            compatible = "zmk,behavior-mod-morph";
-            label = "MRP_COMMA_LESS";
-            bindings = <&kp COMMA>, <&la_less>;
-
-            #binding-cells = <0>;
-            mods = <(MOD_LSFT|MOD_RSFT)>;
-        };
-
-        mrp_dot_great: mrp_dot_great {
-            compatible = "zmk,behavior-mod-morph";
-            label = "MRP_DOT_GREAT";
-            bindings = <&kp DOT>, <&la_great>;
-
-            #binding-cells = <0>;
-            mods = <(MOD_LSFT|MOD_RSFT)>;
-        };
-
-        mrp_par: mrp_par {
-            compatible = "zmk,behavior-mod-morph";
-            label = "MRP_PAR";
-            bindings = <&la_par_o>, <&la_par_c>;
-
-            #binding-cells = <0>;
-            mods = <(MOD_LSFT|MOD_RSFT)>;
-        };
-
-        mrp_brack_o_less: mrp_brack_o_less {
-            compatible = "zmk,behavior-mod-morph";
-            label = "MRP_BRACK_O_LESS";
-            bindings = <&la_brack_o>, <&la_less>;
-
-            #binding-cells = <0>;
-            mods = <(MOD_LSFT|MOD_RSFT)>;
-        };
-
-        mrp_brack_c_great: mrp_brack_c_great {
-            compatible = "zmk,behavior-mod-morph";
-            label = "MRP_BRACK_C_GREAT";
-            bindings = <&la_brack_c>, <&la_great>;
-
-            #binding-cells = <0>;
-            mods = <(MOD_LSFT|MOD_RSFT)>;
-        };
-
-        hml_fnav_f: homerow_mod_fnav_f {
-            compatible = "zmk,behavior-hold-tap";
-            label = "HOMEROW_MOD_FNAV_F";
-            bindings = <&kp>, <&la_brace_o>;
-
-            #binding-cells = <2>;
-            tapping-term-ms = <165>;
-            hold-trigger-key-positions = <6 7 8 6 7 8 9 10 30 31 32 33 34 18 19 20 21 22>;
-            flavor = "tap-preferred";
-            quick-tap-ms = <250>;
-            require-prior-idle-ms = <125>;
-        };
-
-        mrp_carets: mrp_carets {
-            compatible = "zmk,behavior-mod-morph";
-            label = "MRP_CARETS";
-            bindings = <&la_caret>, <&la_exp>;
-
-            #binding-cells = <0>;
-            mods = <(MOD_LSFT|MOD_RSFT)>;
-        };
-
-        hml_num_f: hml_num_f {
-            compatible = "zmk,behavior-hold-tap";
-            label = "HML_NUM_F";
+            label = "HML_QUEST_C";
             bindings = <&kp>, <&la_quest_c>;
 
             #binding-cells = <2>;
@@ -599,40 +398,17 @@
             quick-tap-ms = <250>;
         };
 
-        mrp_minus_undersc: mrp_minus_undersc {
-            compatible = "zmk,behavior-mod-morph";
-            label = "MRP_MINUS_UNDERSC";
-            bindings = <&kp KP_MINUS>, <&la_undersc>;
+        hml_apos: hml_apos {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HML_APOS";
+            bindings = <&kp>, <&la_apost>;
 
-            #binding-cells = <0>;
-            mods = <(MOD_LSFT|MOD_RSFT)>;
-        };
-
-        mrp_tilde_apost: mrp_tilde_apost {
-            compatible = "zmk,behavior-mod-morph";
-            label = "MRP_TILDE_APOST";
-            bindings = <&la_tilde>, <&la_apost>;
-
-            #binding-cells = <0>;
-            mods = <(MOD_LSFT|MOD_RSFT)>;
-        };
-
-        mrp_slash_quest_c: mrp_slash_quest_c {
-            compatible = "zmk,behavior-mod-morph";
-            label = "MRP_SLASH_QUEST_C";
-            bindings = <&kp KP_DIVIDE>, <&la_quest_c>;
-
-            #binding-cells = <0>;
-            mods = <(MOD_LSFT|MOD_RSFT)>;
-        };
-
-        mrp_tilde_quotes: mrp_tilde_quotes {
-            compatible = "zmk,behavior-mod-morph";
-            label = "MRP_TILDE_QUOTES";
-            bindings = <&ssw_tildes 0 0>, <&la_quo>;
-
-            #binding-cells = <0>;
-            mods = <(MOD_LSFT|MOD_RSFT)>;
+            #binding-cells = <2>;
+            tapping-term-ms = <165>;
+            hold-trigger-key-positions = <6 7 8 6 7 8 9 10 30 31 32 33 34 18 19 20 21 22 11 23 35>;
+            flavor = "tap-preferred";
+            quick-tap-ms = <250>;
+            require-prior-idle-ms = <125>;
         };
     };
 
@@ -648,7 +424,7 @@
 
             bindings = <
 &kp ESCAPE  &kp Q  &kp W          &kp E                &kp R            &kp T        &kp Y      &kp U            &kp I                 &kp O          &kp P          &kp BACKSPACE
-&kp TAB     &kp A  &hml LSHIFT S  &hml LEFT_CONTROL D  &hml LEFT_ALT F  &kp G        &kp H      &hmr LEFT_ALT J  &hmr RIGHT_CONTROL K  &hmr RSHIFT L  &la_ntild      &mrp_tilde_quotes
+&kp TAB     &kp A  &hml LSHIFT S  &hml LEFT_CONTROL D  &hml LEFT_ALT F  &kp G        &kp H      &hmr LEFT_ALT J  &hmr RIGHT_CONTROL K  &hmr RSHIFT L  &la_ntild      &la_tilde
 &caps_word  &kp Z  &kp X          &kp C                &kp V            &kp B        &kp N      &kp M            &kp COMMA             &kp PERIOD     &kp KP_DIVIDE  &kp DEL
                                   &kp LEFT_GUI         &mo 1            &kp SPACE    &kp ENTER  &mo 2            &mo 3
             >;
@@ -656,19 +432,19 @@
 
         sym {
             bindings = <
-&la_otilde  &la_at     &la_apost   &kp POUND         &kp DOLLAR   &kp PERCENT      &la_amp      &la_undersc  &la_caret    &la_pipe     &kp KP_MULTIPLY  &la_equal
-&la_grave   &kp EXCL   &kp LSHIFT  &kp LEFT_CONTROL  &la_quest_c  &none            &la_par_o    &la_par_c    &la_brace_o  &la_brace_c  &kp KP_MINUS     &kp KP_PLUS
-&none       &la_exc_o  &none       &none             &la_quest_o  &none            &la_brack_o  &la_brack_c  &la_less     &la_great    &la_backslash    &none
-                                   &kp ENTER         &trans       &kp BACKSPACE    &none        &none        &none
+&la_otilde  &la_at     &la_quo             &kp POUND         &kp DOLLAR   &kp PERCENT      &la_amp      &la_undersc  &la_caret    &la_pipe     &kp KP_MULTIPLY  &la_equal
+&la_grave   &kp EXCL   &hml_apos LSHIFT 0  &kp LEFT_CONTROL  &la_quest_c  &none            &la_par_o    &la_par_c    &la_brace_o  &la_brace_c  &kp KP_MINUS     &kp KP_PLUS
+&none       &la_exc_o  &none               &none             &la_quest_o  &none            &la_brack_o  &la_brack_c  &la_less     &la_great    &la_backslash    &none
+                                           &kp ENTER         &trans       &kp BACKSPACE    &none        &none        &none
             >;
         };
 
         num {
             bindings = <
-&la_otilde  &la_at     &la_apost       &kp POUND         &kp DOLLAR             &kp PERCENT    &kp C_AL_CALC  &kp NUMBER_7  &kp N8        &kp N9        &kp KP_MULTIPLY  &la_equal
-&la_grave   &kp EXCL   &kp LEFT_SHIFT  &kp LEFT_CONTROL  &hml_num_f LEFT_ALT 0  &none          &none          &kp NUMBER_4  &kp N5        &kp NUMBER_6  &kp KP_MINUS     &kp KP_PLUS
-&none       &la_exc_o  &kp INSERT      &none             &la_quest_o            &none          &kp N0         &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp KP_DIVIDE    &none
-                                       &kp LEFT_GUI      &trans                 &none          &none          &trans        &none
+&la_otilde  &la_at     &la_quo                 &kp POUND         &kp DOLLAR               &kp PERCENT    &kp C_AL_CALC  &kp NUMBER_7  &kp N8        &kp N9        &kp KP_MULTIPLY  &la_equal
+&la_grave   &kp EXCL   &hml_apos LEFT_SHIFT 0  &kp LEFT_CONTROL  &hml_quest_c LEFT_ALT 0  &none          &none          &kp NUMBER_4  &kp N5        &kp NUMBER_6  &kp KP_MINUS     &kp KP_PLUS
+&none       &la_exc_o  &kp INSERT              &none             &la_quest_o              &none          &kp N0         &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp KP_DIVIDE    &none
+                                               &kp LEFT_GUI      &trans                   &none          &none          &trans        &none
             >;
         };
 
