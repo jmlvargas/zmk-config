@@ -647,10 +647,10 @@
 
         sym {
             bindings = <
-&la_otilde  &kp EXCL   &la_at      &kp POUND         &kp DOLLAR   &kp PERCENT      &la_amp    &none        &la_caret    &la_pipe     &kp KP_MULTIPLY  &la_equal
-&la_grave   &la_exc_o  &kp LSHIFT  &kp LEFT_CONTROL  &la_quest_c  &none            &la_par_o  &la_par_c    &la_brace_o  &la_brace_c  &kp KP_MINUS     &la_quo
-&none       &none      &none       &none             &la_quest_o  &none            &none      &la_undersc  &la_less     &la_great    &la_backslash    &none
-                                   &kp ENTER         &trans       &kp BACKSPACE    &none      &none        &none
+&la_otilde  &kp EXCL   &la_at      &kp POUND         &kp DOLLAR   &kp PERCENT      &la_amp      &la_undersc  &la_caret    &la_pipe     &kp KP_MULTIPLY  &la_equal
+&la_grave   &la_exc_o  &kp LSHIFT  &kp LEFT_CONTROL  &la_quest_c  &none            &la_par_o    &la_par_c    &la_brace_o  &la_brace_c  &kp KP_MINUS     &la_quo
+&none       &none      &none       &none             &la_quest_o  &none            &la_brack_o  &la_brack_c  &la_less     &la_great    &la_backslash    &none
+                                   &kp ENTER         &trans       &kp BACKSPACE    &none        &none        &none
             >;
         };
 
