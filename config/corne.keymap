@@ -44,7 +44,7 @@
             key-positions = <24 29>;
             timeout-ms = <30>;
             require-prior-idle-ms = <100>;
-            layers = <2>;
+            layers = <3>;
         };
 
         bootldr_r {
@@ -52,7 +52,7 @@
             key-positions = <30 35>;
             timeout-ms = <30>;
             require-prior-idle-ms = <100>;
-            layers = <2>;
+            layers = <3>;
         };
 
         reset_l {
@@ -60,7 +60,7 @@
             key-positions = <0 5>;
             timeout-ms = <30>;
             require-prior-idle-ms = <100>;
-            layers = <2>;
+            layers = <3>;
         };
 
         reset_r {
@@ -68,7 +68,7 @@
             key-positions = <6 11>;
             timeout-ms = <30>;
             require-prior-idle-ms = <100>;
-            layers = <2>;
+            layers = <3>;
         };
     };
 
