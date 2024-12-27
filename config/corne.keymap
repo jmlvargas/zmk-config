@@ -625,6 +625,15 @@
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
+
+        mrp_tilde_quotes: mrp_tilde_quotes {
+            compatible = "zmk,behavior-mod-morph";
+            label = "MRP_TILDE_QUOTES";
+            bindings = <&ssw_tildes 0 0>, <&la_quo>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
     };
 
     keymap {
@@ -639,7 +648,7 @@
 
             bindings = <
 &kp ESCAPE  &kp Q  &kp W          &kp E                &kp R            &kp T        &kp Y      &kp U            &kp I                 &kp O          &kp P          &kp BACKSPACE
-&kp TAB     &kp A  &hml LSHIFT S  &hml LEFT_CONTROL D  &hml LEFT_ALT F  &kp G        &kp H      &hmr LEFT_ALT J  &hmr RIGHT_CONTROL K  &hmr RSHIFT L  &la_ntild      &mrp_tilde_apost
+&kp TAB     &kp A  &hml LSHIFT S  &hml LEFT_CONTROL D  &hml LEFT_ALT F  &kp G        &kp H      &hmr LEFT_ALT J  &hmr RIGHT_CONTROL K  &hmr RSHIFT L  &la_ntild      &mrp_tilde_quotes
 &caps_word  &kp Z  &kp X          &kp C                &kp V            &kp B        &kp N      &kp M            &kp COMMA             &kp PERIOD     &kp KP_DIVIDE  &kp DEL
                                   &kp LEFT_GUI         &mo 1            &kp SPACE    &kp ENTER  &mo 2            &mo 3
             >;
@@ -647,7 +656,7 @@
 
         sym {
             bindings = <
-&la_otilde  &la_at     &la_quo     &kp POUND         &kp DOLLAR   &kp PERCENT      &la_amp      &la_undersc  &la_caret    &la_pipe     &kp KP_MULTIPLY  &la_equal
+&la_otilde  &la_at     &la_apost   &kp POUND         &kp DOLLAR   &kp PERCENT      &la_amp      &la_undersc  &la_caret    &la_pipe     &kp KP_MULTIPLY  &la_equal
 &la_grave   &kp EXCL   &kp LSHIFT  &kp LEFT_CONTROL  &la_quest_c  &none            &la_par_o    &la_par_c    &la_brace_o  &la_brace_c  &kp KP_MINUS     &kp KP_PLUS
 &none       &la_exc_o  &none       &none             &la_quest_o  &none            &la_brack_o  &la_brack_c  &la_less     &la_great    &kp KP_DIVIDE    &la_backslash
                                    &kp ENTER         &trans       &kp BACKSPACE    &none        &none        &none
@@ -665,10 +674,10 @@
 
         fnv {
             bindings = <
-&kp F12  &none  &none       &none             &none         &none              &kp F2     &kp F3          &kp F4        &kp F5     &kp F6   &kp F7
-&none    &none  &kp LSHIFT  &kp LEFT_CONTROL  &kp LEFT_ALT  &none              &kp LEFT   &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT  &kp F10  &kp F11
-&none    &none  &kp LC(X)   &kp LC(C)         &kp LC(V)     &kp PAUSE_BREAK    &kp F8     &kp F9          &kp HOME      &kp END    &kp F1   &sk LEFT_ALT
-                            &kp LEFT_GUI      &none         &kp BACKSPACE      &kp SPACE  &trans          &trans
+&kp F1  &none  &none       &none             &none         &none              &kp F2     &kp F3          &kp F4        &kp F5     &kp F8   &kp F9
+&none   &none  &kp LSHIFT  &kp LEFT_CONTROL  &kp LEFT_ALT  &none              &kp LEFT   &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT  &kp F10  &kp F11
+&none   &none  &kp LC(X)   &kp LC(C)         &kp LC(V)     &kp PAUSE_BREAK    &kp F6     &kp F7          &kp HOME      &kp END    &kp F12  &sk LEFT_ALT
+                           &kp LEFT_GUI      &none         &kp BACKSPACE      &kp SPACE  &trans          &trans
             >;
         };
     };
