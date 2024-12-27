@@ -311,14 +311,14 @@
             label = "LA_BACKSLASH";
         };
 
-        la_quest_o: la_quest_o {
+        la_quest_c: la_quest_o {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&kp LS(MINUS)>;
             label = "LA_QUEST_O";
         };
 
-        la_quest_c: la_quest_c {
+        la_quest_o: la_quest_c {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&kp EQUAL>;
@@ -617,10 +617,10 @@
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
-        mrp_slash_quest_o: mrp_slash_quest_o {
+        mrp_slash_quest_c: mrp_slash_quest_c {
             compatible = "zmk,behavior-mod-morph";
-            label = "MRP_SLASH_QUEST_O";
-            bindings = <&kp KP_DIVIDE>, <&la_quest_o>;
+            label = "MRP_SLASH_QUEST_C";
+            bindings = <&kp KP_DIVIDE>, <&la_quest_c>;
 
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
@@ -640,7 +640,7 @@
             bindings = <
 &kp ESCAPE  &kp Q  &kp W          &kp E                &kp R            &kp T        &kp Y      &kp U            &kp I                 &kp O          &kp P               &kp BACKSPACE
 &kp TAB     &kp A  &hml LSHIFT S  &hml LEFT_CONTROL D  &hml LEFT_ALT F  &kp G        &kp H      &hmr LEFT_ALT J  &hmr RIGHT_CONTROL K  &hmr RSHIFT L  &la_ntild           &mrp_tilde_apost
-&caps_word  &kp Z  &kp X          &kp C                &kp V            &kp B        &kp N      &kp M            &kp COMMA             &kp PERIOD     &mrp_slash_quest_o  &kp DEL
+&caps_word  &kp Z  &kp X          &kp C                &kp V            &kp B        &kp N      &kp M            &kp COMMA             &kp PERIOD     &mrp_slash_quest_c  &kp DEL
                                   &kp LEFT_GUI         &mo 1            &kp SPACE    &kp ENTER  &mo 2            &mo 3
             >;
         };
