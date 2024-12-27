@@ -626,9 +626,9 @@
 
         ckp {
             bindings = <
-&kp PRINTSCREEN  &none         &none           &kp INSERT        &none         &none                &trans  &kp NUMBER_7  &kp N8        &kp N9        &kp KP_MULTIPLY  &la_equal
+&kp PRINTSCREEN  &none         &none           &kp INSERT        &none         &none                &none   &kp NUMBER_7  &kp N8        &kp N9        &kp KP_MULTIPLY  &la_equal
 &none            &none         &kp LEFT_SHIFT  &kp LEFT_CONTROL  &kp LEFT_ALT  &kp C_VOLUME_UP      &kp N0  &kp NUMBER_4  &kp N5        &kp NUMBER_6  &kp KP_MINUS     &kp KP_PLUS
-&bt BT_CLR       &bt BT_SEL 0  &bt BT_SEL 1    &kp C_AL_CALC     &kp C_MUTE    &kp C_VOLUME_DOWN    &trans  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &trans           &none
+&bt BT_CLR       &bt BT_SEL 0  &bt BT_SEL 1    &kp C_AL_CALC     &kp C_MUTE    &kp C_VOLUME_DOWN    &none   &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp KP_DIVIDE    &none
                                                &kp LEFT_GUI      &trans        &none                &none   &trans        &none
             >;
         };
