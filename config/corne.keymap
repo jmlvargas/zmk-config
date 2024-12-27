@@ -608,28 +608,28 @@
 
         sym {
             bindings = <
-&mrp_tillde_grave  &la_at       &kp N7                &kp N8                &kp N9        &mrp_carets      &kp PERCENT  &la_amp               &la_equal                   &la_pipe                  &mrp_exclm          &none
-&sk LEFT_CONTROL   &kp KP_PLUS  &hml LSHIFT NUMBER_4  &hml LEFT_CONTROL N5  &kp NUMBER_6  &kp DOLLAR       &la_par_o    &hm_par_c LEFT_ALT 0  &hm_brace_o LEFT_CONTROL 0  &hm_brace_c LEFT_SHIFT 0  &mrp_minus_undersc  &mrp_quotes
-&kp PERIOD         &kp N0       &kp NUMBER_1          &kp NUMBER_2          &kp NUMBER_3  &kp POUND        &none        &kp KP_MULTIPLY       &la_less                    &la_great                 &mrp_questm         &none
-                                                      &kp ENTER             &trans        &kp BACKSPACE    &none        &none                 &none
+&mrp_tillde_grave  &mrp_exclm   &la_at                &kp POUND             &kp DOLLAR    &kp PERCENT      &la_amp    &la_amp               &la_caret                   &la_pipe                  &kp KP_MULTIPLY     &la_equal
+&sk LEFT_CONTROL   &kp KP_PLUS  &hml LSHIFT NUMBER_4  &hml LEFT_CONTROL N5  &kp NUMBER_6  &kp SPACE        &la_par_o  &hm_par_c LEFT_ALT 0  &hm_brace_o LEFT_CONTROL 0  &hm_brace_c LEFT_SHIFT 0  &mrp_minus_undersc  &mrp_quotes
+&kp PERIOD         &kp N0       &kp NUMBER_1          &kp NUMBER_2          &kp NUMBER_3  &kp POUND        &none      &kp KP_MULTIPLY       &la_less                    &la_great                 &mrp_questm         &none
+                                                      &kp ENTER             &trans        &kp BACKSPACE    &none      &none                 &none
             >;
         };
 
         fun {
             bindings = <
-&kp F12  &none  &none       &none             &none         &none            &kp F2     &kp F3          &kp F4        &kp F5     &kp F6   &kp F7
-&none    &none  &kp LSHIFT  &kp LEFT_CONTROL  &kp LEFT_ALT  &none            &kp LEFT   &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT  &kp F10  &kp F11
-&none    &none  &kp LC(X)   &kp LC(C)         &kp LC(V)     &none            &kp F8     &kp F9          &kp HOME      &kp END    &kp F1   &sk LEFT_ALT
-                            &kp LEFT_GUI      &none         &kp BACKSPACE    &kp SPACE  &trans          &trans
+&kp F12  &none  &none       &none             &none         &none              &kp F2     &kp F3          &kp F4        &kp F5     &kp F6   &kp F7
+&none    &none  &kp LSHIFT  &kp LEFT_CONTROL  &kp LEFT_ALT  &none              &kp LEFT   &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT  &kp F10  &kp F11
+&none    &none  &kp LC(X)   &kp LC(C)         &kp LC(V)     &kp PAUSE_BREAK    &kp F8     &kp F9          &kp HOME      &kp END    &kp F1   &sk LEFT_ALT
+                            &kp LEFT_GUI      &none         &kp BACKSPACE      &kp SPACE  &trans          &trans
             >;
         };
 
         sys {
             bindings = <
-&none       &none         &none           &kp INSERT        &kp SPACE     &kp C_VOLUME_UP    &none  &kp NUMBER_7  &kp N8        &kp N9        &none  &kp LC(PAUSE_BREAK)
-&none       &none         &kp LEFT_SHIFT  &kp LEFT_CONTROL  &kp LEFT_ALT  &kp C_VOL_DN       &none  &kp NUMBER_4  &kp N5        &kp NUMBER_6  &none  &none
-&bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1    &kp C_AL_CALC     &kp SPACE     &kp C_MUTE         &none  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &none  &none
-                                          &kp LEFT_GUI      &trans        &none              &none  &trans        &none
+&none       &none         &none           &kp INSERT        &kp SPACE     &kp C_VOLUME_UP    &mrp_carets  &kp NUMBER_7  &kp N8        &kp N9        &kp KP_MULTIPLY  &la_equal
+&none       &none         &kp LEFT_SHIFT  &kp LEFT_CONTROL  &kp LEFT_ALT  &kp C_VOL_DN       &kp N0       &kp NUMBER_4  &kp N5        &kp NUMBER_6  &kp KP_MINUS     &kp KP_PLUS
+&bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1    &kp C_AL_CALC     &kp SPACE     &kp C_MUTE         &none        &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp KP_DIVIDE    &kp SPACE
+                                          &kp LEFT_GUI      &trans        &none              &none        &trans        &none
             >;
         };
     };
