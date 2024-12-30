@@ -387,17 +387,6 @@
             require-prior-idle-ms = <125>;
         };
 
-        ssw_tildes: ssw_tilde_apostrophe {
-            compatible = "zmk,behavior-hold-tap";
-            label = "SSW_TILDE_APOSTROPHE";
-            bindings = <&la_apost>, <&la_tilde>;
-
-            #binding-cells = <2>;
-            tapping-term-ms = <200>;
-            flavor = "balanced";
-            quick-tap-ms = <250>;
-        };
-
         hml_apos: hml_apos {
             compatible = "zmk,behavior-hold-tap";
             label = "HML_APOS";
@@ -432,19 +421,19 @@
 
         sym {
             bindings = <
-&la_otilde  &la_at     &la_quo             &kp POUND         &kp DOLLAR   &kp PERCENT      &la_amp      &la_undersc  &la_caret    &la_pipe     &kp KP_MULTIPLY  &la_equal
-&la_grave   &kp EXCL   &hml_apos LSHIFT 0  &kp LEFT_CONTROL  &la_quest_c  &none            &la_par_o    &la_par_c    &la_brace_o  &la_brace_c  &kp KP_MINUS     &kp KP_PLUS
-&none       &la_exc_o  &none               &none             &la_quest_o  &none            &la_brack_o  &la_brack_c  &la_less     &la_great    &la_backslash    &none
-                                           &kp ENTER         &trans       &kp BACKSPACE    &none        &none        &none
+&la_grave  &la_exc_o  &la_at      &kp POUND         &kp DOLLAR   &kp PERCENT      &la_undersc  &la_amp      &none        &la_pipe     &kp KP_MULTIPLY  &la_equal
+&none      &la_apost  &kp LSHIFT  &kp LEFT_CONTROL  &la_quest_o  &none            &la_par_o    &la_par_c    &la_brace_o  &la_brace_c  &kp KP_MINUS     &kp KP_PLUS
+&none      &none      &none       &none             &la_quest_o  &none            &la_brack_o  &la_brack_c  &la_less     &la_great    &la_backslash    &none
+                                  &kp ENTER         &trans       &kp BACKSPACE    &none        &none        &none
             >;
         };
 
         num {
             bindings = <
-&la_otilde  &la_at     &la_quo                 &kp POUND         &kp DOLLAR               &kp PERCENT    &kp C_AL_CALC  &kp NUMBER_7  &kp N8        &kp N9        &kp KP_MULTIPLY  &la_equal
-&la_grave   &kp EXCL   &hml_apos LEFT_SHIFT 0  &kp LEFT_CONTROL  &hml_quest_c LEFT_ALT 0  &none          &none          &kp NUMBER_4  &kp N5        &kp NUMBER_6  &kp KP_MINUS     &kp KP_PLUS
-&none       &la_exc_o  &kp INSERT              &none             &la_quest_o              &none          &kp N0         &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp KP_DIVIDE    &none
-                                               &kp LEFT_GUI      &trans                   &none          &none          &trans        &none
+&la_otilde  &kp EXCL  &la_at          &kp POUND         &kp DOLLAR               &kp PERCENT    &kp C_AL_CALC  &kp NUMBER_7  &kp N8        &kp N9        &kp KP_MULTIPLY  &la_equal
+&none       &la_quo   &kp LEFT_SHIFT  &kp LEFT_CONTROL  &hml_quest_c LEFT_ALT 0  &none          &none          &kp NUMBER_4  &kp N5        &kp NUMBER_6  &kp KP_MINUS     &kp KP_PLUS
+&none       &none     &kp INSERT      &none             &none                    &none          &kp N0         &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp KP_DIVIDE    &none
+                                      &kp LEFT_GUI      &trans                   &none          &none          &trans        &none
             >;
         };
 
