@@ -413,6 +413,15 @@
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
+
+        mrp_minus_und: mrp_minus_und {
+            compatible = "zmk,behavior-mod-morph";
+            label = "MRP_MINUS_UND";
+            bindings = <&kp KP_MINUS>, <&la_undersc>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
     };
 
     keymap {
@@ -436,7 +445,7 @@
         sym {
             bindings = <
 &mrp_tilde_grave  &mrp_excl  &la_at      &kp POUND         &kp DOLLAR    &kp PERCENT      &la_caret    &la_amp      &mrp_quest   &la_pipe     &kp KP_MULTIPLY  &la_equal
-&la_apost         &la_quo    &kp LSHIFT  &kp LEFT_CONTROL  &kp LEFT_ALT  &none            &la_par_o    &la_par_c    &la_brace_o  &la_brace_c  &kp MINUS        &kp KP_PLUS
+&la_apost         &la_quo    &kp LSHIFT  &kp LEFT_CONTROL  &kp LEFT_ALT  &none            &la_par_o    &la_par_c    &la_brace_o  &la_brace_c  &mrp_minus_und   &kp KP_PLUS
 &none             &none      &none       &none             &none         &none            &la_brack_o  &la_brack_c  &la_less     &la_great    &la_backslash    &none
                                          &kp ENTER         &trans        &kp BACKSPACE    &none        &none        &none
             >;
@@ -445,7 +454,7 @@
         num {
             bindings = <
 &mrp_tilde_grave  &mrp_excl  &la_at          &kp POUND         &kp DOLLAR    &kp PERCENT    &la_caret  &kp NUMBER_7  &kp N8        &kp N9                    &kp KP_MULTIPLY  &la_equal
-&la_apost         &la_quo    &kp LEFT_SHIFT  &kp LEFT_CONTROL  &kp LEFT_ALT  &none          &none      &kp NUMBER_4  &kp N5        &hmr LEFT_SHIFT NUMBER_6  &kp MINUS        &kp KP_PLUS
+&la_apost         &la_quo    &kp LEFT_SHIFT  &kp LEFT_CONTROL  &kp LEFT_ALT  &none          &none      &kp NUMBER_4  &kp N5        &hmr LEFT_SHIFT NUMBER_6  &mrp_minus_und   &kp KP_PLUS
 &none             &none      &none           &none             &none         &none          &kp N0     &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3              &kp KP_DIVIDE    &none
                                              &kp LEFT_GUI      &trans        &none          &none      &trans        &none
             >;
