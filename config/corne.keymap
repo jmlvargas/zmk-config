@@ -486,7 +486,7 @@
 &mrp_tilde_grave  &mrp_excl  &la_at                       &kp POUND                     &kp DOLLAR               &kp PERCENT    &la_caret       &la_amp      &mrp_quest    &la_pipe   &kp KP_MULTIPLY  &la_equal
 &la_apost         &la_quo    &hml_sym_shift LEFT_SHIFT 0  &hml_sym_ctrl LEFT_CONTROL 0  &hml_sym_alt LEFT_ALT 0  &la_brace_c    &kp LEFT_ARROW  &kp DOWN     &kp UP_ARROW  &kp RIGHT  &mrp_minus_und   &kp KP_PLUS
 &kp LEFT_SHIFT    &none      &la_less                     &la_great                     &la_brack_o              &la_brack_c    &la_brack_o     &la_brack_c  &kp HOME      &kp END    &la_backslash    &none
-                                                          &kp DELETE                    &trans                   &kp ENTER      &kp BACKSPACE   &kp DEL      &none
+                                                          &kp LEFT_GUI                  &trans                   &kp ENTER      &kp BACKSPACE   &kp DEL      &none
             >;
         };
 
