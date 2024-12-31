@@ -386,6 +386,33 @@
             quick-tap-ms = <250>;
             require-prior-idle-ms = <125>;
         };
+
+        mrp_excl: mrp_excl {
+            compatible = "zmk,behavior-mod-morph";
+            label = "MRP_EXCL";
+            bindings = <&kp EXCL>, <&la_exc_o>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        mrp_quest: mrp_quest {
+            compatible = "zmk,behavior-mod-morph";
+            label = "MRP_QUEST";
+            bindings = <&la_quest_c>, <&la_quest_o>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        mrp_tilde_grave: mrp_tilde_grave {
+            compatible = "zmk,behavior-mod-morph";
+            label = "MRP_TILDE_GRAVE";
+            bindings = <&la_otilde>, <&la_grave>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
     };
 
     keymap {
@@ -408,28 +435,28 @@
 
         sym {
             bindings = <
-&la_grave  &la_exc_o  &la_at      &kp POUND         &kp DOLLAR   &kp PERCENT      &la_caret    &la_amp      &none        &la_pipe     &kp KP_MULTIPLY  &la_equal
-&none      &la_apost  &kp LSHIFT  &kp LEFT_CONTROL  &la_quest_o  &none            &la_par_o    &la_par_c    &la_brace_o  &la_brace_c  &la_undersc      &kp KP_PLUS
-&none      &none      &none       &none             &la_quest_o  &none            &la_brack_o  &la_brack_c  &la_less     &la_great    &la_backslash    &none
-                                  &kp ENTER         &trans       &kp BACKSPACE    &none        &none        &none
+&mrp_tilde_grave  &mrp_excl  &la_at      &kp POUND         &kp DOLLAR    &kp PERCENT      &la_caret    &la_amp      &mrp_quest   &la_pipe     &kp KP_MULTIPLY  &la_equal
+&la_apost         &la_quo    &kp LSHIFT  &kp LEFT_CONTROL  &kp LEFT_ALT  &mrp_quest       &la_par_o    &la_par_c    &la_brace_o  &la_brace_c  &kp KP_MINUS     &kp KP_PLUS
+&none             &none      &none       &none             &none         &none            &la_brack_o  &la_brack_c  &la_less     &la_great    &la_backslash    &la_undersc
+                                         &kp ENTER         &trans        &kp BACKSPACE    &none        &none        &none
             >;
         };
 
         num {
             bindings = <
-&la_otilde  &kp EXCL  &la_at          &kp POUND         &kp DOLLAR               &kp PERCENT    &kp C_AL_CALC  &kp NUMBER_7  &kp N8        &kp N9        &kp KP_MULTIPLY  &la_equal
-&none       &la_quo   &kp LEFT_SHIFT  &kp LEFT_CONTROL  &hml_quest_c LEFT_ALT 0  &none          &none          &kp NUMBER_4  &kp N5        &kp NUMBER_6  &kp KP_MINUS     &kp KP_PLUS
-&none       &none     &kp INSERT      &none             &none                    &none          &kp N0         &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp KP_DIVIDE    &none
-                                      &kp LEFT_GUI      &trans                   &none          &none          &trans        &none
+&mrp_tilde_grave  &mrp_excl  &la_at          &kp POUND         &kp DOLLAR    &kp PERCENT    &la_caret  &kp NUMBER_7  &kp N8        &kp N9        &kp KP_MULTIPLY  &la_equal
+&la_apost         &la_quo    &kp LEFT_SHIFT  &kp LEFT_CONTROL  &kp LEFT_ALT  &mrp_quest     &none      &kp NUMBER_4  &kp N5        &kp NUMBER_6  &kp KP_MINUS     &kp KP_PLUS
+&none             &none      &none           &none             &none         &none          &kp N0     &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp KP_DIVIDE    &la_undersc
+                                             &kp LEFT_GUI      &trans        &none          &none      &trans        &none
             >;
         };
 
         fun {
             bindings = <
-&kp PAUSE_BREAK  &kp F1           &none       &none             &none         &none            &kp F2     &kp F3          &kp F4        &kp F5     &kp F8   &kp F9
-&none            &kp PRINTSCREEN  &kp LSHIFT  &kp LEFT_CONTROL  &kp LEFT_ALT  &none            &kp LEFT   &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT  &kp F10  &kp F11
-&bt BT_CLR       &bt BT_NXT       &kp LC(X)   &kp LC(C)         &kp LC(V)     &kp C_MUTE       &kp F6     &kp F7          &kp HOME      &kp END    &kp F12  &sk LEFT_ALT
-                                              &kp LEFT_GUI      &none         &kp BACKSPACE    &kp SPACE  &trans          &trans
+&kp PAUSE_BREAK  &kp F1           &none         &kp INSERT        &none         &none            &kp F2     &kp F3          &kp F4        &kp F5     &kp F8   &kp F9
+&bt BT_CLR       &kp PRINTSCREEN  &kp LSHIFT    &kp LEFT_CONTROL  &kp LEFT_ALT  &none            &kp LEFT   &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT  &kp F10  &kp F11
+&bt BT_CLR       &bt BT_SEL 0     &bt BT_SEL 1  &bt BT_SEL 2      &bt BT_NXT    &kp C_MUTE       &kp F6     &kp F7          &kp HOME      &kp END    &kp F12  &sk LEFT_ALT
+                                                &kp LEFT_GUI      &none         &kp BACKSPACE    &kp SPACE  &trans          &trans
             >;
         };
     };
