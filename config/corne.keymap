@@ -422,6 +422,45 @@
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
+
+        hml_sym_shift: hml_sym_shift {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HML_SYM_SHIFT";
+            bindings = <&kp>, <&la_par_o>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <165>;
+            hold-trigger-key-positions = <18 19 20 21 22 33 32 8 15 16>;
+            flavor = "tap-preferred";
+            quick-tap-ms = <250>;
+            require-prior-idle-ms = <125>;
+        };
+
+        hml_sym_ctrl: hml_sym_ctrl {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HML_SYM_CTRL";
+            bindings = <&kp>, <&la_par_c>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <165>;
+            hold-trigger-key-positions = <18 19 20 21 33 32 14 16>;
+            flavor = "tap-preferred";
+            quick-tap-ms = <250>;
+            require-prior-idle-ms = <125>;
+        };
+
+        hml_sym_alt: hml_sym_alt {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HML_SYM_ALT";
+            bindings = <&kp>, <&la_brace_o>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <165>;
+            hold-trigger-key-positions = <18 19 20 21 32 33 14 15>;
+            flavor = "tap-preferred";
+            quick-tap-ms = <250>;
+            require-prior-idle-ms = <125>;
+        };
     };
 
     keymap {
@@ -444,10 +483,10 @@
 
         sym {
             bindings = <
-&mrp_tilde_grave  &mrp_excl  &la_at     &kp POUND  &kp DOLLAR   &kp PERCENT      &la_caret       &la_amp      &mrp_quest    &la_pipe   &kp KP_MULTIPLY  &la_equal
-&la_apost         &la_quo    &la_par_o  &la_par_c  &la_brace_o  &la_brace_c      &kp LEFT_ARROW  &kp DOWN     &kp UP_ARROW  &kp RIGHT  &mrp_minus_und   &kp KP_PLUS
-&none             &none      &la_less   &la_great  &la_brack_o  &la_brack_c      &la_brack_o     &la_brack_c  &kp HOME      &kp END    &la_backslash    &none
-                                        &kp ENTER  &trans       &kp BACKSPACE    &none           &none        &none
+&mrp_tilde_grave  &mrp_excl  &la_at                       &kp POUND                     &kp DOLLAR               &kp PERCENT      &la_caret       &la_amp      &mrp_quest    &la_pipe   &kp KP_MULTIPLY  &la_equal
+&la_apost         &la_quo    &hml_sym_shift LEFT_SHIFT 0  &hml_sym_ctrl LEFT_CONTROL 0  &hml_sym_alt LEFT_ALT 0  &la_brace_c      &kp LEFT_ARROW  &kp DOWN     &kp UP_ARROW  &kp RIGHT  &mrp_minus_und   &kp KP_PLUS
+&none             &none      &la_less                     &la_great                     &la_brack_o              &la_brack_c      &la_brack_o     &la_brack_c  &kp HOME      &kp END    &la_backslash    &none
+                                                          &kp ENTER                     &trans                   &kp BACKSPACE    &none           &none        &none
             >;
         };
 
