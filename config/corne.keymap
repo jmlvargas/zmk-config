@@ -461,6 +461,15 @@
             quick-tap-ms = <250>;
             require-prior-idle-ms = <125>;
         };
+
+        mrp_quotes: mrp_quotes {
+            compatible = "zmk,behavior-mod-morph";
+            label = "MRP_QUOTES";
+            bindings = <&la_apost>, <&la_quo>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
     };
 
     keymap {
@@ -474,9 +483,9 @@
             //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
 
             bindings = <
-&kp ESCAPE                &kp Q  &kp W          &kp E                &kp R            &kp T        &kp Y      &kp U            &kp I                 &kp O          &kp P          &kp BACKSPACE
-&kp TAB                   &kp A  &hml LSHIFT S  &hml LEFT_CONTROL D  &hml LEFT_ALT F  &kp G        &kp H      &hmr LEFT_ALT J  &hmr RIGHT_CONTROL K  &hmr RSHIFT L  &la_ntild      &la_tilde
-&hml LEFT_SHIFT CAPSLOCK  &kp Z  &kp X          &kp C                &kp V            &kp B        &kp N      &kp M            &kp COMMA             &kp PERIOD     &kp KP_DIVIDE  &kp DEL
+&kp TAB                   &kp Q  &kp W          &kp E                &kp R            &kp T        &kp Y      &kp U            &kp I                 &kp O          &kp P          &kp BACKSPACE
+&hml LEFT_SHIFT CAPSLOCK  &kp A  &hml LSHIFT S  &hml LEFT_CONTROL D  &hml LEFT_ALT F  &kp G        &kp H      &hmr LEFT_ALT J  &hmr RIGHT_CONTROL K  &hmr RSHIFT L  &la_ntild      &la_tilde
+&kp LEFT_CONTROL          &kp Z  &kp X          &kp C                &kp V            &kp B        &kp N      &kp M            &kp COMMA             &kp PERIOD     &kp KP_DIVIDE  &kp ESCAPE
                                                 &kp LEFT_GUI         &mo 1            &kp SPACE    &kp ENTER  &mo 2            &mo 3
             >;
         };
@@ -484,8 +493,8 @@
         sym {
             bindings = <
 &mrp_tilde_grave  &mrp_excl  &la_at                       &kp POUND                     &kp DOLLAR               &kp PERCENT    &la_caret       &la_amp      &mrp_quest    &la_pipe   &kp KP_MULTIPLY  &la_equal
-&la_apost         &la_quo    &hml_sym_shift LEFT_SHIFT 0  &hml_sym_ctrl LEFT_CONTROL 0  &hml_sym_alt LEFT_ALT 0  &la_brace_c    &kp LEFT_ARROW  &kp DOWN     &kp UP_ARROW  &kp RIGHT  &mrp_minus_und   &kp KP_PLUS
-&kp LEFT_SHIFT    &none      &la_less                     &la_great                     &la_brack_o              &la_brack_c    &la_brack_o     &la_brack_c  &kp HOME      &kp END    &la_backslash    &none
+&mrp_quotes       &la_quo    &hml_sym_shift LEFT_SHIFT 0  &hml_sym_ctrl LEFT_CONTROL 0  &hml_sym_alt LEFT_ALT 0  &la_brace_c    &kp LEFT_ARROW  &kp DOWN     &kp UP_ARROW  &kp RIGHT  &mrp_minus_und   &kp KP_PLUS
+&none             &none      &la_less                     &la_great                     &la_brack_o              &la_brack_c    &la_brack_o     &la_brack_c  &kp HOME      &kp END    &la_backslash    &kp DELETE
                                                           &kp LEFT_GUI                  &trans                   &kp ENTER      &kp BACKSPACE   &kp DEL      &none
             >;
         };
@@ -493,8 +502,8 @@
         num {
             bindings = <
 &mrp_tilde_grave  &mrp_excl  &la_at                   &kp POUND                     &kp DOLLAR               &kp PERCENT      &la_caret  &kp NUMBER_7  &kp N8        &kp N9                    &kp KP_MULTIPLY  &la_equal
-&la_apost         &la_quo    &hml_sym_shift LSHIFT 0  &hml_sym_ctrl LEFT_CONTROL 0  &hml_sym_alt LEFT_ALT 0  &la_brace_c      &none      &kp NUMBER_4  &kp N5        &hmr LEFT_SHIFT NUMBER_6  &mrp_minus_und   &kp KP_PLUS
-&kp LEFT_SHIFT    &none      &la_less                 &la_great                     &la_brack_o              &la_brack_c      &none      &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3              &kp KP_DIVIDE    &none
+&mrp_quotes       &la_quo    &hml_sym_shift LSHIFT 0  &hml_sym_ctrl LEFT_CONTROL 0  &hml_sym_alt LEFT_ALT 0  &la_brace_c      &none      &kp NUMBER_4  &kp N5        &hmr LEFT_SHIFT NUMBER_6  &mrp_minus_und   &kp KP_PLUS
+&none             &none      &la_less                 &la_great                     &la_brack_o              &la_brack_c      &none      &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3              &kp KP_DIVIDE    &kp DELETE
                                                       &kp LEFT_GUI                  &kp DELETE               &kp BACKSPACE    &kp SPACE  &trans        &kp NUMBER_0
             >;
         };
