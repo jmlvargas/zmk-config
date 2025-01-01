@@ -206,7 +206,7 @@
             label = "AMP";
         };
 
-        la_astsk: astersk {
+        la_aster: astersk {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&kp LS(RIGHT_BRACKET)>;
@@ -324,6 +324,13 @@
             bindings = <&kp EQUAL>;
             label = "LA_QUEST_C";
         };
+
+        la_slash: la_sash {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LS(N7)>;
+            label = "LA_SASH";
+        };
     };
 
     behaviors {
@@ -417,7 +424,7 @@
         mrp_minus_und: mrp_minus_und {
             compatible = "zmk,behavior-mod-morph";
             label = "MRP_MINUS_UND";
-            bindings = <&kp KP_MINUS>, <&la_undersc>;
+            bindings = <&la_minus>, <&la_undersc>;
 
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
@@ -492,18 +499,18 @@
 
         nav {
             bindings = <
-&mrp_tilde_grave  &mrp_excl  &la_at                       &kp POUND                     &kp DOLLAR               &kp PERCENT    &la_caret       &la_amp      &mrp_quest    &la_pipe   &kp KP_MULTIPLY  &la_equal
-&mrp_quotes       &la_quo    &hml_sym_shift LEFT_SHIFT 0  &hml_sym_ctrl LEFT_CONTROL 0  &hml_sym_alt LEFT_ALT 0  &la_brace_c    &kp LEFT_ARROW  &kp DOWN     &kp UP_ARROW  &kp RIGHT  &mrp_minus_und   &kp KP_PLUS
-&none             &none      &la_less                     &la_great                     &la_brack_o              &la_brack_c    &la_brack_o     &la_brack_c  &kp HOME      &kp END    &la_backslash    &kp DELETE
+&mrp_tilde_grave  &mrp_excl  &la_at                       &kp POUND                     &kp DOLLAR               &kp PERCENT    &la_caret       &la_amp      &mrp_quest    &la_pipe   &la_aster       &la_equal
+&mrp_quotes       &la_quo    &hml_sym_shift LEFT_SHIFT 0  &hml_sym_ctrl LEFT_CONTROL 0  &hml_sym_alt LEFT_ALT 0  &la_brace_c    &kp LEFT_ARROW  &kp DOWN     &kp UP_ARROW  &kp RIGHT  &mrp_minus_und  &la_plus
+&none             &none      &la_less                     &la_great                     &la_brack_o              &la_brack_c    &la_brack_o     &la_brack_c  &kp HOME      &kp END    &la_backslash   &kp DELETE
                                                           &kp LEFT_GUI                  &trans                   &kp ENTER      &kp BACKSPACE   &kp DEL      &none
             >;
         };
 
         num {
             bindings = <
-&mrp_tilde_grave  &mrp_excl  &la_at                   &kp POUND                     &kp DOLLAR               &kp PERCENT      &la_caret  &kp NUMBER_7  &kp N8        &kp N9                    &kp KP_MULTIPLY  &la_equal
-&mrp_quotes       &la_quo    &hml_sym_shift LSHIFT 0  &hml_sym_ctrl LEFT_CONTROL 0  &hml_sym_alt LEFT_ALT 0  &la_brace_c      &none      &kp NUMBER_4  &kp N5        &hmr LEFT_SHIFT NUMBER_6  &mrp_minus_und   &kp KP_PLUS
-&none             &none      &la_less                 &la_great                     &la_brack_o              &la_brack_c      &none      &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3              &kp KP_DIVIDE    &kp DELETE
+&mrp_tilde_grave  &mrp_excl  &la_at                   &kp POUND                     &kp DOLLAR               &kp PERCENT      &la_caret  &kp NUMBER_7  &kp N8        &kp N9                    &la_aster       &la_equal
+&mrp_quotes       &la_quo    &hml_sym_shift LSHIFT 0  &hml_sym_ctrl LEFT_CONTROL 0  &hml_sym_alt LEFT_ALT 0  &la_brace_c      &none      &kp NUMBER_4  &kp N5        &hmr LEFT_SHIFT NUMBER_6  &mrp_minus_und  &la_plus
+&none             &none      &la_less                 &la_great                     &la_brack_o              &la_brack_c      &none      &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3              &la_slash       &kp DELETE
                                                       &kp LEFT_GUI                  &kp DELETE               &kp BACKSPACE    &kp SPACE  &trans        &kp NUMBER_0
             >;
         };
