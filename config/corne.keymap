@@ -28,7 +28,7 @@
             key-positions = <8 9>;
             timeout-ms = <30>;
             require-prior-idle-ms = <100>;
-            layers = <3>;
+            layers = <3 1>;
         };
 
         pagedown {
@@ -36,7 +36,7 @@
             key-positions = <20 21>;
             timeout-ms = <30>;
             require-prior-idle-ms = <100>;
-            layers = <3>;
+            layers = <3 1>;
         };
 
         bootldr_l {
