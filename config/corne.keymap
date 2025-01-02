@@ -510,7 +510,7 @@
             bindings = <
 &mrp_tilde_grave  &mrp_excl     &la_at                   &kp POUND                     &kp DOLLAR               &kp PERCENT      &kp RA(SINGLE_QUOTE)  &kp NUMBER_7  &kp N8        &kp N9                    &la_aster       &la_equal
 &mrp_quotes       &la_quo       &hml_sym_shift LSHIFT 0  &hml_sym_ctrl LEFT_CONTROL 0  &hml_sym_alt LEFT_ALT 0  &la_brace_c      &none                 &kp NUMBER_4  &kp N5        &hmr LEFT_SHIFT NUMBER_6  &mrp_minus_und  &la_plus
-&sk RIGHT_ALT     &kp LS(RALT)  &la_less                 &la_great                     &la_brack_o              &la_brack_c      &none                 &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3              &la_slash       &none
+&sk RIGHT_ALT     &sk LS(RALT)  &la_less                 &la_great                     &la_brack_o              &la_brack_c      &none                 &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3              &la_slash       &none
                                                          &kp LEFT_GUI                  &kp DELETE               &kp BACKSPACE    &kp SPACE             &trans        &kp NUMBER_0
             >;
         };
