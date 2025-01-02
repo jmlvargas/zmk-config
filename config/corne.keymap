@@ -501,17 +501,17 @@
             bindings = <
 &mrp_tilde_grave  &mrp_excl  &la_at                       &kp POUND                     &kp DOLLAR               &kp PERCENT    &la_caret       &la_amp      &mrp_quest    &la_pipe   &la_aster       &la_equal
 &mrp_quotes       &la_quo    &hml_sym_shift LEFT_SHIFT 0  &hml_sym_ctrl LEFT_CONTROL 0  &hml_sym_alt LEFT_ALT 0  &la_brace_c    &kp LEFT_ARROW  &kp DOWN     &kp UP_ARROW  &kp RIGHT  &mrp_minus_und  &la_plus
-&none             &none      &la_less                     &la_great                     &la_brack_o              &la_brack_c    &la_brack_o     &la_brack_c  &kp HOME      &kp END    &la_backslash   &kp DELETE
+&none             &none      &la_less                     &la_great                     &la_brack_o              &la_brack_c    &la_brack_o     &la_brack_c  &kp HOME      &kp END    &la_backslash   &none
                                                           &kp LEFT_GUI                  &trans                   &kp ENTER      &kp BACKSPACE   &kp DEL      &none
             >;
         };
 
         num {
             bindings = <
-&mrp_tilde_grave  &mrp_excl  &la_at                   &kp POUND                     &kp DOLLAR               &kp PERCENT      &la_caret  &kp NUMBER_7  &kp N8        &kp N9                    &la_aster       &la_equal
-&mrp_quotes       &la_quo    &hml_sym_shift LSHIFT 0  &hml_sym_ctrl LEFT_CONTROL 0  &hml_sym_alt LEFT_ALT 0  &la_brace_c      &none      &kp NUMBER_4  &kp N5        &hmr LEFT_SHIFT NUMBER_6  &mrp_minus_und  &la_plus
-&none             &none      &la_less                 &la_great                     &la_brack_o              &la_brack_c      &none      &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3              &la_slash       &kp DELETE
-                                                      &kp LEFT_GUI                  &kp DELETE               &kp BACKSPACE    &kp SPACE  &trans        &kp NUMBER_0
+&mrp_tilde_grave  &mrp_excl     &la_at                   &kp POUND                     &kp DOLLAR               &kp PERCENT      &sk RA(SINGLE_QUOTE)  &kp NUMBER_7  &kp N8        &kp N9                    &la_aster       &la_equal
+&mrp_quotes       &la_quo       &hml_sym_shift LSHIFT 0  &hml_sym_ctrl LEFT_CONTROL 0  &hml_sym_alt LEFT_ALT 0  &la_brace_c      &none                 &kp NUMBER_4  &kp N5        &hmr LEFT_SHIFT NUMBER_6  &mrp_minus_und  &la_plus
+&sk RIGHT_ALT     &kp LS(RALT)  &la_less                 &la_great                     &la_brack_o              &la_brack_c      &none                 &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3              &la_slash       &none
+                                                         &kp LEFT_GUI                  &kp DELETE               &kp BACKSPACE    &kp SPACE             &trans        &kp NUMBER_0
             >;
         };
 
@@ -519,8 +519,8 @@
             bindings = <
 &kp PAUSE_BREAK  &kp F1        &none                        &kp INSERT        &none         &none            &kp F2     &kp F3          &kp F4        &kp F5     &kp F8   &kp F9
 &none            &none         &hml LEFT_SHIFT PRINTSCREEN  &kp LEFT_CONTROL  &kp LEFT_ALT  &none            &kp LEFT   &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT  &kp F10  &kp F11
-&bt BT_CLR       &bt BT_SEL 0  &bt BT_SEL 1                 &bt BT_NXT        &kp C_MUTE    &none            &kp F6     &kp F7          &kp HOME      &kp END    &kp F12  &sk LEFT_ALT
-                                                            &kp LEFT_GUI      &none         &kp BACKSPACE    &kp SPACE  &trans          &trans
+&bt BT_CLR       &bt BT_SEL 0  &bt BT_SEL 1                 &bt BT_NXT        &kp C_MUTE    &none            &kp F6     &kp F7          &kp HOME      &kp END    &kp F12  &none
+                                                            &kp LEFT_GUI      &none         &kp BACKSPACE    &kp SPACE  &kp DELETE      &trans
             >;
         };
     };
