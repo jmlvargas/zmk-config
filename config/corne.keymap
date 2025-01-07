@@ -478,7 +478,7 @@
         mrp_quotes: mrp_quotes {
             compatible = "zmk,behavior-mod-morph";
             label = "MRP_QUOTES";
-            bindings = <&la_apost>, <&la_quo>;
+            bindings = <&la_quo>, <&la_apost>;
 
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
