@@ -443,7 +443,7 @@
 
             #binding-cells = <2>;
             tapping-term-ms = <165>;
-            hold-trigger-key-positions = <18 19 20 21 22 33 32 8 15 16>;
+            hold-trigger-key-positions = <18 19 20 21 22 33 32 8 15 16 31 30>;
             flavor = "tap-preferred";
             quick-tap-ms = <250>;
             require-prior-idle-ms = <125>;
@@ -456,7 +456,7 @@
 
             #binding-cells = <2>;
             tapping-term-ms = <165>;
-            hold-trigger-key-positions = <18 19 20 21 33 32 14 16>;
+            hold-trigger-key-positions = <18 19 20 21 33 32 14 16 31 30 7 8 9 22 23>;
             flavor = "tap-preferred";
             quick-tap-ms = <250>;
             require-prior-idle-ms = <125>;
@@ -469,7 +469,7 @@
 
             #binding-cells = <2>;
             tapping-term-ms = <165>;
-            hold-trigger-key-positions = <18 19 20 21 32 33 14 15>;
+            hold-trigger-key-positions = <18 19 20 21 32 33 14 15 31 30>;
             flavor = "tap-preferred";
             quick-tap-ms = <250>;
             require-prior-idle-ms = <125>;
@@ -522,7 +522,7 @@
 
             #binding-cells = <2>;
             tapping-term-ms = <200>;
-            hold-trigger-key-positions = <1 2 3 4 5 13 14 15 16 17 25 26 27 28 29 6 7 8 9 10 18 19 20 21 22 30 31 32 33 34 11 0>;
+            hold-trigger-key-positions = <1 2 3 4 5 13 14 15 16 17 25 26 27 28 29 6 7 8 9 10 18 19 20 21 22 30 31 32 33 34 11 0 35 23>;
         };
 
         ht_plus: ht_plus {
@@ -547,6 +547,19 @@
             require-prior-idle-ms = <200>;
             quick-tap-ms = <200>;
         };
+
+        hmr_num_shift: hmr_num_shift {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HMR_NUM_SHIFT";
+            bindings = <&kp>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <165>;
+            hold-trigger-key-positions = <13 1>;
+            flavor = "tap-preferred";
+            quick-tap-ms = <250>;
+            require-prior-idle-ms = <125>;
+        };
     };
 
     keymap {
@@ -569,19 +582,19 @@
 
         nav {
             bindings = <
-&mrp_tilde_grave  &mrp_excl     &la_at                       &kp POUND                     &kp DOLLAR   &kp PERCENT    &la_caret       &la_amp        &mrp_quest    &la_pipe   &la_aster                 &la_equal
-&kp LEFT_SHIFT    &mrp_quotes   &hml_sym_shift LEFT_SHIFT 0  &hml_sym_ctrl LEFT_CONTROL 0  &la_brace_o  &la_brace_c    &kp LEFT_ARROW  &kp DOWN       &kp UP_ARROW  &kp RIGHT  &mrp_minus_und            &ht_plus RIGHT_SHIFT 0
-&kp LEFT_CONTROL  &kp LEFT_ALT  &la_less                     &la_great                     &la_brack_o  &la_brack_c    &kp PAGE_UP     &kp PAGE_DOWN  &kp HOME      &kp END    &ht_backslash LEFT_ALT 0  &kp LEFT_CONTROL
-                                                             &kp DELETE                    &trans       &kp ENTER      &kp ENTER       &kp DEL        &none
+&mrp_tilde_grave  &mrp_excl     &la_at                       &kp POUND                     &kp DOLLAR               &kp PERCENT    &la_caret       &la_amp        &mrp_quest    &la_pipe   &la_aster                 &la_equal
+&kp LEFT_SHIFT    &mrp_quotes   &hml_sym_shift LEFT_SHIFT 0  &hml_sym_ctrl LEFT_CONTROL 0  &hml_sym_alt LEFT_ALT 0  &la_brace_c    &kp LEFT_ARROW  &kp DOWN       &kp UP_ARROW  &kp RIGHT  &mrp_minus_und            &ht_plus RIGHT_SHIFT 0
+&kp LEFT_CONTROL  &kp LEFT_ALT  &la_less                     &la_great                     &la_brack_o              &la_brack_c    &kp PAGE_UP     &kp PAGE_DOWN  &kp HOME      &kp END    &ht_backslash LEFT_ALT 0  &kp LEFT_CONTROL
+                                                             &kp DELETE                    &trans                   &kp ENTER      &kp ENTER       &kp DEL        &none
             >;
         };
 
         num {
             bindings = <
-&mrp_tilde_grave  &mrp_excl     &la_at     &kp POUND     &kp DOLLAR   &kp PERCENT      &kp RA(SINGLE_QUOTE)  &kp NUMBER_7  &kp N8        &kp N9        &la_aster              &la_equal
-&kp LEFT_SHIFT    &mrp_quotes   &la_par_o  &la_par_c     &la_brace_o  &la_brace_c      &kp NUMBER_0          &kp NUMBER_4  &kp N5        &kp NUMBER_6  &mrp_minus_und         &ht_plus RIGHT_SHIFT 0
-&kp LEFT_CONTROL  &kp LEFT_ALT  &la_less   &la_great     &la_brack_o  &la_brack_c      &none                 &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &ht_slash RIGHT_ALT 0  &ht_any_hold RIGHT_CONTROL TAB
-                                           &kp LEFT_GUI  &kp DELETE   &kp BACKSPACE    &kp RETURN            &trans        &kp DELETE
+&mrp_tilde_grave  &mrp_excl     &la_at     &kp POUND                     &kp DOLLAR   &kp PERCENT      &kp RA(SINGLE_QUOTE)  &kp NUMBER_7  &kp N8        &kp N9                          &la_aster              &la_equal
+&kp LEFT_SHIFT    &mrp_quotes   &la_par_o  &hml_sym_ctrl LEFT_CONTROL 0  &la_brace_o  &la_brace_c      &kp NUMBER_0          &kp NUMBER_4  &kp N5        &hmr_num_shift LSHIFT NUMBER_6  &mrp_minus_und         &ht_plus RIGHT_SHIFT 0
+&kp LEFT_CONTROL  &kp LEFT_ALT  &la_less   &la_great                     &la_brack_o  &la_brack_c      &none                 &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3                    &ht_slash RIGHT_ALT 0  &ht_any_hold RIGHT_CONTROL TAB
+                                           &kp LEFT_GUI                  &kp DELETE   &kp BACKSPACE    &kp RETURN            &trans        &kp DELETE
             >;
         };
 
