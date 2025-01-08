@@ -560,6 +560,16 @@
             quick-tap-ms = <250>;
             require-prior-idle-ms = <125>;
         };
+
+        ht_shift_caps: ht_shift_caps {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HT_SHIFT_CAPS";
+            bindings = <&kp>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <250>;
+            hold-trigger-key-positions = <1 2 3 4 5 13 14 15 16 17 25 26 27 28 29 6 7 8 9 10 18 19 20 21 22 30 31 32 33 34 11 0 23 35 24>;
+        };
     };
 
     keymap {
