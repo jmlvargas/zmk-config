@@ -576,10 +576,10 @@
 
         fst {
             bindings = <
-&mrp_tilde_grave  &mrp_excl     &la_at                       &kp POUND                     &kp DOLLAR               &kp PERCENT    &la_caret   &kp N7        &kp N8        &kp N9        &la_aster             &la_equal
-&kp LEFT_SHIFT    &mrp_quotes   &hml_sym_shift LEFT_SHIFT 0  &hml_sym_ctrl LEFT_CONTROL 0  &hml_sym_alt LEFT_ALT 0  &la_brace_c    &kp N0      &kp NUMBER_4  &kp N5        &kp NUMBER_6  &mrp_minus_und        &ht_plus RIGHT_SHIFT 0
-&kp LEFT_CONTROL  &kp LEFT_ALT  &la_less                     &la_great                     &la_brack_o              &la_brack_c    &kp PERIOD  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &ht_slash LEFT_ALT 0  &ht_any_hold LEFT_CONTROL TAB
-                                                             &kp DELETE                    &trans                   &kp ENTER      &kp ENTER   &kp DEL       &none
+&mrp_tilde_grave  &mrp_excl     &la_at                       &kp POUND                     &kp DOLLAR               &kp PERCENT    &la_caret   &kp N7        &kp N8         &kp N9        &la_aster             &la_equal
+&kp LEFT_SHIFT    &mrp_quotes   &hml_sym_shift LEFT_SHIFT 0  &hml_sym_ctrl LEFT_CONTROL 0  &hml_sym_alt LEFT_ALT 0  &la_brace_c    &kp N0      &kp NUMBER_4  &kp N5         &kp NUMBER_6  &mrp_minus_und        &ht_plus RIGHT_SHIFT 0
+&kp LEFT_CONTROL  &kp LEFT_ALT  &la_less                     &la_great                     &la_brack_o              &la_brack_c    &kp PERIOD  &kp NUMBER_1  &kp NUMBER_2   &kp NUMBER_3  &ht_slash LEFT_ALT 0  &ht_any_hold LEFT_CONTROL TAB
+                                                             &kp DELETE                    &trans                   &kp ENTER      &kp ENTER   &kp DEL       &kp BACKSPACE
             >;
         };
 
