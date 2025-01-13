@@ -554,6 +554,15 @@
             tapping-term-ms = <250>;
             hold-trigger-key-positions = <1 2 3 4 5 13 14 15 16 17 25 26 27 28 29 6 7 8 9 10 18 19 20 21 22 30 31 32 33 34 11 0 23 35 24>;
         };
+
+        mrp_semic: mrp_semic {
+            compatible = "zmk,behavior-mod-morph";
+            label = "MRP_SEMIC";
+            bindings = <&kp LS(COMMA)>, <&kp LS(PERIOD)>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
     };
 
     keymap {
@@ -586,7 +595,7 @@
         snd {
             bindings = <
 &mrp_tilde_grave  &mrp_excl             &la_at                   &kp POUND                     &kp DOLLAR               &kp PERCENT      &la_caret       &la_amp         &la_quest_c   &la_pipe   &la_aster                 &kp DEL
-&kp LEFT_SHIFT    &none                 &hml_sym_shift LSHIFT 0  &hml_sym_ctrl LEFT_CONTROL 0  &hml_sym_alt LEFT_ALT 0  &la_brace_c      &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT  &mrp_quotes               &ht_plus RIGHT_SHIFT 0
+&kp LEFT_SHIFT    &none                 &hml_sym_shift LSHIFT 0  &hml_sym_ctrl LEFT_CONTROL 0  &hml_sym_alt LEFT_ALT 0  &la_brace_c      &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT  &mrp_semic                &mrp_quotes
 &kp LEFT_CONTROL  &ht_slash LEFT_ALT 0  &la_less                 &la_great                     &la_brack_o              &la_brack_c      &kp PAGE_DOWN   &kp PAGE_UP     &kp HOME      &kp END    &ht_backslash LEFT_ALT 0  &kp RIGHT_CONTROL
                                                                  &kp LEFT_GUI                  &kp LEFT_SHIFT           &kp BACKSPACE    &kp RETURN      &trans          &kp DELETE
             >;
