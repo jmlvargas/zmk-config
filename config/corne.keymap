@@ -576,9 +576,9 @@
             //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
 
             bindings = <
-&kp TAB                             &kp Q            &kp W  &kp E         &kp R  &kp T        &kp Y      &kp U  &kp I      &kp O       &kp P                  &kp BACKSPACE
-&ht_shift_caps LEFT_SHIFT CAPSLOCK  &kp A            &kp S  &kp D         &kp F  &kp G        &kp H      &kp J  &kp K      &kp L       &la_ntild              &ht_tilde RSHIFT 0
-&kp LEFT_CONTROL                    &hml LEFT_ALT Z  &kp X  &kp C         &kp V  &kp B        &kp N      &kp M  &kp COMMA  &kp PERIOD  &ht_slash RIGHT_ALT 0  &ht_any_hold RIGHT_CONTROL ESCAPE
+&kp TAB                             &kp Q            &kp W  &kp E         &kp R  &kp T        &kp Y      &kp U  &kp I      &kp O       &kp P                 &kp BACKSPACE
+&ht_shift_caps LEFT_SHIFT CAPSLOCK  &kp A            &kp S  &kp D         &kp F  &kp G        &kp H      &kp J  &kp K      &kp L       &la_ntild             &ht_tilde RSHIFT 0
+&kp LEFT_CONTROL                    &hml LEFT_ALT Z  &kp X  &kp C         &kp V  &kp B        &kp N      &kp M  &kp COMMA  &kp PERIOD  &ht_slash LEFT_ALT 0  &ht_any_hold RIGHT_CONTROL ESCAPE
                                                             &kp LEFT_GUI  &mo 1  &kp SPACE    &kp ENTER  &mo 2  &mo 3
             >;
         };
@@ -594,10 +594,10 @@
 
         snd {
             bindings = <
-&mrp_tilde_grave  &mrp_excl             &la_at                   &kp POUND                     &kp DOLLAR               &kp PERCENT      &la_caret       &la_amp         &mrp_quest    &la_pipe   &la_aster                 &kp DEL
-&kp LEFT_SHIFT    &none                 &hml_sym_shift LSHIFT 0  &hml_sym_ctrl LEFT_CONTROL 0  &hml_sym_alt LEFT_ALT 0  &la_brace_c      &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT  &mrp_semic                &mrp_quotes
-&kp LEFT_CONTROL  &ht_slash LEFT_ALT 0  &la_less                 &la_great                     &la_brack_o              &la_brack_c      &kp PAGE_DOWN   &kp PAGE_UP     &kp HOME      &kp END    &ht_backslash LEFT_ALT 0  &kp RIGHT_CONTROL
-                                                                 &kp LEFT_GUI                  &kp LEFT_SHIFT           &kp BACKSPACE    &kp RETURN      &trans          &kp DELETE
+&mrp_tilde_grave  &mrp_excl     &la_at     &kp POUND     &kp DOLLAR      &kp PERCENT      &la_caret       &la_amp         &mrp_quest    &la_pipe   &la_aster                 &kp DEL
+&kp LEFT_SHIFT    &none         &la_par_o  &la_par_c     &la_brace_o     &la_brace_c      &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT  &mrp_semic                &mrp_quotes
+&kp LEFT_CONTROL  &kp LEFT_ALT  &la_less   &la_great     &la_brack_o     &la_brack_c      &kp PAGE_DOWN   &kp PAGE_UP     &kp HOME      &kp END    &ht_backslash LEFT_ALT 0  &kp RIGHT_CONTROL
+                                           &kp LEFT_GUI  &kp LEFT_SHIFT  &kp BACKSPACE    &kp RETURN      &trans          &kp DELETE
             >;
         };
 
