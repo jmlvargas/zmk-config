@@ -586,7 +586,7 @@
         snd {
             bindings = <
 &mrp_tilde_grave  &mrp_excl             &la_at                   &kp POUND                     &kp DOLLAR               &kp PERCENT      &la_caret       &la_amp         &la_quest_c   &la_pipe   &la_aster                 &kp DEL
-&kp LEFT_SHIFT    &mrp_quotes           &hml_sym_shift LSHIFT 0  &hml_sym_ctrl LEFT_CONTROL 0  &hml_sym_alt LEFT_ALT 0  &la_brace_c      &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT  &mrp_quest                &ht_plus RIGHT_SHIFT 0
+&kp LEFT_SHIFT    &none                 &hml_sym_shift LSHIFT 0  &hml_sym_ctrl LEFT_CONTROL 0  &hml_sym_alt LEFT_ALT 0  &la_brace_c      &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT  &mrp_quotes               &ht_plus RIGHT_SHIFT 0
 &kp LEFT_CONTROL  &ht_slash LEFT_ALT 0  &la_less                 &la_great                     &la_brack_o              &la_brack_c      &kp PAGE_DOWN   &kp PAGE_UP     &kp HOME      &kp END    &ht_backslash LEFT_ALT 0  &kp RIGHT_CONTROL
                                                                  &kp LEFT_GUI                  &kp LEFT_SHIFT           &kp BACKSPACE    &kp RETURN      &trans          &kp DELETE
             >;
