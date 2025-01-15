@@ -418,18 +418,18 @@
 
         fst {
             bindings = <
-&la_otilde        &kp EXCL      &la_at  &kp POUND   &kp DOLLAR   &kp PERCENT    &la_caret   &kp N7        &kp N8        &kp N9        &la_plus              &la_aster
-&kp LEFT_SHIFT    &none         &none   &none       &la_brace_o  &la_brace_c    &kp N0      &kp NUMBER_4  &kp N5        &kp NUMBER_6  &la_minus             &la_quo
-&kp LEFT_CONTROL  &kp LEFT_ALT  &none   &none       &la_par_o    &la_par_c      &kp PERIOD  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &ht_slash LEFT_ALT 0  &la_equal
+&la_otilde        &kp EXCL      &la_at  &kp POUND   &kp DOLLAR   &kp PERCENT    &la_caret   &kp N7        &kp N8        &kp N9        &la_plus   &la_aster
+&kp LEFT_SHIFT    &none         &none   &none       &la_brace_o  &la_brace_c    &kp N0      &kp NUMBER_4  &kp N5        &kp NUMBER_6  &la_minus  &la_quo
+&kp LEFT_CONTROL  &kp LEFT_ALT  &none   &none       &la_par_o    &la_par_c      &kp PERIOD  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &la_slash  &la_equal
                                         &kp DELETE  &trans       &kp ENTER      &kp DELETE  &mo 2         &none
             >;
         };
 
         snd {
             bindings = <
-&la_otilde        &kp EXCL      &la_at  &kp POUND     &kp DOLLAR   &kp PERCENT      &la_caret       &la_amp         &mrp_quest    &la_pipe   &la_plus              &kp DEL
-&kp LEFT_SHIFT    &none         &none   &none         &la_brace_o  &la_brace_c      &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT  &la_minus             &la_quo
-&kp LEFT_CONTROL  &kp LEFT_ALT  &none   &none         &la_par_o    &la_par_c        &kp PAGE_DOWN   &kp PAGE_UP     &kp HOME      &kp END    &ht_slash LEFT_ALT 0  &kp RIGHT_CONTROL
+&la_otilde        &kp EXCL      &la_at  &kp POUND     &kp DOLLAR   &kp PERCENT      &la_caret       &la_amp         &mrp_quest    &la_pipe   &la_plus   &la_aster
+&kp LEFT_SHIFT    &none         &none   &none         &la_brace_o  &la_brace_c      &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT  &la_minus  &la_quo
+&kp LEFT_CONTROL  &kp LEFT_ALT  &none   &none         &la_par_o    &la_par_c        &kp PAGE_DOWN   &kp PAGE_UP     &kp HOME      &kp END    &la_slash  &la_equal
                                         &kp LEFT_GUI  &mo 1        &kp BACKSPACE    &kp SPACE       &trans          &kp DELETE
             >;
         };
