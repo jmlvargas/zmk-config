@@ -437,8 +437,8 @@
         trd {
             bindings = <
 &la_grave  &la_exc_o  &none  &none  &none        &none          &none  &none  &la_quest_o  &none  &none          &none
-&none      &none      &none  &none  &la_brack_o  &la_brack_c    &none  &none  &none        &none  &la_undersc    &la_apost
-&none      &none      &none  &none  &la_less     &la_great      &none  &none  &none        &none  &la_backslash  &none
+&none      &none      &none  &none  &la_less     &la_great      &none  &none  &none        &none  &la_undersc    &la_apost
+&none      &none      &none  &none  &la_brack_o  &la_brack_c    &none  &none  &none        &none  &la_backslash  &none
                              &none  &none        &none          &none  &none  &none
             >;
         };
