@@ -301,18 +301,18 @@
             label = "LA_BACKSLASH";
         };
 
-        la_quest_c: la_quest_o {
+        la_quest_c: la_quest_c {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&kp LS(MINUS)>;
-            label = "LA_QUEST_O";
+            label = "LA_QUEST_C";
         };
 
-        la_quest_o: la_quest_c {
+        la_quest_o: la_quest_o {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&kp EQUAL>;
-            label = "LA_QUEST_C";
+            label = "LA_QUEST_O";
         };
 
         la_slash: la_sash {
@@ -418,28 +418,28 @@
 
         fst {
             bindings = <
-&la_otilde        &kp EXCL      &la_at       &kp POUND   &kp DOLLAR   &kp PERCENT    &la_caret   &kp N7        &kp N8        &kp N9        &la_plus   &la_aster
-&kp LEFT_SHIFT    &la_amp       &la_quest_c  &la_pipe    &la_brace_o  &la_brace_c    &kp N0      &kp NUMBER_4  &kp N5        &kp NUMBER_6  &la_minus  &la_quo
-&kp LEFT_CONTROL  &kp LEFT_ALT  &none        &la_caret   &la_par_o    &la_par_c      &kp PERIOD  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &la_slash  &la_equal
-                                             &kp DELETE  &trans       &kp ENTER      &kp DELETE  &mo 2         &none
+&la_otilde        &kp EXCL      &la_at    &kp POUND    &kp DOLLAR   &kp PERCENT    &la_caret   &kp N7        &kp N8        &kp N9        &la_plus   &la_aster
+&kp LEFT_SHIFT    &la_amp       &la_pipe  &la_quest_c  &la_brace_o  &la_brace_c    &kp N0      &kp NUMBER_4  &kp N5        &kp NUMBER_6  &la_minus  &la_quo
+&kp LEFT_CONTROL  &kp LEFT_ALT  &none     &la_caret    &la_par_o    &la_par_c      &kp PERIOD  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &la_slash  &la_equal
+                                          &kp DELETE   &trans       &kp ENTER      &kp DELETE  &mo 2         &none
             >;
         };
 
         snd {
             bindings = <
-&la_otilde        &kp EXCL      &la_at       &kp POUND     &kp DOLLAR   &kp PERCENT      &none           &none           &none         &none      &none         &kp BACKSPACE
-&kp LEFT_SHIFT    &la_amp       &la_quest_c  &la_pipe      &la_brace_o  &la_brace_c      &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT  &none         &kp LEFT_SHIFT
-&kp LEFT_CONTROL  &kp LEFT_ALT  &none        &la_caret     &la_par_o    &la_par_c        &kp PAGE_DOWN   &kp PAGE_UP     &kp HOME      &kp END    &kp LEFT_ALT  &kp LEFT_CONTROL
-                                             &kp LEFT_GUI  &mo 1        &kp BACKSPACE    &kp SPACE       &trans          &kp DELETE
+&la_otilde        &kp EXCL      &la_at    &kp POUND     &kp DOLLAR   &kp PERCENT      &none           &none           &none         &none      &none         &kp BACKSPACE
+&kp LEFT_SHIFT    &la_amp       &la_pipe  &la_quest_c   &la_brace_o  &la_brace_c      &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT  &none         &kp LEFT_SHIFT
+&kp LEFT_CONTROL  &kp LEFT_ALT  &none     &la_caret     &la_par_o    &la_par_c        &kp PAGE_DOWN   &kp PAGE_UP     &kp HOME      &kp END    &kp LEFT_ALT  &kp LEFT_CONTROL
+                                          &kp LEFT_GUI  &mo 1        &kp BACKSPACE    &kp SPACE       &trans          &kp DELETE
             >;
         };
 
         trd {
             bindings = <
-&la_grave  &la_exc_o  &none        &none  &none        &none          &none  &none  &la_quest_o    &none           &none          &none
-&none      &none      &la_quest_o  &none  &la_less     &la_great      &none  &none  &none          &none           &la_undersc    &la_apost
-&none      &none      &none        &none  &la_brack_o  &la_brack_c    &none  &none  &kp LS(COMMA)  &kp LS(PERIOD)  &la_backslash  &none
-                                   &none  &none        &none          &none  &none  &none
+&la_grave  &la_exc_o  &none  &none        &none        &none          &none  &none  &la_quest_o    &none           &none          &none
+&none      &none      &none  &la_quest_o  &la_less     &la_great      &none  &none  &none          &none           &la_undersc    &la_apost
+&none      &none      &none  &none        &la_brack_o  &la_brack_c    &none  &none  &kp LS(COMMA)  &kp LS(PERIOD)  &la_backslash  &none
+                             &none        &none        &none          &none  &none  &none
             >;
         };
 
