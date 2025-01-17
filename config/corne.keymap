@@ -427,10 +427,10 @@
 
         snd {
             bindings = <
-&la_otilde        &kp EXCL      &la_at    &kp POUND     &kp DOLLAR   &kp PERCENT      &trans          &kp PAGE_DOWN   &kp PG_UP     &none      &trans  &trans
-&kp LEFT_SHIFT    &la_amp       &la_pipe  &la_quest_c   &la_par_o    &la_par_c        &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT  &trans  &trans
-&kp LEFT_CONTROL  &kp LEFT_ALT  &none     &la_caret     &la_brace_o  &la_brace_c      &none           &none           &kp HOME      &kp END    &trans  &trans
-                                          &kp LEFT_GUI  &mo 1        &kp BACKSPACE    &kp SPACE       &mo 2           &kp DELETE
+&la_otilde        &kp EXCL      &la_at    &kp POUND     &kp DOLLAR   &kp PERCENT      &la_caret       &kp PAGE_DOWN   &kp PG_UP     &none      &la_plus   &la_aster
+&kp LEFT_SHIFT    &la_amp       &la_pipe  &la_quest_c   &la_par_o    &la_par_c        &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT  &la_minus  &la_quo
+&kp LEFT_CONTROL  &kp LEFT_ALT  &none     &la_caret     &la_brace_o  &la_brace_c      &none           &none           &kp HOME      &kp END    &la_slash  &la_equal
+                                          &kp LEFT_GUI  &mo 1        &kp BACKSPACE    &kp SPACE       &trans          &kp DELETE
             >;
         };
 
