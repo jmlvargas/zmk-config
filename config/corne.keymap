@@ -23,28 +23,12 @@
     combos {
         compatible = "zmk,combos";
 
-        pageup {
-            bindings = <&kp PAGE_UP>;
-            key-positions = <8 9>;
-            timeout-ms = <30>;
-            require-prior-idle-ms = <100>;
-            layers = <3 1>;
-        };
-
-        pagedown {
-            bindings = <&kp PAGE_DOWN>;
-            key-positions = <20 21>;
-            timeout-ms = <30>;
-            require-prior-idle-ms = <100>;
-            layers = <3 1>;
-        };
-
         bootldr_l {
             bindings = <&bootloader>;
             key-positions = <24 29>;
             timeout-ms = <30>;
             require-prior-idle-ms = <100>;
-            layers = <3>;
+            layers = <4 1>;
         };
 
         bootldr_r {
@@ -52,7 +36,7 @@
             key-positions = <30 35>;
             timeout-ms = <30>;
             require-prior-idle-ms = <100>;
-            layers = <3>;
+            layers = <4 1>;
         };
 
         reset_l {
@@ -60,7 +44,7 @@
             key-positions = <0 5>;
             timeout-ms = <30>;
             require-prior-idle-ms = <100>;
-            layers = <3>;
+            layers = <4 1>;
         };
 
         reset_r {
@@ -68,13 +52,13 @@
             key-positions = <6 11>;
             timeout-ms = <30>;
             require-prior-idle-ms = <100>;
-            layers = <3>;
+            layers = <4 1>;
         };
 
         clear_bt_profile {
             bindings = <&bt BT_CLR>;
             key-positions = <29 26>;
-            layers = <3>;
+            layers = <4 1>;
         };
     };
 
@@ -191,7 +175,7 @@
             label = "MLESSTHAN";
         };
 
-        la_great: mgreat {
+        la_greater: mgreat {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&kp LS(NON_US_BACKSLASH)>;
@@ -317,18 +301,18 @@
             label = "LA_BACKSLASH";
         };
 
-        la_quest_c: la_quest_o {
+        la_quest_c: la_quest_c {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&kp LS(MINUS)>;
-            label = "LA_QUEST_O";
+            label = "LA_QUEST_C";
         };
 
-        la_quest_o: la_quest_c {
+        la_quest_o: la_quest_o {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&kp EQUAL>;
-            label = "LA_QUEST_C";
+            label = "LA_QUEST_O";
         };
 
         la_slash: la_sash {
@@ -363,122 +347,10 @@
             require-prior-idle-ms = <125>;
         };
 
-        hmr: homerow_mods_right {
-            compatible = "zmk,behavior-hold-tap";
-            label = "HOMEROW_MODS_RIGHT_HAND";
-            bindings = <&kp>, <&kp>;
-
-            #binding-cells = <2>;
-            tapping-term-ms = <165>;
-            hold-trigger-key-positions = <0 1 2 3 4 5 12 13 14 15 16 17 24 25 26 27 28 29 36 37 38 11 40>;
-            flavor = "tap-preferred";
-            quick-tap-ms = <250>;
-            require-prior-idle-ms = <125>;
-        };
-
-        ssw: symbol_switch {
-            compatible = "zmk,behavior-hold-tap";
-            label = "SYMBOL_SWITCH";
-            bindings = <&kp>, <&kp>;
-
-            #binding-cells = <2>;
-            tapping-term-ms = <165>;
-            flavor = "balanced";
-            quick-tap-ms = <250>;
-        };
-
-        hml_quest_c: hml_quest_c {
-            compatible = "zmk,behavior-hold-tap";
-            label = "HML_QUEST_C";
-            bindings = <&kp>, <&la_quest_c>;
-
-            #binding-cells = <2>;
-            tapping-term-ms = <165>;
-            hold-trigger-key-positions = <6 7 8 6 7 8 9 10 30 31 32 33 34 18 19 20 21 22 11 23 35>;
-            flavor = "tap-preferred";
-            quick-tap-ms = <250>;
-            require-prior-idle-ms = <125>;
-        };
-
-        mrp_excl: mrp_excl {
-            compatible = "zmk,behavior-mod-morph";
-            label = "MRP_EXCL";
-            bindings = <&kp EXCL>, <&la_exc_o>;
-
-            #binding-cells = <0>;
-            mods = <(MOD_LSFT|MOD_RSFT)>;
-        };
-
         mrp_quest: mrp_quest {
             compatible = "zmk,behavior-mod-morph";
             label = "MRP_QUEST";
             bindings = <&la_quest_c>, <&la_quest_o>;
-
-            #binding-cells = <0>;
-            mods = <(MOD_LSFT|MOD_RSFT)>;
-        };
-
-        mrp_tilde_grave: mrp_tilde_grave {
-            compatible = "zmk,behavior-mod-morph";
-            label = "MRP_TILDE_GRAVE";
-            bindings = <&la_otilde>, <&la_grave>;
-
-            #binding-cells = <0>;
-            mods = <(MOD_LSFT|MOD_RSFT)>;
-        };
-
-        mrp_minus_und: mrp_minus_und {
-            compatible = "zmk,behavior-mod-morph";
-            label = "MRP_MINUS_UND";
-            bindings = <&la_minus>, <&la_undersc>;
-
-            #binding-cells = <0>;
-            mods = <(MOD_LSFT|MOD_RSFT)>;
-        };
-
-        hml_sym_shift: hml_sym_shift {
-            compatible = "zmk,behavior-hold-tap";
-            label = "HML_SYM_SHIFT";
-            bindings = <&kp>, <&la_par_o>;
-
-            #binding-cells = <2>;
-            tapping-term-ms = <165>;
-            hold-trigger-key-positions = <18 19 20 21 22 33 32 8 15 16 31 30>;
-            flavor = "tap-preferred";
-            quick-tap-ms = <250>;
-            require-prior-idle-ms = <125>;
-        };
-
-        hml_sym_ctrl: hml_sym_ctrl {
-            compatible = "zmk,behavior-hold-tap";
-            label = "HML_SYM_CTRL";
-            bindings = <&kp>, <&la_par_c>;
-
-            #binding-cells = <2>;
-            tapping-term-ms = <165>;
-            hold-trigger-key-positions = <18 19 20 21 33 32 14 16 31 30 7 8 9 22 23>;
-            flavor = "tap-preferred";
-            quick-tap-ms = <250>;
-            require-prior-idle-ms = <125>;
-        };
-
-        hml_sym_alt: hml_sym_alt {
-            compatible = "zmk,behavior-hold-tap";
-            label = "HML_SYM_ALT";
-            bindings = <&kp>, <&la_brace_o>;
-
-            #binding-cells = <2>;
-            tapping-term-ms = <165>;
-            hold-trigger-key-positions = <18 19 20 21 32 33 14 15 31 30>;
-            flavor = "tap-preferred";
-            quick-tap-ms = <250>;
-            require-prior-idle-ms = <125>;
-        };
-
-        mrp_quotes: mrp_quotes {
-            compatible = "zmk,behavior-mod-morph";
-            label = "MRP_QUOTES";
-            bindings = <&la_quo>, <&la_apost>;
 
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
@@ -515,52 +387,6 @@
             hold-trigger-key-positions = <1 2 3 4 5 13 14 15 16 17 25 26 27 28 29 6 7 8 9 10 18 19 20 21 22 30 31 32 33 34 11 0>;
         };
 
-        ht_backslash: ht_backslash {
-            compatible = "zmk,behavior-hold-tap";
-            label = "HT_BACKSLASH";
-            bindings = <&kp>, <&la_backslash>;
-
-            #binding-cells = <2>;
-            tapping-term-ms = <200>;
-            hold-trigger-key-positions = <1 2 3 4 5 13 14 15 16 17 25 26 27 28 29 6 7 8 9 10 18 19 20 21 22 30 31 32 33 34 11 0 35 23>;
-        };
-
-        ht_plus: ht_plus {
-            compatible = "zmk,behavior-hold-tap";
-            label = "HT_PLUS";
-            bindings = <&kp>, <&la_plus>;
-
-            #binding-cells = <2>;
-            tapping-term-ms = <200>;
-            hold-trigger-key-positions = <1 2 3 4 5 13 14 15 16 17 25 26 27 28 29 6 7 8 9 10 18 19 20 21 22 30 31 32 33 34 11 0>;
-        };
-
-        ht_any_balanced: ht_any_balanced {
-            compatible = "zmk,behavior-hold-tap";
-            label = "HT_ANY_BALANCED";
-            bindings = <&kp>, <&kp>;
-
-            #binding-cells = <2>;
-            tapping-term-ms = <200>;
-            hold-trigger-key-positions = <1 2 3 4 5 13 14 15 16 17 25 26 27 28 29 6 7 8 9 10 18 19 20 21 22 30 31 32 33 34 11 0>;
-            flavor = "balanced";
-            require-prior-idle-ms = <200>;
-            quick-tap-ms = <200>;
-        };
-
-        hmr_num_shift: hmr_num_shift {
-            compatible = "zmk,behavior-hold-tap";
-            label = "HMR_NUM_SHIFT";
-            bindings = <&kp>, <&kp>;
-
-            #binding-cells = <2>;
-            tapping-term-ms = <165>;
-            hold-trigger-key-positions = <13 1>;
-            flavor = "tap-preferred";
-            quick-tap-ms = <250>;
-            require-prior-idle-ms = <125>;
-        };
-
         ht_shift_caps: ht_shift_caps {
             compatible = "zmk,behavior-hold-tap";
             label = "HT_SHIFT_CAPS";
@@ -583,38 +409,56 @@
             //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
 
             bindings = <
-&kp TAB                             &kp Q            &kp W  &kp E         &kp R  &kp T        &kp Y      &kp U  &kp I      &kp O       &kp P                  &kp BACKSPACE
-&ht_shift_caps LEFT_SHIFT CAPSLOCK  &kp A            &kp S  &kp D         &kp F  &kp G        &kp H      &kp J  &kp K      &kp L       &la_ntild              &ht_tilde RSHIFT 0
-&kp LEFT_CONTROL                    &hml LEFT_ALT Z  &kp X  &kp C         &kp V  &kp B        &kp N      &kp M  &kp COMMA  &kp PERIOD  &ht_slash RIGHT_ALT 0  &ht_any_hold RIGHT_CONTROL ESCAPE
-                                                            &kp LEFT_GUI  &mo 1  &kp SPACE    &kp ENTER  &mo 2  &mo 3
+&kp TAB                             &kp Q            &kp W  &kp E         &kp R  &kp T        &kp Y      &kp U  &kp I      &kp O       &kp P                 &kp BACKSPACE
+&ht_shift_caps LEFT_SHIFT CAPSLOCK  &kp A            &kp S  &kp D         &kp F  &kp G        &kp H      &kp J  &kp K      &kp L       &la_ntild             &ht_tilde RSHIFT 0
+&kp LEFT_CONTROL                    &hml LEFT_ALT Z  &kp X  &kp C         &kp V  &kp B        &kp N      &kp M  &kp COMMA  &kp PERIOD  &ht_slash LEFT_ALT 0  &ht_any_hold RIGHT_CONTROL ESCAPE
+                                                            &kp LEFT_GUI  &mo 1  &kp SPACE    &kp ENTER  &mo 2  &mo 4
             >;
         };
 
-        nav {
+        fst {
             bindings = <
-&mrp_tilde_grave  &mrp_excl     &la_at                       &kp POUND                     &kp DOLLAR               &kp PERCENT    &la_caret       &la_amp        &mrp_quest    &la_pipe   &la_aster                 &la_equal
-&kp LEFT_SHIFT    &mrp_quotes   &hml_sym_shift LEFT_SHIFT 0  &hml_sym_ctrl LEFT_CONTROL 0  &hml_sym_alt LEFT_ALT 0  &la_brace_c    &kp LEFT_ARROW  &kp DOWN       &kp UP_ARROW  &kp RIGHT  &mrp_minus_und            &ht_plus RIGHT_SHIFT 0
-&kp LEFT_CONTROL  &kp LEFT_ALT  &la_less                     &la_great                     &la_brack_o              &la_brack_c    &kp PAGE_UP     &kp PAGE_DOWN  &kp HOME      &kp END    &ht_backslash LEFT_ALT 0  &kp LEFT_CONTROL
-                                                             &kp DELETE                    &trans                   &kp ENTER      &kp ENTER       &kp DEL        &none
+&la_otilde        &kp EXCL      &la_at    &kp POUND    &kp DOLLAR   &kp PERCENT    &la_caret   &kp N7        &kp N8         &kp N9        &la_plus   &la_aster
+&kp LEFT_SHIFT    &la_amp       &la_pipe  &la_quest_c  &la_par_o    &la_par_c      &kp N0      &kp NUMBER_4  &kp N5         &kp NUMBER_6  &la_minus  &la_quo
+&kp LEFT_CONTROL  &kp LEFT_ALT  &none     &la_caret    &la_brace_o  &la_brace_c    &kp PERIOD  &kp NUMBER_1  &kp NUMBER_2   &kp NUMBER_3  &la_slash  &la_equal
+                                          &kp DELETE   &trans       &kp ENTER      &kp DELETE  &mo 2         &kp BACKSPACE
             >;
         };
 
-        num {
+        snd {
             bindings = <
-&mrp_tilde_grave  &mrp_excl     &la_at     &kp POUND                     &kp DOLLAR   &kp PERCENT      &kp RA(SINGLE_QUOTE)  &kp NUMBER_7  &kp N8        &kp N9                          &la_aster              &la_equal
-&kp LEFT_SHIFT    &mrp_quotes   &la_par_o  &hml_sym_ctrl LEFT_CONTROL 0  &la_brace_o  &la_brace_c      &kp NUMBER_0          &kp NUMBER_4  &kp N5        &hmr_num_shift LSHIFT NUMBER_6  &mrp_minus_und         &ht_plus RIGHT_SHIFT 0
-&kp LEFT_CONTROL  &kp LEFT_ALT  &la_less   &la_great                     &la_brack_o  &la_brack_c      &kp PERIOD            &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3                    &ht_slash RIGHT_ALT 0  &ht_any_hold RIGHT_CONTROL TAB
-                                           &kp LEFT_GUI                  &kp DELETE   &kp BACKSPACE    &kp RETURN            &trans        &kp DELETE
+&la_otilde        &kp EXCL      &la_at    &kp POUND     &kp DOLLAR   &kp PERCENT      &la_caret       &kp PAGE_DOWN   &kp PG_UP     &none      &la_plus   &la_aster
+&kp LEFT_SHIFT    &la_amp       &la_pipe  &la_quest_c   &la_par_o    &la_par_c        &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT  &la_minus  &la_quo
+&kp LEFT_CONTROL  &kp LEFT_ALT  &none     &la_caret     &la_brace_o  &la_brace_c      &none           &none           &kp HOME      &kp END    &la_slash  &la_equal
+                                          &kp LEFT_GUI  &mo 1        &kp BACKSPACE    &kp SPACE       &trans          &kp DELETE
             >;
         };
 
-        fun {
+        trd {
             bindings = <
-&kp F1            &kp F2        &kp F3           &kp F4        &kp F5        &kp F6             &kp F7       &kp F8          &kp F9        &kp F10    &kp F11       &kp F12
-&kp LEFT_SHIFT    &bt BT_CLR    &kp PRINTSCREEN  &kp C_MUTE    &kp C_VOL_DN  &kp C_VOLUME_UP    &kp LEFT     &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT  &none         &kp RSHIFT
-&kp LEFT_CONTROL  &kp LEFT_ALT  &kp PAUSE_BREAK  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_NXT         &kp PAGE_UP  &kp PG_DN       &kp HOME      &kp END    &kp LEFT_ALT  &kp RIGHT_CONTROL
-                                                 &none         &none         &none              &none        &none           &trans
+&la_grave  &la_exc_o  &none  &none        &none        &none          &none  &none  &la_quest_o    &none           &none          &none
+&none      &none      &none  &la_quest_o  &la_brack_o  &la_brack_c    &none  &none  &none          &none           &la_undersc    &la_apost
+&none      &none      &none  &none        &la_less     &la_greater    &none  &none  &kp LS(COMMA)  &kp LS(PERIOD)  &la_backslash  &none
+                             &none        &none        &none          &none  &none  &none
             >;
+        };
+
+        fth {
+            bindings = <
+&none             &none         &none            &none         &none         &none              &none  &kp F7  &kp F8  &kp F9  &kp F10       &kp F11
+&kp LEFT_SHIFT    &bt BT_CLR    &kp PRINTSCREEN  &kp C_MUTE    &kp C_VOL_DN  &kp C_VOLUME_UP    &none  &kp F4  &kp F5  &kp F6  &kp F12       &kp LEFT_SHIFT
+&kp LEFT_CONTROL  &kp LEFT_ALT  &kp PAUSE_BREAK  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_NXT         &none  &kp F1  &kp F2  &kp F3  &kp LEFT_ALT  &kp RIGHT_CONTROL
+                                                 &none         &none         &none              &none  &none   &trans
+            >;
+        };
+    };
+
+    conditional_layers {
+        compatible = "zmk,conditional-layers";
+
+        third {
+            if-layers = <1 2>;
+            then-layer = <3>;
         };
     };
 };
