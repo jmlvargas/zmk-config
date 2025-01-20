@@ -26,32 +26,24 @@
         bootldr_l {
             bindings = <&bootloader>;
             key-positions = <24 29>;
-            timeout-ms = <30>;
-            require-prior-idle-ms = <100>;
             layers = <4 1>;
         };
 
         bootldr_r {
             bindings = <&bootloader>;
             key-positions = <30 35>;
-            timeout-ms = <30>;
-            require-prior-idle-ms = <100>;
             layers = <4 1>;
         };
 
         reset_l {
             bindings = <&sys_reset>;
             key-positions = <0 5>;
-            timeout-ms = <30>;
-            require-prior-idle-ms = <100>;
             layers = <4 1>;
         };
 
         reset_r {
             bindings = <&sys_reset>;
             key-positions = <6 11>;
-            timeout-ms = <30>;
-            require-prior-idle-ms = <100>;
             layers = <4 1>;
         };
 
@@ -59,6 +51,12 @@
             bindings = <&bt BT_CLR>;
             key-positions = <29 26>;
             layers = <4 1>;
+        };
+
+        next_bt_profile {
+            bindings = <&bt BT_NXT>;
+            key-positions = <29 0>;
+            layers = <1 4>;
         };
     };
 
