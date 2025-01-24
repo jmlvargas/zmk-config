@@ -423,10 +423,10 @@
 
         fst {
             bindings = <
-&la_otilde        &kp EXCL      &la_at    &kp POUND    &kp DOLLAR   &kp PERCENT    &none       &kp N7        &kp N8         &kp N9        &la_plus   &la_aster
-&kp LEFT_SHIFT    &la_amp       &la_pipe  &la_quest_c  &la_par_o    &la_par_c      &kp N0      &kp NUMBER_4  &kp N5         &kp NUMBER_6  &la_minus  &la_quo
-&kp LEFT_CONTROL  &kp LEFT_ALT  &none     &la_caret    &la_brace_o  &la_brace_c    &none       &kp NUMBER_1  &kp NUMBER_2   &kp NUMBER_3  &la_slash  &la_equal
-                                          &kp DELETE   &trans       &kp ENTER      &kp DELETE  &mo 2         &kp BACKSPACE
+&la_grave         &la_exc_o     &none  &none        &none      &none          &none       &kp N7        &kp N8         &kp N9        &la_plus   &la_aster
+&kp LEFT_SHIFT    &none         &none  &la_quest_o  &la_par_o  &la_brack_c    &kp N0      &kp NUMBER_4  &kp N5         &kp NUMBER_6  &la_minus  &la_quo
+&kp LEFT_CONTROL  &kp LEFT_ALT  &none  &none        &la_less   &la_greater    &none       &kp NUMBER_1  &kp NUMBER_2   &kp NUMBER_3  &la_slash  &la_equal
+                                       &kp DELETE   &trans     &kp ENTER      &kp DELETE  &mo 2         &kp BACKSPACE
             >;
         };
 
