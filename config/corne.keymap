@@ -19,6 +19,11 @@
     mods = <(MOD_LSFT)>;
 };
 
+&lt {
+    flavor = "hold-preferred";
+    tapping-term-ms = <160>;
+};
+
 / {
     combos {
         compatible = "zmk,combos";
