@@ -398,19 +398,19 @@
 
         snd {
             bindings = <
-&la_otilde      &kp EXCL      &la_at    &kp POUND         &kp DOLLAR   &kp PERCENT      &none           &kp PAGE_DOWN   &kp PG_UP     &none      &none          &none
-&kp LEFT_SHIFT  &la_amp       &la_pipe  &la_quest_c       &la_par_o    &la_par_c        &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT  &la_undersc    &la_apost
-&kp LEFT_GUI    &kp LEFT_ALT  &none     &la_caret         &la_brace_o  &la_brace_c      &none           &none           &kp HOME      &kp END    &la_backslash  &none
+&la_otilde      &kp EXCL      &la_at    &kp POUND         &kp DOLLAR   &kp PERCENT      &none           &none           &kp PG_UP     &kp PAGE_DOWN  &none          &none
+&kp LEFT_SHIFT  &la_amp       &la_pipe  &la_quest_c       &la_par_o    &la_par_c        &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT      &la_undersc    &la_apost
+&kp LEFT_GUI    &kp LEFT_ALT  &none     &la_caret         &la_brace_o  &la_brace_c      &none           &none           &kp HOME      &kp END        &la_backslash  &none
                                         &kp LEFT_CONTROL  &kp DEL      &kp BACKSPACE    &kp SPACE       &trans          &kp DELETE
             >;
         };
 
         sys {
             bindings = <
-&none           &none         &none            &none             &none         &none              &none  &kp F7  &kp F8            &kp F9  &kp F10       &kp F11
-&kp LEFT_SHIFT  &bt BT_CLR    &kp PRINTSCREEN  &kp C_MUTE        &kp C_VOL_DN  &kp C_VOLUME_UP    &none  &kp F4  &kp F5            &kp F6  &kp F12       &kp LEFT_SHIFT
-&kp LEFT_GUI    &kp LEFT_ALT  &kp PAUSE_BREAK  &bt BT_SEL 0      &bt BT_SEL 1  &bt BT_NXT         &none  &kp F1  &kp F2            &kp F3  &kp LEFT_ALT  &trans
-                                               &kp LEFT_CONTROL  &none         &none              &none  &none   &kp LEFT_CONTROL
+&bt BT_NXT      &bt BT_SEL 0  &bt BT_SEL 1     &bt BT_CLR        &kp C_VOLUME_UP  &kp INSERT    &none  &kp F7  &kp F8  &kp F9  &kp F10  &none
+&kp LEFT_SHIFT  &none         &kp PRINTSCREEN  &none             &kp C_VOL_DN     &none         &none  &kp F4  &kp F5  &kp F6  &kp F11  &none
+&kp LEFT_GUI    &kp LEFT_ALT  &kp PAUSE_BREAK  &none             &kp C_MUTE       &none         &none  &kp F1  &kp F2  &kp F3  &kp F12  &trans
+                                               &kp LEFT_CONTROL  &none            &none         &none  &none   &none
             >;
         };
     };
