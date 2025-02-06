@@ -380,37 +380,37 @@
             //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
 
             bindings = <
-&kp TAB         &kp Q  &kp W  &kp E             &kp R  &kp T        &kp Y      &kp U  &kp I             &kp O       &kp P         &kp BACKSPACE
-&td_shift_caps  &kp A  &kp S  &kp D             &kp F  &kp G        &kp H      &kp J  &kp K             &kp L       &la_ntild     &ht_tilde RSHIFT 0
-&kp LEFT_GUI    &kp Z  &kp X  &kp C             &kp V  &kp B        &kp N      &kp M  &kp COMMA         &kp PERIOD  &kp LEFT_ALT  &lt 3 ESCAPE
-                              &kp LEFT_CONTROL  &mo 1  &kp SPACE    &kp ENTER  &mo 2  &kp LEFT_CONTROL
+&kp TAB         &kp Q  &kp W  &kp E  &kp R             &kp T        &kp Y      &kp U              &kp I      &kp O       &kp P         &kp BACKSPACE
+&td_shift_caps  &kp A  &kp S  &kp D  &kp F             &kp G        &kp H      &kp J              &kp K      &kp L       &la_ntild     &ht_tilde RSHIFT 0
+&kp LEFT_GUI    &kp Z  &kp X  &kp C  &kp V             &kp B        &kp N      &kp M              &kp COMMA  &kp PERIOD  &kp LEFT_ALT  &lt 3 ESCAPE
+                              &mo 1  &kp LEFT_CONTROL  &kp SPACE    &kp ENTER  &kp RIGHT_CONTROL  &mo 2
             >;
         };
 
         fst {
             bindings = <
-&la_grave       &la_exc_o     &none  &none        &none        &none          &la_equal   &kp N7        &kp N8            &kp N9        &la_plus   &la_aster
-&kp LEFT_SHIFT  &none         &none  &la_quest_o  &la_brack_o  &la_brack_c    &kp N0      &kp NUMBER_4  &kp N5            &kp NUMBER_6  &la_minus  &la_quo
-&kp LEFT_GUI    &kp LEFT_ALT  &none  &none        &la_less     &la_greater    &kp DOT     &kp NUMBER_1  &kp NUMBER_2      &kp NUMBER_3  &la_slash  &none
-                                     &kp DELETE   &trans       &kp ENTER      &kp DELETE  &mo 2         &kp LEFT_CONTROL
+&la_grave       &la_exc_o     &none  &none        &none        &none          &la_equal   &kp N7             &kp N8        &kp N9        &la_plus   &la_aster
+&kp LEFT_SHIFT  &none         &none  &la_quest_o  &la_brack_o  &la_brack_c    &kp N0      &kp NUMBER_4       &kp N5        &kp NUMBER_6  &la_minus  &la_quo
+&kp LEFT_GUI    &kp LEFT_ALT  &none  &none        &la_less     &la_greater    &kp DOT     &kp NUMBER_1       &kp NUMBER_2  &kp NUMBER_3  &la_slash  &none
+                                     &trans       &kp DELETE   &kp ENTER      &kp DELETE  &kp RIGHT_CONTROL  &mo 2
             >;
         };
 
         snd {
             bindings = <
-&la_otilde      &kp EXCL      &la_at     &kp POUND         &kp DOLLAR   &kp PERCENT      &none           &none           &kp PG_UP     &kp PAGE_DOWN  &none          &none
-&kp LEFT_SHIFT  &la_amp       &la_pipe   &la_quest_c       &la_par_o    &la_par_c        &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT      &la_undersc    &la_apost
-&kp LEFT_GUI    &kp LEFT_ALT  &la_equal  &la_caret         &la_brace_o  &la_brace_c      &none           &none           &kp HOME      &kp END        &la_backslash  &none
-                                         &kp LEFT_CONTROL  &kp DEL      &kp BACKSPACE    &kp SPACE       &trans          &kp DELETE
+&la_otilde      &kp EXCL      &la_at     &kp POUND    &kp DOLLAR        &kp PERCENT      &none           &none           &kp PG_UP     &kp PAGE_DOWN  &none          &none
+&kp LEFT_SHIFT  &la_amp       &la_pipe   &la_quest_c  &la_par_o         &la_par_c        &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT      &la_undersc    &la_apost
+&kp LEFT_GUI    &kp LEFT_ALT  &la_equal  &la_caret    &la_brace_o       &la_brace_c      &none           &none           &kp HOME      &kp END        &la_backslash  &none
+                                         &kp DELETE   &kp LEFT_CONTROL  &kp BACKSPACE    &kp SPACE       &kp DELETE      &trans
             >;
         };
 
         sys {
             bindings = <
-&bt BT_NXT      &bt BT_SEL 0  &bt BT_SEL 1     &bt BT_CLR        &kp C_VOLUME_UP  &kp INSERT    &none  &kp F7  &kp F8  &kp F9  &kp F10  &none
-&kp LEFT_SHIFT  &none         &kp PRINTSCREEN  &none             &kp C_VOL_DN     &none         &none  &kp F4  &kp F5  &kp F6  &kp F11  &none
-&kp LEFT_GUI    &kp LEFT_ALT  &kp PAUSE_BREAK  &none             &kp C_MUTE       &none         &none  &kp F1  &kp F2  &kp F3  &kp F12  &trans
-                                               &kp LEFT_CONTROL  &none            &none         &none  &none   &none
+&bt BT_NXT      &bt BT_SEL 0  &bt BT_SEL 1     &bt BT_CLR  &kp C_VOLUME_UP   &kp INSERT    &none   &kp F7  &kp F8  &kp F9  &kp F10  &none
+&kp LEFT_SHIFT  &none         &kp PRINTSCREEN  &none       &kp C_VOL_DN      &none         &none   &kp F4  &kp F5  &kp F6  &kp F11  &none
+&kp LEFT_GUI    &kp LEFT_ALT  &kp PAUSE_BREAK  &none       &kp C_MUTE        &none         &tog 1  &kp F1  &kp F2  &kp F3  &kp F12  &trans
+                                               &none       &kp LEFT_CONTROL  &none         &none   &none   &none
             >;
         };
     };
