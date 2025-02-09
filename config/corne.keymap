@@ -389,7 +389,7 @@
         mrp_quest: mrp_quest {
             compatible = "zmk,behavior-mod-morph";
             label = "MRP_QUEST";
-            bindings = <&la_quest_c>, <&la_exc_o>;
+            bindings = <&la_quest_c>, <&la_quest_o>;
 
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
@@ -407,7 +407,7 @@
         mrp_par_brak_c: mrp_par_brak_c {
             compatible = "zmk,behavior-mod-morph";
             label = "MRP_PAR_BRAK_C";
-            bindings = <&la_par_c>, <&la_brack_o>;
+            bindings = <&la_par_c>, <&la_brack_c>;
 
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
