@@ -470,10 +470,10 @@
 
         fst {
             bindings = <
-&none           &none         &none      &kp ESCAPE        &none      &none        &la_equal   &kp N7        &kp N8             &kp N9        &la_plus           &la_aster
-&kp LEFT_SHIFT  &kp LC(A)     &kp LC(S)  &kp DELETE        &mo 4      &none        &kp N0      &kp NUMBER_4  &kp N5             &kp NUMBER_6  &la_minus          &mrp_quotes
-&none           &kp LEFT_ALT  &kp LC(X)  &kp LC(C)         &kp LC(V)  &none        &kp DOT     &kp NUMBER_1  &kp NUMBER_2       &kp NUMBER_3  &mrp_slash_bslash  &mo 3
-                                         &kp LEFT_CONTROL  &trans     &kp ENTER    &kp DELETE  &mo 2         &kp RIGHT_CONTROL
+&none           &kp LC(Q)         &kp LC(W)  &kp ESCAPE        &kp LC(R)  &none        &la_equal   &kp N7        &kp N8             &kp N9        &la_plus           &la_aster
+&kp LEFT_SHIFT  &kp LC(A)         &kp LC(S)  &kp DELETE        &mo 4      &kp LC(G)    &kp N0      &kp NUMBER_4  &kp N5             &kp NUMBER_6  &la_minus          &mrp_quotes
+&none           &kp LC(LEFT_ALT)  &kp LC(X)  &kp LC(C)         &kp LC(V)  &kp LC(B)    &kp DOT     &kp NUMBER_1  &kp NUMBER_2       &kp NUMBER_3  &mrp_slash_bslash  &mo 3
+                                             &kp LEFT_CONTROL  &trans     &kp ENTER    &kp DELETE  &mo 2         &kp RIGHT_CONTROL
             >;
         };
 
@@ -497,10 +497,10 @@
 
         fth {
             bindings = <
-&none           &none         &la_at      &none             &none  &none            &none           &none           &kp PG_UP          &kp PAGE_DOWN  &none  &none
-&kp LEFT_SHIFT  &kp LEFT_ALT  &kp LSHIFT  &kp LEFT_CONTROL  &none  &none            &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW       &kp RIGHT      &none  &kp RIGHT_SHIFT
-&kp LEFT_GUI    &kp LEFT_ALT  &none       &none             &none  &none            &none           &none           &kp HOME           &kp END        &none  &none
-                                          &kp LEFT_CONTROL  &none  &kp BACKSPACE    &kp SPACE       &trans          &kp RIGHT_CONTROL
+&none           &none         &la_at      &none             &none  &none    &none           &none           &kp PG_UP          &kp PAGE_DOWN  &none  &none
+&kp LEFT_SHIFT  &kp LEFT_ALT  &kp LSHIFT  &kp LEFT_CONTROL  &none  &none    &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW       &kp RIGHT      &none  &kp RIGHT_SHIFT
+&kp LEFT_GUI    &kp LEFT_ALT  &none       &none             &none  &none    &none           &none           &kp HOME           &kp END        &none  &none
+                                          &kp LEFT_CONTROL  &none  &none    &none           &none           &kp RIGHT_CONTROL
             >;
         };
     };
