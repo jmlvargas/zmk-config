@@ -470,7 +470,7 @@
 
         fst {
             bindings = <
-&none           &kp LC(Q)  &kp LC(W)  &kp ESCAPE        &kp LC(R)  &none        &la_equal   &kp N7        &kp N8             &kp N9        &la_plus           &la_aster
+&none           &kp LC(Q)  &kp LC(W)  &kp ESCAPE        &kp LC(R)  &kp LC(T)    &la_equal   &kp N7        &kp N8             &kp N9        &la_plus           &la_aster
 &kp LEFT_SHIFT  &kp LC(A)  &kp LC(S)  &kp DELETE        &mo 4      &kp LC(G)    &kp N0      &kp NUMBER_4  &kp N5             &kp NUMBER_6  &la_minus          &mrp_quotes
 &none           &kp LC(Z)  &kp LC(X)  &kp LC(C)         &kp LC(V)  &kp LC(B)    &kp DOT     &kp NUMBER_1  &kp NUMBER_2       &kp NUMBER_3  &mrp_slash_bslash  &mo 3
                                       &kp LEFT_CONTROL  &trans     &kp ENTER    &kp DELETE  &mo 2         &kp RIGHT_CONTROL
