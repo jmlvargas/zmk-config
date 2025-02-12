@@ -497,10 +497,10 @@
 
         fst {
             bindings = <
-&none           &kp LC(Q)  &kp LC(W)  &kp ESCAPE        &kp LC(R)  &kp LC(T)    &la_equal    &kp N7        &kp N8             &kp N9        &la_plus     &la_aster
-&kp LEFT_SHIFT  &kp LC(A)  &kp LC(S)  &kp DELETE        &mo 2      &kp LC(G)    &kp N0       &kp NUMBER_4  &kp N5             &kp NUMBER_6  &la_minus    &mp_quo
-&none           &kp LC(Z)  &kp LC(X)  &kp LC(C)         &kp LC(V)  &kp LC(B)    &mp_dot_cma  &kp NUMBER_1  &mp_2_cma          &mp_3_dot     &mp_slh_bsl  &mo 3
-                                      &kp LEFT_CONTROL  &trans     &kp ENTER    &kp ENTER    &mo 2         &kp RIGHT_CONTROL
+&none           &kp LC(Q)  &kp LC(W)  &kp ESCAPE        &kp LC(R)  &kp LC(T)    &la_equal  &kp N7        &kp N8             &kp N9        &la_aster    &kp BACKSPACE
+&kp LEFT_SHIFT  &kp LC(A)  &kp LC(S)  &kp DELETE        &mo 2      &kp LC(G)    &la_plus   &kp NUMBER_4  &kp N5             &kp NUMBER_6  &la_minus    &mp_quo
+&none           &kp LC(Z)  &kp LC(X)  &kp LC(C)         &kp LC(V)  &kp LC(B)    &kp N0     &kp NUMBER_1  &mp_2_cma          &mp_3_dot     &mp_slh_bsl  &mo 3
+                                      &kp LEFT_CONTROL  &trans     &kp ENTER    &kp ENTER  &mo 2         &kp RIGHT_CONTROL
             >;
         };
 
