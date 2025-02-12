@@ -368,81 +368,81 @@
             bindings = <&kp LSHIFT>, <&kp CAPSLOCK>;
         };
 
-        mrp_quotes: mrp_quotes {
+        mp_quo: mp_quo {
             compatible = "zmk,behavior-mod-morph";
-            label = "MRP_QUOTES";
+            label = "MP_QUO";
             bindings = <&la_quo>, <&la_apost>;
 
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
-        mrp_exclam: mrp_exclam {
+        mp_exc: mp_exc {
             compatible = "zmk,behavior-mod-morph";
-            label = "MRP_EXCLAM";
+            label = "MP_EXC";
             bindings = <&kp EXCL>, <&la_exc_o>;
 
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
-        mrp_quest: mrp_quest {
+        mp_quest: mp_quest {
             compatible = "zmk,behavior-mod-morph";
-            label = "MRP_QUEST";
+            label = "MP_QUEST";
             bindings = <&la_quest_c>, <&la_quest_o>;
 
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
-        mrp_par_brak_o: mrp_par_brak_o {
+        mp_par_brk_o: mp_par_brk_o {
             compatible = "zmk,behavior-mod-morph";
-            label = "MRP_PAR_BRAK_O";
+            label = "MP_PAR_BRK_O";
             bindings = <&la_par_o>, <&la_brack_o>;
 
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
-        mrp_par_brak_c: mrp_par_brak_c {
+        mp_par_brk_c: mp_par_brk_c {
             compatible = "zmk,behavior-mod-morph";
-            label = "MRP_PAR_BRAK_C";
+            label = "MP_PAR_BRK_C";
             bindings = <&la_par_c>, <&la_brack_c>;
 
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
-        mrp_brace_less_o: mrp_brace_less_o {
+        mp_brc_lt_o: mp_brc_lt_o {
             compatible = "zmk,behavior-mod-morph";
-            label = "MRP_BRACE_LESS_O";
+            label = "MP_BRC_LT_O";
             bindings = <&la_brace_o>, <&la_less>;
 
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
-        mrp_brace_great_c: mrp_brace_great_c {
+        mp_brc_gt_c: mp_brc_gt_c {
             compatible = "zmk,behavior-mod-morph";
-            label = "MRP_BRACE_GREAT_C";
+            label = "MP_BRC_GT_C";
             bindings = <&la_brace_c>, <&la_greater>;
 
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
-        mrp_otilde_grave: mrp_otilde_grave {
+        mp_otd_grv: mp_otd_grv {
             compatible = "zmk,behavior-mod-morph";
-            label = "MRP_OTILDE_GRAVE";
+            label = "MP_OTD_GRV";
             bindings = <&la_otilde>, <&la_grave>;
 
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
-        mrp_slash_bslash: mrp_slash_bslash {
+        mp_slh_bsl: mp_slh_bsl {
             compatible = "zmk,behavior-mod-morph";
-            label = "MRP_SLASH_BSLASH";
+            label = "MP_SLH_BSL";
             bindings = <&la_slash>, <&la_backslash>;
 
             #binding-cells = <0>;
@@ -470,19 +470,19 @@
 
         fst {
             bindings = <
-&none           &kp LC(Q)  &kp LC(W)  &kp ESCAPE        &kp LC(R)  &kp LC(T)    &la_equal  &kp N7        &kp N8             &kp N9        &la_plus           &la_aster
-&kp LEFT_SHIFT  &kp LC(A)  &kp LC(S)  &kp DELETE        &mo 2      &kp LC(G)    &kp N0     &kp NUMBER_4  &kp N5             &kp NUMBER_6  &la_minus          &mrp_quotes
-&none           &kp LC(Z)  &kp LC(X)  &kp LC(C)         &kp LC(V)  &kp LC(B)    &kp DOT    &kp NUMBER_1  &kp NUMBER_2       &kp NUMBER_3  &mrp_slash_bslash  &mo 3
+&none           &kp LC(Q)  &kp LC(W)  &kp ESCAPE        &kp LC(R)  &kp LC(T)    &la_equal  &kp N7        &kp N8             &kp N9        &la_plus     &la_aster
+&kp LEFT_SHIFT  &kp LC(A)  &kp LC(S)  &kp DELETE        &mo 2      &kp LC(G)    &kp N0     &kp NUMBER_4  &kp N5             &kp NUMBER_6  &la_minus    &mp_quo
+&none           &kp LC(Z)  &kp LC(X)  &kp LC(C)         &kp LC(V)  &kp LC(B)    &kp DOT    &kp NUMBER_1  &kp NUMBER_2       &kp NUMBER_3  &mp_slh_bsl  &mo 3
                                       &kp LEFT_CONTROL  &trans     &kp ENTER    &kp ENTER  &mo 2         &kp RIGHT_CONTROL
             >;
         };
 
         snd {
             bindings = <
-&mrp_otilde_grave  &mrp_exclam   &la_at     &kp POUND         &kp DOLLAR  &kp PERCENT      &kp PAGE_UP     &kp PAGE_DOWN   &mrp_par_brak_o    &mrp_par_brak_c     &none    &kp BACKSPACE
-&kp LEFT_SHIFT     &la_amp       &la_pipe   &mrp_quest        &none       &none            &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW       &kp RIGHT           &kp TAB  &kp RIGHT_SHIFT
-&kp LEFT_GUI       &kp LEFT_ALT  &la_caret  &none             &none       &none            &kp HOME        &kp END         &mrp_brace_less_o  &mrp_brace_great_c  &none    &kp ESCAPE
-                                            &kp LEFT_CONTROL  &none       &kp BACKSPACE    &kp SPACE       &trans          &kp RIGHT_CONTROL
+&mp_otd_grv     &mp_exc       &la_at     &kp POUND         &kp DOLLAR  &kp PERCENT      &kp PAGE_UP     &kp PAGE_DOWN   &mp_par_brk_o      &mp_par_brk_c  &none    &kp BACKSPACE
+&kp LEFT_SHIFT  &la_amp       &la_pipe   &mp_quest         &none       &none            &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW       &kp RIGHT      &kp TAB  &kp RIGHT_SHIFT
+&kp LEFT_GUI    &kp LEFT_ALT  &la_caret  &none             &none       &none            &kp HOME        &kp END         &mp_brc_lt_o       &mp_brc_gt_c   &none    &kp ESCAPE
+                                         &kp LEFT_CONTROL  &none       &kp BACKSPACE    &kp SPACE       &trans          &kp RIGHT_CONTROL
             >;
         };
 
