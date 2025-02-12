@@ -481,7 +481,7 @@
             bindings = <
 &mrp_otilde_grave  &mrp_exclam   &la_at    &kp POUND         &kp DOLLAR         &kp PERCENT           &la_par_o       &la_par_c       &kp PG_UP          &kp PAGE_DOWN  &none  &kp BACKSPACE
 &kp LEFT_SHIFT     &la_amp       &la_pipe  &mrp_quest        &mrp_par_brak_o    &mrp_par_brak_c       &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW       &kp RIGHT      &none  &kp RIGHT_SHIFT
-&kp LEFT_GUI       &kp LEFT_ALT  &none     &la_caret         &mrp_brace_less_o  &mrp_brace_great_c    &none           &none           &kp HOME           &kp END        &none  &none
+&kp LEFT_GUI       &kp LEFT_ALT  &none     &la_caret         &mrp_brace_less_o  &mrp_brace_great_c    &none           &none           &kp HOME           &kp END        &none  &kp ESCAPE
                                            &kp LEFT_CONTROL  &none              &kp BACKSPACE         &kp SPACE       &trans          &kp RIGHT_CONTROL
             >;
         };
