@@ -351,17 +351,6 @@
             require-prior-idle-ms = <125>;
         };
 
-        ht_tilde: ht_tilde {
-            compatible = "zmk,behavior-hold-tap";
-            label = "HT_TILDE";
-            bindings = <&kp>, <&la_tilde>;
-
-            #binding-cells = <2>;
-            tapping-term-ms = <200>;
-            hold-trigger-key-positions = <1 2 3 4 5 13 14 15 16 17 25 26 27 28 29 6 7 8 9 10 18 19 20 21 22 30 31 32 33 34 11 0>;
-            flavor = "balanced";
-        };
-
         td_shift_caps: td_shift_caps {
             compatible = "zmk,behavior-tap-dance";
             label = "TD_SHIFT_CAPS";
@@ -372,7 +361,7 @@
         mp_quo: mp_quo {
             compatible = "zmk,behavior-mod-morph";
             label = "MP_QUO";
-            bindings = <&la_quo>, <&la_apost>;
+            bindings = <&kp ES_DOUBLE_QUOTES>, <&kp ES_SINGLE_QUOTE>;
 
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
@@ -381,7 +370,7 @@
         mp_exc: mp_exc {
             compatible = "zmk,behavior-mod-morph";
             label = "MP_EXC";
-            bindings = <&kp EXCL>, <&la_exc_o>;
+            bindings = <&kp EXCL>, <&kp ES_INVERTED_EXCLAMATION>;
 
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
@@ -390,7 +379,7 @@
         mp_quest: mp_quest {
             compatible = "zmk,behavior-mod-morph";
             label = "MP_QUEST";
-            bindings = <&la_quest_c>, <&la_quest_o>;
+            bindings = <&kp ES_QUESTION>, <&kp ES_INVERTED_QUESTION>;
 
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
@@ -399,7 +388,7 @@
         mp_par_brk_o: mp_par_brk_o {
             compatible = "zmk,behavior-mod-morph";
             label = "MP_PAR_BRK_O";
-            bindings = <&la_par_o>, <&la_brack_o>;
+            bindings = <&kp ES_LEFT_PARENTHESIS>, <&kp ES_LEFT_BRACKET>;
 
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
@@ -408,7 +397,7 @@
         mp_par_brk_c: mp_par_brk_c {
             compatible = "zmk,behavior-mod-morph";
             label = "MP_PAR_BRK_C";
-            bindings = <&la_par_c>, <&la_brack_c>;
+            bindings = <&kp ES_RIGHT_PARENTHESIS>, <&kp ES_RIGHT_BRACKET>;
 
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
@@ -417,7 +406,7 @@
         mp_brc_lt_o: mp_brc_lt_o {
             compatible = "zmk,behavior-mod-morph";
             label = "MP_BRC_LT_O";
-            bindings = <&la_brace_o>, <&la_less>;
+            bindings = <&kp ES_LEFT_BRACE>, <&kp ES_LESS_THAN>;
 
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
@@ -426,7 +415,7 @@
         mp_brc_gt_c: mp_brc_gt_c {
             compatible = "zmk,behavior-mod-morph";
             label = "MP_BRC_GT_C";
-            bindings = <&la_brace_c>, <&la_greater>;
+            bindings = <&kp ES_RIGHT_BRACE>, <&kp ES_GREATER_THAN>;
 
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
@@ -435,7 +424,7 @@
         mp_otd_grv: mp_otd_grv {
             compatible = "zmk,behavior-mod-morph";
             label = "MP_OTD_GRV";
-            bindings = <&la_otilde>, <&la_grave>;
+            bindings = <&kp ES_TILDE>, <&la_grave>;
 
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
@@ -444,16 +433,7 @@
         mp_slh_bsl: mp_slh_bsl {
             compatible = "zmk,behavior-mod-morph";
             label = "MP_SLH_BSL";
-            bindings = <&la_slash>, <&la_backslash>;
-
-            #binding-cells = <0>;
-            mods = <(MOD_LSFT|MOD_RSFT)>;
-        };
-
-        mp_dot_cma: mp_dot_cma {
-            compatible = "zmk,behavior-mod-morph";
-            label = "MP_DOT_CMA";
-            bindings = <&kp PERIOD>, <&kp COMMA>;
+            bindings = <&kp ES_SLASH>, <&kp ES_BACKSLASH>;
 
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
@@ -487,6 +467,17 @@
             hold-trigger-key-positions = <32 33>;
             flavor = "balanced";
         };
+
+        ht: ht {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HOLD_TAP";
+            bindings = <&kp>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+            hold-trigger-key-positions = <1 2 3 4 5 13 14 15 16 17 25 26 27 28 29 6 7 8 9 10 18 19 20 21 22 30 31 32 33 34 11 0>;
+            flavor = "balanced";
+        };
     };
 
     keymap {
@@ -501,7 +492,7 @@
 
             bindings = <
 &kp TAB         &kp Q  &kp W  &kp E             &kp R  &kp T        &kp Y      &kp U  &kp I              &kp O       &kp P           &kp BACKSPACE
-&td_shift_caps  &kp A  &kp S  &kp D             &kp F  &kp G        &kp H      &kp J  &kp K              &kp L       &kp ES_N_TILDE  &ht_tilde RSHIFT 0
+&td_shift_caps  &kp A  &kp S  &kp D             &kp F  &kp G        &kp H      &kp J  &kp K              &kp L       &kp ES_N_TILDE  &ht RSHIFT ES_ACUTE
 &kp LEFT_GUI    &kp Z  &kp X  &kp C             &kp V  &kp B        &kp N      &kp M  &kp COMMA          &kp PERIOD  &kp LEFT_ALT    &lt 3 ESCAPE
                               &kp LEFT_CONTROL  &mo 1  &kp SPACE    &kp ENTER  &mo 2  &kp RIGHT_CONTROL
             >;
