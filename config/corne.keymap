@@ -299,10 +299,10 @@
 
         snd {
             bindings = <
-&mp_otd_grv     &mp_exc       &kp ES_AT     &kp POUND         &kp DOLLAR  &kp PERCENT      &kp PAGE_UP     &kp PAGE_DOWN   &mp_par_brk_o      &mp_par_brk_c  &none         &kp DELETE
-&kp LEFT_SHIFT  &kp ES_AMPS   &kp ES_PIPE   &mp_quest         &none       &none            &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW       &kp RIGHT      &kp TAB       &kp RIGHT_SHIFT
-&kp LEFT_GUI    &kp LEFT_ALT  &kp ES_CARET  &none             &none       &none            &kp HOME        &kp END         &mp_brc_lt_o       &mp_brc_gt_c   &kp LEFT_ALT  &kp ESCAPE
-                                            &kp LEFT_CONTROL  &none       &kp BACKSPACE    &kp SPACE       &trans          &kp RIGHT_CONTROL
+&mp_otd_grv     &mp_exc       &kp ES_AT    &kp POUND         &kp DOLLAR    &kp PERCENT      &kp PAGE_UP     &kp PAGE_DOWN   &mp_par_brk_o      &mp_par_brk_c  &none         &kp DELETE
+&kp LEFT_SHIFT  &kp ES_AMPS   &kp ES_PIPE  &mp_quest         &none         &kp ES_DEGREE    &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW       &kp RIGHT      &kp TAB       &kp RIGHT_SHIFT
+&kp LEFT_GUI    &kp LEFT_ALT  &none        &none             &kp ES_CARET  &none            &kp HOME        &kp END         &mp_brc_lt_o       &mp_brc_gt_c   &kp LEFT_ALT  &kp ESCAPE
+                                           &kp LEFT_CONTROL  &none         &kp BACKSPACE    &kp SPACE       &trans          &kp RIGHT_CONTROL
             >;
         };
 
