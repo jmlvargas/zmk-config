@@ -32,37 +32,37 @@
         bootldr_l {
             bindings = <&bootloader>;
             key-positions = <24 29>;
-            layers = <3 1>;
+            layers = <4 2>;
         };
 
         bootldr_r {
             bindings = <&bootloader>;
             key-positions = <30 35>;
-            layers = <3 1>;
+            layers = <4 2>;
         };
 
         reset_l {
             bindings = <&sys_reset>;
             key-positions = <0 5>;
-            layers = <3 1>;
+            layers = <4 2>;
         };
 
         reset_r {
             bindings = <&sys_reset>;
             key-positions = <6 11>;
-            layers = <3 1>;
+            layers = <4 2>;
         };
 
         clear_bt_profile {
             bindings = <&bt BT_CLR>;
             key-positions = <29 26>;
-            layers = <3 1>;
+            layers = <4 2>;
         };
 
         next_bt_profile {
             bindings = <&bt BT_NXT>;
             key-positions = <29 0>;
-            layers = <1 3>;
+            layers = <2 4>;
         };
     };
 
@@ -273,7 +273,16 @@
     keymap {
         compatible = "zmk,keymap";
 
-        bas {
+        qrt {
+            bindings = <
+&kp TAB         &kp Q  &kp W  &kp E             &kp R  &kp T        &kp Y      &kp U  &kp I              &kp O       &kp P           &kp BACKSPACE
+&td_shift_caps  &kp A  &kp S  &kp D             &kp F  &kp G        &kp H      &kp J  &kp K              &kp L       &kp ES_N_TILDE  &ht RSHIFT ES_ACUTE
+&kp LEFT_GUI    &kp Z  &kp X  &kp C             &kp V  &kp B        &kp N      &kp M  &kp COMMA          &kp PERIOD  &kp LEFT_ALT    &lt 4 ESCAPE
+                              &kp LEFT_CONTROL  &mo 2  &kp SPACE    &kp ENTER  &mo 3  &kp RIGHT_CONTROL
+            >;
+        };
+
+        dvk {
             // -----------------------------------------------------------------------------------------
             // |  TAB |  Q  |  W  |  E  |  R  |  T  |   |  Y  |  U   |  I  |  O  |  P  | BSPC |
             // | CTRL |  A  |  S  |  D  |  F  |  G  |   |  H  |  J   |  K  |  L  |  ;  |  '   |
@@ -281,19 +290,19 @@
             //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
 
             bindings = <
-&kp TAB         &kp Q  &kp W  &kp E             &kp R  &kp T        &kp Y      &kp U  &kp I              &kp O       &kp P           &kp BACKSPACE
-&td_shift_caps  &kp A  &kp S  &kp D             &kp F  &kp G        &kp H      &kp J  &kp K              &kp L       &kp ES_N_TILDE  &ht RSHIFT ES_ACUTE
-&kp LEFT_GUI    &kp Z  &kp X  &kp C             &kp V  &kp B        &kp N      &kp M  &kp COMMA          &kp PERIOD  &kp LEFT_ALT    &lt 3 ESCAPE
-                              &kp LEFT_CONTROL  &mo 1  &kp SPACE    &kp ENTER  &mo 2  &kp RIGHT_CONTROL
+&kp TAB         &kp DOT       &kp COMMA  &kp ES_N_TILDE    &kp P  &kp Y        &kp F      &kp G  &kp C              &kp H  &kp L       &kp BACKSPACE
+&td_shift_caps  &kp A         &kp O      &kp E             &kp U  &kp I        &kp D      &kp R  &kp T              &kp N  &kp S       &ht RSHIFT ES_ACUTE
+&kp LEFT_GUI    &kp LEFT_ALT  &kp Q      &kp J             &kp K  &kp X        &kp B      &kp M  &kp W              &kp V  &ht LALT Z  &lt 4 ESCAPE
+                                         &kp LEFT_CONTROL  &mo 2  &kp SPACE    &kp ENTER  &mo 3  &kp RIGHT_CONTROL
             >;
         };
 
         fst {
             bindings = <
 &kp BACKSPACE   &kp LC(Q)  &kp LC(W)  &kp ESCAPE        &kp LC(R)  &kp LC(T)    &kp ES_EQUAL  &kp N7        &kp N8             &kp N9        &kp ES_ASTRK  &kp BACKSPACE
-&kp LEFT_SHIFT  &kp LC(A)  &kp LC(S)  &kp DELETE        &mo 2      &kp LC(G)    &kp ES_PLUS   &kp NUMBER_4  &kp N5             &kp NUMBER_6  &kp ES_MINUS  &ht_mp_quo RSHIFT 0
-&none           &kp LC(Z)  &kp LC(X)  &kp LC(C)         &kp LC(V)  &kp LC(B)    &kp N0        &kp NUMBER_1  &mp_2_cma          &mp_3_dot     &mp_slh_bsl   &mo 3
-                                      &kp LEFT_CONTROL  &trans     &kp ENTER    &kp ENTER     &mo 2         &kp RIGHT_CONTROL
+&kp LEFT_SHIFT  &kp LC(A)  &kp LC(S)  &kp DELETE        &mo 3      &kp LC(G)    &kp ES_PLUS   &kp NUMBER_4  &kp N5             &kp NUMBER_6  &kp ES_MINUS  &ht_mp_quo RSHIFT 0
+&none           &kp LC(Z)  &kp LC(X)  &kp LC(C)         &kp LC(V)  &kp LC(B)    &kp N0        &kp NUMBER_1  &mp_2_cma          &mp_3_dot     &mp_slh_bsl   &lt 4 ESCAPE
+                                      &kp LEFT_CONTROL  &trans     &kp ENTER    &kp ENTER     &mo 3         &kp RIGHT_CONTROL
             >;
         };
 
@@ -309,8 +318,8 @@
         sys {
             bindings = <
 &bt BT_NXT      &bt BT_SEL 0  &bt BT_SEL 1     &bt BT_CLR        &kp C_VOLUME_UP  &kp INSERT    &none   &kp F7  &kp F8             &kp F9  &kp F10  &none
-&kp LEFT_SHIFT  &none         &kp PRINTSCREEN  &none             &kp C_VOL_DN     &none         &none   &kp F4  &kp F5             &kp F6  &kp F11  &none
-&kp LEFT_GUI    &kp LEFT_ALT  &kp PAUSE_BREAK  &none             &kp C_MUTE       &none         &tog 1  &kp F1  &kp F2             &kp F3  &kp F12  &trans
+&kp LEFT_SHIFT  &none         &kp PRINTSCREEN  &tog 1            &kp C_VOL_DN     &none         &none   &kp F4  &kp F5             &kp F6  &kp F11  &none
+&kp LEFT_GUI    &kp LEFT_ALT  &kp PAUSE_BREAK  &none             &kp C_MUTE       &tog 0        &tog 2  &kp F1  &kp F2             &kp F3  &kp F12  &trans
                                                &kp LEFT_CONTROL  &none            &none         &none   &none   &kp RIGHT_CONTROL
             >;
         };
