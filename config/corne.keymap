@@ -146,6 +146,8 @@
             label = "TD_SHIFT_CAPS";
             #binding-cells = <0>;
             bindings = <&kp LSHIFT>, <&kp CAPSLOCK>;
+
+            tapping-term-ms = <160>;
         };
 
         mp_quo: mp_quo {
