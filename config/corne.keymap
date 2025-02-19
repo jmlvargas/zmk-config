@@ -141,15 +141,6 @@
             require-prior-idle-ms = <125>;
         };
 
-        td_shift_caps: td_shift_caps {
-            compatible = "zmk,behavior-tap-dance";
-            label = "TD_SHIFT_CAPS";
-            #binding-cells = <0>;
-            bindings = <&kp LSHIFT>, <&kp CAPSLOCK>;
-
-            tapping-term-ms = <160>;
-        };
-
         mp_quo: mp_quo {
             compatible = "zmk,behavior-mod-morph";
             label = "MP_QUO";
@@ -283,10 +274,10 @@
             //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
 
             bindings = <
-&kp TAB         &kp Q  &kp W  &kp E             &kp R  &kp T        &kp Y      &kp U  &kp I              &kp O       &kp P           &kp BACKSPACE
-&td_shift_caps  &kp A  &kp S  &kp D             &kp F  &kp G        &kp H      &kp J  &kp K              &kp L       &kp ES_N_TILDE  &ht RSHIFT ES_ACUTE
-&kp LEFT_GUI    &kp Z  &kp X  &kp C             &kp V  &kp B        &kp N      &kp M  &kp COMMA          &kp PERIOD  &kp LEFT_ALT    &lt 3 ESCAPE
-                              &kp LEFT_CONTROL  &mo 1  &kp SPACE    &kp ENTER  &mo 2  &kp RIGHT_CONTROL
+&kp TAB       &kp Q  &kp W  &kp E             &kp R  &kp T        &kp Y      &kp U  &kp I              &kp O       &kp P           &kp BACKSPACE
+&kp LSHIFT    &kp A  &kp S  &kp D             &kp F  &kp G        &kp H      &kp J  &kp K              &kp L       &kp ES_N_TILDE  &ht RSHIFT ES_ACUTE
+&kp LEFT_GUI  &kp Z  &kp X  &kp C             &kp V  &kp B        &kp N      &kp M  &kp COMMA          &kp PERIOD  &kp LEFT_ALT    &lt 3 ESCAPE
+                            &kp LEFT_CONTROL  &mo 1  &kp SPACE    &kp ENTER  &mo 2  &kp RIGHT_CONTROL
             >;
         };
 
@@ -312,7 +303,7 @@
             bindings = <
 &bt BT_NXT      &bt BT_SEL 0  &bt BT_SEL 1     &bt BT_CLR        &kp C_VOLUME_UP  &kp INSERT    &none   &kp F7  &kp F8             &kp F9  &kp F10  &none
 &kp LEFT_SHIFT  &none         &kp PRINTSCREEN  &none             &kp C_VOL_DN     &none         &none   &kp F4  &kp F5             &kp F6  &kp F11  &none
-&kp LEFT_GUI    &kp LEFT_ALT  &none            &kp PAUSE_BREAK   &kp C_MUTE       &none         &tog 1  &kp F1  &kp F2             &kp F3  &kp F12  &trans
+&kp LEFT_GUI    &kp LEFT_ALT  &kp PAUSE_BREAK  &kp CAPSLOCK      &kp C_MUTE       &none         &tog 1  &kp F1  &kp F2             &kp F3  &kp F12  &trans
                                                &kp LEFT_CONTROL  &none            &none         &none   &none   &kp RIGHT_CONTROL
             >;
         };
