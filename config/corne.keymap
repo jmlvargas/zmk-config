@@ -216,19 +216,19 @@
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
-        mp_2_cma: mp_2_cma {
+        mp_2_lt: mp_2_lt {
             compatible = "zmk,behavior-mod-morph";
-            label = "MP_2_CMA";
-            bindings = <&kp NUMBER_2>, <&kp COMMA>;
+            label = "MP_2_LT";
+            bindings = <&kp NUMBER_2>, <&kp ES_LESS_THAN>;
 
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
-        mp_3_dot: mp_3_dot {
+        mp_3_gt: mp_3_gt {
             compatible = "zmk,behavior-mod-morph";
-            label = "MP_3_DOT";
-            bindings = <&kp NUMBER_3>, <&kp DOT>;
+            label = "MP_3_GT";
+            bindings = <&kp NUMBER_3>, <&kp ES_GT>;
 
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
@@ -264,6 +264,42 @@
             #binding-cells = <0>;
             mods = <(MOD_RSFT|MOD_LSFT)>;
         };
+
+        mp_5_brc: mp_5_brc {
+            compatible = "zmk,behavior-mod-morph";
+            label = "MP_5_BRC";
+            bindings = <&kp ES_N5>, <&kp ES_LEFT_BRACE>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        mp_6_brc: mp_6_brc {
+            compatible = "zmk,behavior-mod-morph";
+            label = "MP_6_BRC";
+            bindings = <&kp ES_N6>, <&kp ES_RIGHT_BRACE>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        mp_plus_brk: mp_plus_brk {
+            compatible = "zmk,behavior-mod-morph";
+            label = "MP_PLUS_BRK";
+            bindings = <&kp ES_PLUS>, <&kp ES_LEFT_BRACKET>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        mp_4_brk: mp_4_brk {
+            compatible = "zmk,behavior-mod-morph";
+            label = "MP_4_BRK";
+            bindings = <&kp ES_N4>, <&kp ES_RIGHT_BRACKET>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
     };
 
     keymap {
@@ -286,18 +322,18 @@
 
         num {
             bindings = <
-&kp BACKSPACE   &kp LC(Q)     &kp LC(W)  &kp ESCAPE        &kp LC(R)  &kp LC(T)    &kp ES_EQUAL  &kp N7        &kp N8             &kp N9        &kp ES_ASTRK  &kp BACKSPACE
-&kp LEFT_SHIFT  &kp LC(A)     &kp LC(S)  &kp DELETE        &kp LC(F)  &kp LC(G)    &kp ES_PLUS   &kp NUMBER_4  &kp N5             &kp NUMBER_6  &kp ES_MINUS  &ht_mp_quo RSHIFT 0
-&kp LEFT_GUI    &kp LEFT_ALT  &kp LC(X)  &kp LC(C)         &kp LC(V)  &kp LC(B)    &kp N0        &kp NUMBER_1  &mp_2_cma          &mp_3_dot     &mp_slh_bsl   &lt 3 ESCAPE
+&kp BACKSPACE   &kp LC(Q)     &kp LC(W)  &kp ESCAPE        &kp LC(R)  &kp LC(T)    &kp ES_EQUAL  &kp N7        &kp N8             &kp N9     &kp ES_ASTRK  &kp BACKSPACE
+&kp LEFT_SHIFT  &kp LC(A)     &kp LC(S)  &kp DELETE        &kp LC(F)  &kp LC(G)    &mp_plus_brk  &mp_4_brk     &mp_5_brc          &mp_6_brc  &kp ES_MINUS  &ht_mp_quo RSHIFT 0
+&kp LEFT_GUI    &kp LEFT_ALT  &kp LC(X)  &kp LC(C)         &kp LC(V)  &kp LC(B)    &kp N0        &kp NUMBER_1  &mp_2_lt           &mp_3_gt   &mp_slh_bsl   &lt 3 ESCAPE
                                          &kp LEFT_CONTROL  &trans     &kp ENTER    &kp ENTER     &mo 2         &kp RIGHT_CONTROL
             >;
         };
 
         nav {
             bindings = <
-&mp_otd_grv     &mp_exc       &kp ES_AT    &kp POUND         &kp DOLLAR    &kp PERCENT      &kp HOME        &kp END         &mp_par_brk_o      &mp_par_brk_c  &none     &kp DELETE
-&kp LEFT_SHIFT  &kp ES_AMPS   &kp ES_PIPE  &mp_quest         &none         &kp ES_DEGREE    &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW       &kp RIGHT      &kp TAB   &kp RIGHT_SHIFT
-&kp LEFT_GUI    &kp LEFT_ALT  &mp_es_quo   &kp RA(ES_C)      &kp ES_CARET  &kp RA(COMMA)    &kp PAGE_UP     &kp PAGE_DOWN   &mp_brc_lt_o       &mp_brc_gt_c   &kp RALT  &kp ESCAPE
+&mp_otd_grv     &mp_exc       &kp ES_AT    &kp POUND         &kp DOLLAR    &kp PERCENT      &kp HOME        &kp END         &kp ES_LEFT_PARENTHESIS  &kp ES_RIGHT_PARENTHESIS  &none     &kp DELETE
+&kp LEFT_SHIFT  &kp ES_AMPS   &kp ES_PIPE  &mp_quest         &none         &kp ES_DEGREE    &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW             &kp RIGHT                 &kp TAB   &kp RIGHT_SHIFT
+&kp LEFT_GUI    &kp LEFT_ALT  &mp_es_quo   &kp RA(ES_C)      &kp ES_CARET  &kp RA(COMMA)    &kp PAGE_UP     &kp PAGE_DOWN   &kp COMMA                &kp DOT                   &kp RALT  &kp ESCAPE
                                            &kp LEFT_CONTROL  &none         &kp BACKSPACE    &kp SPACE       &trans          &kp RIGHT_CONTROL
             >;
         };
