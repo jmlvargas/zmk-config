@@ -277,10 +277,10 @@
 
         num {
             bindings = <
-&kp BACKSPACE   &kp LC(Q)  &kp LC(W)  &kp ESCAPE        &kp LC(R)  &kp LC(T)    &kp ES_EQUAL  &kp N7        &kp N8             &kp N9        &kp ES_ASTRK  &kp BACKSPACE
-&kp LEFT_SHIFT  &kp LC(A)  &kp LC(S)  &kp DELETE        &mo 2      &kp LC(G)    &kp ES_PLUS   &kp NUMBER_4  &kp N5             &kp NUMBER_6  &kp ES_MINUS  &ht_mp_quo RSHIFT 0
-&kp LEFT_GUI    &kp LC(Z)  &kp LC(X)  &kp LC(C)         &kp LC(V)  &kp LC(B)    &kp N0        &kp NUMBER_1  &mp_2_cma          &mp_3_dot     &mp_slh_bsl   &lt 3 ESCAPE
-                                      &kp LEFT_CONTROL  &trans     &kp ENTER    &kp ENTER     &mo 2         &kp RIGHT_CONTROL
+&kp BACKSPACE   &kp LC(Q)     &kp LC(W)  &kp ESCAPE        &kp LC(R)  &kp LC(T)    &kp ES_EQUAL  &kp N7        &kp N8             &kp N9        &kp ES_ASTRK  &kp BACKSPACE
+&kp LEFT_SHIFT  &kp LC(A)     &kp LC(S)  &kp DELETE        &kp LC(F)  &kp LC(G)    &kp ES_PLUS   &kp NUMBER_4  &kp N5             &kp NUMBER_6  &kp ES_MINUS  &ht_mp_quo RSHIFT 0
+&kp LEFT_GUI    &kp LEFT_ALT  &kp LC(X)  &kp LC(C)         &kp LC(V)  &kp LC(B)    &kp N0        &kp NUMBER_1  &mp_2_cma          &mp_3_dot     &mp_slh_bsl   &lt 3 ESCAPE
+                                         &kp LEFT_CONTROL  &trans     &kp ENTER    &kp ENTER     &mo 2         &kp RIGHT_CONTROL
             >;
         };
 
@@ -295,9 +295,9 @@
 
         sys {
             bindings = <
-&bt BT_NXT      &bt BT_SEL 0  &bt BT_SEL 1     &bt BT_SEL 2      &kp C_VOLUME_UP  &kp INSERT    &none   &kp F7  &kp F8             &kp F9  &kp F10  &none
+&bt BT_NXT      &bt BT_SEL 0  &bt BT_SEL 1     &bt BT_SEL 2      &kp C_VOLUME_UP  &kp INSERT    &none   &kp F7  &kp F8             &kp F9  &kp F10  &kp PAUSE_BREAK
 &kp LEFT_SHIFT  &none         &kp PRINTSCREEN  &none             &kp C_VOL_DN     &none         &none   &kp F4  &kp F5             &kp F6  &kp F11  &none
-&kp LEFT_GUI    &kp LEFT_ALT  &kp PAUSE_BREAK  &kp CAPSLOCK      &kp C_MUTE       &none         &tog 1  &kp F1  &kp F2             &kp F3  &kp F12  &trans
+&kp LEFT_GUI    &kp LEFT_ALT  &none            &kp CAPSLOCK      &kp C_MUTE       &none         &tog 1  &kp F1  &kp F2             &kp F3  &kp F12  &trans
                                                &kp LEFT_CONTROL  &none            &none         &none   &none   &kp RIGHT_CONTROL
             >;
         };
