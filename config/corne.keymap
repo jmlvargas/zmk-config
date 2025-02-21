@@ -255,6 +255,15 @@
             hold-trigger-key-positions = <1 2 3 4 5 13 14 15 16 17 25 26 27 28 29 6 7 8 9 10 18 19 20 21 22 30 31 32 33 34 11 0>;
             flavor = "balanced";
         };
+
+        mp_es_quo: mp_es_quo {
+            compatible = "zmk,behavior-mod-morph";
+            label = "MP_ES_QUO";
+            bindings = <&kp RA(ES_B)>, <&kp RA(ES_N)>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_RSFT|MOD_LSFT)>;
+        };
     };
 
     keymap {
@@ -288,7 +297,7 @@
             bindings = <
 &mp_otd_grv     &mp_exc       &kp ES_AT    &kp POUND         &kp DOLLAR    &kp PERCENT      &kp HOME        &kp END         &mp_par_brk_o      &mp_par_brk_c  &none     &kp DELETE
 &kp LEFT_SHIFT  &kp ES_AMPS   &kp ES_PIPE  &mp_quest         &none         &kp ES_DEGREE    &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW       &kp RIGHT      &kp TAB   &kp RIGHT_SHIFT
-&kp LEFT_GUI    &kp LEFT_ALT  &none        &kp RA(ES_C)      &kp ES_CARET  &none            &kp PAGE_UP     &kp PAGE_DOWN   &mp_brc_lt_o       &mp_brc_gt_c   &kp RALT  &kp ESCAPE
+&kp LEFT_GUI    &kp LEFT_ALT  &mp_es_quo   &kp RA(ES_C)      &kp ES_CARET  &kp RA(COMMA)    &kp PAGE_UP     &kp PAGE_DOWN   &mp_brc_lt_o       &mp_brc_gt_c   &kp RALT  &kp ESCAPE
                                            &kp LEFT_CONTROL  &none         &kp BACKSPACE    &kp SPACE       &trans          &kp RIGHT_CONTROL
             >;
         };
