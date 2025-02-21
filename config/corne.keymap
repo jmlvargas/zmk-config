@@ -333,7 +333,7 @@
             bindings = <
 &mp_otd_grv     &mp_exc       &kp ES_AT    &kp POUND         &kp DOLLAR    &kp PERCENT      &kp PAGE_UP     &kp PAGE_DOWN   &kp ES_LEFT_PARENTHESIS  &kp ES_RIGHT_PARENTHESIS  &none     &kp DELETE
 &kp LEFT_SHIFT  &kp ES_AMPS   &kp ES_PIPE  &mp_quest         &none         &kp ES_DEGREE    &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW             &kp RIGHT                 &kp TAB   &kp RIGHT_SHIFT
-&kp LEFT_GUI    &kp LEFT_ALT  &mp_es_quo   &kp RA(ES_C)      &kp ES_CARET  &kp RA(COMMA)    &kp END         &kp END         &kp COMMA                &kp DOT                   &kp RALT  &kp ESCAPE
+&kp LEFT_GUI    &kp LEFT_ALT  &mp_es_quo   &kp RA(ES_C)      &kp ES_CARET  &kp RA(COMMA)    &kp HOME        &kp END         &kp COMMA                &kp DOT                   &kp RALT  &kp ESCAPE
                                            &kp LEFT_CONTROL  &none         &kp BACKSPACE    &kp SPACE       &trans          &kp RIGHT_CONTROL
             >;
         };
