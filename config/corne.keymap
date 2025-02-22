@@ -241,7 +241,7 @@
         mp_7_brk: mp_7_brk {
             compatible = "zmk,behavior-mod-morph";
             label = "MP_7_BRK";
-            bindings = <&kp ES_N6>, <&kp ES_RIGHT_BRACKET>;
+            bindings = <&kp ES_N7>, <&kp ES_RIGHT_BRACKET>;
 
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
@@ -286,9 +286,9 @@
 
         num {
             bindings = <
-&kp BACKSPACE   &kp LC(Q)     &kp LC(W)  &kp ESCAPE        &kp LC(R)  &kp LC(T)    &mp_eq_brk    &mp_7_brk     &kp N8             &kp N9     &kp ES_ASTRK  &kp BACKSPACE
-&kp LEFT_SHIFT  &kp LC(A)     &kp LC(S)  &kp DELETE        &kp LC(F)  &kp LC(G)    &mp_plus_brc  &mp_4_brc     &kp ES_N5          &kp ES_N6  &kp ES_MINUS  &ht_mp_quo RSHIFT 0
-&kp LEFT_GUI    &kp LEFT_ALT  &kp LC(X)  &kp LC(C)         &kp LC(V)  &kp LC(B)    &kp N0        &kp NUMBER_1  &mp_2_lt           &mp_3_gt   &mp_slh_bsl   &lt 3 ESCAPE
+&kp BACKSPACE   &kp LC(Q)     &kp LC(W)  &kp ESCAPE        &kp LC(R)  &kp LC(T)    &kp ES_EQUAL  &kp ES_N7     &kp N8             &kp N9     &kp ES_ASTRK  &kp BACKSPACE
+&kp LEFT_SHIFT  &kp LC(A)     &kp LC(S)  &kp DELETE        &kp LC(F)  &kp LC(G)    &kp ES_PLUS   &kp ES_N4     &kp ES_N5          &kp ES_N6  &kp ES_MINUS  &ht_mp_quo RSHIFT 0
+&kp LEFT_GUI    &kp LEFT_ALT  &kp LC(X)  &kp LC(C)         &kp LC(V)  &kp LC(B)    &kp N0        &kp NUMBER_1  &kp ES_N2          &kp ES_N3  &mp_slh_bsl   &lt 3 ESCAPE
                                          &kp LEFT_CONTROL  &trans     &kp ENTER    &kp ENTER     &mo 2         &kp RIGHT_CONTROL
             >;
         };
@@ -310,7 +310,23 @@
                                                &kp LEFT_CONTROL  &none            &none         &none   &none   &kp RIGHT_CONTROL
             >;
         };
+
+        grp {
+            bindings = <
+&none  &none  &none  &none  &none  &none    &kp ES_LEFT_BRACKET  &kp ES_RIGHT_BRACKET  &kp ES_LPAR       &kp ES_RPAR          &none             &none
+&none  &none  &none  &none  &none  &none    &kp ES_LEFT_BRACE    &kp ES_RIGHT_BRACE    &none             &none                &none             &none
+&none  &none  &none  &none  &none  &none    &none                &none                 &kp ES_LESS_THAN  &kp ES_GREATER_THAN  &kp ES_BACKSLASH  &none
+                     &none  &none  &none    &none                &none                 &none
+            >;
+        };
     };
 
-    conditional_layers { compatible = "zmk,conditional-layers"; };
+    conditional_layers {
+        compatible = "zmk,conditional-layers";
+
+        fthlayer {
+            if-layers = <1 2>;
+            then-layer = <4>;
+        };
+    };
 };
