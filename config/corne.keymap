@@ -302,10 +302,10 @@
 
         grp {
             bindings = <
-&kp ES_INVERTED_QUESTION  &kp ES_QUESTION  &none         &kp ES_EQUAL   &none       &la_grave       &kp ES_AMPS          &kp ES_LPAR                  &kp ES_RPAR       &kp ES_PIPE           &kp ES_PERCENT     &kp DELETE
-&kp ES_TILDE              &kp ES_AT        &kp ES_SLASH  &kp ES_DOLLAR  &kp ES_DEG  &kp ES_POUND    &kp ES_LEFT_BRACKET  &kp ES_LBRC                  &kp ES_RBRC       &kp ES_RIGHT_BRACKET  &kp ES_UNDERSCORE  &kp ES_DOUBLE_QUOTES
-&none                     &none            &none         &kp ES_CARET   &none       &la_bullet      &kp ES_EXCL          &kp ES_INVERTED_EXCLAMATION  &kp ES_LESS_THAN  &kp ES_GT             &kp ES_BACKSLASH   &kp ES_SINGLE_QUOTE
-                                                         &none          &none       &none           &none                &none                        &none
+&kp ES_INVERTED_QUESTION  &kp ES_QUESTION  &none         &kp ES_EQUAL   &none       &la_grave           &kp ES_AMPS          &kp ES_LPAR                  &kp ES_RPAR       &kp ES_PIPE           &kp ES_PERCENT  &kp DELETE
+&kp ES_TILDE              &kp ES_AT        &kp ES_SLASH  &kp ES_DOLLAR  &kp ES_DEG  &kp ES_POUND        &kp ES_LEFT_BRACKET  &kp ES_LBRC                  &kp ES_RBRC       &kp ES_RIGHT_BRACKET  &kp ES_MINUS    &kp ES_DOUBLE_QUOTES
+&none                     &none            &none         &kp ES_CARET   &none       &kp ES_BACKSLASH    &kp ES_EXCL          &kp ES_INVERTED_EXCLAMATION  &kp ES_LESS_THAN  &kp ES_GT             &kp ES_UNDER    &kp ES_SINGLE_QUOTE
+                                                         &none          &none       &none               &none                &none                        &none
             >;
         };
 
