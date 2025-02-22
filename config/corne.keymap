@@ -288,16 +288,16 @@
             bindings = <
 &kp BACKSPACE   &kp LC(Q)     &kp LC(W)  &kp ESCAPE        &kp LC(R)  &kp LC(T)    &kp ES_EQUAL  &kp ES_N7     &kp N8             &kp N9     &kp ES_ASTRK  &kp BACKSPACE
 &kp LEFT_SHIFT  &kp LC(A)     &kp LC(S)  &kp DELETE        &kp LC(F)  &kp LC(G)    &kp ES_PLUS   &kp ES_N4     &kp ES_N5          &kp ES_N6  &kp ES_MINUS  &ht_mp_quo RSHIFT 0
-&kp LEFT_GUI    &kp LEFT_ALT  &kp LC(X)  &kp LC(C)         &kp LC(V)  &kp LC(B)    &kp N0        &kp NUMBER_1  &kp ES_N2          &kp ES_N3  &mp_slh_bsl   &lt 3 ESCAPE
+&kp LEFT_GUI    &kp LEFT_ALT  &kp LC(X)  &kp LC(C)         &kp LC(V)  &kp LC(B)    &kp N0        &kp NUMBER_1  &kp ES_N2          &kp ES_N3  &kp ES_SLASH  &lt 3 ESCAPE
                                          &kp LEFT_CONTROL  &mo 1      &kp ENTER    &kp ENTER     &mo 2         &kp RIGHT_CONTROL
             >;
         };
 
         nav {
             bindings = <
-&mp_otd_grv     &mp_exc       &kp ES_AT    &kp POUND         &kp DOLLAR    &kp PERCENT      &kp PAGE_UP     &kp PAGE_DOWN   &kp ES_LEFT_PARENTHESIS  &kp ES_RIGHT_PARENTHESIS  &none     &kp DELETE
-&kp LEFT_SHIFT  &kp ES_AMPS   &kp ES_PIPE  &mp_quest         &none         &kp ES_DEGREE    &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW             &kp RIGHT                 &kp TAB   &kp RIGHT_SHIFT
-&kp LEFT_GUI    &kp LEFT_ALT  &mp_es_quo   &kp RA(ES_C)      &kp ES_CARET  &kp RA(COMMA)    &kp HOME        &kp END         &kp COMMA                &kp DOT                   &kp RALT  &kp ESCAPE
+&mp_otd_grv     &mp_exc       &kp ES_AT    &kp POUND         &kp DOLLAR    &kp PERCENT      &kp PAGE_UP     &kp PAGE_DOWN   &kp HOME           &kp END    &none     &kp DELETE
+&kp LEFT_SHIFT  &kp ES_AMPS   &kp ES_PIPE  &mp_quest         &none         &kp ES_DEGREE    &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW       &kp RIGHT  &kp TAB   &kp RIGHT_SHIFT
+&kp LEFT_GUI    &kp LEFT_ALT  &mp_es_quo   &kp RA(ES_C)      &kp ES_CARET  &kp RA(COMMA)    &none           &none           &kp COMMA          &kp DOT    &kp RALT  &kp ESCAPE
                                            &kp LEFT_CONTROL  &mo 1         &kp BACKSPACE    &kp SPACE       &mo 2           &kp RIGHT_CONTROL
             >;
         };
@@ -313,9 +313,9 @@
 
         grp {
             bindings = <
-&la_grave  &kp ES_INVERTED_EXCLAMATION  &none         &none                     &none  &none    &kp ES_LEFT_BRACKET  &kp ES_RIGHT_BRACKET  &kp ES_LPAR       &kp ES_RPAR          &none             &none
-&none      &none                        &none         &kp ES_INVERTED_QUESTION  &none  &none    &kp ES_LEFT_BRACE    &kp ES_RIGHT_BRACE    &none             &none                &none             &none
-&none      &none                        &kp RA(ES_N)  &none                     &none  &none    &none                &none                 &kp ES_LESS_THAN  &kp ES_GREATER_THAN  &kp ES_BACKSLASH  &none
+&la_grave  &kp ES_INVERTED_EXCLAMATION  &none         &none                     &none  &none    &kp ES_LEFT_BRACKET  &kp ES_RIGHT_BRACKET  &kp ES_LPAR       &kp ES_RPAR    &none             &none
+&none      &none                        &none         &kp ES_INVERTED_QUESTION  &none  &none    &kp ES_LEFT_BRACE    &kp ES_RIGHT_BRACE    &kp ES_LESS_THAN  &kp ES_GT      &kp ES_UNDER      &kp ES_SINGLE_QUOTE
+&none      &none                        &kp RA(ES_N)  &none                     &none  &none    &none                &none                 &kp ES_COMMA      &kp ES_PERIOD  &kp ES_BACKSLASH  &none
                                                       &none                     &none  &none    &none                &none                 &none
             >;
         };
