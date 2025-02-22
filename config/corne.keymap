@@ -289,7 +289,7 @@
 &kp BACKSPACE   &kp LC(Q)     &kp LC(W)  &kp ESCAPE        &kp LC(R)  &kp LC(T)    &kp ES_EQUAL  &kp ES_N7     &kp N8             &kp N9     &kp ES_ASTRK  &kp BACKSPACE
 &kp LEFT_SHIFT  &kp LC(A)     &kp LC(S)  &kp DELETE        &kp LC(F)  &kp LC(G)    &kp ES_PLUS   &kp ES_N4     &kp ES_N5          &kp ES_N6  &kp ES_MINUS  &ht_mp_quo RSHIFT 0
 &kp LEFT_GUI    &kp LEFT_ALT  &kp LC(X)  &kp LC(C)         &kp LC(V)  &kp LC(B)    &kp N0        &kp NUMBER_1  &kp ES_N2          &kp ES_N3  &mp_slh_bsl   &lt 3 ESCAPE
-                                         &kp LEFT_CONTROL  &trans     &kp ENTER    &kp ENTER     &mo 2         &kp RIGHT_CONTROL
+                                         &kp LEFT_CONTROL  &mo 1      &kp ENTER    &kp ENTER     &mo 2         &kp RIGHT_CONTROL
             >;
         };
 
