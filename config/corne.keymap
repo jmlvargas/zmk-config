@@ -32,31 +32,31 @@
         bootldr_l {
             bindings = <&bootloader>;
             key-positions = <24 29>;
-            layers = <4>;
+            layers = <5>;
         };
 
         bootldr_r {
             bindings = <&bootloader>;
             key-positions = <30 35>;
-            layers = <4>;
+            layers = <5>;
         };
 
         reset_l {
             bindings = <&sys_reset>;
             key-positions = <0 5>;
-            layers = <4>;
+            layers = <5>;
         };
 
         reset_r {
             bindings = <&sys_reset>;
             key-positions = <6 11>;
-            layers = <4>;
+            layers = <5>;
         };
 
         clear_bt_profile {
             bindings = <&bt BT_CLR>;
             key-positions = <29 26>;
-            layers = <4>;
+            layers = <5>;
         };
     };
 
@@ -286,8 +286,8 @@
             bindings = <
 &kp TAB       &kp Q  &kp W  &kp E  &kp R  &kp T        &kp Y      &kp U  &kp I              &kp O       &kp P           &kp BACKSPACE
 &kp LSHIFT    &kp A  &kp S  &kp D  &kp F  &kp G        &kp H      &kp J  &kp K              &kp L       &kp ES_N_TILDE  &ht RSHIFT ES_ACUTE
-&kp LEFT_GUI  &kp Z  &kp X  &kp C  &kp V  &kp B        &kp N      &kp M  &kp COMMA          &kp PERIOD  &kp LEFT_ALT    &lt 4 ESCAPE
-                            &mo 1  &mo 2  &kp SPACE    &kp ENTER  &mo 3  &kp RIGHT_CONTROL
+&kp LEFT_GUI  &kp Z  &kp X  &kp C  &kp V  &kp B        &kp N      &kp M  &kp COMMA          &kp PERIOD  &kp LEFT_ALT    &lt 5 ESCAPE
+                            &mo 1  &mo 2  &kp SPACE    &kp ENTER  &mo 4  &kp RIGHT_CONTROL
             >;
         };
 
@@ -295,17 +295,26 @@
             bindings = <
 &kp BACKSPACE   &kp LC(Q)     &kp LC(W)  &kp ESCAPE  &kp LC(R)  &kp LC(T)    &kp ES_EQUAL  &kp ES_N7     &kp N8             &kp N9     &kp ES_ASTRK  &kp BACKSPACE
 &kp LEFT_SHIFT  &kp LC(A)     &kp LC(S)  &kp DELETE  &kp LC(F)  &kp LC(G)    &kp ES_PLUS   &kp ES_N4     &kp ES_N5          &kp ES_N6  &kp ES_MINUS  &kp ES_SINGLE_QUOTE
-&kp LEFT_GUI    &kp LEFT_ALT  &kp LC(X)  &kp LC(C)   &kp LC(V)  &kp LC(B)    &kp N0        &kp NUMBER_1  &kp ES_N2          &kp ES_N3  &kp ES_SLASH  &lt 4 ESCAPE
-                                         &none       &mo 2      &kp ENTER    &kp ENTER     &mo 3         &kp RIGHT_CONTROL
+&kp LEFT_GUI    &kp LEFT_ALT  &kp LC(X)  &kp LC(C)   &kp LC(V)  &kp LC(B)    &kp N0        &kp NUMBER_1  &kp ES_N2          &kp ES_N3  &kp ES_SLASH  &lt 5 ESCAPE
+                                         &none       &mo 2      &kp ENTER    &kp ENTER     &mo 4         &kp RIGHT_CONTROL
             >;
         };
 
         grp {
             bindings = <
-&kp ES_INVERTED_QUESTION  &kp ES_QUESTION  &none         &kp ES_EQUAL   &none       &la_grave           &kp ES_AMPS          &kp ES_LPAR                  &kp ES_RPAR       &kp ES_PIPE           &kp ES_PERCENT  &kp DELETE
-&kp ES_TILDE              &kp ES_AT        &kp ES_SLASH  &kp ES_DOLLAR  &kp ES_DEG  &kp ES_POUND        &kp ES_LEFT_BRACKET  &kp ES_LBRC                  &kp ES_RBRC       &kp ES_RIGHT_BRACKET  &kp ES_MINUS    &kp ES_DOUBLE_QUOTES
-&none                     &none            &none         &kp ES_CARET   &none       &kp ES_BACKSLASH    &kp ES_EXCL          &kp ES_INVERTED_EXCLAMATION  &kp ES_LESS_THAN  &kp ES_GT             &kp ES_UNDER    &kp ES_SINGLE_QUOTE
-                                                         &none          &none       &none               &none                &none                        &none
+&kp ES_INVERTED_QUESTION  &kp ES_QUESTION  &none         &kp ES_EQUAL   &kp ES_TILDE  &la_grave           &kp ES_AMPS          &kp ES_LPAR                  &kp ES_RPAR       &kp ES_PIPE           &kp ES_PERCENT  &kp DELETE
+&kp LSHIFT                &kp ES_AT        &kp ES_SLASH  &kp ES_DOLLAR  &kp ES_DEG    &kp ES_POUND        &kp ES_LEFT_BRACKET  &kp ES_LBRC                  &kp ES_RBRC       &kp ES_RIGHT_BRACKET  &kp ES_MINUS    &kp ES_DOUBLE_QUOTES
+&kp LEFT_ALT              &none            &none         &kp ES_CARET   &none         &kp ES_BACKSLASH    &kp ES_EXCL          &kp ES_INVERTED_EXCLAMATION  &kp ES_LESS_THAN  &kp ES_GT             &kp ES_UNDER    &kp ES_SINGLE_QUOTE
+                                                         &none          &none         &none               &none                &none                        &none
+            >;
+        };
+
+        layer_5 {
+            bindings = <
+&kp ES_INVERTED_QUESTION  &kp ES_QUESTION  &none         &kp ES_EQUAL      &kp ES_TILDE  &la_grave           &kp PG_UP       &kp PAGE_DOWN                &kp HOME          &kp END          &kp ES_PERCENT  &kp DELETE
+&kp LSHIFT                &kp ES_AT        &kp ES_SLASH  &kp ES_DOLLAR     &kp ES_DEG    &kp ES_POUND        &kp LEFT_ARROW  &kp DOWN_ARROW               &kp UP_ARROW      &kp RIGHT_ARROW  &kp TAB         &kp ES_DOUBLE_QUOTES
+&kp LEFT_ALT              &none            &none         &kp ES_CARET      &none         &kp ES_BACKSLASH    &kp ES_EXCL     &kp ES_INVERTED_EXCLAMATION  &kp ES_LESS_THAN  &kp ES_GT        &kp RALT        &kp ES_SINGLE_QUOTE
+                                                         &kp LEFT_CONTROL  &none         &kp BACKSPACE       &kp SPACE       &none                        &none
             >;
         };
 
@@ -314,7 +323,7 @@
 &mp_otd_grv     &mp_exc       &kp ES_AT    &kp POUND         &kp DOLLAR    &kp PERCENT      &kp PAGE_UP     &kp PAGE_DOWN   &kp HOME           &kp END    &none     &kp DELETE
 &kp LEFT_SHIFT  &kp ES_AMPS   &kp ES_PIPE  &mp_quest         &none         &kp ES_DEGREE    &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW       &kp RIGHT  &kp TAB   &kp RIGHT_SHIFT
 &kp LEFT_GUI    &kp LEFT_ALT  &mp_es_quo   &kp RA(ES_C)      &kp ES_CARET  &kp RA(COMMA)    &none           &none           &kp COMMA          &kp DOT    &kp RALT  &kp ESCAPE
-                                           &kp LEFT_CONTROL  &mo 2         &kp BACKSPACE    &kp SPACE       &mo 3           &kp RIGHT_CONTROL
+                                           &kp LEFT_CONTROL  &mo 2         &kp BACKSPACE    &kp SPACE       &mo 4           &kp RIGHT_CONTROL
             >;
         };
 
