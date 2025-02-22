@@ -162,42 +162,6 @@
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
-        mp_par_brk_o: mp_par_brk_o {
-            compatible = "zmk,behavior-mod-morph";
-            label = "MP_PAR_BRK_O";
-            bindings = <&kp ES_LEFT_PARENTHESIS>, <&kp ES_LEFT_BRACKET>;
-
-            #binding-cells = <0>;
-            mods = <(MOD_LSFT|MOD_RSFT)>;
-        };
-
-        mp_par_brk_c: mp_par_brk_c {
-            compatible = "zmk,behavior-mod-morph";
-            label = "MP_PAR_BRK_C";
-            bindings = <&kp ES_RIGHT_PARENTHESIS>, <&kp ES_RIGHT_BRACKET>;
-
-            #binding-cells = <0>;
-            mods = <(MOD_LSFT|MOD_RSFT)>;
-        };
-
-        mp_brc_lt_o: mp_brc_lt_o {
-            compatible = "zmk,behavior-mod-morph";
-            label = "MP_BRC_LT_O";
-            bindings = <&kp ES_LEFT_BRACE>, <&kp ES_LESS_THAN>;
-
-            #binding-cells = <0>;
-            mods = <(MOD_LSFT|MOD_RSFT)>;
-        };
-
-        mp_brc_gt_c: mp_brc_gt_c {
-            compatible = "zmk,behavior-mod-morph";
-            label = "MP_BRC_GT_C";
-            bindings = <&kp ES_RIGHT_BRACE>, <&kp ES_GREATER_THAN>;
-
-            #binding-cells = <0>;
-            mods = <(MOD_LSFT|MOD_RSFT)>;
-        };
-
         mp_otd_grv: mp_otd_grv {
             compatible = "zmk,behavior-mod-morph";
             label = "MP_OTD_GRV";
@@ -265,37 +229,37 @@
             mods = <(MOD_RSFT|MOD_LSFT)>;
         };
 
-        mp_5_brc: mp_5_brc {
+        mp_eq_brk: mp_eq_brk {
             compatible = "zmk,behavior-mod-morph";
-            label = "MP_5_BRC";
-            bindings = <&kp ES_N5>, <&kp ES_LEFT_BRACE>;
+            label = "MP_EQ_BRK";
+            bindings = <&kp ES_EQUAL>, <&kp ES_LEFT_BRACKET>;
 
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
-        mp_6_brc: mp_6_brc {
+        mp_7_brk: mp_7_brk {
             compatible = "zmk,behavior-mod-morph";
-            label = "MP_6_BRC";
-            bindings = <&kp ES_N6>, <&kp ES_RIGHT_BRACE>;
+            label = "MP_7_BRK";
+            bindings = <&kp ES_N6>, <&kp ES_RIGHT_BRACKET>;
 
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
-        mp_plus_brk: mp_plus_brk {
+        mp_plus_brc: mp_plus_brc {
             compatible = "zmk,behavior-mod-morph";
-            label = "MP_PLUS_BRK";
-            bindings = <&kp ES_PLUS>, <&kp ES_LEFT_BRACKET>;
+            label = "MP_PLUS_BRC";
+            bindings = <&kp ES_PLUS>, <&kp ES_LEFT_BRACE>;
 
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
-        mp_4_brk: mp_4_brk {
+        mp_4_brc: mp_4_brc {
             compatible = "zmk,behavior-mod-morph";
-            label = "MP_4_BRK";
-            bindings = <&kp ES_N4>, <&kp ES_RIGHT_BRACKET>;
+            label = "MP_4_BRC";
+            bindings = <&kp ES_N4>, <&kp ES_RIGHT_BRACE>;
 
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
@@ -322,8 +286,8 @@
 
         num {
             bindings = <
-&kp BACKSPACE   &kp LC(Q)     &kp LC(W)  &kp ESCAPE        &kp LC(R)  &kp LC(T)    &kp ES_EQUAL  &kp N7        &kp N8             &kp N9     &kp ES_ASTRK  &kp BACKSPACE
-&kp LEFT_SHIFT  &kp LC(A)     &kp LC(S)  &kp DELETE        &kp LC(F)  &kp LC(G)    &mp_plus_brk  &mp_4_brk     &mp_5_brc          &mp_6_brc  &kp ES_MINUS  &ht_mp_quo RSHIFT 0
+&kp BACKSPACE   &kp LC(Q)     &kp LC(W)  &kp ESCAPE        &kp LC(R)  &kp LC(T)    &mp_eq_brk    &mp_7_brk     &kp N8             &kp N9     &kp ES_ASTRK  &kp BACKSPACE
+&kp LEFT_SHIFT  &kp LC(A)     &kp LC(S)  &kp DELETE        &kp LC(F)  &kp LC(G)    &mp_plus_brc  &mp_4_brc     &kp ES_N5          &kp ES_N6  &kp ES_MINUS  &ht_mp_quo RSHIFT 0
 &kp LEFT_GUI    &kp LEFT_ALT  &kp LC(X)  &kp LC(C)         &kp LC(V)  &kp LC(B)    &kp N0        &kp NUMBER_1  &mp_2_lt           &mp_3_gt   &mp_slh_bsl   &lt 3 ESCAPE
                                          &kp LEFT_CONTROL  &trans     &kp ENTER    &kp ENTER     &mo 2         &kp RIGHT_CONTROL
             >;
