@@ -313,10 +313,10 @@
 
         grp {
             bindings = <
-&none  &none  &none  &none  &none  &none    &kp ES_LEFT_BRACKET  &kp ES_RIGHT_BRACKET  &kp ES_LPAR       &kp ES_RPAR          &none             &none
-&none  &none  &none  &none  &none  &none    &kp ES_LEFT_BRACE    &kp ES_RIGHT_BRACE    &none             &none                &none             &none
-&none  &none  &none  &none  &none  &none    &none                &none                 &kp ES_LESS_THAN  &kp ES_GREATER_THAN  &kp ES_BACKSLASH  &none
-                     &none  &none  &none    &none                &none                 &none
+&la_grave  &kp ES_INVERTED_EXCLAMATION  &none         &none                     &none  &none    &kp ES_LEFT_BRACKET  &kp ES_RIGHT_BRACKET  &kp ES_LPAR       &kp ES_RPAR          &none             &none
+&none      &none                        &none         &kp ES_INVERTED_QUESTION  &none  &none    &kp ES_LEFT_BRACE    &kp ES_RIGHT_BRACE    &none             &none                &none             &none
+&none      &none                        &kp RA(ES_N)  &none                     &none  &none    &none                &none                 &kp ES_LESS_THAN  &kp ES_GREATER_THAN  &kp ES_BACKSLASH  &none
+                                                      &none                     &none  &none    &none                &none                 &none
             >;
         };
     };
