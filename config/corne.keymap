@@ -311,7 +311,7 @@
 
         nav {
             bindings = <
-&kp TAB     &kp ES_QUESTION  &kp ES_INVERTED_QUESTION  &kp ES_EQUAL      &kp ES_TILDE  &la_grave        &kp PG_UP       &kp PAGE_DOWN   &kp HOME           &kp END          &kp TAB   &kp DELETE
+&kp TAB     &kp ES_QUESTION  &kp ES_INVERTED_QUESTION  &kp ES_EQUAL      &kp ES_TILDE  &la_grave        &kp PG_UP       &kp HOME        &kp END            &kp PAGE_DOWN    &kp TAB   &kp DELETE
 &kp LSHIFT  &kp ES_AT        &kp ES_SLASH              &kp ES_DOLLAR     &kp ES_DEG    &kp ES_POUND     &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW       &kp RIGHT_ARROW  &none     &kp RSHIFT
 &kp LGUI    &kp LEFT_ALT     &kp ES_BACKSLASH          &kp ES_PERCENT    &kp ES_CARET  &la_bullet       &none           &none           &kp ES_COMMA       &kp ES_PERIOD    &kp RALT  &kp ESCAPE
                                                        &kp LEFT_CONTROL  &none         &kp BACKSPACE    &kp SPACE       &none           &kp RIGHT_CONTROL
