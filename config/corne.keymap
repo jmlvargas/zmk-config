@@ -309,9 +309,9 @@
 
         nav {
             bindings = <
-&kp TAB     &kp ES_QUESTION  &kp ES_INVERTED_QUESTION  &kp ES_EQUAL      &kp ES_PERCENT  &la_grave           &kp ES_AMPS     &kp PG_UP       &kp PAGE_DOWN      &kp ES_PIPE      &kp TAB       &kp DELETE
-&kp LSHIFT  &kp ES_AT        &none                     &kp ES_DOLLAR     &kp ES_DEG      &kp ES_POUND        &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW       &kp RIGHT_ARROW  &kp ES_TILDE  &kp RSHIFT
-&kp LGUI    &kp LEFT_ALT     &none                     &none             &kp ES_CARET    &kp ES_BACKSLASH    &kp ES_EXCL     &kp ES_IEXCL    &kp HOME           &kp END          &kp RALT      &kp ESCAPE
+&la_grave   &kp ES_QUESTION  &kp ES_INVERTED_QUESTION  &kp ES_EQUAL      &kp ES_PERCENT  &kp TILDE           &none           &kp PG_UP       &kp PAGE_DOWN      &none            &kp TAB   &kp DELETE
+&kp LSHIFT  &kp ES_AT        &kp ES_DOLLAR             &kp ES_AMPS       &kp ES_PIPE     &kp ES_POUND        &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW       &kp RIGHT_ARROW  &none     &kp RSHIFT
+&kp LGUI    &kp LEFT_ALT     &kp ES_EXCL               &kp ES_IEXCL      &kp ES_CARET    &kp ES_BACKSLASH    &none           &none           &kp HOME           &kp END          &kp RALT  &kp ESCAPE
                                                        &kp LEFT_CONTROL  &trans          &kp BACKSPACE       &kp SPACE       &trans          &kp RIGHT_CONTROL
             >;
         };
