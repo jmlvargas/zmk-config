@@ -320,7 +320,7 @@
             bindings = <
 &none  &none  &none  &none             &none  &none        &none                &kp ES_LPAR  &kp ES_RPAR        &none                 &none  &none
 &none  &none  &none  &kp ES_DEGREE     &none  &none        &kp ES_LEFT_BRACKET  &kp ES_LBRC  &kp ES_RBRC        &kp ES_RIGHT_BRACKET  &none  &none
-&none  &none  &none  &none             &none  &none        &none                &kp ES_LT    &kp ES_GT          &none                 &none  &none
+&none  &none  &none  &none             &none  &none        &none                &none        &kp ES_LT          &kp ES_GT             &none  &none
                      &kp LEFT_CONTROL  &none  &kp ENTER    &kp BACKSPACE        &none        &kp RIGHT_CONTROL
             >;
         };
