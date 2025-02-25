@@ -55,7 +55,7 @@
 
         clear_bt_profile {
             bindings = <&bt BT_CLR>;
-            key-positions = <29 26>;
+            key-positions = <10 11>;
             layers = <4>;
         };
     };
@@ -300,10 +300,10 @@
 
         num {
             bindings = <
-&kp ESCAPE    &none  &none  &none             &none   &none        &kp ES_ASTRK  &kp ES_N7     &kp N8             &kp N9     &kp ES_UNDERSCORE  &kp BACKSPACE
-&kp LSHIFT    &none  &none  &kp DELETE        &none   &none        &kp ES_PLUS   &kp ES_N4     &kp ES_N5          &kp ES_N6  &kp ES_MINUS       &kp ES_DOUBLE_QUOTES
-&kp LEFT_GUI  &none  &none  &none             &none   &none        &kp N0        &kp NUMBER_1  &kp ES_N2          &kp ES_N3  &kp ES_SLASH       &kp ES_SINGLE_QUOTE
-                            &kp LEFT_CONTROL  &trans  &kp ENTER    &kp ENTER     &trans        &kp RIGHT_CONTROL
+&kp ESCAPE    &none  &none  &none             &none       &kp INSERT    &kp ES_ASTRK  &kp ES_N7     &kp N8             &kp N9     &kp ES_UNDERSCORE  &kp BACKSPACE
+&kp LSHIFT    &none  &none  &kp DELETE        &none       &none         &kp ES_PLUS   &kp ES_N4     &kp ES_N5          &kp ES_N6  &kp ES_MINUS       &kp ES_DOUBLE_QUOTES
+&kp LEFT_GUI  &none  &none  &kp CLCK          &kp C_MUTE  &none         &kp N0        &kp NUMBER_1  &kp ES_N2          &kp ES_N3  &kp ES_SLASH       &kp ES_SINGLE_QUOTE
+                            &kp LEFT_CONTROL  &trans      &kp ENTER     &kp ENTER     &trans        &kp RIGHT_CONTROL
             >;
         };
 
@@ -327,10 +327,10 @@
 
         sys {
             bindings = <
-&bt BT_NXT      &bt BT_SEL 0  &bt BT_SEL 1     &bt BT_SEL 2      &kp C_VOLUME_UP  &kp INSERT    &none  &kp F7  &kp F8             &kp F9  &kp F10  &kp PAUSE_BREAK
-&kp LEFT_SHIFT  &none         &kp PRINTSCREEN  &none             &kp C_VOL_DN     &none         &none  &kp F4  &kp F5             &kp F6  &kp F11  &none
-&kp LEFT_GUI    &kp LEFT_ALT  &none            &kp CAPSLOCK      &kp C_MUTE       &none         &none  &kp F1  &kp F2             &kp F3  &kp F12  &trans
-                                               &kp LEFT_CONTROL  &none            &none         &none  &none   &kp RIGHT_CONTROL
+&none           &none         &none            &none             &none  &none    &kp F1  &kp F2   &kp F3             &kp F4   &bt BT_SEL 0  &kp PAUSE_BREAK
+&kp LEFT_SHIFT  &none         &kp PRINTSCREEN  &none             &none  &none    &kp F5  &kp F6   &kp F7             &kp F8   &bt BT_NXT    &kp RIGHT_SHIFT
+&kp LEFT_GUI    &kp LEFT_ALT  &none            &none             &none  &none    &kp F9  &kp F10  &kp F11            &kp F12  &kp LALT      &trans
+                                               &kp LEFT_CONTROL  &none  &none    &none   &none    &kp RIGHT_CONTROL
             >;
         };
     };
