@@ -32,31 +32,31 @@
         bootldr_l {
             bindings = <&bootloader>;
             key-positions = <24 29>;
-            layers = <3 1>;
+            layers = <4 1>;
         };
 
         bootldr_r {
             bindings = <&bootloader>;
             key-positions = <30 35>;
-            layers = <3 1>;
+            layers = <4>;
         };
 
         reset_l {
             bindings = <&sys_reset>;
             key-positions = <0 5>;
-            layers = <3 1>;
+            layers = <4>;
         };
 
         reset_r {
             bindings = <&sys_reset>;
             key-positions = <6 11>;
-            layers = <3 1>;
+            layers = <4>;
         };
 
         clear_bt_profile {
             bindings = <&bt BT_CLR>;
-            key-positions = <29 26>;
-            layers = <3 1>;
+            key-positions = <10 11>;
+            layers = <4>;
         };
     };
 
@@ -109,6 +109,20 @@
             bindings = <&kp RA(BACKSLASH) &kp SPACE>;
             label = "TILDEGRAVE";
         };
+
+        la_bullet: la_bullet {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp RA(COMMA)>;
+            label = "LA_BULLET";
+        };
+
+        la_cent: la_cent {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp RA(ES_C)>;
+            label = "LA_CENT";
+        };
     };
 
     behaviors {
@@ -144,105 +158,22 @@
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
-        mp_exc: mp_exc {
+        mp_2_lt: mp_2_lt {
             compatible = "zmk,behavior-mod-morph";
-            label = "MP_EXC";
-            bindings = <&kp EXCL>, <&kp ES_INVERTED_EXCLAMATION>;
+            label = "MP_2_LT";
+            bindings = <&kp NUMBER_2>, <&kp ES_LESS_THAN>;
 
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
-        mp_quest: mp_quest {
+        mp_3_gt: mp_3_gt {
             compatible = "zmk,behavior-mod-morph";
-            label = "MP_QUEST";
-            bindings = <&kp ES_QUESTION>, <&kp ES_INVERTED_QUESTION>;
+            label = "MP_3_GT";
+            bindings = <&kp NUMBER_3>, <&kp ES_GT>;
 
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
-        };
-
-        mp_par_brk_o: mp_par_brk_o {
-            compatible = "zmk,behavior-mod-morph";
-            label = "MP_PAR_BRK_O";
-            bindings = <&kp ES_LEFT_PARENTHESIS>, <&kp ES_LEFT_BRACKET>;
-
-            #binding-cells = <0>;
-            mods = <(MOD_LSFT|MOD_RSFT)>;
-        };
-
-        mp_par_brk_c: mp_par_brk_c {
-            compatible = "zmk,behavior-mod-morph";
-            label = "MP_PAR_BRK_C";
-            bindings = <&kp ES_RIGHT_PARENTHESIS>, <&kp ES_RIGHT_BRACKET>;
-
-            #binding-cells = <0>;
-            mods = <(MOD_LSFT|MOD_RSFT)>;
-        };
-
-        mp_brc_lt_o: mp_brc_lt_o {
-            compatible = "zmk,behavior-mod-morph";
-            label = "MP_BRC_LT_O";
-            bindings = <&kp ES_LEFT_BRACE>, <&kp ES_LESS_THAN>;
-
-            #binding-cells = <0>;
-            mods = <(MOD_LSFT|MOD_RSFT)>;
-        };
-
-        mp_brc_gt_c: mp_brc_gt_c {
-            compatible = "zmk,behavior-mod-morph";
-            label = "MP_BRC_GT_C";
-            bindings = <&kp ES_RIGHT_BRACE>, <&kp ES_GREATER_THAN>;
-
-            #binding-cells = <0>;
-            mods = <(MOD_LSFT|MOD_RSFT)>;
-        };
-
-        mp_otd_grv: mp_otd_grv {
-            compatible = "zmk,behavior-mod-morph";
-            label = "MP_OTD_GRV";
-            bindings = <&kp ES_TILDE>, <&la_grave>;
-
-            #binding-cells = <0>;
-            mods = <(MOD_LSFT|MOD_RSFT)>;
-        };
-
-        mp_slh_bsl: mp_slh_bsl {
-            compatible = "zmk,behavior-mod-morph";
-            label = "MP_SLH_BSL";
-            bindings = <&kp ES_SLASH>, <&kp ES_BACKSLASH>;
-
-            #binding-cells = <0>;
-            mods = <(MOD_LSFT|MOD_RSFT)>;
-        };
-
-        mp_2_cma: mp_2_cma {
-            compatible = "zmk,behavior-mod-morph";
-            label = "MP_2_CMA";
-            bindings = <&kp NUMBER_2>, <&kp COMMA>;
-
-            #binding-cells = <0>;
-            mods = <(MOD_LSFT|MOD_RSFT)>;
-        };
-
-        mp_3_dot: mp_3_dot {
-            compatible = "zmk,behavior-mod-morph";
-            label = "MP_3_DOT";
-            bindings = <&kp NUMBER_3>, <&kp DOT>;
-
-            #binding-cells = <0>;
-            mods = <(MOD_LSFT|MOD_RSFT)>;
-        };
-
-        ht_mp_quo: ht_mp_quo {
-            compatible = "zmk,behavior-hold-tap";
-            label = "HT_MP_QUO";
-            bindings = <&kp>, <&mp_quo>;
-
-            #binding-cells = <2>;
-            tapping-term-ms = <200>;
-            hold-trigger-key-positions = <32 33>;
-            flavor = "balanced";
         };
 
         ht: ht {
@@ -254,6 +185,42 @@
             tapping-term-ms = <200>;
             hold-trigger-key-positions = <1 2 3 4 5 13 14 15 16 17 25 26 27 28 29 6 7 8 9 10 18 19 20 21 22 30 31 32 33 34 11 0>;
             flavor = "balanced";
+        };
+
+        mp_5_brk: mp_5_brk {
+            compatible = "zmk,behavior-mod-morph";
+            label = "MP_5_BRK";
+            bindings = <&kp N5>, <&kp ES_LBKT>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        mp_6_brk: mp_6_brk {
+            compatible = "zmk,behavior-mod-morph";
+            label = "MP_6_BRK";
+            bindings = <&kp ES_N6>, <&kp ES_RBKT>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        mp_4_brc: mp_4_brc {
+            compatible = "zmk,behavior-mod-morph";
+            label = "MP_4_BRC";
+            bindings = <&kp ES_N4>, <&kp ES_LBRC>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        mp_minus_brc: mp_minus_brc {
+            compatible = "zmk,behavior-mod-morph";
+            label = "MP_MINUS_BRC";
+            bindings = <&kp ES_MINUS>, <&kp ES_RBRC>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
         };
     };
 
@@ -270,38 +237,54 @@
             bindings = <
 &kp TAB       &kp Q  &kp W  &kp E             &kp R  &kp T        &kp Y      &kp U  &kp I              &kp O       &kp P           &kp BACKSPACE
 &kp LSHIFT    &kp A  &kp S  &kp D             &kp F  &kp G        &kp H      &kp J  &kp K              &kp L       &kp ES_N_TILDE  &ht RSHIFT ES_ACUTE
-&kp LEFT_GUI  &kp Z  &kp X  &kp C             &kp V  &kp B        &kp N      &kp M  &kp COMMA          &kp PERIOD  &kp LEFT_ALT    &lt 3 ESCAPE
+&kp LEFT_GUI  &kp Z  &kp X  &kp C             &kp V  &kp B        &kp N      &kp M  &kp COMMA          &kp PERIOD  &kp LEFT_ALT    &lt 4 ESCAPE
                             &kp LEFT_CONTROL  &mo 1  &kp SPACE    &kp ENTER  &mo 2  &kp RIGHT_CONTROL
             >;
         };
 
         num {
             bindings = <
-&kp BACKSPACE   &kp LC(Q)     &kp LC(W)  &kp ESCAPE        &kp LC(R)  &kp LC(T)    &kp ES_EQUAL  &kp N7        &kp N8             &kp N9        &kp ES_ASTRK  &kp BACKSPACE
-&kp LEFT_SHIFT  &kp LC(A)     &kp LC(S)  &kp DELETE        &kp LC(F)  &kp LC(G)    &kp ES_PLUS   &kp NUMBER_4  &kp N5             &kp NUMBER_6  &kp ES_MINUS  &ht_mp_quo RSHIFT 0
-&kp LEFT_GUI    &kp LEFT_ALT  &kp LC(X)  &kp LC(C)         &kp LC(V)  &kp LC(B)    &kp N0        &kp NUMBER_1  &mp_2_cma          &mp_3_dot     &mp_slh_bsl   &lt 3 ESCAPE
-                                         &kp LEFT_CONTROL  &trans     &kp ENTER    &kp ENTER     &mo 2         &kp RIGHT_CONTROL
+&kp ESCAPE    &none      &kp CLCK   &none             &kp INS    &kp C_MUTE    &kp ES_ASTRK  &kp ES_N7     &kp N8             &kp N9     &kp ES_UNDERSCORE  &kp BACKSPACE
+&kp LSHIFT    &none      &kp LC(S)  &kp DELETE        &none      &none         &kp ES_PLUS   &mp_4_brc     &mp_5_brk          &mp_6_brk  &mp_minus_brc      &kp ES_DOUBLE_QUOTES
+&kp LEFT_GUI  &kp LC(Z)  &kp LC(X)  &kp LC(C)         &kp LC(V)  &none         &kp N0        &kp NUMBER_1  &mp_2_lt           &mp_3_gt   &kp ES_SLASH       &kp ES_SINGLE_QUOTE
+                                    &kp LEFT_CONTROL  &trans     &kp ENTER     &kp ENTER     &trans        &kp RIGHT_CONTROL
             >;
         };
 
         nav {
             bindings = <
-&mp_otd_grv     &mp_exc       &kp ES_AT    &kp POUND         &kp DOLLAR    &kp PERCENT      &kp HOME        &kp END         &mp_par_brk_o      &mp_par_brk_c  &none         &kp DELETE
-&kp LEFT_SHIFT  &kp ES_AMPS   &kp ES_PIPE  &mp_quest         &none         &kp ES_DEGREE    &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW       &kp RIGHT      &kp TAB       &kp RIGHT_SHIFT
-&kp LEFT_GUI    &kp LEFT_ALT  &none        &none             &kp ES_CARET  &none            &kp PAGE_UP     &kp PAGE_DOWN   &mp_brc_lt_o       &mp_brc_gt_c   &kp LEFT_ALT  &kp ESCAPE
-                                           &kp LEFT_CONTROL  &none         &kp BACKSPACE    &kp SPACE       &trans          &kp RIGHT_CONTROL
+&la_grave   &kp ES_QUESTION  &kp ES_INVERTED_QUESTION  &kp ES_EQUAL      &kp ES_PERCENT  &kp ES_TILDE        &none           &kp PG_UP       &none              &none            &kp TAB   &kp DELETE
+&kp LSHIFT  &kp ES_AT        &kp ES_DOLLAR             &kp ES_AMPS       &kp ES_PIPE     &kp ES_POUND        &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW       &kp RIGHT_ARROW  &none     &kp RSHIFT
+&kp LGUI    &kp LEFT_ALT     &kp ES_EXCL               &kp ES_IEXCL      &kp ES_CARET    &kp ES_BACKSLASH    &none           &kp PAGE_DOWN   &kp HOME           &kp END          &kp RALT  &kp ESCAPE
+                                                       &kp LEFT_CONTROL  &trans          &kp BACKSPACE       &kp SPACE       &trans          &kp RIGHT_CONTROL
+            >;
+        };
+
+        grp {
+            bindings = <
+&none  &none  &none  &none             &none  &none        &none          &none        &kp ES_LPAR        &kp ES_RPAR  &none        &none
+&none  &none  &none  &kp ES_DEGREE     &none  &none        &none          &kp ES_LBRC  &kp ES_LBKT        &kp ES_RBKT  &kp ES_RBRC  &none
+&none  &none  &none  &none             &none  &none        &none          &none        &kp ES_LT          &kp ES_GT    &none        &none
+                     &kp LEFT_CONTROL  &none  &kp ENTER    &kp BACKSPACE  &none        &kp RIGHT_CONTROL
             >;
         };
 
         sys {
             bindings = <
-&bt BT_NXT      &bt BT_SEL 0  &bt BT_SEL 1     &bt BT_SEL 2      &kp C_VOLUME_UP  &kp INSERT    &none   &kp F7  &kp F8             &kp F9  &kp F10  &kp PAUSE_BREAK
-&kp LEFT_SHIFT  &none         &kp PRINTSCREEN  &none             &kp C_VOL_DN     &none         &none   &kp F4  &kp F5             &kp F6  &kp F11  &none
-&kp LEFT_GUI    &kp LEFT_ALT  &none            &kp CAPSLOCK      &kp C_MUTE       &none         &tog 1  &kp F1  &kp F2             &kp F3  &kp F12  &trans
-                                               &kp LEFT_CONTROL  &none            &none         &none   &none   &kp RIGHT_CONTROL
+&none           &none         &none            &none             &none  &none    &kp F1  &kp F2   &kp F3             &kp F4   &bt BT_SEL 0  &kp PAUSE_BREAK
+&kp LEFT_SHIFT  &none         &kp PRINTSCREEN  &none             &none  &none    &kp F5  &kp F6   &kp F7             &kp F8   &bt BT_NXT    &kp RIGHT_SHIFT
+&kp LEFT_GUI    &kp LEFT_ALT  &none            &none             &none  &none    &kp F9  &kp F10  &kp F11            &kp F12  &kp LALT      &trans
+                                               &kp LEFT_CONTROL  &none  &none    &none   &none    &kp RIGHT_CONTROL
             >;
         };
     };
 
-    conditional_layers { compatible = "zmk,conditional-layers"; };
+    conditional_layers {
+        compatible = "zmk,conditional-layers";
+
+        grp_layer {
+            if-layers = <1 2>;
+            then-layer = <3>;
+        };
+    };
 };
