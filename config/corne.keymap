@@ -235,27 +235,27 @@
             //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
 
             bindings = <
-&kp LWIN        &kp Q  &kp W  &kp E             &kp R  &kp T        &kp Y      &kp U  &kp I              &kp O       &kp P           &lt 4 ESCAPE
-&kp TAB         &kp A  &kp S  &kp D             &kp F  &kp G        &kp H      &kp J  &kp K              &kp L       &kp ES_N_TILDE  &kp BACKSPACE
-&kp LEFT_SHIFT  &kp Z  &kp X  &kp C             &kp V  &kp B        &kp N      &kp M  &kp COMMA          &kp PERIOD  &kp LEFT_ALT    &ht RSHIFT ES_ACUTE
-                              &kp LEFT_CONTROL  &mo 1  &kp SPACE    &kp ENTER  &mo 2  &kp RIGHT_CONTROL
+&kp TAB     &kp Q  &kp W  &kp E             &kp R  &kp T        &kp Y      &kp U  &kp I              &kp O       &kp P           &lt 4 ESCAPE
+&kp LSHIFT  &kp A  &kp S  &kp D             &kp F  &kp G        &kp H      &kp J  &kp K              &kp L       &kp ES_N_TILDE  &ht RSHIFT ES_ACUTE
+&kp LWIN    &kp Z  &kp X  &kp C             &kp V  &kp B        &kp N      &kp M  &kp COMMA          &kp PERIOD  &kp LEFT_ALT    &kp BACKSPACE
+                          &kp LEFT_CONTROL  &mo 1  &kp SPACE    &kp ENTER  &mo 2  &kp RIGHT_CONTROL
             >;
         };
 
         num {
             bindings = <
-&kp LWIN    &none      &kp CLCK   &none             &kp INS    &kp C_MUTE      &kp ES_ASTRK  &kp ES_N7     &kp N8             &kp N9     &kp ES_UNDERSCORE  &none
-&kp ESCAPE  &none      &kp LC(S)  &kp DELETE        &none      &none           &kp ES_PLUS   &mp_4_brc     &mp_5_brk          &mp_6_brk  &mp_minus_brc      &kp ES_DOUBLE_QUOTES
-&kp LSHIFT  &kp LC(Z)  &kp LC(X)  &kp LC(C)         &kp LC(V)  &kp LC(ES_B)    &kp N0        &kp NUMBER_1  &mp_2_lt           &mp_3_gt   &kp ES_SLASH       &kp ES_SINGLE_QUOTE
-                                  &kp LEFT_CONTROL  &trans     &kp ENTER       &kp ENTER     &trans        &kp RIGHT_CONTROL
+&none      &none     &kp CLCK   &kp ESCAPE        &kp INS    &kp C_MUTE      &kp ES_ASTRK  &kp ES_N7     &kp N8             &kp N9     &kp ES_UNDERSCORE  &kp ES_SINGLE_QUOTE
+&kp LSHFT  &none     &kp LC(S)  &kp DELETE        &none      &none           &kp ES_PLUS   &mp_4_brc     &mp_5_brk          &mp_6_brk  &mp_minus_brc      &kp ES_DOUBLE_QUOTES
+&kp LWIN   &kp LALT  &kp LC(X)  &kp LC(C)         &kp LC(V)  &kp LC(ES_B)    &kp N0        &kp NUMBER_1  &mp_2_lt           &mp_3_gt   &kp ES_SLASH       &kp DEL
+                                &kp LEFT_CONTROL  &trans     &kp ENTER       &kp ENTER     &trans        &kp RIGHT_CONTROL
             >;
         };
 
         nav {
             bindings = <
 &kp LWIN    &kp ES_QUESTION  &kp ES_INVERTED_QUESTION  &kp ES_EQUAL      &kp ES_PERCENT  &kp ES_TILDE        &none           &kp PG_UP       &none              &none            &none     &none
-&la_grave   &kp ES_AT        &kp ES_DOLLAR             &kp ES_AMPS       &kp ES_PIPE     &kp ES_POUND        &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW       &kp RIGHT_ARROW  &none     &kp DEL
-&kp LSHIFT  &kp LEFT_ALT     &kp ES_EXCL               &kp ES_IEXCL      &kp ES_CARET    &kp ES_BACKSLASH    &none           &kp PAGE_DOWN   &kp HOME           &kp END          &kp RALT  &kp RSHIFT
+&kp LSHIFT  &kp ES_AT        &kp ES_DOLLAR             &kp ES_AMPS       &kp ES_PIPE     &kp ES_POUND        &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW       &kp RIGHT_ARROW  &none     &kp RSHIFT
+&la_grave   &kp LEFT_ALT     &kp ES_EXCL               &kp ES_IEXCL      &kp ES_CARET    &kp ES_BACKSLASH    &none           &kp PAGE_DOWN   &kp HOME           &kp END          &kp RALT  &kp DEL
                                                        &kp LEFT_CONTROL  &trans          &kp BACKSPACE       &kp SPACE       &trans          &kp RIGHT_CONTROL
             >;
         };
@@ -271,10 +271,10 @@
 
         sys {
             bindings = <
-&kp LWIN    &none         &none            &none             &none  &none    &kp F1  &kp F2   &kp F3             &kp F4   &bt BT_SEL 0  &trans
-&none       &none         &kp PRINTSCREEN  &none             &none  &none    &kp F5  &kp F6   &kp F7             &kp F8   &bt BT_NXT    &kp PAUSE_BREAK
-&kp LSHIFT  &kp LEFT_ALT  &none            &none             &none  &none    &kp F9  &kp F10  &kp F11            &kp F12  &kp LALT      &kp RSHIFT
-                                           &kp LEFT_CONTROL  &none  &none    &none   &none    &kp RIGHT_CONTROL
+&kp LWIN   &none         &none            &none             &none  &none    &kp F1  &kp F2   &kp F3             &kp F4   &bt BT_SEL 0  &trans
+&kp LSHFT  &none         &kp PRINTSCREEN  &none             &none  &none    &kp F5  &kp F6   &kp F7             &kp F8   &bt BT_NXT    &kp RSHIFT
+&none      &kp LEFT_ALT  &none            &none             &none  &none    &kp F9  &kp F10  &kp F11            &kp F12  &kp LALT      &kp PAUSE_BREAK
+                                          &kp LEFT_CONTROL  &none  &none    &none   &none    &kp RIGHT_CONTROL
             >;
         };
     };
