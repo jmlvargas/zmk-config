@@ -244,9 +244,9 @@
 
         num {
             bindings = <
-&kp ESCAPE    &none     &kp CLCK   &none             &kp INS    &kp C_MUTE    &kp ES_ASTRK  &kp ES_N7     &kp N8             &kp N9     &kp ES_UNDERSCORE  &kp ES_SINGLE_QUOTE
+&kp ESCAPE    &none     &kp CLCK   &none             &kp INS    &kp C_MUTE    &kp ES_ASTRK  &kp ES_N7     &kp N8             &kp N9     &kp ES_UNDERSCORE  &kp DELETE
 &kp LSHIFT    &none     &kp LC(S)  &kp DELETE        &none      &none         &kp ES_PLUS   &mp_4_brc     &mp_5_brk          &mp_6_brk  &mp_minus_brc      &kp ES_DOUBLE_QUOTES
-&kp LEFT_GUI  &kp LALT  &kp LC(X)  &kp LC(C)         &kp LC(V)  &none         &kp N0        &kp NUMBER_1  &mp_2_lt           &mp_3_gt   &kp ES_SLASH       &none
+&kp LEFT_GUI  &kp LALT  &kp LC(X)  &kp LC(C)         &kp LC(V)  &none         &kp N0        &kp NUMBER_1  &mp_2_lt           &mp_3_gt   &kp ES_SLASH       &kp ES_SINGLE_QUOTE
                                    &kp LEFT_CONTROL  &trans     &kp ENTER     &kp ENTER     &trans        &kp RIGHT_CONTROL
             >;
         };
