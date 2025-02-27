@@ -253,9 +253,9 @@
 
         nav {
             bindings = <
-&kp LWIN    &kp ES_QUESTION  &kp ES_INVERTED_QUESTION  &kp ES_EQUAL      &kp ES_PERCENT  &kp ES_TILDE        &none           &kp PG_UP       &none              &none            &none     &none
+&la_grave   &kp ES_QUESTION  &kp ES_INVERTED_QUESTION  &kp ES_EQUAL      &kp ES_PERCENT  &kp ES_TILDE        &none           &kp PG_UP       &none              &none            &none     &none
 &kp LSHIFT  &kp ES_AT        &kp ES_DOLLAR             &kp ES_AMPS       &kp ES_PIPE     &kp ES_POUND        &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW       &kp RIGHT_ARROW  &none     &kp RSHIFT
-&la_grave   &kp LEFT_ALT     &kp ES_EXCL               &kp ES_IEXCL      &kp ES_CARET    &kp ES_BACKSLASH    &none           &kp PAGE_DOWN   &kp HOME           &kp END          &kp RALT  &kp DEL
+&kp LWIN    &kp LEFT_ALT     &kp ES_EXCL               &kp ES_IEXCL      &kp ES_CARET    &kp ES_BACKSLASH    &none           &kp PAGE_DOWN   &kp HOME           &kp END          &kp RALT  &kp DEL
                                                        &kp LEFT_CONTROL  &trans          &kp BACKSPACE       &kp SPACE       &trans          &kp RIGHT_CONTROL
             >;
         };
@@ -271,9 +271,9 @@
 
         sys {
             bindings = <
-&kp LWIN   &none         &none            &none             &none  &none    &kp F1  &kp F2   &kp F3             &kp F4   &bt BT_SEL 0  &trans
+&none      &none         &none            &none             &none  &none    &kp F1  &kp F2   &kp F3             &kp F4   &bt BT_SEL 0  &trans
 &kp LSHFT  &none         &kp PRINTSCREEN  &none             &none  &none    &kp F5  &kp F6   &kp F7             &kp F8   &bt BT_NXT    &kp RSHIFT
-&none      &kp LEFT_ALT  &none            &none             &none  &none    &kp F9  &kp F10  &kp F11            &kp F12  &kp LALT      &kp PAUSE_BREAK
+&kp LWIN   &kp LEFT_ALT  &none            &none             &none  &none    &kp F9  &kp F10  &kp F11            &kp F12  &kp LALT      &kp PAUSE_BREAK
                                           &kp LEFT_CONTROL  &none  &none    &none   &none    &kp RIGHT_CONTROL
             >;
         };
