@@ -214,10 +214,37 @@
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
-        mp_minus_brc: mp_minus_brc {
+        mp_1_brc: mp_1_brc {
             compatible = "zmk,behavior-mod-morph";
-            label = "MP_MINUS_BRC";
-            bindings = <&kp ES_MINUS>, <&kp ES_RBRC>;
+            label = "MP_1_BRC";
+            bindings = <&kp ES_N1>, <&kp ES_RBRC>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        mp_exc: mp_exc {
+            compatible = "zmk,behavior-mod-morph";
+            label = "MP_EXC";
+            bindings = <&kp ES_EXCL>, <&kp ES_IEXCL>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        mp_que: mp_que {
+            compatible = "zmk,behavior-mod-morph";
+            label = "MP_QUE";
+            bindings = <&kp ES_QUESTION>, <&kp ES_INVERTED_QUESTION>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        mp_slash: mp_slash {
+            compatible = "zmk,behavior-mod-morph";
+            label = "MP_SLASH";
+            bindings = <&kp ES_SLASH>, <&kp ES_BACKSLASH>;
 
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
@@ -244,27 +271,27 @@
 
         num {
             bindings = <
-&kp ESCAPE    &none     &kp CLCK   &none             &kp INS    &kp C_MUTE    &kp ES_ASTRK  &kp ES_N7     &kp N8             &kp N9     &kp ES_UNDERSCORE  &kp LC(BACKSPACE)
-&kp LSHIFT    &none     &kp LC(S)  &kp DELETE        &none      &none         &kp ES_PLUS   &mp_4_brc     &mp_5_brk          &mp_6_brk  &mp_minus_brc      &mp_quo
-&kp LEFT_GUI  &kp LALT  &kp LC(X)  &kp LC(C)         &kp LC(V)  &none         &kp N0        &kp NUMBER_1  &mp_2_lt           &mp_3_gt   &kp ES_SLASH       &kp DELETE
-                                   &kp LEFT_CONTROL  &trans     &kp ENTER     &kp ENTER     &trans        &kp RIGHT_CONTROL
+&kp ESCAPE    &none     &kp CLCK   &none             &kp INS    &kp C_MUTE    &kp ES_ASTRK  &kp ES_N7  &kp N8             &kp N9     &mp_que       &kp LC(BACKSPACE)
+&kp LSHIFT    &none     &kp LC(S)  &kp DELETE        &none      &none         &kp ES_PLUS   &mp_4_brc  &mp_5_brk          &mp_6_brk  &kp ES_MINUS  &mp_quo
+&kp LEFT_GUI  &kp LALT  &kp LC(X)  &kp LC(C)         &kp LC(V)  &none         &kp N0        &mp_1_brc  &mp_2_lt           &mp_3_gt   &mp_slash     &kp DELETE
+                                   &kp LEFT_CONTROL  &trans     &kp ENTER     &kp ENTER     &trans     &kp RIGHT_CONTROL
             >;
         };
 
         nav {
             bindings = <
-&la_grave   &kp ES_QUESTION  &kp ES_INVERTED_QUESTION  &kp ES_EQUAL      &kp ES_PERCENT  &kp ES_TILDE        &none           &kp PG_UP       &none              &none            &kp TAB   &kp DELETE
-&kp LSHIFT  &kp ES_AT        &kp ES_DOLLAR             &kp ES_AMPS       &kp ES_PIPE     &kp ES_POUND        &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW       &kp RIGHT_ARROW  &none     &kp RSHIFT
-&kp LGUI    &kp LEFT_ALT     &kp ES_EXCL               &kp ES_IEXCL      &kp ES_CARET    &kp ES_BACKSLASH    &none           &kp PAGE_DOWN   &kp HOME           &kp END          &kp RALT  &none
-                                                       &kp LEFT_CONTROL  &trans          &kp BACKSPACE       &kp SPACE       &trans          &kp RIGHT_CONTROL
+&la_grave   &mp_exc       &kp ES_AT      &kp ES_EQUAL      &kp ES_PERCENT  &kp ES_TILDE        &none           &kp PG_UP       &none              &none            &none     &kp DELETE
+&kp LSHIFT  &none         &kp ES_DOLLAR  &kp ES_AMPS       &kp ES_PIPE     &kp ES_POUND        &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW       &kp RIGHT_ARROW  &none     &kp RSHIFT
+&kp LGUI    &kp LEFT_ALT  &none          &none             &kp ES_CARET    &kp ES_BACKSLASH    &none           &kp PAGE_DOWN   &kp HOME           &kp END          &kp RALT  &none
+                                         &kp LEFT_CONTROL  &trans          &kp BACKSPACE       &kp SPACE       &trans          &kp RIGHT_CONTROL
             >;
         };
 
         grp {
             bindings = <
-&none  &none  &none  &none             &none  &none        &none          &none        &kp ES_LPAR        &kp ES_RPAR  &none        &none
-&none  &none  &none  &kp ES_DEGREE     &none  &none        &none          &kp ES_LBRC  &kp ES_LBKT        &kp ES_RBKT  &kp ES_RBRC  &none
-&none  &none  &none  &none             &none  &none        &none          &none        &kp ES_LT          &kp ES_GT    &none        &none
+&none  &none  &none  &none             &none  &none        &none          &none        &kp ES_LPAR        &kp ES_RPAR  &none  &none
+&none  &none  &none  &kp ES_DEGREE     &none  &none        &none          &kp ES_LBRC  &kp ES_LBKT        &kp ES_RBKT  &none  &none
+&none  &none  &none  &none             &none  &none        &none          &kp ES_RBRC  &kp ES_LT          &kp ES_GT    &none  &none
                      &kp LEFT_CONTROL  &none  &kp ENTER    &kp BACKSPACE  &none        &kp RIGHT_CONTROL
             >;
         };
