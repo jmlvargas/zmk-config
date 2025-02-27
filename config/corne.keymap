@@ -244,9 +244,9 @@
 
         num {
             bindings = <
-&kp ESCAPE    &none     &kp CLCK   &none             &kp INS    &kp C_MUTE    &kp ES_ASTRK  &kp ES_N7     &kp N8             &kp N9     &kp ES_UNDERSCORE  &kp BACKSPACE
+&kp ESCAPE    &none     &kp CLCK   &none             &kp INS    &kp C_MUTE    &kp ES_ASTRK  &kp ES_N7     &kp N8             &kp N9     &kp ES_UNDERSCORE  &kp ES_SINGLE_QUOTE
 &kp LSHIFT    &none     &kp LC(S)  &kp DELETE        &none      &none         &kp ES_PLUS   &mp_4_brc     &mp_5_brk          &mp_6_brk  &mp_minus_brc      &kp ES_DOUBLE_QUOTES
-&kp LEFT_GUI  &kp LALT  &kp LC(X)  &kp LC(C)         &kp LC(V)  &none         &kp N0        &kp NUMBER_1  &mp_2_lt           &mp_3_gt   &kp ES_SLASH       &kp ES_SINGLE_QUOTE
+&kp LEFT_GUI  &kp LALT  &kp LC(X)  &kp LC(C)         &kp LC(V)  &none         &kp N0        &kp NUMBER_1  &mp_2_lt           &mp_3_gt   &kp ES_SLASH       &none
                                    &kp LEFT_CONTROL  &trans     &kp ENTER     &kp ENTER     &trans        &kp RIGHT_CONTROL
             >;
         };
@@ -255,7 +255,7 @@
             bindings = <
 &la_grave   &kp ES_QUESTION  &kp ES_INVERTED_QUESTION  &kp ES_EQUAL      &kp ES_PERCENT  &kp ES_TILDE        &none           &kp PG_UP       &none              &none            &kp TAB   &kp DELETE
 &kp LSHIFT  &kp ES_AT        &kp ES_DOLLAR             &kp ES_AMPS       &kp ES_PIPE     &kp ES_POUND        &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW       &kp RIGHT_ARROW  &none     &kp RSHIFT
-&kp LGUI    &kp LEFT_ALT     &kp ES_EXCL               &kp ES_IEXCL      &kp ES_CARET    &kp ES_BACKSLASH    &none           &kp PAGE_DOWN   &kp HOME           &kp END          &kp RALT  &kp ESCAPE
+&kp LGUI    &kp LEFT_ALT     &kp ES_EXCL               &kp ES_IEXCL      &kp ES_CARET    &kp ES_BACKSLASH    &none           &kp PAGE_DOWN   &kp HOME           &kp END          &kp RALT  &none
                                                        &kp LEFT_CONTROL  &trans          &kp BACKSPACE       &kp SPACE       &trans          &kp RIGHT_CONTROL
             >;
         };
