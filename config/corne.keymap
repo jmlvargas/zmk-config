@@ -271,7 +271,7 @@
 
         num {
             bindings = <
-&none         &kp ESCAPE    &kp CLCK   &kp DEL           &kp INS       &kp C_MUTE      &none          &kp ES_N7  &kp N8             &kp N9     &kp ES_ASTRK  &kp LC(BACKSPACE)
+&kp ESCAPE    &none         &kp CLCK   &kp DEL           &kp INS       &kp C_MUTE      &none          &kp ES_N7  &kp N8             &kp N9     &kp ES_ASTRK  &kp LC(BACKSPACE)
 &kp LSHIFT    &kp LC(ES_A)  &kp LC(S)  &kp LC(ES_D)      &kp LC(ES_F)  &kp LC(ES_G)    &kp ES_PLUS    &kp ES_N4  &kp ES_N5          &kp ES_N6  &kp ES_MINUS  &kp ES_SINGLE_QUOTE
 &kp LEFT_GUI  &kp LALT      &kp LC(X)  &kp LC(C)         &kp LC(V)     &kp LC(ES_B)    &kp N0         &kp ES_N1  &kp ES_N2          &kp ES_N3  &kp ES_SLASH  &kp DELETE
                                        &kp LEFT_CONTROL  &trans        &kp ENTER       &kp BACKSPACE  &trans     &kp RIGHT_CONTROL
