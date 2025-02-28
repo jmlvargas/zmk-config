@@ -271,28 +271,28 @@
 
         num {
             bindings = <
-&kp ESCAPE    &none         &kp CLCK   &kp DEL           &kp INS       &kp C_MUTE      &none          &kp ES_N7  &kp N8             &kp N9     &kp ES_ASTRK  &kp LC(BACKSPACE)
-&kp LSHIFT    &kp LC(ES_A)  &kp LC(S)  &kp LC(ES_D)      &kp LC(ES_F)  &kp LC(ES_G)    &kp ES_PLUS    &mp_4_brc  &mp_5_brk          &mp_6_brk  &kp ES_MINUS  &mp_quo
-&kp LEFT_GUI  &kp LALT      &kp LC(X)  &kp LC(C)         &kp LC(V)     &kp LC(ES_B)    &kp N0         &mp_1_brc  &mp_2_lt           &mp_3_gt   &mp_slash     &kp DELETE
+&none         &kp ESCAPE    &kp CLCK   &kp DEL           &kp INS       &kp C_MUTE      &none          &kp ES_N7  &kp N8             &kp N9     &kp ES_ASTRK  &kp LC(BACKSPACE)
+&kp LSHIFT    &kp LC(ES_A)  &kp LC(S)  &kp LC(ES_D)      &kp LC(ES_F)  &kp LC(ES_G)    &kp ES_PLUS    &kp ES_N4  &kp ES_N5          &kp ES_N6  &kp ES_MINUS  &kp ES_SINGLE_QUOTE
+&kp LEFT_GUI  &kp LALT      &kp LC(X)  &kp LC(C)         &kp LC(V)     &kp LC(ES_B)    &kp N0         &kp ES_N1  &kp ES_N2          &kp ES_N3  &kp ES_SLASH  &kp DELETE
                                        &kp LEFT_CONTROL  &trans        &kp ENTER       &kp BACKSPACE  &trans     &kp RIGHT_CONTROL
             >;
         };
 
         nav {
             bindings = <
-&la_grave   &mp_exc       &kp ES_AT      &kp ES_EQUAL      &kp ES_PERCENT  &kp ES_TILDE    &none           &kp PG_UP       &none              &none            &none     &kp DELETE
-&kp LSHIFT  &mp_que       &kp ES_DOLLAR  &kp ES_AMPS       &kp ES_PIPE     &kp ES_POUND    &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW       &kp RIGHT_ARROW  &none     &kp RSHIFT
-&kp LGUI    &kp LEFT_ALT  &mp_slash      &none             &kp ES_CARET    &none           &none           &kp PAGE_DOWN   &kp HOME           &kp END          &kp RALT  &none
+&la_grave   &kp ES_EXCL   &kp ES_AT      &kp ES_EQUAL      &kp ES_PERCENT  &kp ES_TILDE    &none           &kp PG_UP       &none              &none            &none     &kp DELETE
+&kp LSHIFT  &kp ES_QMARK  &kp ES_DOLLAR  &kp ES_AMPS       &kp ES_PIPE     &kp ES_POUND    &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW       &kp RIGHT_ARROW  &none     &kp RSHIFT
+&kp LGUI    &kp LEFT_ALT  &none          &none             &kp ES_CARET    &none           &none           &kp PAGE_DOWN   &kp HOME           &kp END          &kp RALT  &none
                                          &kp LEFT_CONTROL  &trans          &kp TAB         &kp SPACE       &trans          &kp RIGHT_CONTROL
             >;
         };
 
         grp {
             bindings = <
-&none  &none  &none  &none          &none  &none    &none  &none        &kp ES_LPAR  &kp ES_RPAR  &none  &none
-&none  &none  &none  &kp ES_DEGREE  &none  &none    &none  &kp ES_LBRC  &kp ES_LBKT  &kp ES_RBKT  &none  &none
-&none  &none  &none  &none          &none  &none    &none  &kp ES_RBRC  &kp ES_LT    &kp ES_GT    &none  &none
-                     &none          &none  &none    &none  &none        &none
+&none  &kp ES_IEXCL   &none  &none          &none  &none    &none  &none        &kp ES_LPAR  &kp ES_RPAR  &none             &none
+&none  &kp ES_IQMARK  &none  &kp ES_DEGREE  &none  &none    &none  &kp ES_LBRC  &kp ES_LBKT  &kp ES_RBKT  &kp ES_UNDER      &kp ES_DOUBLE_QUOTES
+&none  &none          &none  &none          &none  &none    &none  &kp ES_RBRC  &kp ES_LT    &kp ES_GT    &kp ES_BACKSLASH  &none
+                             &none          &none  &none    &none  &none        &none
             >;
         };
 
