@@ -271,19 +271,19 @@
 
         num {
             bindings = <
-&kp ESCAPE    &none         &kp CLCK   &kp DEL           &kp INS       &kp C_MUTE      &none        &kp ES_N7  &kp N8             &kp N9     &kp ES_ASTRK  &kp LC(BACKSPACE)
-&kp LSHIFT    &kp LC(ES_A)  &kp LC(S)  &kp LC(ES_D)      &kp LC(ES_F)  &kp LC(ES_G)    &kp ES_PLUS  &mp_4_brc  &mp_5_brk          &mp_6_brk  &kp ES_MINUS  &mp_quo
-&kp LEFT_GUI  &kp LALT      &kp LC(X)  &kp LC(C)         &kp LC(V)     &kp LC(ES_B)    &kp N0       &mp_1_brc  &mp_2_lt           &mp_3_gt   &mp_slash     &kp DELETE
-                                       &kp LEFT_CONTROL  &trans        &kp ENTER       &kp ENTER    &trans     &kp RIGHT_CONTROL
+&kp ESCAPE    &none         &kp CLCK   &kp DEL           &kp INS       &kp C_MUTE      &none          &kp ES_N7  &kp N8             &kp N9     &kp ES_ASTRK  &kp LC(BACKSPACE)
+&kp LSHIFT    &kp LC(ES_A)  &kp LC(S)  &kp LC(ES_D)      &kp LC(ES_F)  &kp LC(ES_G)    &kp ES_PLUS    &mp_4_brc  &mp_5_brk          &mp_6_brk  &kp ES_MINUS  &mp_quo
+&kp LEFT_GUI  &kp LALT      &kp LC(X)  &kp LC(C)         &kp LC(V)     &kp LC(ES_B)    &kp N0         &mp_1_brc  &mp_2_lt           &mp_3_gt   &mp_slash     &kp DELETE
+                                       &kp LEFT_CONTROL  &trans        &kp ENTER       &kp BACKSPACE  &trans     &kp RIGHT_CONTROL
             >;
         };
 
         nav {
             bindings = <
-&la_grave   &mp_exc       &kp ES_AT      &kp ES_EQUAL      &kp ES_PERCENT  &kp ES_TILDE     &none           &kp PG_UP       &none              &none            &none     &kp DELETE
-&kp LSHIFT  &mp_que       &kp ES_DOLLAR  &kp ES_AMPS       &kp ES_PIPE     &kp ES_POUND     &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW       &kp RIGHT_ARROW  &none     &kp RSHIFT
-&kp LGUI    &kp LEFT_ALT  &mp_slash      &none             &kp ES_CARET    &none            &none           &kp PAGE_DOWN   &kp HOME           &kp END          &kp RALT  &none
-                                         &kp LEFT_CONTROL  &trans          &kp BACKSPACE    &kp SPACE       &trans          &kp RIGHT_CONTROL
+&la_grave   &mp_exc       &kp ES_AT      &kp ES_EQUAL      &kp ES_PERCENT  &kp ES_TILDE    &none           &kp PG_UP       &none              &none            &none     &kp DELETE
+&kp LSHIFT  &mp_que       &kp ES_DOLLAR  &kp ES_AMPS       &kp ES_PIPE     &kp ES_POUND    &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW       &kp RIGHT_ARROW  &none     &kp RSHIFT
+&kp LGUI    &kp LEFT_ALT  &mp_slash      &none             &kp ES_CARET    &none           &none           &kp PAGE_DOWN   &kp HOME           &kp END          &kp RALT  &none
+                                         &kp LEFT_CONTROL  &trans          &kp TAB         &kp SPACE       &trans          &kp RIGHT_CONTROL
             >;
         };
 
