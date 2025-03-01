@@ -280,9 +280,9 @@
 
         nav {
             bindings = <
-&la_grave   &kp ES_EXCL   &kp ES_DOUBLE_QUOTES  &kp ES_EQUAL      &kp ES_DOLLAR  &kp ES_PERCENT    &none           &kp PG_UP       &none              &none            &none     &kp DELETE
-&kp LSHIFT  &kp ES_AT     &none                 &kp ES_AMPS       &kp ES_PIPE    &kp ES_POUND      &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW       &kp RIGHT_ARROW  &none     &kp RSHIFT
-&kp LGUI    &kp LEFT_ALT  &none                 &kp ES_QMARK      &kp ES_CARET   &kp ES_TILDE      &none           &kp PAGE_DOWN   &kp HOME           &kp END          &kp RALT  &none
+&la_grave   &kp ES_EXCL   &kp ES_DOUBLE_QUOTES  &kp ES_EQUAL      &kp ES_DOLLAR  &kp ES_PERCENT    &none           &kp PG_UP       &none              &none            &kp ES_ASTRK  &kp DELETE
+&kp LSHIFT  &kp ES_AT     &none                 &kp ES_AMPS       &kp ES_PIPE    &kp ES_POUND      &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW       &kp RIGHT_ARROW  &kp ES_MINUS  &kp RSHIFT
+&kp LGUI    &kp LEFT_ALT  &none                 &kp ES_QMARK      &kp ES_CARET   &kp ES_TILDE      &none           &kp PAGE_DOWN   &kp HOME           &kp END          &kp RALT      &none
                                                 &kp LEFT_CONTROL  &trans         &kp TAB           &kp SPACE       &trans          &kp RIGHT_CONTROL
             >;
         };
