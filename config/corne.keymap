@@ -32,25 +32,25 @@
         bootldr_l {
             bindings = <&bootloader>;
             key-positions = <24 29>;
-            layers = <4>;
+            layers = <4 1>;
         };
 
         bootldr_r {
             bindings = <&bootloader>;
             key-positions = <30 35>;
-            layers = <4>;
+            layers = <4 1>;
         };
 
         reset_l {
             bindings = <&sys_reset>;
             key-positions = <0 5>;
-            layers = <4>;
+            layers = <4 1>;
         };
 
         reset_r {
             bindings = <&sys_reset>;
             key-positions = <6 11>;
-            layers = <4>;
+            layers = <4 1>;
         };
 
         clear_bt_profile {
