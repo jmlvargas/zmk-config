@@ -249,6 +249,17 @@
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
+
+        ht_quo: ht_quo {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HT_QUO";
+            bindings = <&kp>, <&mp_quo>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+            hold-trigger-key-positions = <1 2 3 4 5 13 14 15 16 17 25 26 27 28 29 6 7 8 9 10 18 19 20 21 22 30 31 32 33 34 11 0>;
+            flavor = "balanced";
+        };
     };
 
     keymap {
@@ -271,19 +282,19 @@
 
         nav {
             bindings = <
-&kp ESCAPE        &none         &kp LWIN  &kp LG(E)     &kp LG(R)  &kp LG(T)    &kp PG_UP       &none     &none     &none            &kp PG_UP      &none
+&kp ESCAPE        &none         &kp LWIN  &kp LG(E)     &kp LG(R)  &kp LG(T)    &none           &none     &none     &none            &kp PG_UP      &none
 &kp LSHIFT        &none         &none     &none         &none      &none        &kp LEFT_ARROW  &kp DOWN  &kp UP    &kp RIGHT_ARROW  &kp PAGE_DOWN  &kp RSHIFT
-&kp LEFT_CONTROL  &kp LEFT_ALT  &none     &kp CAPSLOCK  &none      &none        &kp PG_DN       &none     &kp HOME  &kp END          &kp LEFT_ALT   &kp RIGHT_CONTROL
+&kp LEFT_CONTROL  &kp LEFT_ALT  &none     &kp CAPSLOCK  &none      &none        &none           &none     &kp HOME  &kp END          &kp LEFT_ALT   &kp RIGHT_CONTROL
                                           &trans        &trans     &trans       &trans          &trans    &trans
             >;
         };
 
         sym {
             bindings = <
-&la_grave         &mp_exc  &kp ES_AT  &kp ES_EQUAL  &kp ES_DOLLAR  &kp ES_PERCENT    &none          &kp ES_LBRC  &kp ES_LPAR  &kp ES_RPAR  &kp ES_ASTRK  &kp DELETE
-&kp LSHIFT        &none    &none      &kp ES_AMPS   &kp ES_PIPE    &kp ES_POUND      &kp ES_PLUS    &none        &kp ES_LBKT  &kp ES_RBKT  &kp ES_MINUS  &mp_quo
-&kp LEFT_CONTROL  &none    &none      &mp_que       &kp ES_CARET   &kp ES_TILDE      &none          &kp ES_RBRC  &kp ES_LT    &kp ES_GT    &mp_slash     &kp RCTRL
-                                      &trans        &trans         &kp TAB           &kp BACKSPACE  &trans       &trans
+&la_grave         &kp ES_EXCL       &kp ES_AT      &kp ES_EQUAL  &kp ES_DOLLAR  &kp ES_PERCENT    &none          &none        &kp ES_LPAR  &kp ES_RPAR  &kp ES_ASTRK  &kp DELETE
+&kp LSHIFT        &kp ES_IEXCL      &kp ES_TILDE   &kp ES_AMPS   &kp ES_PIPE    &kp ES_POUND      &kp ES_PLUS    &kp ES_LBRC  &kp ES_LBKT  &kp ES_RBKT  &kp ES_MINUS  &mp_quo
+&kp LEFT_CONTROL  &kp ES_BACKSLASH  &kp ES_IQMARK  &kp ES_QMARK  &kp ES_CARET   &none             &none          &kp ES_RBRC  &kp ES_LT    &kp ES_GT    &kp ES_SLASH  &kp RCTRL
+                                                   &trans        &trans         &kp TAB           &kp BACKSPACE  &trans       &trans
             >;
         };
 
@@ -291,7 +302,7 @@
             bindings = <
 &none             &none     &kp LGUI  &none   &none   &none     &none        &kp ES_N7  &kp ES_N8  &kp ES_N9  &kp ES_ASTRK  &none
 &kp LSHIFT        &none     &none     &none   &none   &none     &kp ES_PLUS  &kp ES_N4  &kp ES_N5  &kp ES_N6  &kp ES_MINUS  &kp RSHIFT
-&kp LEFT_CONTROL  &kp LALT  &none     &none   &none   &none     &kp ES_N0    &kp ES_N1  &kp ES_N2  &kp ES_N3  &mp_slash     &kp RIGHT_CONTROL
+&kp LEFT_CONTROL  &kp LALT  &none     &none   &none   &none     &kp ES_N0    &kp ES_N1  &kp ES_N2  &kp ES_N3  &kp ES_SLASH  &kp RIGHT_CONTROL
                                       &trans  &trans  &trans    &trans       &trans     &trans
             >;
         };
