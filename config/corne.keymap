@@ -271,37 +271,37 @@
 
         num {
             bindings = <
-&kp ESCAPE        &none         &kp CLCK   &kp DEL       &kp INS       &kp C_MUTE      &none        &kp ES_N7  &kp ES_N8  &kp ES_N9  &kp ES_ASTRK  &none
-&kp LSHIFT        &kp LC(ES_A)  &kp LC(S)  &kp LC(ES_D)  &kp LC(ES_F)  &kp LC(ES_G)    &kp ES_PLUS  &kp ES_N4  &kp ES_N5  &kp ES_N6  &kp ES_MINUS  &none
-&kp LEFT_CONTROL  &kp LALT      &kp LC(X)  &kp LC(C)     &kp LC(V)     &kp LC(ES_B)    &kp ES_N0    &kp ES_N1  &kp ES_N2  &kp ES_N3  &mp_slash     &none
-                                           &trans        &trans        &trans          &trans       &trans     &trans
+&kp ESCAPE        &none     &kp CLCK  &kp DEL  &kp INS  &kp C_MUTE    &none        &kp ES_N7  &kp ES_N8  &kp ES_N9  &kp ES_ASTRK  &none
+&kp LSHIFT        &none     &none     &none    &none    &none         &kp ES_PLUS  &kp ES_N4  &kp ES_N5  &kp ES_N6  &kp ES_MINUS  &kp RSHIFT
+&kp LEFT_CONTROL  &kp LALT  &none     &none    &none    &none         &kp ES_N0    &kp ES_N1  &kp ES_N2  &kp ES_N3  &mp_slash     &kp RIGHT_CONTROL
+                                      &trans   &trans   &trans        &trans       &trans     &trans
             >;
         };
 
         sym {
             bindings = <
-&la_grave         &mp_exc       &kp ES_AT  &kp ES_EQUAL      &kp ES_DOLLAR  &kp ES_PERCENT    &none        &kp ES_LBRC  &kp ES_LPAR        &kp ES_RPAR  &kp ES_ASTRK  &kp DELETE
-&kp LSHIFT        &none         &none      &kp ES_AMPS       &kp ES_PIPE    &kp ES_POUND      &kp ES_PLUS  &none        &kp ES_LBKT        &kp ES_RBKT  &kp ES_MINUS  &kp RSHIFT
-&kp LEFT_CONTROL  &kp LEFT_ALT  &none      &mp_que           &kp ES_CARET   &kp ES_TILDE      &none        &kp ES_RBRC  &kp ES_LT          &kp ES_GT    &mp_slash     &none
-                                           &kp LEFT_CONTROL  &trans         &kp TAB           &kp SPACE    &trans       &kp RIGHT_CONTROL
+&la_grave   &mp_exc  &kp ES_AT  &kp ES_EQUAL  &kp ES_DOLLAR  &kp ES_PERCENT    &none        &kp ES_LBRC  &kp ES_LPAR  &kp ES_RPAR  &kp ES_ASTRK  &kp DELETE
+&kp LSHIFT  &none    &none      &kp ES_AMPS   &kp ES_PIPE    &kp ES_POUND      &kp ES_PLUS  &none        &kp ES_LBKT  &kp ES_RBKT  &kp ES_MINUS  &kp RSHIFT
+&none       &none    &none      &mp_que       &kp ES_CARET   &kp ES_TILDE      &none        &kp ES_RBRC  &kp ES_LT    &kp ES_GT    &mp_slash     &none
+                                &trans        &trans         &trans            &trans       &trans       &trans
             >;
         };
 
         nav {
             bindings = <
-&none             &none         &none  &none   &none   &none     &kp PG_UP  &none           &kp UP    &none            &none  &none
-&kp LSHIFT        &none         &none  &none   &none   &none     &none      &kp LEFT_ARROW  &kp DOWN  &kp RIGHT_ARROW  &none  &none
-&kp LEFT_CONTROL  &kp LEFT_ALT  &none  &none   &none   &none     &kp PG_DN  &none           &kp HOME  &kp END          &none  &none
+&none             &none         &none  &none   &none   &none     &kp PG_UP  &none           &kp UP    &none            &kp PG_UP      &none
+&kp LSHIFT        &none         &none  &none   &none   &none     &none      &kp LEFT_ARROW  &kp DOWN  &kp RIGHT_ARROW  &kp PAGE_DOWN  &kp RSHIFT
+&kp LEFT_CONTROL  &kp LEFT_ALT  &none  &none   &none   &none     &kp PG_DN  &none           &kp HOME  &kp END          &kp LEFT_ALT   &kp RIGHT_CONTROL
                                        &trans  &trans  &trans    &trans     &trans          &trans
             >;
         };
 
         sys {
             bindings = <
-&kp RC(TAB)       &kp RC(Q)  &kp RC(W)     &kp RC(E)         &kp RC(R)  &kp RC(T)    &kp F1  &kp F2   &kp F3             &kp F4   &bt BT_SEL 0  &kp PAUSE_BREAK
-&kp LEFT_SHIFT    &kp RC(A)  &kp RC(ES_S)  &kp RC(D)         &kp RC(F)  &kp RC(G)    &kp F5  &kp F6   &kp F7             &kp F8   &bt BT_NXT    &kp RIGHT_SHIFT
-&kp LEFT_CONTROL  &kp RC(Z)  &kp RC(X)     &kp RC(C)         &kp RC(V)  &kp RC(B)    &kp F9  &kp F10  &kp F11            &kp F12  &kp LALT      &trans
-                                           &kp LEFT_CONTROL  &none      &none        &none   &none    &kp RIGHT_CONTROL
+&kp RC(TAB)       &kp RC(Q)  &kp RC(W)     &kp RC(E)  &kp RC(R)  &kp RC(T)    &kp F1  &kp F2   &kp F3   &kp F4   &bt BT_SEL 0  &kp PAUSE_BREAK
+&kp LEFT_SHIFT    &kp RC(A)  &kp RC(ES_S)  &kp RC(D)  &kp RC(F)  &kp RC(G)    &kp F5  &kp F6   &kp F7   &kp F8   &bt BT_NXT    &kp RIGHT_SHIFT
+&kp LEFT_CONTROL  &kp RC(Z)  &kp RC(X)     &kp RC(C)  &kp RC(V)  &kp RC(B)    &kp F9  &kp F10  &kp F11  &kp F12  &kp LALT      &trans
+                                           &trans     &trans     &trans       &trans  &trans   &trans
             >;
         };
     };
