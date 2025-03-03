@@ -334,7 +334,7 @@
 &kp ESCAPE        &kp LG(Q)     &kp LWIN  &kp LG(E)     &kp LG(R)  &kp LG(T)    &win_tile_l     &win_tile_b  &win_tile_t  &win_tile_r      &kp PG_UP      &win_close
 &kp LSHIFT        &none         &none     &kp DEL       &none      &none        &kp LEFT_ARROW  &kp DOWN     &kp UP       &kp RIGHT_ARROW  &kp PAGE_DOWN  &kp RSHIFT
 &kp LEFT_CONTROL  &kp LEFT_ALT  &none     &kp CAPSLOCK  &none      &none        &win_min        &win_max     &kp HOME     &kp END          &kp LEFT_ALT   &kp RIGHT_CONTROL
-                                          &trans        &trans     &trans       &trans          &trans       &trans
+                                          &trans        &trans     &kp ENTER    &kp SPACE       &trans       &trans
             >;
         };
 
