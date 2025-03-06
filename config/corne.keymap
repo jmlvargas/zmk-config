@@ -331,10 +331,10 @@
 
         uno {
             bindings = <
-&kp ESCAPE        &none  &kp CAPS  &kp ESCAPE    &kp INS  &none        &none          &none        &kp ES_LPAR  &kp ES_RPAR  &kp ES_ASTRK  &kp DELETE
-&kp LSHIFT        &none  &none     &kp DEL       &none    &none        &kp ES_PLUS    &kp ES_LBRC  &kp ES_LBKT  &kp ES_RBKT  &kp ES_MINUS  &mp_quo
-&kp LEFT_CONTROL  &none  &none     &none         &none    &none        &none          &kp ES_RBRC  &kp ES_LT    &kp ES_GT    &kp ES_SLASH  &kp RIGHT_CONTROL
-                                   &kp LEFT_ALT  &trans   &kp ENTER    &kp BACKSPACE  &trans       &trans
+&kp ESCAPE        &none       &kp CAPS           &kp ESCAPE    &kp INS       &none        &none          &none        &kp ES_LPAR  &kp ES_RPAR  &kp ES_ASTRK  &kp DELETE
+&kp LSHIFT        &kp C_MUTE  &kp C_VOLUME_DOWN  &kp DEL       &kp C_VOL_UP  &none        &kp ES_PLUS    &kp ES_LBRC  &kp ES_LBKT  &kp ES_RBKT  &kp ES_MINUS  &mp_quo
+&kp LEFT_CONTROL  &none       &none              &none         &none         &none        &none          &kp ES_RBRC  &kp ES_LT    &kp ES_GT    &kp ES_SLASH  &kp RIGHT_CONTROL
+                                                 &kp LEFT_ALT  &trans        &kp ENTER    &kp BACKSPACE  &trans       &trans
             >;
         };
 
@@ -358,10 +358,10 @@
 
         sys {
             bindings = <
-&none             &none  &kp CLCK      &kp ESCAPE  &kp INS       &none     &kp F1  &kp F2   &kp F3   &kp F4   &bt BT_SEL 0  &kp PAUSE_BREAK
-&kp LEFT_SHIFT    &none  &kp C_VOL_DN  &kp DEL     &kp C_VOL_UP  &none     &kp F5  &kp F6   &kp F7   &kp F8   &bt BT_NXT    &kp RIGHT_SHIFT
-&kp LEFT_CONTROL  &none  &kp C_MUTE    &none       &none         &none     &kp F9  &kp F10  &kp F11  &kp F12  &none         &kp RIGHT_CONTROL
-                                       &kp LALT    &trans        &trans    &trans  &trans   &trans
+&kp ESC           &none       &kp CLCK      &kp ESCAPE  &kp INS       &none     &kp F1  &kp F2   &kp F3   &kp F4   &bt BT_SEL 0  &kp PAUSE_BREAK
+&kp LEFT_SHIFT    &kp C_MUTE  &kp C_VOL_DN  &kp DEL     &kp C_VOL_UP  &none     &kp F5  &kp F6   &kp F7   &kp F8   &bt BT_NXT    &kp RIGHT_SHIFT
+&kp LEFT_CONTROL  &none       &none         &none       &none         &none     &kp F9  &kp F10  &kp F11  &kp F12  &none         &kp RIGHT_CONTROL
+                                            &kp LALT    &trans        &trans    &trans  &trans   &trans
             >;
         };
     };
