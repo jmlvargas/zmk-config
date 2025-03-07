@@ -261,10 +261,10 @@
 
         num {
             bindings = <
-&none     &none  &none  &none   &none   &none     &none        &kp ES_N7  &kp ES_N8  &kp ES_N9  &kp ES_ASTRK  &kp BACKSPACE
-&trans    &none  &none  &none   &none   &none     &kp ES_PLUS  &kp ES_N4  &kp ES_N5  &kp ES_N6  &kp ES_MINUS  &kp RSHIFT
-&kp LALT  &none  &none  &none   &none   &none     &kp ES_N0    &kp ES_N1  &kp ES_N2  &kp ES_N3  &kp ES_SLASH  &trans
-                        &trans  &trans  &trans    &trans       &trans     &trans
+&none     &none  &none  &none   &none   &none     &kp ES_PERIOD  &kp ES_N7  &kp ES_N8  &kp ES_N9  &kp ES_ASTRK  &kp BACKSPACE
+&trans    &none  &none  &none   &none   &none     &kp ES_PLUS    &kp ES_N4  &kp ES_N5  &kp ES_N6  &kp ES_MINUS  &kp RSHIFT
+&kp LALT  &none  &none  &none   &none   &none     &kp ES_N0      &kp ES_N1  &kp ES_N2  &kp ES_N3  &kp ES_SLASH  &trans
+                        &trans  &trans  &trans    &trans         &trans     &trans
             >;
         };
 
