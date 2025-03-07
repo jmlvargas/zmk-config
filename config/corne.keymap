@@ -255,7 +255,7 @@
 &la_grave  &kp ES_EXCL       &kp ES_AT      &kp ES_EQUAL  &kp ES_DOLLAR  &kp ES_PERCENT    &none      &none     &none     &none      &kp PG_UP      &win_close
 &trans     &kp ES_IEXCL      &kp ES_TILDE   &kp ES_AMPS   &kp ES_PIPE    &kp ES_POUND      &kp LEFT   &kp DOWN  &kp UP    &kp RIGHT  &kp PAGE_DOWN  &kp RSHIFT
 &trans     &kp ES_BACKSLASH  &kp ES_IQMARK  &kp ES_QMARK  &kp ES_CARET   &none             &none      &win_max  &kp HOME  &kp END    &win_min       &trans
-                                            &trans        &trans         &kp TAB           &kp SPACE  &trans    &trans
+                                            &trans        &trans         &kp LCTRL         &kp SPACE  &trans    &trans
             >;
         };
 
