@@ -55,7 +55,7 @@
 
         num_zero {
             bindings = <&kp ES_N0>;
-            key-positions = <31 32>;
+            key-positions = <20 21>;
             layers = <3>;
         };
 
