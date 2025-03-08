@@ -255,7 +255,7 @@
 &la_grave  &kp ES_EXCL       &kp ES_AT      &kp ES_EQUAL  &kp ES_DOLLAR  &kp ES_PERCENT    &none        &none        &kp ES_LPAR  &kp ES_RPAR  &kp ES_ASTRK  &win_close
 &trans     &kp ES_IEXCL      &kp ES_TILDE   &kp ES_AMPS   &kp ES_PIPE    &kp ES_POUND      &kp ES_PLUS  &kp ES_LBRC  &kp ES_LBKT  &kp ES_RBKT  &kp ES_MINUS  &mp_quo
 &kp LALT   &kp ES_BACKSLASH  &kp ES_IQMARK  &kp ES_QMARK  &kp ES_CARET   &none             &none        &kp ES_RBRC  &kp ES_LT    &kp ES_GT    &kp ES_SLASH  &win_min
-                                            &mo 3         &trans         &kp TAB           &kp SPACE    &trans       &trans
+                                            &trans        &mo 3          &kp TAB           &kp SPACE    &trans       &trans
             >;
         };
 
