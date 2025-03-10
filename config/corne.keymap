@@ -274,7 +274,7 @@
 &none     &none  &none  &none   &none   &none     &kp F1  &kp F2     &kp F3   &kp F4   &bt BT_SEL 0  &kp PAUSE_BREAK
 &trans    &none  &none  &none   &none   &none     &kp F5  &kp F6     &kp F7   &kp F8   &bt BT_NXT    &kp RIGHT_SHIFT
 &kp LALT  &none  &none  &none   &none   &none     &kp F9  &kp F10    &kp F11  &kp F12  &none         &none
-                        &trans  &trans  &trans    &mo 1   &kp LCTRL  &trans
+                        &trans  &trans  &trans    &trans  &kp LCTRL  &trans
             >;
         };
     };
