@@ -271,10 +271,10 @@
 
         sys {
             bindings = <
-&kp ESCAPE  &none       &kp CLCK      &none    &kp INS       &none     &kp F1  &kp F2     &kp F3   &kp F4   &bt BT_SEL 0  &kp PAUSE_BREAK
-&trans      &kp C_MUTE  &kp C_VOL_DN  &kp DEL  &kp C_VOL_UP  &none     &kp F5  &kp F6     &kp F7   &kp F8   &bt BT_NXT    &kp RIGHT_SHIFT
-&trans      &none       &none         &none    &none         &none     &kp F9  &kp F10    &kp F11  &kp F12  &none         &none
-                                      &trans   &trans        &trans    &trans  &kp LCTRL  &trans
+&kp ESCAPE  &none       &kp CLCK      &kp ENTER  &kp INS       &none     &kp F1  &kp F2     &kp F3   &kp F4   &bt BT_SEL 0  &kp PAUSE_BREAK
+&trans      &kp C_MUTE  &kp C_VOL_DN  &kp DEL    &kp C_VOL_UP  &none     &kp F5  &kp F6     &kp F7   &kp F8   &bt BT_NXT    &kp RIGHT_SHIFT
+&trans      &none       &none         &none      &none         &none     &kp F9  &kp F10    &kp F11  &kp F12  &none         &none
+                                      &trans     &trans        &trans    &trans  &kp LCTRL  &trans
             >;
         };
     };
