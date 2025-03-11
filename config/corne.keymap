@@ -242,7 +242,7 @@
             >;
         };
 
-        uno {
+        nav {
             bindings = <
 &none   &none  &none  &none     &none   &none        &none     &none     &none     &none      &kp PG_UP  &kp DELETE
 &trans  &none  &none  &none     &none   &none        &kp LEFT  &kp DOWN  &kp UP    &kp RIGHT  &kp PG_DN  &kp RSHIFT
@@ -251,7 +251,7 @@
             >;
         };
 
-        dos {
+        sym {
             bindings = <
 &la_grave  &kp ES_EXCL       &kp ES_AT      &kp ES_EQUAL  &kp ES_DOLLAR  &kp ES_PERCENT    &none        &none        &kp ES_LPAR  &kp ES_RPAR  &kp ES_ASTRK  &kp DEL
 &trans     &kp ES_IEXCL      &kp ES_TILDE   &kp ES_AMPS   &kp ES_PIPE    &kp ES_POUND      &kp ES_PLUS  &kp ES_LBRC  &kp ES_LBKT  &kp ES_RBKT  &kp ES_MINUS  &mp_quo
