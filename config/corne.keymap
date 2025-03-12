@@ -249,10 +249,10 @@
             //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
 
             bindings = <
-&kp TAB     &kp Q  &kp W  &kp E  &kp R     &kp T        &kp Y        &kp U      &kp I      &kp O       &kp P           &kp BACKSPACE
-&kp LSHIFT  &kp A  &kp S  &kp D  &kp F     &kp G        &kp H        &kp J      &kp K      &kp L       &kp ES_N_TILDE  &ht RSHIFT ES_ACUTE
-&kp LWIN    &kp Z  &kp X  &kp C  &kp V     &kp B        &kp N        &kp M      &kp COMMA  &kp PERIOD  &mo 4           &kp ESCAPE
-                          &mo 4  &td_left  &kp SPACE    &lt 2 ENTER  &td_right  &kp LALT
+&kp TAB     &kp Q  &kp W  &kp E  &kp R     &kp T        &kp Y      &kp U      &kp I      &kp O       &kp P           &kp BACKSPACE
+&kp LSHIFT  &kp A  &kp S  &kp D  &kp F     &kp G        &kp H      &kp J      &kp K      &kp L       &kp ES_N_TILDE  &ht RSHIFT ES_ACUTE
+&kp LWIN    &kp Z  &kp X  &kp C  &kp V     &kp B        &kp N      &kp M      &kp COMMA  &kp PERIOD  &mo 4           &kp ESCAPE
+                          &mo 2  &td_left  &kp SPACE    &kp ENTER  &td_right  &kp LALT
             >;
         };
 
@@ -267,10 +267,10 @@
 
         nav {
             bindings = <
-&none   &none  &none  &none     &none   &none        &none     &none     &none     &none      &kp PG_UP  &kp DELETE
-&trans  &none  &none  &none     &none   &none        &kp LEFT  &kp DOWN  &kp UP    &kp RIGHT  &kp PG_DN  &kp RSHIFT
-&trans  &none  &none  &none     &none   &none        &none     &none     &kp HOME  &kp END    &none      &trans
-                      &kp LALT  &trans  &kp ENTER    &trans    &trans    &trans
+&kp ESCAPE  &none       &kp CLCK      &kp ENTER  &kp INS       &none        &none     &none     &none     &none      &kp PG_UP  &kp DELETE
+&trans      &kp C_MUTE  &kp C_VOL_DN  &kp DEL    &kp C_VOL_UP  &none        &kp LEFT  &kp DOWN  &kp UP    &kp RIGHT  &kp PG_DN  &kp RSHIFT
+&trans      &none       &none         &none      &none         &none        &none     &none     &kp HOME  &kp END    &none      &trans
+                                      &kp LALT   &trans        &kp ENTER    &trans    &trans    &trans
             >;
         };
 
