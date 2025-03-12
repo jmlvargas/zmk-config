@@ -222,6 +222,20 @@
             hold-trigger-key-positions = <1 2 3 4 5 13 14 15 16 17 25 26 27 28 29 6 7 8 9 10 18 19 20 21 22 30 31 32 33 34 11 0 23 35 41 36 24 12 38 39>;
             flavor = "hold-preferred";
         };
+
+        td_right: td_right {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TD_RIGHT";
+            #binding-cells = <0>;
+            bindings = <&mo 1>, <&mo 2>;
+        };
+
+        td_left: td_left {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TD_LEFT";
+            #binding-cells = <0>;
+            bindings = <&kp LEFT_CONTROL>, <&mo 3>;
+        };
     };
 
     keymap {
@@ -235,10 +249,10 @@
             //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
 
             bindings = <
-&kp TAB     &kp Q  &kp W  &kp E  &kp R      &kp T        &kp Y        &kp U  &kp I      &kp O       &kp P           &kp BACKSPACE
-&kp LSHIFT  &kp A  &kp S  &kp D  &kp F      &kp G        &kp H        &kp J  &kp K      &kp L       &kp ES_N_TILDE  &ht RSHIFT ES_ACUTE
-&kp LWIN    &kp Z  &kp X  &kp C  &kp V      &kp B        &kp N        &kp M  &kp COMMA  &kp PERIOD  &mo 4           &kp ESCAPE
-                          &mo 4  &kp LCTRL  &kp SPACE    &lt 2 ENTER  &mo 1  &kp LALT
+&kp TAB     &kp Q  &kp W  &kp E  &kp R     &kp T        &kp Y      &kp U      &kp I      &kp O       &kp P           &kp BACKSPACE
+&kp LSHIFT  &kp A  &kp S  &kp D  &kp F     &kp G        &kp H      &kp J      &kp K      &kp L       &kp ES_N_TILDE  &ht RSHIFT ES_ACUTE
+&kp LWIN    &kp Z  &kp X  &kp C  &kp V     &kp B        &kp N      &kp M      &kp COMMA  &kp PERIOD  &mo 4           &kp ESCAPE
+                          &mo 4  &td_left  &kp SPACE    &kp ENTER  &td_right  &kp LALT
             >;
         };
 
