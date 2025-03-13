@@ -27,25 +27,25 @@
         bootldr_l {
             bindings = <&bootloader>;
             key-positions = <24 29>;
-            layers = <1 4>;
+            layers = <2 4>;
         };
 
         bootldr_r {
             bindings = <&bootloader>;
             key-positions = <30 35>;
-            layers = <2 4>;
+            layers = <1 4>;
         };
 
         reset_l {
             bindings = <&sys_reset>;
             key-positions = <0 5>;
-            layers = <1 4>;
+            layers = <2 4>;
         };
 
         reset_r {
             bindings = <&sys_reset>;
             key-positions = <6 11>;
-            layers = <2 4>;
+            layers = <1 4>;
         };
 
         clear_bt_profile {
@@ -222,6 +222,13 @@
             hold-trigger-key-positions = <1 2 3 4 5 13 14 15 16 17 25 26 27 28 29 6 7 8 9 10 18 19 20 21 22 30 31 32 33 34 11 0 23 35 41 36 24 12 38 39>;
             flavor = "hold-preferred";
         };
+
+        td_right: td_right {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TD_RIGHT";
+            #binding-cells = <0>;
+            bindings = <&mo 1>, <&mo 2>;
+        };
     };
 
     keymap {
@@ -235,46 +242,46 @@
             //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
 
             bindings = <
-&kp TAB     &kp Q  &kp W  &kp E     &kp R      &kp T        &kp Y        &kp U  &kp I      &kp O       &kp P           &kp BACKSPACE
-&kp LSHIFT  &kp A  &kp S  &kp D     &kp F      &kp G        &kp H        &kp J  &kp K      &kp L       &kp ES_N_TILDE  &ht RSHIFT ES_ACUTE
-&kp LWIN    &kp Z  &kp X  &kp C     &kp V      &kp B        &kp N        &kp M  &kp COMMA  &kp PERIOD  &mo 4           &kp ESCAPE
-                          &kp LALT  &kp LCTRL  &kp SPACE    &lt 1 ENTER  &mo 2  &kp LALT
+&kp TAB     &kp Q  &kp W  &kp E  &kp R             &kp T        &kp Y      &kp U      &kp I      &kp O       &kp P           &kp BACKSPACE
+&kp LSHIFT  &kp A  &kp S  &kp D  &kp F             &kp G        &kp H      &kp J      &kp K      &kp L       &kp ES_N_TILDE  &kp RSHIFT
+&kp LWIN    &kp Z  &kp X  &kp C  &kp V             &kp B        &kp N      &kp M      &kp COMMA  &kp PERIOD  &kp ES_ACUTE    &lt 4 ESCAPE
+                          &mo 2  &kp LEFT_CONTROL  &kp SPACE    &kp ENTER  &td_right  &kp LALT
             >;
         };
 
-        uno {
-            bindings = <
-&kp ESCAPE  &none       &kp CAPS           &none    &kp INS       &none        &none     &none     &none     &none      &kp PG_UP  &kp DELETE
-&trans      &kp C_MUTE  &kp C_VOLUME_DOWN  &kp DEL  &kp C_VOL_UP  &none        &kp LEFT  &kp DOWN  &kp UP    &kp RIGHT  &kp PG_DN  &kp RSHIFT
-&trans      &none       &none              &none    &none         &none        &none     &none     &kp HOME  &kp END    &none      &none
-                                           &trans   &trans        &kp ENTER    &trans    &trans    &trans
-            >;
-        };
-
-        dos {
+        sym {
             bindings = <
 &la_grave  &kp ES_EXCL       &kp ES_AT      &kp ES_EQUAL  &kp ES_DOLLAR  &kp ES_PERCENT    &none        &none        &kp ES_LPAR  &kp ES_RPAR  &kp ES_ASTRK  &kp DEL
 &trans     &kp ES_IEXCL      &kp ES_TILDE   &kp ES_AMPS   &kp ES_PIPE    &kp ES_POUND      &kp ES_PLUS  &kp ES_LBRC  &kp ES_LBKT  &kp ES_RBKT  &kp ES_MINUS  &mp_quo
-&trans     &kp ES_BACKSLASH  &kp ES_IQMARK  &kp ES_QMARK  &kp ES_CARET   &none             &none        &kp ES_RBRC  &kp ES_LT    &kp ES_GT    &kp ES_SLASH  &none
-                                            &trans        &mo 3          &kp TAB           &kp SPACE    &trans       &trans
+&trans     &kp ES_BACKSLASH  &kp ES_IQMARK  &kp ES_QMARK  &kp ES_CARET   &none             &none        &kp ES_RBRC  &kp ES_LT    &kp ES_GT    &kp ES_SLASH  &trans
+                                            &kp LALT      &mo 3          &kp TAB           &kp SPACE    &trans       &trans
+            >;
+        };
+
+        nav {
+            bindings = <
+&kp ESCAPE  &none       &kp CLCK      &kp ENTER  &kp INS       &none        &none     &none             &none     &none      &kp PG_UP  &kp DELETE
+&trans      &kp C_MUTE  &kp C_VOL_DN  &kp DEL    &kp C_VOL_UP  &none        &kp LEFT  &kp DOWN          &kp UP    &kp RIGHT  &kp PG_DN  &kp RSHIFT
+&trans      &none       &none         &none      &none         &none        &none     &none             &kp HOME  &kp END    &none      &trans
+                                      &kp LALT   &trans        &kp ENTER    &trans    &kp LEFT_CONTROL  &trans
             >;
         };
 
         num {
             bindings = <
-&kp ESCAPE  &none       &kp CLCK      &none    &kp INSERT    &none     &kp ES_PERIOD  &kp ES_N7         &kp ES_N8  &kp ES_N9  &kp ES_ASTRK  &kp BACKSPACE
-&trans      &kp C_MUTE  &kp C_VOL_DN  &kp DEL  &kp C_VOL_UP  &none     &kp ES_PLUS    &kp ES_N4         &kp ES_N5  &kp ES_N6  &kp ES_MINUS  &kp RSHIFT
-&trans      &none       &none         &none    &none         &none     &kp ES_N0      &kp ES_N1         &kp ES_N2  &kp ES_N3  &kp ES_SLASH  &none
-                                      &trans   &trans        &trans    &trans         &kp LEFT_CONTROL  &trans
+&kp ESCAPE  &none       &kp CLCK      &kp ENTER  &kp INSERT    &none     &kp ES_PERIOD  &kp ES_N7         &kp ES_N8  &kp ES_N9  &kp ES_ASTRK  &kp BACKSPACE
+&trans      &kp C_MUTE  &kp C_VOL_DN  &kp DEL    &kp C_VOL_UP  &none     &kp ES_PLUS    &kp ES_N4         &kp ES_N5  &kp ES_N6  &kp ES_MINUS  &kp RSHIFT
+&trans      &none       &none         &none      &none         &none     &kp ES_N0      &kp ES_N1         &kp ES_N2  &kp ES_N3  &kp ES_SLASH  &trans
+                                      &trans     &trans        &trans    &trans         &kp LEFT_CONTROL  &trans
             >;
         };
 
         sys {
             bindings = <
-&none   &none  &none  &none   &none   &none     &kp F1  &kp F2     &kp F3   &kp F4   &bt BT_SEL 0  &kp PAUSE_BREAK
-&trans  &none  &none  &none   &none   &none     &kp F5  &kp F6     &kp F7   &kp F8   &bt BT_NXT    &kp RIGHT_SHIFT
-&trans  &none  &none  &none   &none   &none     &kp F9  &kp F10    &kp F11  &kp F12  &none         &none
-                      &trans  &trans  &trans    &trans  &kp LCTRL  &trans
+&kp ESCAPE  &none       &kp CLCK      &kp ENTER  &kp INS       &none     &kp F1  &kp F2     &kp F3   &kp F4   &bt BT_SEL 0  &kp PAUSE_BREAK
+&trans      &kp C_MUTE  &kp C_VOL_DN  &kp DEL    &kp C_VOL_UP  &none     &kp F5  &kp F6     &kp F7   &kp F8   &bt BT_NXT    &kp RIGHT_SHIFT
+&trans      &none       &none         &none      &none         &none     &kp F9  &kp F10    &kp F11  &kp F12  &none         &none
+                                      &trans     &trans        &trans    &trans  &kp LCTRL  &trans
             >;
         };
     };
