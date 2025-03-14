@@ -70,6 +70,7 @@
             bindings = <&kp CLCK>;
             key-positions = <12 23>;
             layers = <0>;
+            timeout-ms = <160>;
         };
     };
 
