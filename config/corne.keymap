@@ -236,20 +236,6 @@
             #binding-cells = <0>;
             bindings = <&mo 1>, <&mo 2>;
         };
-
-        LSHIFT_TD: LSHIFT_TD {
-            compatible = "zmk,behavior-tap-dance";
-            label = "LSHIFT_TD";
-            #binding-cells = <0>;
-            bindings = <&kp LSHIFT>, <&kp CLCK>;
-        };
-
-        RSHIFT_TD: RSHIFT_TD {
-            compatible = "zmk,behavior-tap-dance";
-            label = "RSHIFT_TD";
-            #binding-cells = <0>;
-            bindings = <&kp RSHIFT>, <&kp CLCK>;
-        };
     };
 
     keymap {
