@@ -65,13 +65,6 @@
             key-positions = <32 33>;
             layers = <3>;
         };
-
-        cb_caps {
-            bindings = <&kp CLCK>;
-            key-positions = <12 23>;
-            layers = <0>;
-            timeout-ms = <160>;
-        };
     };
 
     macros {
@@ -256,6 +249,15 @@
 
             tapping-term-ms = <300>;
         };
+
+        td_shf_cap: td_shf_cap {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TD_SHF_CAP";
+            #binding-cells = <0>;
+            bindings = <&kp RSHIFT>, <&kp CLCK>;
+
+            tapping-term-ms = <300>;
+        };
     };
 
     keymap {
@@ -270,7 +272,7 @@
 
             bindings = <
 &kp TAB     &kp Q  &kp W  &kp E        &kp R      &kp T        &kp Y      &kp U        &kp I      &kp O       &kp P           &kp BACKSPACE
-&kp LSHIFT  &kp A  &kp S  &kp D        &kp F      &kp G        &kp H      &kp J        &kp K      &kp L       &kp ES_N_TILDE  &kp RSHIFT
+&kp LSHIFT  &kp A  &kp S  &kp D        &kp F      &kp G        &kp H      &kp J        &kp K      &kp L       &kp ES_N_TILDE  &td_shf_cap
 &kp LWIN    &kp Z  &kp X  &kp C        &kp V      &kp B        &kp N      &kp M        &kp COMMA  &kp PERIOD  &kp ES_ACUTE    &lt 4 ESCAPE
                           &td_nav_alt  &kp LCTRL  &kp SPACE    &kp ENTER  &td_sym_nav  &kp LALT
             >;
