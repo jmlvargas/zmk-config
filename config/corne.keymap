@@ -65,6 +65,12 @@
             key-positions = <32 33>;
             layers = <3>;
         };
+
+        cb_caps {
+            bindings = <&kp CLCK>;
+            key-positions = <12 23>;
+            layers = <0>;
+        };
     };
 
     macros {
@@ -260,8 +266,8 @@
 
         nav {
             bindings = <
-&kp ESCAPE  &none       &kp CLCK      &kp ENTER  &kp INS       &none     &none     &none             &none     &none      &kp PG_UP  &kp DELETE
-&trans      &kp C_MUTE  &kp C_VOL_DN  &kp DEL    &kp C_VOL_UP  &none     &kp LEFT  &kp DOWN          &kp UP    &kp RIGHT  &kp PG_DN  &kp RSHIFT
+&kp ESCAPE  &none       &none         &kp ENTER  &kp INS       &none     &none     &none             &none     &none      &kp PG_UP  &kp DELETE
+&trans      &kp C_MUTE  &kp C_VOL_DN  &kp DEL    &kp C_VOL_UP  &none     &kp LEFT  &kp DOWN          &kp UP    &kp RIGHT  &kp PG_DN  &trans
 &trans      &none       &none         &none      &none         &none     &none     &none             &kp HOME  &kp END    &none      &trans
                                       &kp LALT   &trans        &trans    &trans    &kp LEFT_CONTROL  &trans
             >;
@@ -269,8 +275,8 @@
 
         num {
             bindings = <
-&kp ESCAPE  &none       &kp CLCK      &kp ENTER  &kp INSERT    &none     &kp ES_PERIOD  &kp ES_N7         &kp ES_N8  &kp ES_N9  &kp ES_ASTRK  &kp BACKSPACE
-&trans      &kp C_MUTE  &kp C_VOL_DN  &kp DEL    &kp C_VOL_UP  &none     &kp ES_PLUS    &kp ES_N4         &kp ES_N5  &kp ES_N6  &kp ES_MINUS  &kp RSHIFT
+&kp ESCAPE  &none       &none         &kp ENTER  &kp INSERT    &none     &kp ES_PERIOD  &kp ES_N7         &kp ES_N8  &kp ES_N9  &kp ES_ASTRK  &kp BACKSPACE
+&trans      &kp C_MUTE  &kp C_VOL_DN  &kp DEL    &kp C_VOL_UP  &none     &kp ES_PLUS    &kp ES_N4         &kp ES_N5  &kp ES_N6  &kp ES_MINUS  &trans
 &trans      &none       &none         &none      &none         &none     &kp ES_N0      &kp ES_N1         &kp ES_N2  &kp ES_N3  &kp ES_SLASH  &trans
                                       &trans     &trans        &trans    &trans         &kp LEFT_CONTROL  &trans
             >;
@@ -278,8 +284,8 @@
 
         sys {
             bindings = <
-&kp ESCAPE  &none       &kp CLCK      &kp ENTER  &kp INS       &none     &kp F1  &kp F2     &kp F3   &kp F4   &bt BT_SEL 0  &kp PAUSE_BREAK
-&trans      &kp C_MUTE  &kp C_VOL_DN  &kp DEL    &kp C_VOL_UP  &none     &kp F5  &kp F6     &kp F7   &kp F8   &bt BT_NXT    &kp RIGHT_SHIFT
+&kp ESCAPE  &none       &none         &kp ENTER  &kp INS       &none     &kp F1  &kp F2     &kp F3   &kp F4   &bt BT_SEL 0  &kp PAUSE_BREAK
+&trans      &kp C_MUTE  &kp C_VOL_DN  &kp DEL    &kp C_VOL_UP  &none     &kp F5  &kp F6     &kp F7   &kp F8   &bt BT_NXT    &trans
 &trans      &none       &none         &none      &none         &none     &kp F9  &kp F10    &kp F11  &kp F12  &none         &none
                                       &trans     &trans        &trans    &trans  &kp LCTRL  &trans
             >;
