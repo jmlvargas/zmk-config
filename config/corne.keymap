@@ -235,6 +235,8 @@
             label = "TD_RIGHT";
             #binding-cells = <0>;
             bindings = <&mo 1>, <&mo 2>;
+
+            tapping-term-ms = <300>;
         };
     };
 
