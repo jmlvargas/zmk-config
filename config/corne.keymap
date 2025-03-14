@@ -242,6 +242,13 @@
             #binding-cells = <0>;
             bindings = <&kp LSHIFT>, <&kp CLCK>;
         };
+
+        RSHIFT_TD: RSHIFT_TD {
+            compatible = "zmk,behavior-tap-dance";
+            label = "RSHIFT_TD";
+            #binding-cells = <0>;
+            bindings = <&kp RSHIFT>, <&kp CLCK>;
+        };
     };
 
     keymap {
@@ -256,7 +263,7 @@
 
             bindings = <
 &kp TAB     &kp Q  &kp W  &kp E  &kp R             &kp T        &kp Y      &kp U      &kp I      &kp O       &kp P           &kp BACKSPACE
-&LSHIFT_TD  &kp A  &kp S  &kp D  &kp F             &kp G        &kp H      &kp J      &kp K      &kp L       &kp ES_N_TILDE  &kp RSHIFT
+&LSHIFT_TD  &kp A  &kp S  &kp D  &kp F             &kp G        &kp H      &kp J      &kp K      &kp L       &kp ES_N_TILDE  &RSHIFT_TD
 &kp LWIN    &kp Z  &kp X  &kp C  &kp V             &kp B        &kp N      &kp M      &kp COMMA  &kp PERIOD  &kp ES_ACUTE    &lt 4 ESCAPE
                           &mo 2  &kp LEFT_CONTROL  &kp SPACE    &kp ENTER  &td_right  &kp LALT
             >;
