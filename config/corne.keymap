@@ -53,18 +53,6 @@
             key-positions = <10 11>;
             layers = <4>;
         };
-
-        num_zero {
-            bindings = <&kp ES_N0>;
-            key-positions = <20 21>;
-            layers = <3>;
-        };
-
-        num_dot {
-            bindings = <&kp ES_DOT>;
-            key-positions = <32 33>;
-            layers = <3>;
-        };
     };
 
     macros {
