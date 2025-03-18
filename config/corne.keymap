@@ -304,10 +304,10 @@
             //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
 
             bindings = <
-&kp TAB     &kp Q  &kp W  &kp E        &kp R      &kp T        &kp Y      &kp U        &kp I        &kp O       &kp P           &kp BACKSPACE
-&kp LSHIFT  &kp A  &kp S  &kp D        &kp F      &kp G        &kp H      &kp J        &kp K        &kp L       &kp ES_N_TILDE  &td_shf_cap
-&kp LWIN    &kp Z  &kp X  &kp C        &kp V      &kp B        &kp N      &kp M        &kp COMMA    &kp PERIOD  &kp ES_ACUTE    &lt 4 ESCAPE
-                          &td_nav_alt  &kp LCTRL  &kp SPACE    &kp ENTER  &td_sym_num  &td_nav_alt
+&kp TAB     &kp Q  &kp W  &kp E        &kp R      &kp T        &kp Y      &kp U  &kp I        &kp O       &kp P           &kp BACKSPACE
+&kp LSHIFT  &kp A  &kp S  &kp D        &kp F      &kp G        &kp H      &kp J  &kp K        &kp L       &kp ES_N_TILDE  &td_shf_cap
+&kp LWIN    &kp Z  &kp X  &kp C        &kp V      &kp B        &kp N      &kp M  &kp COMMA    &kp PERIOD  &kp ES_ACUTE    &lt 4 ESCAPE
+                          &td_nav_alt  &kp LCTRL  &kp SPACE    &kp ENTER  &mo 5  &td_nav_alt
             >;
         };
 
