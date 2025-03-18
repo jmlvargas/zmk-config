@@ -259,7 +259,7 @@
         mp_rpar: mp_rpar {
             compatible = "zmk,behavior-mod-morph";
             label = "MP_RPAR";
-            bindings = <&kp ES_RPAR>, <&kp ES_LBKT>;
+            bindings = <&kp ES_RPAR>, <&kp ES_RBKT>;
 
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
