@@ -313,9 +313,9 @@
 
         nav {
             bindings = <
-&kp ESCAPE  &none       &none         &kp ENTER  &kp INS           &none        &none     &none             &none     &none      &kp PG_UP  &kp DELETE
-&trans      &kp C_MUTE  &kp C_VOL_DN  &kp DEL    &kp C_VOL_UP      &none        &kp LEFT  &kp DOWN          &kp UP    &kp RIGHT  &kp PG_DN  &trans
-&trans      &none       &none         &none      &none             &none        &none     &none             &kp HOME  &kp END    &none      &trans
+&kp ESCAPE  &none       &none         &kp ENTER  &none             &none        &none     &none             &kp INSERT  &none      &kp PG_UP  &kp DELETE
+&trans      &kp C_MUTE  &kp C_VOL_DN  &kp DEL    &kp C_VOL_UP      &none        &kp LEFT  &kp DOWN          &kp UP      &kp RIGHT  &kp PG_DN  &trans
+&trans      &none       &none         &none      &none             &none        &none     &none             &kp HOME    &kp END    &none      &trans
                                       &kp LALT   &kp LEFT_CONTROL  &kp ENTER    &trans    &kp LEFT_CONTROL  &kp LALT
             >;
         };
