@@ -27,7 +27,7 @@
         bootldr_l {
             bindings = <&bootloader>;
             key-positions = <24 29>;
-            layers = <1 3>;
+            layers = <6 3>;
         };
 
         bootldr_r {
@@ -39,7 +39,7 @@
         reset_l {
             bindings = <&sys_reset>;
             key-positions = <0 5>;
-            layers = <1 3>;
+            layers = <6 3>;
         };
 
         reset_r {
@@ -224,7 +224,7 @@
             compatible = "zmk,behavior-tap-dance";
             label = "TD_CTL_NAV";
             #binding-cells = <0>;
-            bindings = <&kp LEFT_CONTROL>, <&mo 1>;
+            bindings = <&kp LEFT_CONTROL>, <&mo 6>;
 
             tapping-term-ms = <300>;
         };
@@ -233,7 +233,7 @@
             compatible = "zmk,behavior-tap-dance";
             label = "TD_NAV_ALT";
             #binding-cells = <0>;
-            bindings = <&mo 1>, <&kp LALT>;
+            bindings = <&mo 6>, <&kp LALT>;
 
             tapping-term-ms = <300>;
         };
@@ -304,28 +304,28 @@
             //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
 
             bindings = <
-&kp TAB     &kp Q  &kp W  &kp E        &kp R      &kp T        &kp Y      &kp U  &kp I      &kp O       &kp P           &kp BACKSPACE
-&kp LSHIFT  &kp A  &kp S  &kp D        &kp F      &kp G        &kp H      &kp J  &kp K      &kp L       &kp ES_N_TILDE  &td_shf_cap
-&kp LWIN    &kp Z  &kp X  &kp C        &kp V      &kp B        &kp N      &kp M  &kp COMMA  &kp PERIOD  &kp ES_ACUTE    &lt 3 ESCAPE
-                          &td_nav_alt  &kp LCTRL  &kp SPACE    &kp ENTER  &mo 2  &kp LALT
-            >;
-        };
-
-        nav {
-            bindings = <
-&kp ESCAPE  &none       &none         &kp ENTER  &none             &none        &none     &none             &kp INSERT  &none      &kp PG_UP  &kp DELETE
-&trans      &kp C_MUTE  &kp C_VOL_DN  &kp DEL    &kp C_VOL_UP      &none        &kp LEFT  &kp DOWN          &kp UP      &kp RIGHT  &kp PG_DN  &trans
-&trans      &none       &none         &none      &none             &none        &none     &none             &kp HOME    &kp END    &none      &trans
-                                      &kp LALT   &kp LEFT_CONTROL  &kp ENTER    &trans    &kp LEFT_CONTROL  &kp LALT
+&kp TAB     &kp Q  &kp W  &kp E     &kp R      &kp T        &kp Y      &kp U  &kp I      &kp O       &kp P           &kp BACKSPACE
+&kp LSHIFT  &kp A  &kp S  &kp D     &kp F      &kp G        &kp H      &kp J  &kp K      &kp L       &kp ES_N_TILDE  &td_shf_cap
+&kp LWIN    &kp Z  &kp X  &kp C     &kp V      &kp B        &kp N      &kp M  &kp COMMA  &kp PERIOD  &kp ES_ACUTE    &lt 3 ESCAPE
+                          &kp LALT  &kp LCTRL  &kp SPACE    &kp ENTER  &mo 1  &mo 2
             >;
         };
 
         syn {
             bindings = <
-&la_grave  &kp ES_N1     &kp ES_N2     &kp ES_N3      &kp ES_N4         &kp ES_N5       &kp ES_N6  &kp ES_N7          &kp ES_N8  &kp ES_N9  &kp ES_N0     &kp DEL
-&trans     &kp ES_PLUS   &kp ES_EQUAL  &kp ES_AMPS    &kp ES_PIPE       &kp ES_POUND    &mp_que    &kp ES_LBRC        &mp_lpar   &mp_rpar   &kp ES_MINUS  &mp_quo
-&trans     &kp ES_ASTRK  &kp ES_AT     &kp ES_DOLLAR  &kp ES_PERCENT    &kp ES_CARET    &mp_exc    &kp ES_RBRC        &kp ES_LT  &kp ES_GT  &mp_slash     &kp ES_TILDE
-                                       &kp LALT       &kp LEFT_CONTROL  &trans          &kp SPACE  &kp RIGHT_CONTROL  &kp LALT
+&la_grave  &kp ES_N1     &kp ES_N2     &kp ES_N3      &kp ES_N4         &kp ES_N5       &kp ES_N6  &kp ES_N7    &kp ES_N8  &kp ES_N9  &kp ES_N0     &kp DEL
+&trans     &kp ES_PLUS   &kp ES_EQUAL  &kp ES_AMPS    &kp ES_PIPE       &kp ES_POUND    &mp_que    &kp ES_LBRC  &mp_lpar   &mp_rpar   &kp ES_MINUS  &mp_quo
+&trans     &kp ES_ASTRK  &kp ES_AT     &kp ES_DOLLAR  &kp ES_PERCENT    &kp ES_CARET    &mp_exc    &kp ES_RBRC  &kp ES_LT  &kp ES_GT  &mp_slash     &kp ES_TILDE
+                                       &kp LALT       &kp LEFT_CONTROL  &trans          &kp SPACE  &trans       &trans
+            >;
+        };
+
+        nav {
+            bindings = <
+&none   &none  &none  &none     &none             &none     &none   &none   &none   &kp PG_UP  &kp UP    &kp PG_DN
+&trans  &none  &none  &none     &none             &none     &none   &none   &none   &kp LEFT   &kp DOWN  &kp RIGHT
+&trans  &none  &none  &none     &none             &none     &none   &none   &none   &none      &kp HOME  &kp END
+                      &kp LALT  &kp LEFT_CONTROL  &trans    &trans  &trans  &trans
             >;
         };
 
@@ -353,6 +353,15 @@
 &trans      &kp C_MUTE  &kp C_VOL_DN  &kp DEL    &kp C_VOL_UP      &none     &kp ES_PLUS  &kp ES_N4         &kp ES_N5  &kp ES_N6  &kp ES_MINUS  &kp ES_DOT
 &trans      &none       &none         &none      &none             &none     &kp ES_N0    &kp ES_N1         &kp ES_N2  &kp ES_N3  &kp ES_SLASH  &kp ES_EQUAL
                                       &kp LALT   &kp LEFT_CONTROL  &trans    &trans       &kp LEFT_CONTROL  &kp LALT
+            >;
+        };
+
+        layer_6 {
+            bindings = <
+&kp ESCAPE  &none       &none         &kp ENTER  &none             &none        &none     &none             &kp INSERT  &none      &kp PG_UP  &kp DELETE
+&trans      &kp C_MUTE  &kp C_VOL_DN  &kp DEL    &kp C_VOL_UP      &none        &kp LEFT  &kp DOWN          &kp UP      &kp RIGHT  &kp PG_DN  &trans
+&trans      &none       &none         &none      &none             &none        &none     &none             &kp HOME    &kp END    &none      &trans
+                                      &kp LALT   &kp LEFT_CONTROL  &kp ENTER    &trans    &kp LEFT_CONTROL  &kp LALT
             >;
         };
     };
