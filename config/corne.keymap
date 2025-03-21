@@ -27,7 +27,7 @@
         bootldr_l {
             bindings = <&bootloader>;
             key-positions = <24 29>;
-            layers = <6 3>;
+            layers = <2 3>;
         };
 
         bootldr_r {
@@ -39,7 +39,7 @@
         reset_l {
             bindings = <&sys_reset>;
             key-positions = <0 5>;
-            layers = <6 3>;
+            layers = <2 3>;
         };
 
         reset_r {
@@ -215,7 +215,7 @@
             compatible = "zmk,behavior-tap-dance";
             label = "TD_SYM_NUM";
             #binding-cells = <0>;
-            bindings = <&mo 0>, <&mo 4>;
+            bindings = <&mo 0>, <&mo 6>;
 
             tapping-term-ms = <300>;
         };
@@ -224,7 +224,7 @@
             compatible = "zmk,behavior-tap-dance";
             label = "TD_CTL_NAV";
             #binding-cells = <0>;
-            bindings = <&kp LEFT_CONTROL>, <&mo 6>;
+            bindings = <&kp LEFT_CONTROL>, <&mo 2>;
 
             tapping-term-ms = <300>;
         };
@@ -233,7 +233,7 @@
             compatible = "zmk,behavior-tap-dance";
             label = "TD_NAV_ALT";
             #binding-cells = <0>;
-            bindings = <&mo 6>, <&kp LALT>;
+            bindings = <&mo 2>, <&kp LALT>;
 
             tapping-term-ms = <300>;
         };
@@ -322,10 +322,10 @@
 
         nav {
             bindings = <
-&none   &none  &none  &none     &none             &none     &none   &none   &none   &kp PG_UP  &kp UP    &kp PG_DN
-&trans  &none  &none  &none     &none             &none     &none   &none   &none   &kp LEFT   &kp DOWN  &kp RIGHT
-&trans  &none  &none  &none     &none             &none     &none   &none   &none   &none      &kp HOME  &kp END
-                      &kp LALT  &kp LEFT_CONTROL  &trans    &trans  &trans  &trans
+&kp ESCAPE  &none       &none         &kp ENTER  &none             &none        &none     &none             &none     &none      &kp PG_UP  &kp DELETE
+&trans      &kp C_MUTE  &kp C_VOL_DN  &kp DEL    &kp C_VOL_UP      &none        &kp LEFT  &kp DOWN          &kp UP    &kp RIGHT  &kp PG_DN  &trans
+&trans      &none       &none         &none      &none             &none        &none     &none             &kp HOME  &kp END    &none      &trans
+                                      &kp LALT   &kp LEFT_CONTROL  &kp ENTER    &trans    &kp LEFT_CONTROL  &kp LALT
             >;
         };
 
@@ -338,12 +338,21 @@
             >;
         };
 
+        nav-natural {
+            bindings = <
+&none   &none  &none  &none     &none             &none     &none   &none   &none   &kp PG_UP  &kp UP    &kp PG_DN
+&trans  &none  &none  &none     &none             &none     &none   &none   &none   &kp LEFT   &kp DOWN  &kp RIGHT
+&trans  &none  &none  &none     &none             &none     &none   &none   &none   &none      &kp HOME  &kp END
+                      &kp LALT  &kp LEFT_CONTROL  &trans    &trans  &trans  &trans
+            >;
+        };
+
         sym {
             bindings = <
 &la_grave  &kp ES_EXCL       &kp ES_AT      &kp ES_EQUAL  &kp ES_DOLLAR  &kp ES_PERCENT    &none        &none              &kp ES_LPAR  &kp ES_RPAR  &kp ES_ASTRK  &kp DEL
 &trans     &kp ES_IEXCL      &kp ES_TILDE   &kp ES_AMPS   &kp ES_PIPE    &kp ES_POUND      &kp ES_PLUS  &kp ES_LBRC        &kp ES_LBKT  &kp ES_RBKT  &kp ES_MINUS  &mp_quo
 &trans     &kp ES_BACKSLASH  &kp ES_IQMARK  &kp ES_QMARK  &kp ES_CARET   &none             &none        &kp ES_RBRC        &kp ES_LT    &kp ES_GT    &kp ES_SLASH  &kp ES_EQUAL
-                                            &kp LALT      &mo 4          &trans            &kp SPACE    &kp RIGHT_CONTROL  &kp LALT
+                                            &kp LALT      &mo 6          &trans            &kp SPACE    &kp RIGHT_CONTROL  &kp LALT
             >;
         };
 
@@ -353,15 +362,6 @@
 &trans      &kp C_MUTE  &kp C_VOL_DN  &kp DEL    &kp C_VOL_UP      &none     &kp ES_PLUS  &kp ES_N4         &kp ES_N5  &kp ES_N6  &kp ES_MINUS  &kp ES_DOT
 &trans      &none       &none         &none      &none             &none     &kp ES_N0    &kp ES_N1         &kp ES_N2  &kp ES_N3  &kp ES_SLASH  &kp ES_EQUAL
                                       &kp LALT   &kp LEFT_CONTROL  &trans    &trans       &kp LEFT_CONTROL  &kp LALT
-            >;
-        };
-
-        layer_6 {
-            bindings = <
-&kp ESCAPE  &none       &none         &kp ENTER  &none             &none        &none     &none             &kp INSERT  &none      &kp PG_UP  &kp DELETE
-&trans      &kp C_MUTE  &kp C_VOL_DN  &kp DEL    &kp C_VOL_UP      &none        &kp LEFT  &kp DOWN          &kp UP      &kp RIGHT  &kp PG_DN  &trans
-&trans      &none       &none         &none      &none             &none        &none     &none             &kp HOME    &kp END    &none      &trans
-                                      &kp LALT   &kp LEFT_CONTROL  &kp ENTER    &trans    &kp LEFT_CONTROL  &kp LALT
             >;
         };
     };
