@@ -229,11 +229,11 @@
             tapping-term-ms = <300>;
         };
 
-        td_win_sys: td_win_sys {
+        td_sys_win: td_sys_win {
             compatible = "zmk,behavior-tap-dance";
-            label = "TD_WIN_SYS";
+            label = "TD_SYS_WIN";
             #binding-cells = <0>;
-            bindings = <&kp LGUI>, <&mo 3>;
+            bindings = <&mo 3>, <&kp LWIN>;
 
             tapping-term-ms = <300>;
         };
@@ -306,7 +306,7 @@
             bindings = <
 &kp TAB      &kp Q  &kp W  &kp E     &kp R      &kp T        &kp Y      &kp U  &kp I      &kp O       &kp P           &kp BACKSPACE
 &kp LSHIFT   &kp A  &kp S  &kp D     &kp F      &kp G        &kp H      &kp J  &kp K      &kp L       &kp ES_N_TILDE  &td_shf_cap
-&td_win_sys  &kp Z  &kp X  &kp C     &kp V      &kp B        &kp N      &kp M  &kp COMMA  &kp PERIOD  &kp ES_ACUTE    &lt 3 ESCAPE
+&td_sys_win  &kp Z  &kp X  &kp C     &kp V      &kp B        &kp N      &kp M  &kp COMMA  &kp PERIOD  &kp ES_ACUTE    &lt 3 ESCAPE
                            &kp LALT  &kp LCTRL  &kp SPACE    &kp ENTER  &mo 1  &mo 2
             >;
         };
@@ -315,26 +315,26 @@
             bindings = <
 &la_grave  &kp ES_N1     &kp ES_N2     &kp ES_N3      &kp ES_N4         &kp ES_N5       &kp ES_N6     &kp ES_N7    &kp ES_N8  &kp ES_N9  &kp ES_N0     &kp DEL
 &trans     &kp ES_PLUS   &kp ES_EQUAL  &kp ES_AMPS    &kp ES_PIPE       &kp ES_POUND    &mp_exc       &kp ES_LBRC  &mp_lpar   &mp_rpar   &kp ES_MINUS  &mp_quo
-&trans     &kp ES_ASTRK  &kp ES_AT     &kp ES_DOLLAR  &kp ES_PERCENT    &kp ES_CARET    &kp ES_TILDE  &kp ES_RBRC  &kp ES_LT  &kp ES_GT  &mp_slash     &mp_que
+&kp LWIN   &kp ES_ASTRK  &kp ES_AT     &kp ES_DOLLAR  &kp ES_PERCENT    &kp ES_CARET    &kp ES_TILDE  &kp ES_RBRC  &kp ES_LT  &kp ES_GT  &mp_slash     &mp_que
                                        &kp LALT       &kp LEFT_CONTROL  &trans          &kp SPACE     &trans       &trans
             >;
         };
 
         nav {
             bindings = <
-&kp ESCAPE  &none       &none         &kp ENTER  &none             &none        &none     &none             &none     &none      &kp PG_UP  &kp DELETE
-&trans      &kp C_MUTE  &kp C_VOL_DN  &kp DEL    &kp C_VOL_UP      &none        &kp LEFT  &kp DOWN          &kp UP    &kp RIGHT  &kp PG_DN  &trans
-&trans      &none       &none         &none      &none             &none        &none     &none             &kp HOME  &kp END    &none      &trans
-                                      &kp LALT   &kp LEFT_CONTROL  &kp ENTER    &trans    &kp LEFT_CONTROL  &kp LALT
+&none     &none  &none  &none     &none             &none        &none     &none             &none     &none      &kp PG_UP  &kp DELETE
+&trans    &none  &none  &none     &none             &none        &kp LEFT  &kp DOWN          &kp UP    &kp RIGHT  &kp PG_DN  &trans
+&kp LWIN  &none  &none  &none     &none             &none        &none     &none             &kp HOME  &kp END    &none      &trans
+                        &kp LALT  &kp LEFT_CONTROL  &kp ENTER    &trans    &kp LEFT_CONTROL  &kp LALT
             >;
         };
 
         sys {
             bindings = <
-&kp ESCAPE  &none  &none         &kp ESCAPE  &kp INS           &none        &kp F1  &kp F2     &kp F3    &kp F4   &bt BT_SEL 0  &kp PAUSE_BREAK
-&trans      &none  &kp C_VOL_DN  &kp DEL     &kp C_VOL_UP      &none        &kp F5  &kp F6     &kp F7    &kp F8   &bt BT_NXT    &trans
-&trans      &none  &kp C_MUTE    &kp ESC     &none             &none        &kp F9  &kp F10    &kp F11   &kp F12  &none         &none
-                                 &kp LALT    &kp LEFT_CONTROL  &kp ENTER    &trans  &kp LCTRL  &kp LALT
+&kp ESCAPE  &kp LG(ES_Q)  &kp LG(ES_W)  &kp LG(ES_E)  &kp LG(ES_R)      &kp LG(ES_T)    &kp F1  &kp F2     &kp F3    &kp F4   &bt BT_SEL 0  &kp PAUSE_BREAK
+&trans      &kp C_MUTE    &kp C_VOL_DN  &kp DEL       &kp C_VOL_UP      &kp LG(ES_G)    &kp F5  &kp F6     &kp F7    &kp F8   &bt BT_NXT    &trans
+&kp LGUI    &kp LG(ES_L)  &kp LG(ES_X)  &kp ESC       &kp INSERT        &kp LG(ES_G)    &kp F9  &kp F10    &kp F11   &kp F12  &none         &none
+                                        &kp LALT      &kp LEFT_CONTROL  &kp ENTER       &trans  &kp LCTRL  &kp LALT
             >;
         };
 
