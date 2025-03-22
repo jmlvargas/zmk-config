@@ -27,31 +27,28 @@
         bootldr_l {
             bindings = <&bootloader>;
             key-positions = <24 29>;
-            layers = <3 6>;
+            layers = <3>;
         };
 
         bootldr_r {
             bindings = <&bootloader>;
             key-positions = <30 35>;
-            layers = <6>;
         };
 
         reset_l {
             bindings = <&sys_reset>;
             key-positions = <0 5>;
-            layers = <3 6>;
+            layers = <3>;
         };
 
         reset_r {
             bindings = <&sys_reset>;
             key-positions = <6 11>;
-            layers = <6>;
         };
 
         clear_bt_profile {
             bindings = <&bt BT_CLR>;
             key-positions = <10 11>;
-            layers = <6>;
         };
     };
 
@@ -215,7 +212,7 @@
             compatible = "zmk,behavior-tap-dance";
             label = "TD_SYM_NUM";
             #binding-cells = <0>;
-            bindings = <&mo 0>, <&mo 6>;
+            bindings = <&mo 0>, <&mo 0>;
 
             tapping-term-ms = <300>;
         };
@@ -233,7 +230,7 @@
             compatible = "zmk,behavior-tap-dance";
             label = "TD_NAV_WIN";
             #binding-cells = <0>;
-            bindings = <&mo 2>, <&kp LWIN>;
+            bindings = <&mo 1>, <&kp LWIN>;
 
             tapping-term-ms = <300>;
         };
@@ -304,55 +301,37 @@
             //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
 
             bindings = <
-&kp TAB      &kp Q  &kp W  &kp E     &kp R      &kp T        &kp Y      &kp U  &kp I      &kp O       &kp P           &kp BACKSPACE
-&kp LSHIFT   &kp A  &kp S  &kp D     &kp F      &kp G        &kp H      &kp J  &kp K      &kp L       &kp ES_N_TILDE  &td_shf_cap
-&td_nav_win  &kp Z  &kp X  &kp C     &kp V      &kp B        &kp N      &kp M  &kp COMMA  &kp PERIOD  &kp ES_ACUTE    &lt 3 ESCAPE
-                           &kp LALT  &kp LCTRL  &kp SPACE    &kp ENTER  &mo 1  &mo 2
-            >;
-        };
-
-        syn {
-            bindings = <
-&la_grave  &kp ES_N1     &kp ES_N2     &kp ES_N3      &kp ES_N4         &kp ES_N5       &kp ES_N6     &kp ES_N7    &kp ES_N8  &kp ES_N9  &kp ES_N0     &kp DEL
-&trans     &kp ES_PLUS   &kp ES_EQUAL  &kp ES_AMPS    &kp ES_PIPE       &kp ES_POUND    &mp_exc       &kp ES_LBRC  &mp_lpar   &mp_rpar   &kp ES_MINUS  &mp_quo
-&kp LWIN   &kp ES_ASTRK  &kp ES_AT     &kp ES_DOLLAR  &kp ES_PERCENT    &kp ES_CARET    &kp ES_TILDE  &kp ES_RBRC  &kp ES_LT  &kp ES_GT  &mp_slash     &mp_que
-                                       &kp LALT       &kp LEFT_CONTROL  &trans          &kp SPACE     &trans       &trans
+&kp TAB     &kp Q  &kp W  &kp E     &kp R      &kp T        &kp Y      &kp U  &kp I      &kp O       &kp P           &kp BACKSPACE
+&kp LSHIFT  &kp A  &kp S  &kp D     &kp F      &kp G        &kp H      &kp J  &kp K      &kp L       &kp ES_N_TILDE  &td_shf_cap
+&mo 1       &kp Z  &kp X  &kp C     &kp V      &kp B        &kp N      &kp M  &kp COMMA  &kp PERIOD  &kp ES_ACUTE    &lt 3 ESCAPE
+                          &kp LALT  &kp LCTRL  &kp SPACE    &kp ENTER  &mo 2  &kp LWIN
             >;
         };
 
         nav {
             bindings = <
-&kp ESCAPE  &kp LG(ES_Q)  &kp LG(ES_W)  &kp LG(ES_E)  &kp LG(ES_R)      &kp LG(ES_T)    &none           &none      &none     &none      &kp PG_UP  &none
-&trans      &kp C_MUTE    &kp C_VOL_DN  &kp DEL       &kp C_VOL_UP      &kp LG(ES_G)    &kp LEFT_ARROW  &kp DOWN   &kp UP    &kp RIGHT  &kp PG_DN  &trans
-&kp LGUI    &kp LG(ES_L)  &kp LG(ES_X)  &kp ESC       &kp INSERT        &kp LG(ES_G)    &none           &none      &kp HOME  &kp END    &none      &none
-                                        &kp LALT      &kp LEFT_CONTROL  &kp ENTER       &trans          &kp LCTRL  &kp LALT
+&kp ESCAPE  &kp LG(ES_Q)  &kp LG(ES_W)  &kp LG(ES_E)  &kp LG(ES_R)  &kp LG(ES_T)    &none           &none     &none     &none      &kp PG_UP  &none
+&trans      &kp C_MUTE    &kp C_VOL_DN  &kp DEL       &kp C_VOL_UP  &kp LG(ES_G)    &kp LEFT_ARROW  &kp DOWN  &kp UP    &kp RIGHT  &kp PG_DN  &trans
+&trans      &kp LG(ES_L)  &kp LG(ES_X)  &kp ESC       &kp INSERT    &kp LG(ES_G)    &none           &none     &kp HOME  &kp END    &none      &none
+                                        &trans        &trans        &kp ENTER       &trans          &trans    &trans
+            >;
+        };
+
+        syn {
+            bindings = <
+&la_grave  &kp ES_N1     &kp ES_N2     &kp ES_N3      &kp ES_N4       &kp ES_N5       &kp ES_N6     &kp ES_N7    &kp ES_N8  &kp ES_N9  &kp ES_N0     &kp DEL
+&trans     &kp ES_PLUS   &kp ES_EQUAL  &kp ES_AMPS    &kp ES_PIPE     &kp ES_POUND    &mp_exc       &kp ES_LBRC  &mp_lpar   &mp_rpar   &kp ES_MINUS  &mp_quo
+&trans     &kp ES_ASTRK  &kp ES_AT     &kp ES_DOLLAR  &kp ES_PERCENT  &kp ES_CARET    &kp ES_TILDE  &kp ES_RBRC  &kp ES_LT  &kp ES_GT  &mp_slash     &mp_que
+                                       &trans         &trans          &trans          &trans        &trans       &trans
             >;
         };
 
         sys {
             bindings = <
-&kp ESCAPE  &kp LG(ES_Q)  &kp LG(ES_W)  &kp LG(ES_E)  &kp LG(ES_R)      &kp LG(ES_T)    &kp F1  &kp F2     &kp F3    &kp F4   &bt BT_SEL 0  &kp PAUSE_BREAK
-&trans      &kp C_MUTE    &kp C_VOL_DN  &kp DEL       &kp C_VOL_UP      &kp LG(ES_G)    &kp F5  &kp F6     &kp F7    &kp F8   &bt BT_NXT    &trans
-&kp LGUI    &kp LG(ES_L)  &kp LG(ES_X)  &kp ESC       &kp INSERT        &kp LG(ES_G)    &kp F9  &kp F10    &kp F11   &kp F12  &none         &none
-                                        &kp LALT      &kp LEFT_CONTROL  &kp ENTER       &trans  &kp LCTRL  &kp LALT
-            >;
-        };
-
-        navbk {
-            bindings = <
-&none     &none  &none  &none     &none             &none        &none     &none             &none     &none      &kp PG_UP  &none
-&trans    &none  &none  &none     &none             &none        &kp LEFT  &kp DOWN          &kp UP    &kp RIGHT  &kp PG_DN  &trans
-&kp LWIN  &none  &none  &none     &none             &none        &none     &none             &kp HOME  &kp END    &none      &trans
-                        &kp LALT  &kp LEFT_CONTROL  &kp ENTER    &trans    &kp LEFT_CONTROL  &kp LALT
-            >;
-        };
-
-        num {
-            bindings = <
-&kp ESCAPE  &none       &kp CLCK      &kp ENTER  &kp INSERT        &none     &none        &kp ES_N7         &kp ES_N8  &kp ES_N9  &kp ES_ASTRK  &kp BACKSPACE
-&trans      &kp C_MUTE  &kp C_VOL_DN  &kp DEL    &kp C_VOL_UP      &none     &kp ES_PLUS  &kp ES_N4         &kp ES_N5  &kp ES_N6  &kp ES_MINUS  &kp ES_DOT
-&trans      &none       &none         &none      &none             &none     &kp ES_N0    &kp ES_N1         &kp ES_N2  &kp ES_N3  &kp ES_SLASH  &kp ES_EQUAL
-                                      &kp LALT   &kp LEFT_CONTROL  &trans    &trans       &kp LEFT_CONTROL  &kp LALT
+&kp ESCAPE  &kp LG(ES_Q)  &kp LG(ES_W)  &kp LG(ES_E)  &kp LG(ES_R)  &kp LG(ES_T)    &kp F1  &kp F2   &kp F3   &kp F4   &bt BT_SEL 0  &kp PAUSE_BREAK
+&trans      &kp C_MUTE    &kp C_VOL_DN  &kp DEL       &kp C_VOL_UP  &kp LG(ES_G)    &kp F5  &kp F6   &kp F7   &kp F8   &bt BT_NXT    &trans
+&trans      &kp LG(ES_L)  &kp LG(ES_X)  &kp ESC       &kp INSERT    &kp LG(ES_G)    &kp F9  &kp F10  &kp F11  &kp F12  &none         &none
+                                        &kp LALT      &trans        &kp ENTER       &trans  &trans   &trans
             >;
         };
     };
