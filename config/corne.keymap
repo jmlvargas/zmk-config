@@ -310,10 +310,10 @@
 
         nav {
             bindings = <
-&kp ESCAPE  &kp LG(ES_Q)  &kp LG(ES_W)  &kp LG(ES_E)  &kp LG(ES_R)  &kp LG(ES_T)    &none           &none     &none     &none      &kp PG_UP  &none
-&trans      &kp C_MUTE    &kp C_VOL_DN  &kp DEL       &kp C_VOL_UP  &kp LG(ES_G)    &kp LEFT_ARROW  &kp DOWN  &kp UP    &kp RIGHT  &kp PG_DN  &trans
-&trans      &kp LG(ES_L)  &kp LG(ES_X)  &kp ESC       &kp INSERT    &kp LG(ES_G)    &none           &none     &kp HOME  &kp END    &none      &none
-                                        &trans        &trans        &kp ENTER       &trans          &trans    &trans
+&kp ESCAPE  &kp LG(ES_Q)  &kp LG(ES_W)  &kp LG(ES_E)  &kp LG(ES_R)  &kp LG(ES_T)    &kp C_BRI_UP    &kp C_VOL_UP  &kp INSERT  &none      &kp PG_UP  &none
+&trans      &kp LG(A)     &kp LG(S)     &kp DEL       &kp LG(ES_F)  &kp LG(ES_G)    &kp LEFT_ARROW  &kp DOWN      &kp UP      &kp RIGHT  &kp PG_DN  &trans
+&trans      &kp LG(ES_L)  &kp LG(ES_X)  &kp ESC       &kp C_MUTE    &kp LG(ES_B)    &kp C_BRI_DN    &kp C_VOL_DN  &kp HOME    &kp END    &none      &none
+                                        &trans        &trans        &kp ENTER       &trans          &trans        &trans
             >;
         };
 
