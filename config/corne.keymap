@@ -126,14 +126,14 @@
         win_max: win_max {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LA(F10)>;
+            bindings = <&kp LG(UP)>;
             label = "WIN_MAX";
         };
 
         win_min: win_min {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LA(F9)>;
+            bindings = <&kp LG(DOWN)>;
             label = "WIN_MIN";
         };
 
