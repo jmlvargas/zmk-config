@@ -310,9 +310,9 @@
 
         nav {
             bindings = <
-&kp ESCAPE  &kp LG(ES_Q)  &kp LG(ES_W)  &kp LG(ES_E)  &kp LG(ES_R)  &kp LG(ES_T)    &kp PG_UP       &none       &kp INSERT  &none      &none  &win_close
-&trans      &kp LC(A)     &kp LC(S)     &kp DEL       &kp LC(F)     &kp LC(G)       &kp LEFT_ARROW  &kp DOWN    &kp UP      &kp RIGHT  &none  &win_max
-&trans      &kp LC(Z)     &kp LC(ES_X)  &kp LC(C)     &kp LC(ES_V)  &kp LC(ES_B)    &kp PG_DN       &kp C_MUTE  &kp HOME    &kp END    &none  &win_min
+&kp ESCAPE  &kp LG(ES_Q)  &kp LG(ES_W)  &kp LG(ES_E)  &kp LG(ES_R)  &kp LG(ES_T)    &kp PG_UP       &none       &none     &none      &none  &win_close
+&trans      &kp LC(A)     &kp LC(S)     &kp DEL       &kp LC(F)     &kp LC(G)       &kp LEFT_ARROW  &kp DOWN    &kp UP    &kp RIGHT  &none  &win_max
+&trans      &kp LC(Z)     &kp LC(ES_X)  &kp LC(C)     &kp LC(ES_V)  &kp LC(ES_B)    &kp PG_DN       &kp C_MUTE  &kp HOME  &kp END    &none  &win_min
                                         &trans        &trans        &kp ENTER       &trans          &kp RCTRL   &trans
             >;
         };
@@ -328,10 +328,10 @@
 
         sys {
             bindings = <
-&kp ESCAPE  &kp LG(ES_Q)  &kp LG(ES_W)  &kp LG(ES_E)  &kp LG(ES_R)  &kp LG(ES_T)    &kp F1  &kp F2     &kp F3   &kp F4   &bt BT_SEL 0  &kp PAUSE_BREAK
-&trans      &kp C_MUTE    &kp C_VOL_DN  &kp DEL       &kp C_VOL_UP  &kp LG(ES_G)    &kp F5  &kp F6     &kp F7   &kp F8   &bt BT_NXT    &trans
-&trans      &kp LG(ES_L)  &kp LG(ES_X)  &kp ESC       &kp INSERT    &kp LG(ES_G)    &kp F9  &kp F10    &kp F11  &kp F12  &none         &none
-                                        &trans        &trans        &kp ENTER       &trans  &kp RCTRL  &trans
+&none   &none  &none  &kp C_VOL_UP  &kp INSERT  &none     &kp F1  &kp F2     &kp F3   &kp F4   &bt BT_SEL 0  &kp PAUSE_BREAK
+&trans  &none  &none  &kp C_VOL_DN  &none       &none     &kp F5  &kp F6     &kp F7   &kp F8   &bt BT_NXT    &trans
+&trans  &none  &none  &kp C_MUTE    &none       &none     &kp F9  &kp F10    &kp F11  &kp F12  &none         &none
+                      &trans        &trans      &trans    &trans  &kp RCTRL  &trans
             >;
         };
     };
