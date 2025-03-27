@@ -315,6 +315,29 @@
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
+
+        tgl_on: tgl_on {
+            compatible = "zmk,behavior-toggle-layer";
+            label = "TGL_ON";
+            #binding-cells = <1>;
+            toggle-mode = "on";
+        };
+
+        tgl_off: tgl_off {
+            compatible = "zmk,behavior-toggle-layer";
+            label = "TGL_OFF";
+            #binding-cells = <1>;
+            toggle-mode = "off";
+        };
+
+        td_syn: td_syn {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TD_SYN";
+            #binding-cells = <0>;
+            bindings = <&mo 2>, <&tgl_on 2>;
+
+            tapping-term-ms = <250>;
+        };
     };
 
     keymap {
@@ -328,10 +351,10 @@
             //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
 
             bindings = <
-&kp TAB     &kp Q  &kp W  &kp E     &kp R      &kp T        &kp Y      &kp U  &kp I      &kp O       &kp P           &mp_bsp_del
-&kp LSHIFT  &kp A  &kp S  &kp D     &kp F      &kp G        &kp H      &kp J  &kp K      &kp L       &kp ES_N_TILDE  &td_shf_cap
-&mo 1       &kp Z  &kp X  &kp C     &kp V      &kp B        &kp N      &kp M  &kp COMMA  &kp PERIOD  &kp ES_ACUTE    &lt 3 ESCAPE
-                          &kp LALT  &kp LCTRL  &kp SPACE    &kp ENTER  &mo 2  &kp LWIN
+&kp TAB     &kp Q  &kp W  &kp E     &kp R      &kp T        &kp Y      &kp U    &kp I      &kp O       &kp P           &mp_bsp_del
+&kp LSHIFT  &kp A  &kp S  &kp D     &kp F      &kp G        &kp H      &kp J    &kp K      &kp L       &kp ES_N_TILDE  &td_shf_cap
+&mo 1       &kp Z  &kp X  &kp C     &kp V      &kp B        &kp N      &kp M    &kp COMMA  &kp PERIOD  &kp ES_ACUTE    &lt 3 ESCAPE
+                          &kp LALT  &kp LCTRL  &kp SPACE    &kp ENTER  &td_syn  &kp LWIN
             >;
         };
 
@@ -349,7 +372,7 @@
 &la_grave  &kp ES_N1     &kp ES_N2     &kp ES_N3      &kp ES_N4       &kp ES_N5       &kp ES_N6  &kp ES_N7    &kp ES_N8     &kp ES_N9   &kp ES_N0     &trans
 &trans     &kp ES_PLUS   &kp ES_EQUAL  &kp ES_AMPS    &kp ES_PIPE     &kp ES_POUND    &mp_exc    &kp ES_LBRC  &mp_lpar      &mp_rpar    &kp ES_MINUS  &mp_quo
 &trans     &kp ES_ASTRK  &kp ES_AT     &kp ES_DOLLAR  &kp ES_PERCENT  &kp ES_CARET    &mp_que    &kp ES_RBRC  &mp_lt_comma  &mp_gt_dot  &mp_slash     &kp ES_TILDE
-                                       &trans         &trans          &trans          &trans     &kp RCTRL    &trans
+                                       &trans         &trans          &trans          &trans     &tgl_off 2   &trans
             >;
         };
 
