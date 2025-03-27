@@ -387,7 +387,7 @@
 
         nav {
             bindings = <
-&kp ESCAPE  &kp LG(ES_Q)  &kp LG(ES_W)  &kp LG(ES_E)  &kp LG(ES_R)  &kp LG(ES_T)    &none           &kp PG_UP  &none     &none      &none  &win_close
+&kp ESCAPE  &kp LG(ES_Q)  &kp LC(W)     &kp LG(ES_E)  &kp LG(ES_R)  &kp LG(ES_T)    &none           &kp PG_UP  &none     &none      &none  &win_close
 &trans      &kp LC(A)     &kp LC(S)     &kp DEL       &kp LC(F)     &kp LC(G)       &kp LEFT_ARROW  &kp DOWN   &kp UP    &kp RIGHT  &none  &win_max
 &tgl_off 2  &kp LC(Z)     &kp LC(ES_X)  &kp LC(C)     &kp LC(ES_V)  &kp LC(ES_B)    &none           &kp PG_DN  &kp HOME  &kp END    &none  &win_min
                                         &trans        &trans        &kp ENTER       &trans          &kp RCTRL  &trans
