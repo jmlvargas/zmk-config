@@ -230,7 +230,7 @@
             compatible = "zmk,behavior-tap-dance";
             label = "TD_NAV_WIN";
             #binding-cells = <0>;
-            bindings = <&mo 1>, <&kp LWIN>;
+            bindings = <&mo 2>, <&kp LWIN>;
 
             tapping-term-ms = <300>;
         };
@@ -334,7 +334,7 @@
             compatible = "zmk,behavior-tap-dance";
             label = "TD_SYN";
             #binding-cells = <0>;
-            bindings = <&mo 2>, <&tgl_on 2>;
+            bindings = <&mo 1>, <&tgl_on 1>;
 
             tapping-term-ms = <250>;
         };
@@ -343,7 +343,7 @@
             compatible = "zmk,behavior-tap-dance";
             label = "TD_NAV";
             #binding-cells = <0>;
-            bindings = <&mo 1>, <&tgl_on 1>;
+            bindings = <&mo 2>, <&tgl_on 2>;
 
             tapping-term-ms = <250>;
         };
@@ -376,21 +376,21 @@
             >;
         };
 
-        nav {
-            bindings = <
-&kp ESCAPE  &kp LG(ES_Q)  &kp LG(ES_W)  &kp LG(ES_E)  &kp LG(ES_R)  &kp LG(ES_T)    &none           &kp PG_UP  &none     &none      &none  &win_close
-&trans      &kp LC(A)     &kp LC(S)     &kp DEL       &kp LC(F)     &kp LC(G)       &kp LEFT_ARROW  &kp DOWN   &kp UP    &kp RIGHT  &none  &win_max
-&tgl_off 1  &kp LC(Z)     &kp LC(ES_X)  &kp LC(C)     &kp LC(ES_V)  &kp LC(ES_B)    &none           &kp PG_DN  &kp HOME  &kp END    &none  &win_min
-                                        &trans        &trans        &kp ENTER       &trans          &kp RCTRL  &trans
-            >;
-        };
-
         syn {
             bindings = <
 &la_grave  &kp ES_N1     &kp ES_N2     &kp ES_N3      &kp ES_N4       &kp ES_N5       &kp ES_N6  &kp ES_N7    &kp ES_N8     &kp ES_N9   &kp ES_N0     &trans
 &trans     &kp ES_PLUS   &kp ES_EQUAL  &kp ES_AMPS    &kp ES_PIPE     &kp ES_POUND    &mp_exc    &kp ES_LBRC  &mp_lpar      &mp_rpar    &kp ES_MINUS  &mp_quo
 &trans     &kp ES_ASTRK  &kp ES_AT     &kp ES_DOLLAR  &kp ES_PERCENT  &kp ES_CARET    &mp_que    &kp ES_RBRC  &mp_lt_comma  &mp_gt_dot  &mp_slash     &kp ES_TILDE
-                                       &trans         &trans          &trans          &trans     &tgl_off 2   &trans
+                                       &trans         &trans          &trans          &trans     &tgl_off 1   &trans
+            >;
+        };
+
+        nav {
+            bindings = <
+&kp ESCAPE  &kp LG(ES_Q)  &kp LG(ES_W)  &kp LG(ES_E)  &kp LG(ES_R)  &kp LG(ES_T)    &none           &kp PG_UP  &none     &none      &none  &win_close
+&trans      &kp LC(A)     &kp LC(S)     &kp DEL       &kp LC(F)     &kp LC(G)       &kp LEFT_ARROW  &kp DOWN   &kp UP    &kp RIGHT  &none  &win_max
+&tgl_off 2  &kp LC(Z)     &kp LC(ES_X)  &kp LC(C)     &kp LC(ES_V)  &kp LC(ES_B)    &none           &kp PG_DN  &kp HOME  &kp END    &none  &win_min
+                                        &trans        &trans        &kp ENTER       &trans          &kp RCTRL  &trans
             >;
         };
 
