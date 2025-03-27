@@ -167,6 +167,14 @@
     };
 
     behaviors {
+        es_num_word: es_num_word {
+            compatible = "zmk,behavior-auto-layer";
+            #bindin-cells = <0>;
+            layers = <2>;
+            continue-list = <BSPC DEL ES_DOT ES_COMMA ES_PLUS ES_MINUS ES_STAR ES_FSLH ES_EQUAL ES_N0 ES_N1 ES_N2 ES_N3 ES_N4 ES_N5 ES_N6 ES_N7 ES_N8 ES_N9>;
+            ignore-modifiers;
+        };
+
         as_ht: autoshift_hold_tap {
             compatible = "zmk,behavior-hold-tap";
             label = "AUTOSHIFT_HOLD_TAP";
