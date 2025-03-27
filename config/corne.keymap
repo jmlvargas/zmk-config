@@ -369,10 +369,10 @@
             //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
 
             bindings = <
-&kp TAB     &kp Q  &kp W  &kp E     &kp R      &kp T        &kp Y      &kp U    &kp I      &kp O       &kp P           &mp_bsp_del
-&kp LSHIFT  &kp A  &kp S  &kp D     &kp F      &kp G        &kp H      &kp J    &kp K      &kp L       &kp ES_N_TILDE  &td_shf_cap
-&td_nav     &kp Z  &kp X  &kp C     &kp V      &kp B        &kp N      &kp M    &kp COMMA  &kp PERIOD  &kp ES_ACUTE    &lt 3 ESCAPE
-                          &kp LALT  &kp LCTRL  &kp SPACE    &kp ENTER  &td_syn  &kp LWIN
+&kp TAB     &kp Q  &kp W  &kp E     &kp R    &kp T        &kp Y      &kp U    &kp I      &kp O       &kp P           &kp BACKSPACE
+&kp LSHIFT  &kp A  &kp S  &kp D     &kp F    &kp G        &kp H      &kp J    &kp K      &kp L       &kp ES_N_TILDE  &td_shf_cap
+&kp LCTRL   &kp Z  &kp X  &kp C     &kp V    &kp B        &kp N      &kp M    &kp COMMA  &kp PERIOD  &kp ES_ACUTE    &lt 3 ESCAPE
+                          &kp LALT  &td_nav  &kp SPACE    &kp ENTER  &td_syn  &kp LWIN
             >;
         };
 
@@ -389,8 +389,8 @@
             bindings = <
 &kp ESCAPE  &kp LG(ES_Q)  &kp LC(W)     &kp LG(ES_E)  &kp LG(ES_R)  &kp LG(ES_T)    &none           &kp PG_UP  &none     &none      &none  &win_close
 &trans      &kp LC(A)     &kp LC(S)     &kp DEL       &kp LC(F)     &kp LC(G)       &kp LEFT_ARROW  &kp DOWN   &kp UP    &kp RIGHT  &none  &win_max
-&tgl_off 2  &kp LC(Z)     &kp LC(ES_X)  &kp LC(C)     &kp LC(ES_V)  &kp LC(ES_B)    &none           &kp PG_DN  &kp HOME  &kp END    &none  &win_min
-                                        &trans        &trans        &kp ENTER       &trans          &kp RCTRL  &trans
+&trans      &kp LC(Z)     &kp LC(ES_X)  &kp LC(C)     &kp LC(ES_V)  &kp LC(ES_B)    &none           &kp PG_DN  &kp HOME  &kp END    &none  &win_min
+                                        &trans        &tgl_off 2    &kp ENTER       &trans          &kp RCTRL  &trans
             >;
         };
 
