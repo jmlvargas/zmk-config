@@ -369,10 +369,10 @@
             //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
 
             bindings = <
-&kp TAB     &kp Q  &kp W  &kp E     &kp R    &kp T        &kp Y      &kp U    &kp I         &kp O       &kp P           &kp BACKSPACE
-&kp LSHIFT  &kp A  &kp S  &kp D     &kp F    &kp G        &kp H      &kp J    &kp K         &kp L       &kp ES_N_TILDE  &td_shf_cap
-&kp LCTRL   &kp Z  &kp X  &kp C     &kp V    &kp B        &kp N      &kp M    &kp COMMA     &kp PERIOD  &kp ES_ACUTE    &kp LWIN
-                          &kp LALT  &td_nav  &kp SPACE    &kp ENTER  &td_syn  &lt 3 ESCAPE
+&kp TAB     &kp Q  &kp W  &kp E     &kp R  &kp T        &kp Y      &kp U  &kp I         &kp O       &kp P           &kp BACKSPACE
+&kp LSHIFT  &kp A  &kp S  &kp D     &kp F  &kp G        &kp H      &kp J  &kp K         &kp L       &kp ES_N_TILDE  &td_shf_cap
+&kp LCTRL   &kp Z  &kp X  &kp C     &kp V  &kp B        &kp N      &kp M  &kp COMMA     &kp PERIOD  &kp ES_ACUTE    &kp LWIN
+                          &kp LALT  &mo 2  &kp SPACE    &kp ENTER  &mo 1  &lt 3 ESCAPE
             >;
         };
 
@@ -390,7 +390,7 @@
 &kp ESCAPE  &kp LG(ES_Q)  &kp LC(W)     &kp LG(ES_E)  &kp LG(ES_R)  &kp LG(ES_T)    &none           &kp PG_UP  &none     &none      &win_max    &kp LC(BACKSPACE)
 &trans      &kp LC(A)     &kp LC(S)     &kp DEL       &kp LC(F)     &kp LC(G)       &kp LEFT_ARROW  &kp DOWN   &kp UP    &kp RIGHT  &win_min    &none
 &trans      &kp LC(Z)     &kp LC(ES_X)  &kp LC(C)     &kp LC(ES_V)  &kp LC(ES_B)    &none           &kp PG_DN  &kp HOME  &kp END    &win_close  &none
-                                        &trans        &tgl_off 2    &kp ENTER       &trans          &kp RCTRL  &trans
+                                        &trans        &tgl_off 2    &kp ENTER       &trans          &trans     &trans
             >;
         };
 
@@ -399,7 +399,7 @@
 &none   &none  &none            &none   &kp INSERT  &kp C_MUTE      &kp F1  &kp F2     &kp F3   &kp F4   &bt BT_SEL 0  &kp PAUSE_BREAK
 &trans  &none  &kp PRINTSCREEN  &none   &none       &kp C_VOL_UP    &kp F5  &kp F6     &kp F7   &kp F8   &bt BT_NXT    &trans
 &trans  &none  &none            &none   &none       &kp C_VOL_DN    &kp F9  &kp F10    &kp F11  &kp F12  &none         &none
-                                &trans  &trans      &trans          &trans  &kp RCTRL  &trans
+                                &trans  &tgl_on 2   &trans          &trans  &tgl_on 1  &trans
             >;
         };
     };
