@@ -208,33 +208,6 @@
             flavor = "hold-preferred";
         };
 
-        td_sym_num: td_sym_num {
-            compatible = "zmk,behavior-tap-dance";
-            label = "TD_SYM_NUM";
-            #binding-cells = <0>;
-            bindings = <&mo 0>, <&mo 0>;
-
-            tapping-term-ms = <300>;
-        };
-
-        td_ctl_nav: td_ctl_nav {
-            compatible = "zmk,behavior-tap-dance";
-            label = "TD_CTL_NAV";
-            #binding-cells = <0>;
-            bindings = <&kp LEFT_CONTROL>, <&mo 3>;
-
-            tapping-term-ms = <300>;
-        };
-
-        td_nav_win: td_nav_win {
-            compatible = "zmk,behavior-tap-dance";
-            label = "TD_NAV_WIN";
-            #binding-cells = <0>;
-            bindings = <&mo 2>, <&kp LWIN>;
-
-            tapping-term-ms = <300>;
-        };
-
         td_shf_cap: td_shf_cap {
             compatible = "zmk,behavior-tap-dance";
             label = "TD_SHF_CAP";
@@ -307,15 +280,6 @@
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
-        mp_bsp_del: mp_bsp_del {
-            compatible = "zmk,behavior-mod-morph";
-            label = "MP_BSP_DEL";
-            bindings = <&kp BACKSPACE>, <&kp DELETE>;
-
-            #binding-cells = <0>;
-            mods = <(MOD_LSFT|MOD_RSFT)>;
-        };
-
         tgl_on: tgl_on {
             compatible = "zmk,behavior-toggle-layer";
             label = "TGL_ON";
@@ -330,31 +294,13 @@
             toggle-mode = "off";
         };
 
-        td_syn: td_syn {
+        ALT_RALT: ALT_RALT {
             compatible = "zmk,behavior-tap-dance";
-            label = "TD_SYN";
+            label = "ALT_RALT";
             #binding-cells = <0>;
-            bindings = <&mo 1>, <&tgl_on 1>;
+            bindings = <&kp LALT>, <&kp RALT>;
 
-            tapping-term-ms = <250>;
-        };
-
-        td_nav: td_nav {
-            compatible = "zmk,behavior-tap-dance";
-            label = "TD_NAV";
-            #binding-cells = <0>;
-            bindings = <&mo 2>, <&tgl_on 2>;
-
-            tapping-term-ms = <250>;
-        };
-
-        ts_sys: ts_sys {
-            compatible = "zmk,behavior-tap-dance";
-            label = "TS_SYS";
-            #binding-cells = <0>;
-            bindings = <&mo 3>, <&tgl_on 3>;
-
-            tapping-term-ms = <250>;
+            tapping-term-ms = <200>;
         };
     };
 
@@ -369,10 +315,10 @@
             //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
 
             bindings = <
-&kp TAB     &kp Q  &kp W  &kp E     &kp R  &kp T        &kp Y      &kp U  &kp I         &kp O       &kp P           &kp BACKSPACE
-&kp LSHIFT  &kp A  &kp S  &kp D     &kp F  &kp G        &kp H      &kp J  &kp K         &kp L       &kp ES_N_TILDE  &td_shf_cap
-&kp LCTRL   &kp Z  &kp X  &kp C     &kp V  &kp B        &kp N      &kp M  &kp COMMA     &kp PERIOD  &kp ES_ACUTE    &kp LWIN
-                          &kp LALT  &mo 2  &kp SPACE    &kp ENTER  &mo 1  &lt 3 ESCAPE
+&kp TAB     &kp Q  &kp W  &kp E      &kp R  &kp T        &kp Y      &kp U  &kp I         &kp O       &kp P           &kp BACKSPACE
+&kp LSHIFT  &kp A  &kp S  &kp D      &kp F  &kp G        &kp H      &kp J  &kp K         &kp L       &kp ES_N_TILDE  &td_shf_cap
+&kp LCTRL   &kp Z  &kp X  &kp C      &kp V  &kp B        &kp N      &kp M  &kp COMMA     &kp PERIOD  &kp ES_ACUTE    &kp LWIN
+                          &ALT_RALT  &mo 2  &kp SPACE    &kp ENTER  &mo 1  &lt 3 ESCAPE
             >;
         };
 
