@@ -199,6 +199,13 @@
             bindings = <&kp LG(LC(LS(UP)))>;
             label = "WIN_ROLL";
         };
+
+        dsk_show: dsk_show {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LG(D)>;
+            label = "DSK_SHOW";
+        };
     };
 
     behaviors {
@@ -386,10 +393,10 @@
 
         win {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans    &win_roll  &win_tile_tl  &win_tile_t  &win_tile_tr  &none      &win_close
-&trans  &trans  &trans  &trans  &trans  &trans    &dsk_prev  &win_tile_l   &win_max     &win_tile_r   &dsk_next  &none
-&trans  &trans  &trans  &trans  &trans  &trans    &win_min   &win_tile_bl  &win_tile_b  &win_tile_br  &none      &none
-                        &trans  &trans  &trans    &trans     &trans        &trans
+&trans  &trans  &trans  &trans     &trans  &trans    &win_roll  &win_tile_tl  &win_tile_t  &win_tile_tr  &none      &win_close
+&trans  &trans  &trans  &dsk_show  &trans  &trans    &dsk_prev  &win_tile_l   &win_max     &win_tile_r   &dsk_next  &none
+&trans  &trans  &trans  &trans     &trans  &trans    &win_min   &win_tile_bl  &win_tile_b  &win_tile_br  &none      &none
+                        &trans     &trans  &trans    &trans     &trans        &trans
             >;
         };
     };
