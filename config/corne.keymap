@@ -192,6 +192,13 @@
             bindings = <&kp LG(LC(LA(RIGHT)))>;
             label = "DSK_NEXT";
         };
+
+        win_roll: win_roll {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LG(LC(LS(UP)))>;
+            label = "WIN_ROLL";
+        };
     };
 
     behaviors {
@@ -379,7 +386,7 @@
 
         win {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans    &none      &win_tile_tl  &win_tile_t  &win_tile_tr  &none      &win_close
+&trans  &trans  &trans  &trans  &trans  &trans    &win_roll  &win_tile_tl  &win_tile_t  &win_tile_tr  &none      &win_close
 &trans  &trans  &trans  &trans  &trans  &trans    &dsk_prev  &win_tile_l   &win_max     &win_tile_r   &dsk_next  &none
 &trans  &trans  &trans  &trans  &trans  &trans    &win_min   &win_tile_bl  &win_tile_b  &win_tile_br  &none      &none
                         &trans  &trans  &trans    &trans     &trans        &trans
