@@ -102,20 +102,6 @@
             label = "TILDEGRAVE";
         };
 
-        la_bullet: la_bullet {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp RA(COMMA)>;
-            label = "LA_BULLET";
-        };
-
-        la_cent: la_cent {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp RA(ES_C)>;
-            label = "LA_CENT";
-        };
-
         win_close: win_close {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -154,15 +140,43 @@
         win_tile_t: win_tile_t {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LG(UP)>;
+            bindings = <&kp LG(LC(UP))>;
             label = "WIN_TILE_T";
         };
 
         win_tile_b: win_tile_b {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LG(DOWN)>;
+            bindings = <&kp LG(LC(DOWN))>;
             label = "WIN_TILE_B";
+        };
+
+        win_tile_tl: win_tile_tl {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LG(LS(LEFT))>;
+            label = "WIN_TILE_TL";
+        };
+
+        win_tile_bl: win_tile_bl {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LG(LC(LEFT))>;
+            label = "WIN_TILE_BL";
+        };
+
+        win_tile_tr: win_tile_tr {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LG(LS(RIGHT))>;
+            label = "WIN_TILE_TR";
+        };
+
+        win_tile_br: win_tile_br {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LG(LC(RIGHT))>;
+            label = "WIN_TILE_BR";
         };
     };
 
@@ -333,9 +347,9 @@
 
         nav {
             bindings = <
-&kp ESCAPE  &kp LG(ES_Q)  &kp LC(W)     &kp LG(ES_E)  &kp LG(ES_R)  &kp LG(ES_T)    &win_max        &kp PG_UP  &none     &none      &win_close  &kp LC(BACKSPACE)
-&trans      &kp LC(A)     &kp LC(S)     &kp DEL       &kp LC(F)     &kp LC(G)       &kp LEFT_ARROW  &kp DOWN   &kp UP    &kp RIGHT  &none       &none
-&trans      &kp LC(Z)     &kp LC(ES_X)  &kp LC(C)     &kp LC(ES_V)  &kp LC(ES_B)    &win_min        &kp PG_DN  &kp HOME  &kp END    &none       &trans
+&kp ESCAPE  &kp LG(ES_Q)  &kp LC(W)     &kp LG(ES_E)  &kp LG(ES_R)  &kp LG(ES_T)    &none           &kp PG_UP  &none     &none      &none  &kp LC(BACKSPACE)
+&trans      &kp LC(A)     &kp LC(S)     &kp DEL       &kp LC(F)     &kp LC(G)       &kp LEFT_ARROW  &kp DOWN   &kp UP    &kp RIGHT  &none  &none
+&trans      &kp LC(Z)     &kp LC(ES_X)  &kp LC(C)     &kp LC(ES_V)  &kp LC(ES_B)    &none           &kp PG_DN  &kp HOME  &kp END    &none  &trans
                                         &trans        &tgl_off 2    &kp ENTER       &trans          &trans     &trans
             >;
         };
@@ -348,7 +362,23 @@
                                 &trans  &tgl_on 2   &trans          &trans  &tgl_on 1  &trans
             >;
         };
+
+        win {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans  &trans    &none     &win_tile_tl  &win_tile_t  &win_tile_tr  &none  &win_close
+&trans  &trans  &trans  &trans  &trans  &trans    &none     &win_tile_l   &win_max     &win_tile_r   &none  &none
+&trans  &trans  &trans  &trans  &trans  &trans    &win_min  &win_tile_bl  &win_tile_b  &win_tile_br  &none  &none
+                        &trans  &trans  &trans    &trans    &trans        &trans
+            >;
+        };
     };
 
-    conditional_layers { compatible = "zmk,conditional-layers"; };
+    conditional_layers {
+        compatible = "zmk,conditional-layers";
+
+        cndwin {
+            if-layers = <1 2>;
+            then-layer = <4>;
+        };
+    };
 };
