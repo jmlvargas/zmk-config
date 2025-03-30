@@ -439,9 +439,9 @@
 
         win {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans    &win_wks_l  &win_tile_tl  &win_tile_t  &win_tile_tr  &win_close  &win_wks_r
-&trans  &trans  &trans  &none   &trans  &trans    &win_scr_l  &win_tile_l   &win_max     &win_tile_r   &wks_nxt    &win_scr_r
-&trans  &trans  &trans  &trans  &trans  &trans    &win_roll   &win_tile_bl  &win_tile_b  &win_tile_br  &win_min    &dsk_show
+&trans  &trans  &trans  &trans  &trans  &trans    &win_wks_l  &win_tile_tl  &win_tile_t  &win_tile_tr  &win_max  &win_wks_r
+&trans  &trans  &trans  &none   &trans  &trans    &win_scr_l  &win_tile_l   &win_close   &win_tile_r   &wks_nxt  &win_scr_r
+&trans  &trans  &trans  &trans  &trans  &trans    &win_roll   &win_tile_bl  &win_tile_b  &win_tile_br  &win_min  &dsk_show
                         &trans  &trans  &trans    &trans      &trans        &trans
             >;
         };
