@@ -33,6 +33,7 @@
         bootldr_r {
             bindings = <&bootloader>;
             key-positions = <30 35>;
+            layers = <3>;
         };
 
         reset_l {
@@ -44,11 +45,13 @@
         reset_r {
             bindings = <&sys_reset>;
             key-positions = <6 11>;
+            layers = <3>;
         };
 
         clear_bt_profile {
             bindings = <&bt BT_CLR>;
             key-positions = <10 11>;
+            layers = <3>;
         };
     };
 
