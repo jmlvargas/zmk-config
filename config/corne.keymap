@@ -50,7 +50,7 @@
 
         clear_bt_profile {
             bindings = <&bt BT_CLR>;
-            key-positions = <10 11>;
+            key-positions = <11 29>;
             layers = <3>;
         };
     };
