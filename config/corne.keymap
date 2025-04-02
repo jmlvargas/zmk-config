@@ -433,19 +433,28 @@
 
         sys {
             bindings = <
-&none   &none  &none            &none   &kp INSERT  &kp C_MUTE      &kp F1  &kp F2     &kp F3   &kp F4   &bt BT_SEL 0  &kp PAUSE_BREAK
-&trans  &none  &kp PRINTSCREEN  &none   &none       &kp C_VOL_UP    &kp F5  &kp F6     &kp F7   &kp F8   &bt BT_NXT    &trans
-&trans  &none  &none            &none   &none       &kp C_VOL_DN    &kp F9  &kp F10    &kp F11  &kp F12  &none         &trans
-                                &trans  &tgl_on 2   &trans          &trans  &tgl_on 1  &trans
+&none   &none  &none            &none            &kp INSERT    &none     &kp F1  &kp F2     &kp F3   &kp F4   &none  &kp PAUSE_BREAK
+&trans  &none  &kp PRINTSCREEN  &none            &kp C_VOL_UP  &none     &kp F5  &kp F6     &kp F7   &kp F8   &none  &trans
+&trans  &none  &kp C_MUTE       &kp PAUSE_BREAK  &kp C_VOL_DN  &mo 5     &kp F9  &kp F10    &kp F11  &kp F12  &none  &trans
+                                &trans           &tgl_on 2     &trans    &trans  &tgl_on 1  &trans
             >;
         };
 
         win {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans    &win_wks_l  &win_tile_tl  &win_tile_t  &win_tile_tr  &win_max  &win_wks_r
-&trans  &trans  &trans  &none   &trans  &trans    &win_scr_l  &win_tile_l   &win_close   &win_tile_r   &wks_nxt  &win_scr_r
-&trans  &trans  &trans  &trans  &trans  &trans    &win_roll   &win_tile_bl  &win_tile_b  &win_tile_br  &win_min  &dsk_show
+&trans  &trans  &trans  &trans  &trans  &trans    &win_wks_l  &win_tile_tl  &win_tile_t  &win_tile_tr  &win_close  &win_wks_r
+&trans  &trans  &trans  &none   &trans  &trans    &win_scr_l  &win_tile_l   &win_max     &win_tile_r   &wks_nxt    &win_scr_r
+&trans  &trans  &trans  &trans  &trans  &trans    &win_roll   &win_tile_bl  &win_tile_b  &win_tile_br  &win_min    &dsk_show
                         &trans  &trans  &trans    &trans      &trans        &trans
+            >;
+        };
+
+        bth {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans  &trans    &bt BT_SEL 0   &bt BT_SEL 1   &bt BT_SEL 2   &bt BT_SEL 3   &bt BT_SEL 4   &bt BT_CLR
+&trans  &trans  &trans  &trans  &trans  &trans    &bt BT_DISC 0  &bt BT_DISC 1  &bt BT_DISC 2  &bt BT_DISC 3  &bt BT_DISC 4  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans         &trans         &trans         &trans         &trans         &bt BT_CLR_ALL
+                        &trans  &trans  &trans    &trans         &trans         &trans
             >;
         };
     };
