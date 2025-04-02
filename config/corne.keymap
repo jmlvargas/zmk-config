@@ -33,6 +33,7 @@
         bootldr_r {
             bindings = <&bootloader>;
             key-positions = <30 35>;
+            layers = <3>;
         };
 
         reset_l {
@@ -44,11 +45,13 @@
         reset_r {
             bindings = <&sys_reset>;
             key-positions = <6 11>;
+            layers = <3>;
         };
 
         clear_bt_profile {
             bindings = <&bt BT_CLR>;
-            key-positions = <10 11>;
+            key-positions = <11 29>;
+            layers = <3>;
         };
     };
 
@@ -179,17 +182,17 @@
             label = "WIN_TILE_BR";
         };
 
-        dsk_prev: dsk_prev {
+        wks_prv: dsk_prev {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LG(LC(LA(LEFT)))>;
+            bindings = <&kp LG(LC(LA(LS(LEFT))))>;
             label = "DSK_PREV";
         };
 
-        dsk_next: dsk_next {
+        wks_nxt: dsk_next {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LG(LC(LA(RIGHT)))>;
+            bindings = <&kp LG(LC(LA(LS(RIGHT))))>;
             label = "DSK_NEXT";
         };
 
@@ -205,6 +208,34 @@
             #binding-cells = <0>;
             bindings = <&kp LG(D)>;
             label = "DSK_SHOW";
+        };
+
+        win_scr_l: win_mv_l {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LG(LC(LA(LEFT)))>;
+            label = "WIN_MV_L";
+        };
+
+        win_scr_r: win_mv_r {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LG(LC(LA(RIGHT)))>;
+            label = "WIN_MV_R";
+        };
+
+        win_wks_l: win_wks_l {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LG(LA(LEFT))>;
+            label = "WIN_WKS_L";
+        };
+
+        win_wks_r: win_wks_r {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LG(LA(RIGHT))>;
+            label = "WIN_WKS_R";
         };
     };
 
@@ -344,6 +375,24 @@
 
             tapping-term-ms = <200>;
         };
+
+        mp_win_l: mp_win_l {
+            compatible = "zmk,behavior-mod-morph";
+            label = "MP_WIN_L";
+            bindings = <&win_scr_l>, <&win_wks_l>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        mp_win_r: mp_win_r {
+            compatible = "zmk,behavior-mod-morph";
+            label = "MP_WIN_R";
+            bindings = <&win_scr_r>, <&win_wks_r>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
     };
 
     keymap {
@@ -393,10 +442,10 @@
 
         win {
             bindings = <
-&trans  &trans  &trans  &trans     &trans  &trans    &win_roll  &win_tile_tl  &win_tile_t  &win_tile_tr  &none      &win_close
-&trans  &trans  &trans  &dsk_show  &trans  &trans    &dsk_prev  &win_tile_l   &win_max     &win_tile_r   &dsk_next  &none
-&trans  &trans  &trans  &trans     &trans  &trans    &win_min   &win_tile_bl  &win_tile_b  &win_tile_br  &none      &none
-                        &trans     &trans  &trans    &trans     &trans        &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &win_wks_l  &win_tile_tl  &win_tile_t  &win_tile_tr  &win_max  &win_wks_r
+&trans  &trans  &trans  &none   &trans  &trans    &win_scr_l  &win_tile_l   &win_close   &win_tile_r   &wks_nxt  &win_scr_r
+&trans  &trans  &trans  &trans  &trans  &trans    &win_roll   &win_tile_bl  &win_tile_b  &win_tile_br  &win_min  &dsk_show
+                        &trans  &trans  &trans    &trans      &trans        &trans
             >;
         };
     };
