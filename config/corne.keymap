@@ -47,12 +47,6 @@
             key-positions = <6 11>;
             layers = <3>;
         };
-
-        clear_bt_profile {
-            bindings = <&bt BT_CLR>;
-            key-positions = <11 29>;
-            layers = <3>;
-        };
     };
 
     macros {
@@ -433,10 +427,10 @@
 
         sys {
             bindings = <
-&none   &none  &none            &none            &kp INSERT    &none     &kp F1  &kp F2     &kp F3   &kp F4   &none  &kp PAUSE_BREAK
-&trans  &none  &kp PRINTSCREEN  &none            &kp C_VOL_UP  &none     &kp F5  &kp F6     &kp F7   &kp F8   &none  &trans
-&trans  &none  &kp C_MUTE       &kp PAUSE_BREAK  &kp C_VOL_DN  &mo 5     &kp F9  &kp F10    &kp F11  &kp F12  &none  &trans
-                                &trans           &tgl_on 2     &trans    &trans  &tgl_on 1  &trans
+&none   &kp F1  &kp F2           &kp F3        &kp F4        &kp F5    &kp F6  &kp F7     &kp F8  &kp F9  &kp F10  &kp PAUSE_BREAK
+&trans  &none   &kp PRINTSCREEN  &none         &none         &none     &none   &none      &none   &none   &kp F11  &kp F12
+&trans  &none   &kp C_MUTE       &kp C_VOL_DN  &kp C_VOL_UP  &mo 5     &none   &none      &none   &none   &none    &trans
+                                 &trans        &tgl_on 2     &trans    &trans  &tgl_on 1  &trans
             >;
         };
 
@@ -451,10 +445,10 @@
 
         bth {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans    &bt BT_SEL 0   &bt BT_SEL 1   &bt BT_SEL 2   &bt BT_SEL 3   &bt BT_SEL 4   &bt BT_CLR
-&trans  &trans  &trans  &trans  &trans  &trans    &bt BT_DISC 0  &bt BT_DISC 1  &bt BT_DISC 2  &bt BT_DISC 3  &bt BT_DISC 4  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans         &trans         &trans         &trans         &trans         &bt BT_CLR_ALL
-                        &trans  &trans  &trans    &trans         &trans         &trans
+&trans  &trans       &trans  &trans  &trans  &trans    &bt BT_SEL 0   &bt BT_SEL 1   &bt BT_SEL 2   &bt BT_SEL 3   &bt BT_SEL 4   &bt BT_CLR
+&trans  &trans       &trans  &trans  &trans  &trans    &bt BT_DISC 0  &bt BT_DISC 1  &bt BT_DISC 2  &bt BT_DISC 3  &bt BT_DISC 4  &trans
+&trans  &bootloader  &trans  &none   &none   &trans    &trans         &none          &none          &trans         &bootloader    &bt BT_CLR_ALL
+                             &trans  &trans  &trans    &trans         &trans         &trans
             >;
         };
     };
