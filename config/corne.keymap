@@ -427,7 +427,7 @@
 
         syn {
             bindings = <
-&la_grave  &kp ES_N1  &kp ES_N2      &kp ES_N3     &kp ES_N4    &kp ES_N5    &kp ES_N6     &kp ES_N7    &kp ES_N8   &kp ES_N9   &kp ES_N0     &trans
+&la_grave  &kp ES_N1  &kp ES_N2      &kp ES_N3     &kp ES_N4    &kp ES_N5    &kp ES_N6     &kp ES_N7    &kp ES_N8   &kp ES_N9   &kp ES_N0     &kp DEL
 &trans     &mp_exc    &kp ES_AT      &kp ES_EQUAL  &kp ES_AMPS  &none        &kp ES_CARET  &kp ES_PLUS  &mp_lpar    &mp_rpar    &kp ES_MINUS  &kp RSHFT
 &trans     &mp_que    &kp ES_DOLLAR  &kp ES_POUND  &kp ES_PIPE  &none        &none         &mp_ast_per  &mp_brc_lt  &mp_brc_gt  &mp_slash     &kp ES_TILDE
                                      &trans        &trans       &trans       &trans        &tgl_off 1   &trans
@@ -436,17 +436,17 @@
 
         nav {
             bindings = <
-&kp ESCAPE  &kp LG(ES_Q)  &kp LC(W)     &kp LG(ES_E)  &kp LG(ES_R)  &kp LG(ES_T)    &kp LC(Y)       &kp PG_UP  &kp LC(I)  &kp LC(O)  &kp LC(P)  &kp LC(BACKSPACE)
-&trans      &kp LC(A)     &kp LC(S)     &kp DEL       &kp LC(F)     &kp LC(G)       &kp LEFT_ARROW  &kp DOWN   &kp UP     &kp RIGHT  &none      &none
-&trans      &kp LC(Z)     &kp LC(ES_X)  &kp LC(C)     &kp LC(ES_V)  &kp LC(ES_B)    &kp LC(N)       &kp PG_DN  &kp HOME   &kp END    &none      &trans
-                                        &trans        &tgl_off 2    &kp ENTER       &trans          &trans     &trans
+&kp DEL  &kp LG(ES_Q)  &kp LC(W)     &kp LG(ES_E)  &kp LG(ES_R)  &kp LG(ES_T)    &kp LC(Y)       &kp PG_UP  &kp LC(I)  &kp LC(O)  &kp LC(P)  &kp LC(BACKSPACE)
+&trans   &kp LC(A)     &kp LC(S)     &kp LC(D)     &kp LC(F)     &kp LC(G)       &kp LEFT_ARROW  &kp DOWN   &kp UP     &kp RIGHT  &none      &none
+&trans   &kp LC(Z)     &kp LC(ES_X)  &kp LC(C)     &kp LC(ES_V)  &kp LC(ES_B)    &kp LC(N)       &kp PG_DN  &kp HOME   &kp END    &none      &trans
+                                     &trans        &tgl_off 2    &kp ENTER       &trans          &trans     &trans
             >;
         };
 
         sys {
             bindings = <
 &none   &kp F1  &kp F2           &kp F3        &kp F4        &kp F5    &kp F6  &kp F7  &kp F8  &kp F9  &kp F10  &kp PAUSE_BREAK
-&trans  &none   &kp PRINTSCREEN  &none         &none         &none     &none   &none   &none   &none   &kp F11  &kp F12
+&trans  &none   &kp PRINTSCREEN  &kp DEL       &none         &none     &none   &none   &none   &none   &kp F11  &kp F12
 &trans  &none   &kp C_MUTE       &kp C_VOL_DN  &kp C_VOL_UP  &mo 5     &none   &none   &none   &none   &none    &trans
                                  &trans        &trans        &trans    &trans  &trans  &trans
             >;
