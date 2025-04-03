@@ -427,10 +427,10 @@
 
         syn {
             bindings = <
-&la_grave  &kp ES_N1  &kp ES_N2  &kp ES_N3     &kp ES_N4    &kp ES_N5      &kp ES_N6     &kp ES_N7    &kp ES_N8   &kp ES_N9   &kp ES_N0     &trans
-&trans     &mp_exc    &kp ES_AT  &kp ES_EQUAL  &kp ES_AMPS  &kp ES_PIPE    &kp ES_CARET  &kp ES_PLUS  &mp_lpar    &mp_rpar    &kp ES_MINUS  &kp RSHFT
-&trans     &mp_que    &none      &kp ES_POUND  &kp ES_DLLR  &none          &none         &mp_ast_per  &mp_brc_lt  &mp_brc_gt  &mp_slash     &kp ES_TILDE
-                                 &trans        &trans       &trans         &trans        &tgl_off 1   &trans
+&la_grave  &kp ES_N1  &kp ES_N2      &kp ES_N3     &kp ES_N4    &kp ES_N5    &kp ES_N6     &kp ES_N7    &kp ES_N8   &kp ES_N9   &kp ES_N0     &trans
+&trans     &mp_exc    &kp ES_AT      &kp ES_EQUAL  &kp ES_AMPS  &none        &kp ES_CARET  &kp ES_PLUS  &mp_lpar    &mp_rpar    &kp ES_MINUS  &kp RSHFT
+&trans     &mp_que    &kp ES_DOLLAR  &kp ES_POUND  &kp ES_PIPE  &none        &none         &mp_ast_per  &mp_brc_lt  &mp_brc_gt  &mp_slash     &kp ES_TILDE
+                                     &trans        &trans       &trans       &trans        &tgl_off 1   &trans
             >;
         };
 
