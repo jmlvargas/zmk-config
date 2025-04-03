@@ -329,19 +329,19 @@
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
-        mp_gt_dot: mp_gt_dot {
+        mp_brc_gt: mp_brc_gt {
             compatible = "zmk,behavior-mod-morph";
-            label = "MP_GT_DOT";
-            bindings = <&kp ES_GT>, <&kp ES_DOT>;
+            label = "MP_BRC_GT";
+            bindings = <&kp ES_RBRC>, <&kp ES_GT>;
 
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
-        mp_lt_comma: mp_lt_comma {
+        mp_brc_lt: mp_brc_lt {
             compatible = "zmk,behavior-mod-morph";
-            label = "MP_LT_COMMA";
-            bindings = <&kp ES_LT>, <&kp ES_COMMA>;
+            label = "MP_BRC_LT";
+            bindings = <&kp ES_LBRC>, <&kp ES_LT>;
 
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
@@ -396,6 +396,15 @@
 
             tapping-term-ms = <250>;
         };
+
+        mp_ast_per: mp_ast_per {
+            compatible = "zmk,behavior-mod-morph";
+            label = "MP_AST_PER";
+            bindings = <&kp ES_ASTRK>, <&kp ES_PERCENT>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
     };
 
     keymap {
@@ -418,10 +427,10 @@
 
         syn {
             bindings = <
-&la_grave  &kp ES_N1     &kp ES_N2     &kp ES_N3      &kp ES_N4       &kp ES_N5       &kp ES_N6  &kp ES_N7    &kp ES_N8     &kp ES_N9   &kp ES_N0     &trans
-&trans     &kp ES_PLUS   &kp ES_EQUAL  &kp ES_AMPS    &kp ES_PIPE     &kp ES_POUND    &mp_exc    &kp ES_LBRC  &mp_lpar      &mp_rpar    &kp ES_MINUS  &mp_quo
-&trans     &kp ES_ASTRK  &kp ES_AT     &kp ES_DOLLAR  &kp ES_PERCENT  &kp ES_CARET    &mp_que    &kp ES_RBRC  &mp_lt_comma  &mp_gt_dot  &mp_slash     &kp ES_TILDE
-                                       &trans         &trans          &trans          &trans     &tgl_off 1   &trans
+&la_grave  &kp ES_N1  &kp ES_N2  &kp ES_N3     &kp ES_N4    &kp ES_N5      &kp ES_N6     &kp ES_N7    &kp ES_N8   &kp ES_N9   &kp ES_N0     &trans
+&trans     &mp_exc    &kp ES_AT  &kp ES_EQUAL  &kp ES_AMPS  &kp ES_PIPE    &kp ES_CARET  &kp ES_PLUS  &mp_lpar    &mp_rpar    &kp ES_MINUS  &kp RSHFT
+&trans     &mp_que    &none      &kp ES_POUND  &kp ES_DLLR  &none          &mp_que       &mp_ast_per  &mp_brc_lt  &mp_brc_gt  &mp_slash     &kp ES_TILDE
+                                 &trans        &trans       &trans         &trans        &tgl_off 1   &trans
             >;
         };
 
