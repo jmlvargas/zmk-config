@@ -27,25 +27,25 @@
         bootldr_l {
             bindings = <&bootloader>;
             key-positions = <24 29>;
-            layers = <3>;
+            layers = <5>;
         };
 
         bootldr_r {
             bindings = <&bootloader>;
             key-positions = <30 35>;
-            layers = <3>;
+            layers = <5>;
         };
 
         reset_l {
             bindings = <&sys_reset>;
             key-positions = <0 5>;
-            layers = <3>;
+            layers = <5>;
         };
 
         reset_r {
             bindings = <&sys_reset>;
             key-positions = <6 11>;
-            layers = <3>;
+            layers = <5>;
         };
     };
 
@@ -389,11 +389,11 @@
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
-        td_sys_gui: td_sys_gui {
+        td_gui_sys: td_gui_sys {
             compatible = "zmk,behavior-tap-dance";
-            label = "TD_SYS_GUI";
+            label = "TD_GUI_SYS";
             #binding-cells = <0>;
-            bindings = <&mo 3>, <&kp LWIN>;
+            bindings = <&kp LGUI>, <&mo 5>;
 
             tapping-term-ms = <250>;
         };
@@ -419,37 +419,37 @@
             //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
 
             bindings = <
-&kp TAB             &kp Q  &kp W  &kp E      &kp R  &kp T        &kp Y      &kp U  &kp I        &kp O       &kp P           &kp BACKSPACE
-&kp LSHIFT          &kp A  &kp S  &kp D      &kp F  &kp G        &kp H      &kp J  &kp K        &kp L       &kp ES_N_TILDE  &td_shf_cap
-&ht_h LCTRL ESCAPE  &kp Z  &kp X  &kp C      &kp V  &kp B        &kp N      &kp M  &kp COMMA    &kp PERIOD  &kp ES_ACUTE    &mp_quo
-                                  &ALT_RALT  &mo 2  &kp SPACE    &kp ENTER  &mo 1  &td_sys_gui
-            >;
-        };
-
-        syn {
-            bindings = <
-&la_grave  &kp ES_N1  &kp ES_N2      &kp ES_N3     &kp ES_N4    &kp ES_N5    &kp ES_N6     &kp ES_N7    &kp ES_N8   &kp ES_N9   &kp ES_N0     &kp DEL
-&trans     &mp_exc    &kp ES_AT      &kp ES_EQUAL  &kp ES_AMPS  &none        &kp ES_CARET  &kp ES_PLUS  &mp_lpar    &mp_rpar    &kp ES_MINUS  &kp RSHFT
-&trans     &mp_que    &kp ES_DOLLAR  &kp ES_POUND  &kp ES_PIPE  &none        &none         &mp_ast_per  &mp_brc_lt  &mp_brc_gt  &mp_slash     &kp ES_TILDE
-                                     &trans        &trans       &trans       &trans        &tgl_off 1   &trans
+&kp TAB     &kp Q  &kp W  &kp E      &kp R         &kp T        &kp Y      &kp U  &kp I      &kp O       &kp P           &kp BACKSPACE
+&kp LSHIFT  &kp A  &kp S  &kp D      &kp F         &kp G        &kp H      &kp J  &kp K      &kp L       &kp ES_N_TILDE  &td_shf_cap
+&kp LCTRL   &kp Z  &kp X  &kp C      &kp V         &kp B        &kp N      &kp M  &kp COMMA  &kp PERIOD  &kp ES_ACUTE    &kp RCTRL
+                          &ALT_RALT  &lt 1 ESCAPE  &kp SPACE    &kp ENTER  &mo 2  &kp LGUI
             >;
         };
 
         nav {
             bindings = <
-&kp DEL  &kp LG(ES_Q)  &kp LC(W)     &kp LG(ES_E)  &kp LG(ES_R)  &kp LG(ES_T)    &kp LC(Y)       &kp PG_UP  &kp LC(I)  &kp LC(O)  &kp LC(P)  &kp LC(BACKSPACE)
-&trans   &kp LC(A)     &kp LC(S)     &kp LC(D)     &kp LC(F)     &kp LC(G)       &kp LEFT_ARROW  &kp DOWN   &kp UP     &kp RIGHT  &none      &none
-&trans   &kp LC(Z)     &kp LC(ES_X)  &kp LC(C)     &kp LC(ES_V)  &kp LC(ES_B)    &kp LC(N)       &kp PG_DN  &kp HOME   &kp END    &none      &trans
-                                     &trans        &tgl_off 2    &kp ENTER       &trans          &trans     &trans
+&kp ESCAPE  &kp F1  &kp F2           &kp F3        &kp F4        &kp F5       &kp F6          &kp F7     &kp F8    &kp F9     &kp F10  &kp PAUSE_BREAK
+&trans      &none   &kp PRINTSCREEN  &kp DEL       &none         &none        &kp LEFT_ARROW  &kp DOWN   &kp UP    &kp RIGHT  &kp F11  &trans
+&trans      &none   &kp C_MUTE       &kp C_VOL_DN  &kp C_VOL_UP  &mo 3        &kp PG_UP       &kp PG_DN  &kp HOME  &kp END    &kp F12  &trans
+                                     &trans        &trans        &kp ENTER    &trans          &trans     &trans
             >;
         };
 
-        sys {
+        syn {
             bindings = <
-&none   &kp F1  &kp F2           &kp F3        &kp F4        &kp F5    &kp F6  &kp F7  &kp F8  &kp F9     &kp F10  &kp PAUSE_BREAK
-&trans  &none   &kp PRINTSCREEN  &kp DEL       &none         &none     &none   &none   &none   &kp LG(L)  &kp F11  &kp F12
-&trans  &none   &kp C_MUTE       &kp C_VOL_DN  &kp C_VOL_UP  &mo 5     &none   &none   &none   &none      &none    &trans
-                                 &trans        &trans        &trans    &trans  &trans  &trans
+&la_grave  &kp ES_N1     &kp ES_N2      &kp ES_N3     &kp ES_N4    &kp ES_N5          &kp ES_N6     &kp ES_N7    &kp ES_N8   &kp ES_N9   &kp ES_N0     &trans
+&trans     &kp ES_EXCL   &kp ES_AT      &kp ES_EQUAL  &kp ES_AMPS  &kp ES_QUESTION    &kp ES_CARET  &kp ES_PLUS  &mp_lpar    &mp_rpar    &kp ES_MINUS  &mp_quo
+&trans     &kp ES_IEXCL  &kp ES_DOLLAR  &kp ES_POUND  &kp ES_PIPE  &kp ES_IQMARK      &none         &mp_ast_per  &mp_brc_lt  &mp_brc_gt  &mp_slash     &kp ES_TILDE
+                                        &trans        &trans       &trans             &trans        &trans       &trans
+            >;
+        };
+
+        bth {
+            bindings = <
+&trans       &trans  &trans  &trans  &trans  &trans    &bt BT_SEL 0   &bt BT_SEL 1   &bt BT_SEL 2   &bt BT_SEL 3   &bt BT_SEL 4   &bt BT_CLR
+&trans       &trans  &trans  &trans  &trans  &trans    &bt BT_DISC 0  &bt BT_DISC 1  &bt BT_DISC 2  &bt BT_DISC 3  &bt BT_DISC 4  &trans
+&bootloader  &none   &trans  &none   &none   &trans    &trans         &none          &none          &trans         &none          &bootloader
+                             &trans  &trans  &trans    &trans         &trans         &trans
             >;
         };
 
@@ -462,12 +462,21 @@
             >;
         };
 
-        bth {
+        sys {
             bindings = <
-&trans  &trans       &trans  &trans  &trans  &trans    &bt BT_SEL 0   &bt BT_SEL 1   &bt BT_SEL 2   &bt BT_SEL 3   &bt BT_SEL 4   &bt BT_CLR
-&trans  &trans       &trans  &trans  &trans  &trans    &bt BT_DISC 0  &bt BT_DISC 1  &bt BT_DISC 2  &bt BT_DISC 3  &bt BT_DISC 4  &trans
-&trans  &bootloader  &trans  &none   &none   &trans    &trans         &none          &none          &trans         &bootloader    &bt BT_CLR_ALL
-                             &trans  &trans  &trans    &trans         &trans         &trans
+&none   &kp F1  &kp F2           &kp F3        &kp F4        &kp F5    &kp F6  &kp F7  &kp F8  &kp F9  &kp F10  &kp PAUSE_BREAK
+&trans  &none   &kp PRINTSCREEN  &kp DEL       &none         &none     &none   &none   &none   &none   &kp F11  &kp F12
+&trans  &none   &kp C_MUTE       &kp C_VOL_DN  &kp C_VOL_UP  &mo 3     &none   &none   &none   &none   &none    &trans
+                                 &trans        &trans        &trans    &trans  &trans  &trans
+            >;
+        };
+
+        navbk {
+            bindings = <
+&kp DEL  &kp LG(ES_Q)  &kp LC(W)     &kp LG(ES_E)  &kp LG(ES_R)  &kp LG(ES_T)    &kp LC(Y)       &kp PG_UP  &kp LC(I)  &kp LC(O)  &kp LC(P)  &kp LC(BACKSPACE)
+&trans   &kp LC(A)     &kp LC(S)     &kp LC(D)     &kp LC(F)     &kp LC(G)       &kp LEFT_ARROW  &kp DOWN   &kp UP     &kp RIGHT  &none      &none
+&trans   &kp LC(Z)     &kp LC(ES_X)  &kp LC(C)     &kp LC(ES_V)  &kp LC(ES_B)    &kp LC(N)       &kp PG_DN  &kp HOME   &kp END    &none      &trans
+                                     &trans        &tgl_off 1    &kp ENTER       &trans          &trans     &trans
             >;
         };
     };
@@ -476,7 +485,7 @@
         compatible = "zmk,conditional-layers";
 
         cndwin {
-            if-layers = <1 2>;
+            if-layers = <2 1>;
             then-layer = <4>;
         };
     };
