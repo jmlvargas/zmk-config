@@ -439,7 +439,7 @@
             bindings = <
 &la_grave  &kp ES_N1     &kp ES_N2      &kp ES_N3     &kp ES_N4    &kp ES_N5          &kp ES_N6     &kp ES_N7    &kp ES_N8   &kp ES_N9   &kp ES_N0     &trans
 &trans     &kp ES_EXCL   &kp ES_AT      &kp ES_EQUAL  &kp ES_AMPS  &kp ES_QUESTION    &kp ES_CARET  &kp ES_PLUS  &mp_lpar    &mp_rpar    &kp ES_MINUS  &mp_quo
-&trans     &kp ES_IEXCL  &kp ES_DOLLAR  &kp ES_POUND  &kp ES_PIPE  &kp ES_IQMARK      &none         &mp_ast_per  &mp_brc_lt  &mp_brc_gt  &mp_slash     &kp ES_TILDE
+&trans     &kp ES_IEXCL  &kp ES_DOLLAR  &kp ES_POUND  &kp ES_PIPE  &kp ES_IQMARK      &kp ES_TILDE  &mp_ast_per  &mp_brc_lt  &mp_brc_gt  &mp_slash     &trans
                                         &trans        &trans       &trans             &trans        &trans       &trans
             >;
         };
