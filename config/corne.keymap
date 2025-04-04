@@ -27,25 +27,25 @@
         bootldr_l {
             bindings = <&bootloader>;
             key-positions = <24 29>;
-            layers = <5>;
+            layers = <1>;
         };
 
         bootldr_r {
             bindings = <&bootloader>;
             key-positions = <30 35>;
-            layers = <5>;
+            layers = <1>;
         };
 
         reset_l {
             bindings = <&sys_reset>;
             key-positions = <0 5>;
-            layers = <5>;
+            layers = <1>;
         };
 
         reset_r {
             bindings = <&sys_reset>;
             key-positions = <6 11>;
-            layers = <5>;
+            layers = <1>;
         };
     };
 
@@ -393,7 +393,7 @@
             compatible = "zmk,behavior-tap-dance";
             label = "TD_GUI_SYS";
             #binding-cells = <0>;
-            bindings = <&kp LGUI>, <&mo 5>;
+            bindings = <&kp LGUI>, <&mo 0>;
 
             tapping-term-ms = <250>;
         };
@@ -426,7 +426,7 @@
             >;
         };
 
-        nav {
+        sys {
             bindings = <
 &kp ESCAPE  &kp F1  &kp F2           &kp F3        &kp F4        &kp F5       &kp F6          &kp F7     &kp F8    &kp F9     &kp F10  &kp PAUSE_BREAK
 &trans      &none   &kp PRINTSCREEN  &kp DEL       &none         &none        &kp LEFT_ARROW  &kp DOWN   &kp UP    &kp RIGHT  &kp F11  &trans
@@ -461,31 +461,13 @@
                         &trans  &trans  &trans    &trans      &trans        &trans
             >;
         };
-
-        sys {
-            bindings = <
-&none   &kp F1  &kp F2           &kp F3        &kp F4        &kp F5    &kp F6  &kp F7  &kp F8  &kp F9  &kp F10  &kp PAUSE_BREAK
-&trans  &none   &kp PRINTSCREEN  &kp DEL       &none         &none     &none   &none   &none   &none   &kp F11  &kp F12
-&trans  &none   &kp C_MUTE       &kp C_VOL_DN  &kp C_VOL_UP  &mo 3     &none   &none   &none   &none   &none    &trans
-                                 &trans        &trans        &trans    &trans  &trans  &trans
-            >;
-        };
-
-        navbk {
-            bindings = <
-&kp DEL  &kp LG(ES_Q)  &kp LC(W)     &kp LG(ES_E)  &kp LG(ES_R)  &kp LG(ES_T)    &kp LC(Y)       &kp PG_UP  &kp LC(I)  &kp LC(O)  &kp LC(P)  &kp LC(BACKSPACE)
-&trans   &kp LC(A)     &kp LC(S)     &kp LC(D)     &kp LC(F)     &kp LC(G)       &kp LEFT_ARROW  &kp DOWN   &kp UP     &kp RIGHT  &none      &none
-&trans   &kp LC(Z)     &kp LC(ES_X)  &kp LC(C)     &kp LC(ES_V)  &kp LC(ES_B)    &kp LC(N)       &kp PG_DN  &kp HOME   &kp END    &none      &trans
-                                     &trans        &tgl_off 1    &kp ENTER       &trans          &trans     &trans
-            >;
-        };
     };
 
     conditional_layers {
         compatible = "zmk,conditional-layers";
 
         cndwin {
-            if-layers = <2 1>;
+            if-layers = <1 2>;
             then-layer = <4>;
         };
     };
