@@ -371,33 +371,6 @@
             tapping-term-ms = <200>;
         };
 
-        mp_win_l: mp_win_l {
-            compatible = "zmk,behavior-mod-morph";
-            label = "MP_WIN_L";
-            bindings = <&win_scr_l>, <&win_wks_l>;
-
-            #binding-cells = <0>;
-            mods = <(MOD_LSFT|MOD_RSFT)>;
-        };
-
-        mp_win_r: mp_win_r {
-            compatible = "zmk,behavior-mod-morph";
-            label = "MP_WIN_R";
-            bindings = <&win_scr_r>, <&win_wks_r>;
-
-            #binding-cells = <0>;
-            mods = <(MOD_LSFT|MOD_RSFT)>;
-        };
-
-        td_gui_sys: td_gui_sys {
-            compatible = "zmk,behavior-tap-dance";
-            label = "TD_GUI_SYS";
-            #binding-cells = <0>;
-            bindings = <&kp LGUI>, <&mo 0>;
-
-            tapping-term-ms = <250>;
-        };
-
         mp_ast_per: mp_ast_per {
             compatible = "zmk,behavior-mod-morph";
             label = "MP_AST_PER";
