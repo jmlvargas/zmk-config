@@ -402,8 +402,8 @@
         sys {
             bindings = <
 &kp ESCAPE  &kp F1  &kp F2           &kp F3        &kp F4        &kp F5       &kp F6          &kp F7     &kp F8    &kp F9     &kp F10  &kp PAUSE_BREAK
-&trans      &none   &kp PRINTSCREEN  &kp DEL       &none         &none        &kp LEFT_ARROW  &kp DOWN   &kp UP    &kp RIGHT  &kp F11  &trans
-&trans      &none   &kp C_MUTE       &kp C_VOL_DN  &kp C_VOL_UP  &mo 3        &kp PG_UP       &kp PG_DN  &kp HOME  &kp END    &kp F12  &trans
+&trans      &none   &kp PRINTSCREEN  &kp DEL       &mo 4         &none        &kp LEFT_ARROW  &kp DOWN   &kp UP    &kp RIGHT  &kp F11  &trans
+&trans      &none   &kp C_MUTE       &kp C_VOL_DN  &kp C_VOL_UP  &none        &kp PG_UP       &kp PG_DN  &kp HOME  &kp END    &kp F12  &trans
                                      &trans        &trans        &kp ENTER    &trans          &trans     &trans
             >;
         };
@@ -417,21 +417,21 @@
             >;
         };
 
-        bth {
-            bindings = <
-&none        &none  &none  &none  &none  &none    &bt BT_SEL 0   &bt BT_SEL 1   &bt BT_SEL 2   &bt BT_SEL 3   &bt BT_SEL 4   &bt BT_CLR
-&none        &none  &none  &none  &none  &none    &bt BT_DISC 0  &bt BT_DISC 1  &bt BT_DISC 2  &bt BT_DISC 3  &bt BT_DISC 4  &none
-&bootloader  &none  &none  &none  &none  &none    &none          &none          &none          &none          &none          &bootloader
-                           &none  &none  &none    &none          &none          &none
-            >;
-        };
-
         wkp {
             bindings = <
 &win_roll  &win_close  &win_tile_tl  &win_tile_t  &win_tile_tr  &win_max      &none      &kp N7  &kp N8  &kp N9  &kp N0  &trans
 &trans     &win_scr_l  &win_tile_l   &dsk_show    &win_tile_r   &win_scr_r    &win_hide  &kp N4  &kp N5  &kp N6  &none   &trans
 &trans     &win_wks_l  &win_tile_bl  &win_tile_b  &win_tile_br  &win_wks_r    &wks_nxt   &kp N1  &kp N2  &kp N3  &none   &trans
                                      &none        &none         &none         &none      &none   &none
+            >;
+        };
+
+        bth {
+            bindings = <
+&none        &none         &none       &none       &none  &none    &none  &none  &none  &none  &none  &none
+&none        &bt BT_SEL 0  &bt BT_NXT  &bt BT_CLR  &none  &none    &none  &none  &none  &none  &none  &none
+&bootloader  &none         &none       &none       &none  &none    &none  &none  &none  &none  &none  &bootloader
+                                       &none       &none  &none    &none  &none  &none
             >;
         };
     };
@@ -441,7 +441,7 @@
 
         cndwin {
             if-layers = <1 2>;
-            then-layer = <4>;
+            then-layer = <3>;
         };
     };
 };
