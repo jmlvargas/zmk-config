@@ -392,10 +392,10 @@
             //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
 
             bindings = <
-&kp TAB     &kp Q  &kp W  &kp E      &kp R         &kp T        &kp Y      &kp U  &kp I      &kp O       &kp P           &kp BACKSPACE
-&kp LSHIFT  &kp A  &kp S  &kp D      &kp F         &kp G        &kp H      &kp J  &kp K      &kp L       &kp ES_N_TILDE  &td_shf_cap
-&kp LCTRL   &kp Z  &kp X  &kp C      &kp V         &kp B        &kp N      &kp M  &kp COMMA  &kp PERIOD  &kp ES_ACUTE    &kp RCTRL
-                          &ALT_RALT  &lt 1 ESCAPE  &kp SPACE    &kp ENTER  &mo 2  &kp LGUI
+&kp TAB     &kp Q  &kp W  &kp E             &kp R         &kp T        &kp Y      &kp U  &kp I              &kp O       &kp P           &kp BACKSPACE
+&kp LSHIFT  &kp A  &kp S  &kp D             &kp F         &kp G        &kp H      &kp J  &kp K              &kp L       &kp ES_N_TILDE  &td_shf_cap
+&ALT_RALT   &kp Z  &kp X  &kp C             &kp V         &kp B        &kp N      &kp M  &kp COMMA          &kp PERIOD  &kp ES_ACUTE    &kp LWIN
+                          &kp LEFT_CONTROL  &lt 1 ESCAPE  &kp SPACE    &kp ENTER  &mo 2  &kp RIGHT_CONTROL
             >;
         };
 
@@ -422,7 +422,7 @@
 &win_roll  &win_close  &win_tile_tl  &win_tile_t  &win_tile_tr  &win_max      &none      &kp N7  &kp N8  &kp N9  &kp N0  &trans
 &trans     &win_scr_l  &win_tile_l   &dsk_show    &win_tile_r   &win_scr_r    &win_hide  &kp N4  &kp N5  &kp N6  &none   &trans
 &trans     &win_wks_l  &win_tile_bl  &win_tile_b  &win_tile_br  &win_wks_r    &wks_nxt   &kp N1  &kp N2  &kp N3  &none   &trans
-                                     &none        &none         &none         &none      &none   &none
+                                     &trans       &none         &none         &none      &none   &trans
             >;
         };
 
