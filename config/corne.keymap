@@ -399,7 +399,7 @@
             >;
         };
 
-        sys {
+        fun {
             bindings = <
 &kp ESCAPE  &kp F1  &kp F2           &kp F3        &kp F4        &kp F5       &kp F6          &kp F7     &kp F8    &kp F9     &kp F10  &kp PAUSE_BREAK
 &trans      &none   &kp PRINTSCREEN  &kp DEL       &mo 4         &none        &kp LEFT_ARROW  &kp DOWN   &kp UP    &kp RIGHT  &kp F11  &trans
@@ -408,7 +408,7 @@
             >;
         };
 
-        syn {
+        sym {
             bindings = <
 &la_grave  &kp ES_N1     &kp ES_N2      &kp ES_N3     &kp ES_N4    &kp ES_N5          &kp ES_N6     &kp ES_N7    &kp ES_N8   &kp ES_N9   &kp ES_N0     &trans
 &trans     &kp ES_EXCL   &kp ES_AT      &kp ES_EQUAL  &kp ES_AMPS  &kp ES_QUESTION    &kp ES_CARET  &kp ES_PLUS  &mp_lpar    &mp_rpar    &kp ES_MINUS  &mp_quo
