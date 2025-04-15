@@ -151,7 +151,7 @@
         win_tile_tl: win_tile_tl {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LG(LS(LEFT))>;
+            bindings = <&kp LG(LA(LC(LEFT)))>;
             label = "WIN_TILE_TL";
         };
 
@@ -165,7 +165,7 @@
         win_tile_tr: win_tile_tr {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LG(LS(RIGHT))>;
+            bindings = <&kp LG(LA(LC(RIGHT)))>;
             label = "WIN_TILE_TR";
         };
 
@@ -207,14 +207,14 @@
         win_scr_l: win_mv_l {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LG(LC(LA(LEFT)))>;
+            bindings = <&kp LG(LS(LEFT))>;
             label = "WIN_MV_L";
         };
 
         win_scr_r: win_mv_r {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LG(LC(LA(RIGHT)))>;
+            bindings = <&kp LG(LS(RIGHT))>;
             label = "WIN_MV_R";
         };
 
