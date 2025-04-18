@@ -5,6 +5,7 @@
  */
 
 #define ZMK_POINTING_DEFAULT_MOVE_VAL 1000
+
 // #define ZMK_POINTING_DEFAULT_SCRL_VAL 20
 
 #include "keys_es_latin_american.h"
@@ -23,6 +24,8 @@
     tapping-term-ms = <160>;
     quick-tap-ms = <150>;
 };
+
+&mmv { time-to-max-speed-ms = <500>; };
 
 / {
     combos {
