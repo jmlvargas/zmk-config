@@ -3,9 +3,7 @@
  *
  * SPDX-License-Identifier: MIT
  */
-
 // #define ZMK_POINTING_DEFAULT_MOVE_VAL 1000
-
 // #define ZMK_POINTING_DEFAULT_SCRL_VAL 20
 
 #include "keys_es_latin_american.h"
@@ -408,10 +406,10 @@
 
         fun {
             bindings = <
-&kp ESCAPE  &kp F1  &kp F2           &kp F3        &kp F4        &kp F5       &kp F6          &kp F7     &kp F8    &kp F9     &kp F10  &kp PAUSE_BREAK
-&trans      &none   &kp PRINTSCREEN  &kp DEL       &mo 5         &none        &kp LEFT_ARROW  &kp DOWN   &kp UP    &kp RIGHT  &kp F11  &trans
-&trans      &none   &kp C_MUTE       &kp C_VOL_DN  &kp C_VOL_UP  &mo 4        &kp PG_UP       &kp PG_DN  &kp HOME  &kp END    &kp F12  &trans
-                                     &trans        &trans        &kp ENTER    &trans          &trans     &trans
+&kp ESCAPE  &kp F1     &kp F2           &kp F3        &kp F4        &kp F5    &kp F6          &kp F7     &kp F8    &kp F9     &kp F10  &kp PAUSE_BREAK
+&trans      &kp ENTER  &kp PRINTSCREEN  &kp DEL       &mo 5         &none     &kp LEFT_ARROW  &kp DOWN   &kp UP    &kp RIGHT  &kp F11  &trans
+&trans      &none      &kp C_MUTE       &kp C_VOL_DN  &kp C_VOL_UP  &mo 4     &kp PG_UP       &kp PG_DN  &kp HOME  &kp END    &kp F12  &trans
+                                        &trans        &trans        &trans    &trans          &trans     &trans
             >;
         };
 
