@@ -415,12 +415,12 @@
             >;
         };
 
-        dvk {
+        cmk {
             bindings = <
-&trans  &kp ES_DOT  &kp ES_COMMA  &kp ES_N_TILDE  &kp P   &kp Y     &kp F   &kp G   &kp C   &kp H  &kp L         &trans
-&trans  &kp A       &kp O         &kp E           &kp U   &kp I     &kp D   &kp R   &kp T   &kp N  &kp S         &trans
-&trans  &kp Z       &kp Q         &kp J           &kp K   &kp X     &kp B   &kp M   &kp W   &kp V  &kp ES_ACUTE  &trans
-                                  &trans          &trans  &trans    &trans  &trans  &trans
+&trans  &kp Q  &kp W  &kp F   &kp T   &kp G     &kp J   &kp L   &kp U         &kp Y       &kp ES_N_TILDE  &trans
+&trans  &kp A  &kp R  &kp S   &kp N   &kp D     &kp P   &kp O   &kp E         &kp I       &kp H           &trans
+&trans  &kp Z  &kp X  &kp C   &kp V   &kp B     &kp K   &kp M   &kp ES_COMMA  &kp ES_DOT  &kp ES_ACUTE    &trans
+                      &trans  &trans  &trans    &trans  &trans  &trans
             >;
         };
 
@@ -455,7 +455,7 @@
             bindings = <
 &none        &none         &none       &none       &none  &none    &none  &none  &none  &none  &none  &none
 &none        &bt BT_SEL 0  &bt BT_NXT  &bt BT_CLR  &none  &none    &none  &none  &none  &none  &none  &none
-&bootloader  &tog 1        &none       &none       &none  &none    &none  &none  &none  &none  &none  &bootloader
+&bootloader  &tog 1        &tog 0      &none       &none  &none    &none  &none  &none  &none  &none  &bootloader
                                        &none       &none  &none    &none  &none  &none
             >;
         };
