@@ -455,7 +455,7 @@
             bindings = <
 &none        &none         &none       &none       &none  &none    &none  &none  &none  &none  &none  &none
 &none        &bt BT_SEL 0  &bt BT_NXT  &bt BT_CLR  &none  &none    &none  &none  &none  &none  &none  &none
-&bootloader  &tog 1        &tog 0      &none       &none  &none    &none  &none  &none  &none  &none  &bootloader
+&bootloader  &tog 1        &none       &none       &none  &none    &none  &none  &none  &none  &none  &bootloader
                                        &none       &none  &none    &none  &none  &none
             >;
         };
