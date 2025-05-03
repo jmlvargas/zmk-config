@@ -426,10 +426,10 @@
 
         fun {
             bindings = <
-&trans  &kp F1     &kp F2           &kp F3           &kp F4        &kp F5    &kp F6          &kp F7     &kp F8    &kp F9     &kp F10  &trans
-&trans  &kp ENTER  &kp PRINTSCREEN  &kp DEL          &kp C_VOL_UP  &none     &kp LEFT_ARROW  &kp DOWN   &kp UP    &kp RIGHT  &kp F11  &trans
-&trans  &none      &kp C_MUTE       &kp PAUSE_BREAK  &kp C_VOL_DN  &mo 5     &kp PG_UP       &kp PG_DN  &kp HOME  &kp END    &kp F12  &trans
-                                    &trans           &trans        &trans    &trans          &trans     &kp LWIN
+&trans  &kp F1      &kp F2           &kp F3           &kp F4        &kp F5    &kp F6          &kp F7     &kp F8    &kp F9     &kp F10  &trans
+&trans  &kp ENTER   &kp PRINTSCREEN  &kp DEL          &kp C_VOL_UP  &none     &kp LEFT_ARROW  &kp DOWN   &kp UP    &kp RIGHT  &kp F11  &trans
+&trans  &kp INSERT  &kp C_MUTE       &kp PAUSE_BREAK  &kp C_VOL_DN  &mo 5     &kp PG_UP       &kp PG_DN  &kp HOME  &kp END    &kp F12  &trans
+                                     &trans           &trans        &trans    &trans          &trans     &kp LWIN
             >;
         };
 
