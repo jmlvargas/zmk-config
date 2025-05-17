@@ -424,7 +424,7 @@
         SHFT_QUO: SHFT_QUO {
             compatible = "zmk,behavior-hold-tap";
             label = "SHFT_QUO";
-            bindings = <&MRSHIFT>, <&SNGDBL_Q>;
+            bindings = <&kp>, <&SNGDBL_Q>;
 
             #binding-cells = <2>;
             tapping-term-ms = <200>;
@@ -473,7 +473,7 @@
         sym {
             bindings = <
 &la_grave  &kp ES_N1     &kp ES_N2      &kp ES_N3     &kp ES_N4    &kp ES_N5          &kp ES_N6    &kp ES_N7    &kp ES_N8  &kp ES_N9  &kp ES_N0     &TLD_CRT
-&trans     &kp ES_EXCL   &kp ES_AT      &kp ES_EQUAL  &kp ES_AMPS  &kp ES_QUESTION    &kp ES_PLUS  &kp ES_LBRC  &mp_lpar   &mp_rpar   &kp ES_MINUS  &SHFT_QUO 0 0
+&trans     &kp ES_EXCL   &kp ES_AT      &kp ES_EQUAL  &kp ES_AMPS  &kp ES_QUESTION    &kp ES_PLUS  &kp ES_LBRC  &mp_lpar   &mp_rpar   &kp ES_MINUS  &SHFT_QUO RSHIFT 0
 &trans     &kp ES_IEXCL  &kp ES_DOLLAR  &kp ES_POUND  &kp ES_PIPE  &kp ES_IQMARK      &AST_PER     &kp ES_RBRC  &kp ES_LT  &kp ES_GT  &DIV_SLH      &trans
                                         &kp RALT      &trans       &trans             &trans       &trans       &kp LWIN
             >;
