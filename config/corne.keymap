@@ -235,13 +235,6 @@
             bindings = <&kp LG(LC(RIGHT))>;
             label = "WIN_WKS_R";
         };
-
-        MRSHIFT: MRSHIFT {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp RIGHT_SHIFT>;
-            label = "MRSHIFT";
-        };
     };
 
     behaviors {
@@ -255,15 +248,6 @@
             flavor = "tap-preferred";
         };
 
-        mp_quo: mp_quo {
-            compatible = "zmk,behavior-mod-morph";
-            label = "MP_QUO";
-            bindings = <&kp ES_SINGLE_QUOTE>, <&kp ES_DOUBLE_QUOTES>;
-
-            #binding-cells = <0>;
-            mods = <(MOD_LSFT|MOD_RSFT)>;
-        };
-
         ht_h: ht_h {
             compatible = "zmk,behavior-hold-tap";
             label = "HT_H";
@@ -274,17 +258,6 @@
             hold-trigger-key-positions = <1 2 3 4 5 13 14 15 16 17 25 26 27 28 29 6 7 8 9 10 18 19 20 21 22 30 31 32 33 34 11 0 23 35 24 12 38 39>;
             flavor = "balanced";
             hold-while-undecided;
-        };
-
-        ht_hp: ht_hp {
-            compatible = "zmk,behavior-hold-tap";
-            label = "HT_HP";
-            bindings = <&kp>, <&kp>;
-
-            #binding-cells = <2>;
-            tapping-term-ms = <160>;
-            hold-trigger-key-positions = <1 2 3 4 5 13 14 15 16 17 25 26 27 28 29 6 7 8 9 10 18 19 20 21 22 30 31 32 33 34 11 0 23 35 41 36 24 12 38 39>;
-            flavor = "hold-preferred";
         };
 
         td_shf_cap: td_shf_cap {
