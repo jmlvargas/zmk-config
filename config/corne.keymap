@@ -438,7 +438,7 @@
         fun {
             bindings = <
 &trans  &kp F1      &kp F2           &kp F3           &kp F4        &kp F5          &kp F6          &kp F7     &kp F8    &kp F9     &kp F10  &trans
-&trans  &kp ENTER   &kp PRINTSCREEN  &kp DEL          &kp C_VOL_UP  &kp CAPSLOCK    &kp LEFT_ARROW  &kp DOWN   &kp UP    &kp RIGHT  &kp F11  &trans
+&trans  &kp ENTER   &kp PRINTSCREEN  &kp DEL          &kp C_VOL_UP  &kp CAPSLOCK    &kp LEFT_ARROW  &kp DOWN   &kp UP    &kp RIGHT  &kp F11  &kp RSHIFT
 &trans  &kp INSERT  &kp C_MUTE       &kp PAUSE_BREAK  &kp C_VOL_DN  &mo 5           &kp PG_UP       &kp PG_DN  &kp HOME  &kp END    &kp F12  &trans
                                      &trans           &trans        &trans          &trans          &trans     &kp LWIN
             >;
@@ -447,7 +447,7 @@
         sym {
             bindings = <
 &la_grave  &kp ES_N1     &kp ES_N2      &kp ES_N3     &kp ES_N4    &kp ES_N5       &kp ES_N6    &kp ES_N7    &kp ES_N8  &kp ES_N9  &kp ES_N0     &trans
-&trans     &EXCMRKS      &kp ES_AT      &kp ES_EQUAL  &kp ES_AMPS  &QUEMRKS        &kp ES_PLUS  &kp ES_LBRC  &mp_lpar   &mp_rpar   &kp ES_MINUS  &SHFT_QUO RSHIFT 0
+&trans     &EXCMRKS      &kp ES_AT      &kp ES_EQUAL  &kp ES_AMPS  &QUEMRKS        &kp ES_PLUS  &kp ES_LBRC  &mp_lpar   &mp_rpar   &kp ES_MINUS  &kp RSHIFT
 &trans     &kp ES_TILDE  &kp ES_DOLLAR  &kp ES_POUND  &kp ES_PIPE  &kp ES_CARET    &AST_PER     &kp ES_RBRC  &kp ES_LT  &kp ES_GT  &DIV_SLH      &trans
                                         &kp RALT      &trans       &trans          &trans       &trans       &kp LWIN
             >;
@@ -456,7 +456,7 @@
         wkp {
             bindings = <
 &win_roll  &win_close  &win_tile_tl  &win_tile_t  &win_tile_tr  &win_max      &none      &kp N7  &kp N8    &kp N9  &kp N0  &trans
-&trans     &win_scr_l  &win_tile_l   &dsk_show    &win_tile_r   &win_scr_r    &win_hide  &kp N4  &kp N5    &kp N6  &none   &trans
+&trans     &win_scr_l  &win_tile_l   &dsk_show    &win_tile_r   &win_scr_r    &win_hide  &kp N4  &kp N5    &kp N6  &none   &kp RSHIFT
 &trans     &win_wks_l  &win_tile_bl  &win_tile_b  &win_tile_br  &win_wks_r    &wks_nxt   &kp N1  &kp N2    &kp N3  &none   &trans
                                      &trans       &none         &none         &none      &none   &kp LWIN
             >;
