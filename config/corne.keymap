@@ -406,6 +406,14 @@
             quick-tap-ms = <200>;
             retro-tap;
         };
+
+        TILDE_WIN: TILDE_WIN {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TILDE_WIN";
+            #binding-cells = <0>;
+            tapping-term-ms = <300>;
+            bindings = <&kp ES_ACUTE>, <&kp LWIN>;
+        };
     };
 
     keymap {
@@ -419,10 +427,10 @@
             //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
 
             bindings = <
-&kp TAB                   &kp Q  &kp W  &kp E     &kp R  &kp T        &kp Y      &kp U  &kp I      &kp O       &kp P           &kp BACKSPACE
-&kp LSHIFT                &kp A  &kp S  &kp D     &kp F  &kp G        &kp H      &kp J  &kp K      &kp L       &kp ES_N_TILDE  &SHFT_QUO RSHIFT 0
-&HHT LEFT_CONTROL ESCAPE  &kp Z  &kp X  &kp C     &kp V  &kp B        &kp N      &kp M  &kp COMMA  &kp PERIOD  &kp ES_ACUTE    &HHT RIGHT_CONTROL ESCAPE
-                                        &kp LALT  &mo 2  &kp SPACE    &kp ENTER  &mo 3  &WIN_CTX
+&kp TAB                   &kp Q  &kp W  &kp E     &kp R  &kp T        &kp Y      &kp U  &kp I       &kp O       &kp P           &kp BACKSPACE
+&kp LSHIFT                &kp A  &kp S  &kp D     &kp F  &kp G        &kp H      &kp J  &kp K       &kp L       &kp ES_N_TILDE  &SHFT_QUO RSHIFT 0
+&HHT LEFT_CONTROL ESCAPE  &kp Z  &kp X  &kp C     &kp V  &kp B        &kp N      &kp M  &kp COMMA   &kp PERIOD  &kp ES_ACUTE    &HHT RIGHT_CONTROL ESCAPE
+                                        &kp LALT  &mo 2  &kp SPACE    &kp ENTER  &mo 3  &TILDE_WIN
             >;
         };
 
