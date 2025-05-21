@@ -449,9 +449,9 @@
 
         cmk {
             bindings = <
-&trans  &kp W  &kp Q  &kp F   &kp P   &kp G     &kp J   &kp L   &kp U         &kp Y       &kp ES_N_TILDE  &trans
-&trans  &kp A  &kp R  &kp S   &kp D   &kp B     &kp M   &kp N   &kp O         &kp E       &kp I           &trans
-&trans  &kp Z  &kp X  &kp C   &kp T   &kp V     &kp K   &kp H   &kp ES_COMMA  &kp ES_DOT  &trans          &trans
+&trans  &kp Q  &kp W  &kp F   &kp P   &kp G     &kp J   &kp L   &kp U         &kp Y       &kp ES_N_TILDE  &trans
+&trans  &kp A  &kp R  &kp S   &kp T   &kp D     &kp H   &kp N   &kp E         &kp I       &kp O           &trans
+&trans  &kp Z  &kp X  &kp C   &kp V   &kp B     &kp K   &kp M   &kp ES_COMMA  &kp ES_DOT  &trans          &trans
                       &trans  &trans  &trans    &trans  &trans  &trans
             >;
         };
