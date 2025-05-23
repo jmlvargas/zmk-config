@@ -466,19 +466,19 @@
 
         fun {
             bindings = <
-&kp F12  &kp F1      &kp F2           &kp F3           &kp F4        &kp F5          &kp F6          &kp F7     &kp F8    &kp F9     &kp F10  &kp F11
-&trans   &kp ENTER   &kp PRINTSCREEN  &kp DEL          &kp C_VOL_UP  &kp CAPSLOCK    &kp LEFT_ARROW  &kp DOWN   &kp UP    &kp RIGHT  &none    &trans
-&trans   &kp INSERT  &kp C_MUTE       &kp PAUSE_BREAK  &kp C_VOL_DN  &mo 5           &kp PG_UP       &kp PG_DN  &kp HOME  &kp END    &none    &trans
-                                      &trans           &trans        &trans          &trans          &trans     &trans
+&kp F12  &kp F1      &kp F2           &kp F3           &kp F4        &kp F5          &kp F6       &kp F7       &kp F8       &kp F9       &kp F10       &kp F11
+&trans   &kp ENTER   &kp PRINTSCREEN  &kp DEL          &kp C_VOL_UP  &kp CAPSLOCK    &kp ES_LBRC  &kp ES_RBRC  &kp ES_LPAR  &kp ES_RPAR  &kp ES_MINUS  &trans
+&trans   &kp INSERT  &kp C_MUTE       &kp PAUSE_BREAK  &kp C_VOL_DN  &mo 5           &kp ES_LBKT  &kp ES_RBKT  &kp ES_LT    &kp ES_GT    &QUOTES       &trans
+                                      &trans           &trans        &trans          &trans       &trans       &trans
             >;
         };
 
         sym {
             bindings = <
-&la_grave  &kp ES_N1     &TWO_AT      &kp ES_N3    &kp ES_N4     &kp ES_N5       &kp ES_N6    &kp ES_N7    &kp ES_N8    &kp ES_N9    &kp ES_N0     &trans
-&trans     &EXCMRKS      &kp ES_PLUS  &kp ES_AMPS  &kp ES_EQUAL  &QUEMRKS        &kp ES_LBRC  &kp ES_RBRC  &kp ES_LPAR  &kp ES_RPAR  &kp ES_MINUS  &trans
-&trans     &kp ES_TILDE  &kp ES_STAR  &kp ES_PIPE  &DIV_SLH      &kp ES_CARET    &kp ES_LBKT  &kp ES_RBKT  &kp ES_LT    &kp ES_GT    &QUOTES       &trans
-                                      &kp RALT     &trans        &trans          &trans       &trans       &trans
+&la_grave  &kp ES_N1     &TWO_AT      &kp ES_N3    &kp ES_N4     &kp ES_N5       &kp ES_N6    &kp ES_N7       &kp ES_N8     &kp ES_N9        &kp ES_N0     &trans
+&trans     &EXCMRKS      &kp ES_PLUS  &kp ES_AMPS  &kp ES_EQUAL  &QUEMRKS        &kp LEFT     &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT_ARROW  &kp ES_MINUS  &trans
+&trans     &kp ES_TILDE  &kp ES_STAR  &kp ES_PIPE  &DIV_SLH      &kp ES_CARET    &kp PAGE_UP  &kp PAGE_DOWN   &kp HOME      &kp END          &QUOTES       &trans
+                                      &kp RALT     &trans        &trans          &trans       &trans          &trans
             >;
         };
 
@@ -497,6 +497,24 @@
 &none        &bt BT_SEL 0  &bt BT_NXT  &bt BT_CLR  &none  &none    &none  &none  &none  &none         &none  &none
 &bootloader  &tog 1        &none       &none       &none  &none    &none  &none  &none  &none         &none  &bootloader
                                        &none       &none  &none    &none  &none  &none
+            >;
+        };
+
+        layer_6 {
+            bindings = <
+&kp F12  &kp F1      &kp F2           &kp F3           &kp F4        &kp F5          &kp F6          &kp F7     &kp F8    &kp F9     &kp F10  &kp F11
+&trans   &kp ENTER   &kp PRINTSCREEN  &kp DEL          &kp C_VOL_UP  &kp CAPSLOCK    &kp LEFT_ARROW  &kp DOWN   &kp UP    &kp RIGHT  &none    &trans
+&trans   &kp INSERT  &kp C_MUTE       &kp PAUSE_BREAK  &kp C_VOL_DN  &mo 5           &kp PG_UP       &kp PG_DN  &kp HOME  &kp END    &none    &trans
+                                      &trans           &trans        &trans          &trans          &trans     &trans
+            >;
+        };
+
+        layer_7 {
+            bindings = <
+&la_grave  &kp ES_N1     &TWO_AT      &kp ES_N3    &kp ES_N4     &kp ES_N5       &kp ES_N6    &kp ES_N7    &kp ES_N8    &kp ES_N9    &kp ES_N0     &trans
+&trans     &EXCMRKS      &kp ES_PLUS  &kp ES_AMPS  &kp ES_EQUAL  &QUEMRKS        &kp ES_LBRC  &kp ES_RBRC  &kp ES_LPAR  &kp ES_RPAR  &kp ES_MINUS  &trans
+&trans     &kp ES_TILDE  &kp ES_STAR  &kp ES_PIPE  &DIV_SLH      &kp ES_CARET    &kp ES_LBKT  &kp ES_RBKT  &kp ES_LT    &kp ES_GT    &QUOTES       &trans
+                                      &kp RALT     &trans        &trans          &trans       &trans       &trans
             >;
         };
     };
