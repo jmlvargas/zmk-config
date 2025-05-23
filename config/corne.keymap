@@ -430,7 +430,7 @@
         TWO_AT: TWO_AT {
             compatible = "zmk,behavior-mod-morph";
             label = "TWO_AT";
-            bindings = <&kp ES_N2>, <&kp AT_SIGN>;
+            bindings = <&kp ES_N2>, <&kp ES_AT>;
 
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
