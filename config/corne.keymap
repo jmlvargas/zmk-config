@@ -304,7 +304,7 @@
             #binding-cells = <0>;
             bindings = <&mo 3>, <&kp RIGHT_CONTROL>;
 
-            tapping-term-ms = <120>;
+            tapping-term-ms = <160>;
         };
 
         TDLCTRL: TDLCTRL {
@@ -313,7 +313,7 @@
             #binding-cells = <0>;
             bindings = <&mo 2>, <&kp RIGHT_CONTROL>;
 
-            tapping-term-ms = <120>;
+            tapping-term-ms = <160>;
         };
     };
 
