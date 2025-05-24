@@ -467,8 +467,8 @@
         fun {
             bindings = <
 &kp F12  &kp F1      &kp F2           &kp F3           &kp F4        &kp F5          &kp F6       &kp F7       &kp F8       &kp F9       &kp F10               &kp F11
-&trans   &kp ENTER   &kp PRINTSCREEN  &kp DEL          &kp C_VOL_UP  &kp CAPSLOCK    &kp ES_LBRC  &kp ES_RBRC  &kp ES_LPAR  &kp ES_RPAR  &kp ES_DOUBLE_QUOTES  &trans
-&trans   &kp INSERT  &kp C_MUTE       &kp PAUSE_BREAK  &kp C_VOL_DN  &mo 5           &kp ES_LBKT  &kp ES_RBKT  &kp ES_LT    &kp ES_GT    &kp ES_SINGLE_QUOTE   &trans
+&trans   &kp ENTER   &kp PRINTSCREEN  &kp DEL          &kp C_VOL_UP  &kp CAPSLOCK    &kp ES_LBRC  &kp ES_RBRC  &kp ES_LPAR  &kp ES_RPAR  &kp ES_DOUBLE_QUOTES  &kp ES_SINGLE_QUOTE
+&trans   &kp INSERT  &kp C_MUTE       &kp PAUSE_BREAK  &kp C_VOL_DN  &mo 5           &kp ES_LBKT  &kp ES_RBKT  &kp ES_LT    &kp ES_GT    &none                 &trans
                                       &trans           &trans        &trans          &trans       &trans       &trans
             >;
         };
