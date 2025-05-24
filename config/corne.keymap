@@ -297,6 +297,15 @@
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
+
+        TDWIN: TDWIN {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TDWIN";
+            #binding-cells = <0>;
+            bindings = <&kp LEFT_WIN>, <&mo 5>;
+
+            tapping-term-ms = <120>;
+        };
     };
 
     keymap {
@@ -331,7 +340,7 @@
 &kp F12  &kp F1      &kp F2           &kp F3           &kp F4        &kp F5          &kp F6                &kp F7       &kp F8       &kp F9       &kp F10       &kp F11
 &trans   &kp ENTER   &kp PRINTSCREEN  &kp DEL          &kp C_VOL_UP  &kp CAPSLOCK    &kp ES_SINGLE_QUOTE   &kp ES_LBRC  &kp ES_LPAR  &kp ES_RPAR  &kp ES_SEMI   &trans
 &trans   &kp INSERT  &kp C_MUTE       &kp PAUSE_BREAK  &kp C_VOL_DN  &mo 6           &kp ES_DOUBLE_QUOTES  &kp ES_RBRC  &kp ES_LT    &kp ES_GT    &kp ES_COLON  &trans
-                                      &trans           &trans        &trans          &trans                &trans       &trans
+                                      &trans           &trans        &trans          &trans                &trans       &mo 5
             >;
         };
 
