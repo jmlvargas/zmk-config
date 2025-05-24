@@ -298,11 +298,20 @@
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
-        TDMOV: TDMOV {
+        TDRCTRL: TDRCTRL {
             compatible = "zmk,behavior-tap-dance";
-            label = "TDMOV";
+            label = "TDRCTRL";
             #binding-cells = <0>;
-            bindings = <&mo 3>, <&mo 0>;
+            bindings = <&mo 3>, <&kp RIGHT_CONTROL>;
+
+            tapping-term-ms = <120>;
+        };
+
+        TDLCTRL: TDLCTRL {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TDLCTRL";
+            #binding-cells = <0>;
+            bindings = <&mo 2>, <&kp RIGHT_CONTROL>;
 
             tapping-term-ms = <120>;
         };
@@ -319,10 +328,10 @@
             //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
 
             bindings = <
-&kp TAB                   &kp Q  &kp W  &kp E     &kp R  &kp T        &kp Y      &kp U  &kp I         &kp O       &kp P           &kp BACKSPACE
-&kp LSHIFT                &kp A  &kp S  &kp D     &kp F  &kp G        &kp H      &kp J  &kp K         &kp L       &kp ES_N_TILDE  &kp RSHIFT
-&HHT LEFT_CONTROL ESCAPE  &kp Z  &kp X  &kp C     &kp V  &kp B        &kp N      &kp M  &kp COMMA     &kp PERIOD  &kp ES_ACUTE    &HHT RIGHT_CONTROL ESCAPE
-                                        &kp LALT  &mo 2  &kp SPACE    &kp ENTER  &mo 3  &kp LEFT_WIN
+&kp TAB                   &kp Q  &kp W  &kp E     &kp R     &kp T        &kp Y      &kp U     &kp I         &kp O       &kp P           &kp BACKSPACE
+&kp LSHIFT                &kp A  &kp S  &kp D     &kp F     &kp G        &kp H      &kp J     &kp K         &kp L       &kp ES_N_TILDE  &kp RSHIFT
+&HHT LEFT_CONTROL ESCAPE  &kp Z  &kp X  &kp C     &kp V     &kp B        &kp N      &kp M     &kp COMMA     &kp PERIOD  &kp ES_ACUTE    &HHT RIGHT_CONTROL ESCAPE
+                                        &kp LALT  &TDLCTRL  &kp SPACE    &kp ENTER  &TDRCTRL  &kp LEFT_WIN
             >;
         };
 
