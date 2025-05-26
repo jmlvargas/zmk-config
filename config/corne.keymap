@@ -347,8 +347,8 @@
         fun {
             bindings = <
 &kp F12  &kp F1      &kp F2           &kp F3           &kp F4        &kp F5          &kp F6         &kp F7       &kp F8       &kp F9       &kp F10               &kp F11
-&trans   &kp ENTER   &kp PRINTSCREEN  &kp DEL          &kp C_VOL_UP  &kp CAPSLOCK    &trans         &kp ES_LBRC  &kp ES_LPAR  &kp ES_RPAR  &kp ES_DOUBLE_QUOTES  &trans
-&trans   &kp INSERT  &kp C_MUTE       &kp PAUSE_BREAK  &kp C_VOL_DN  &mo 6           &trans         &kp ES_RBRC  &kp ES_LT    &kp ES_GT    &kp ES_SINGLE_QUOTE   &trans
+&trans   &kp ENTER   &kp PRINTSCREEN  &kp DEL          &kp C_VOL_UP  &kp CAPSLOCK    &kp ES_LBKT    &kp ES_LBRC  &kp ES_LPAR  &kp ES_RPAR  &kp ES_DOUBLE_QUOTES  &trans
+&trans   &kp INSERT  &kp C_MUTE       &kp PAUSE_BREAK  &kp C_VOL_DN  &mo 6           &kp ES_RBKT    &kp ES_RBRC  &kp ES_LT    &kp ES_GT    &kp ES_SINGLE_QUOTE   &trans
                                       &trans           &trans        &trans          &kp BACKSPACE  &trans       &mo 5
             >;
         };
@@ -364,9 +364,9 @@
 
         xsm {
             bindings = <
-&trans  &trans        &kp ES_AT     &kp ES_POUND  &kp ES_DOLLAR  &kp ES_PERCENT    &trans  &trans  &trans       &trans       &trans            &trans
-&trans  &kp ES_IEXCL  &kp ES_UNDER  &trans        &trans         &trans            &trans  &trans  &kp ES_LBKT  &kp ES_RBKT  &kp ES_SEMICOLON  &trans
-&trans  &kp ES_CARET  &trans        &trans        &kp ES_BSLH    &kp ES_IQMARK     &trans  &trans  &trans       &trans       &kp ES_COLON      &trans
+&trans  &trans        &kp ES_AT     &kp ES_POUND  &kp ES_DOLLAR  &kp ES_PERCENT    &trans  &trans  &trans  &trans  &trans            &trans
+&trans  &kp ES_IEXCL  &kp ES_UNDER  &trans        &trans         &trans            &trans  &trans  &trans  &trans  &kp ES_SEMICOLON  &trans
+&trans  &kp ES_CARET  &trans        &trans        &kp ES_BSLH    &kp ES_IQMARK     &trans  &trans  &trans  &trans  &kp ES_COLON      &trans
                                     &trans        &trans         &trans            &trans  &trans  &trans
             >;
         };
