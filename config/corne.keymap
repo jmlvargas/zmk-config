@@ -322,7 +322,7 @@
             #binding-cells = <0>;
             bindings = <&kp BACKSPACE>, <&kp LC(BACKSPACE)>;
 
-            tapping-term-ms = <160>;
+            tapping-term-ms = <180>;
         };
     };
 
