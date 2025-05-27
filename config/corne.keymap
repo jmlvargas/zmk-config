@@ -364,9 +364,9 @@
 
         xsm {
             bindings = <
-&kp ES_IQMARK  &kp ES_CARET  &kp ES_AT     &kp ES_POUND  &kp ES_DOLLAR  &kp ES_PERCENT    &trans  &trans  &trans  &trans  &trans  &trans
+&kp ES_IQMARK  &kp ES_EXCL   &kp ES_AT     &kp ES_POUND  &kp ES_DOLLAR  &kp ES_PERCENT    &trans  &trans  &trans  &trans  &trans  &trans
 &trans         &kp ES_IEXCL  &kp ES_UNDER  &trans        &trans         &trans            &trans  &trans  &trans  &trans  &trans  &trans
-&trans         &trans        &trans        &trans        &kp ES_BSLH    &trans            &trans  &trans  &trans  &trans  &trans  &trans
+&trans         &kp ES_CARET  &trans        &trans        &kp ES_BSLH    &trans            &trans  &trans  &trans  &trans  &trans  &trans
                                            &trans        &trans         &trans            &trans  &trans  &trans
             >;
         };
