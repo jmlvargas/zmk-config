@@ -347,9 +347,9 @@
         fun {
             bindings = <
 &kp F7  &kp F8     &kp F9           &kp F10  &kp F11     &kp F12    &kp C_VOLUME_DOWN  &kp C_VOL_UP  &kp INSERT   &kp CAPSLOCK  &kp ES_SINGLE_QUOTE   &kp PAUSE_BREAK
-&trans  &kp ENTER  &kp PRINTSCREEN  &kp DEL  &kp C_MUTE  &mo 6      &kp ES_LBKT        &kp ES_LBRC   &kp ES_LPAR  &kp ES_RPAR   &kp ES_DOUBLE_QUOTES  &trans
+&trans  &kp ENTER  &kp PRINTSCREEN  &kp DEL  &kp C_MUTE  &mo 5      &kp ES_LBKT        &kp ES_LBRC   &kp ES_LPAR  &kp ES_RPAR   &kp ES_DOUBLE_QUOTES  &trans
 &trans  &kp F2     &kp F3           &kp F4   &kp F5      &kp F6     &kp ES_RBKT        &kp ES_RBRC   &kp ES_LT    &kp ES_GT     &kp F1                &trans
-                                    &trans   &trans      &trans     &trans             &trans        &mo 5
+                                    &trans   &trans      &trans     &trans             &trans        &trans
             >;
         };
 
@@ -368,15 +368,6 @@
 &trans         &kp ES_IEXCL  &kp ES_UNDER  &trans        &trans         &trans            &trans  &trans  &trans  &trans  &trans  &trans
 &trans         &kp ES_CARET  &trans        &trans        &kp ES_BSLH    &trans            &trans  &trans  &trans  &trans  &trans  &trans
                                            &trans        &trans         &trans            &trans  &trans  &trans
-            >;
-        };
-
-        wkp {
-            bindings = <
-&win_roll  &win_close  &win_tile_tl  &win_tile_t  &win_tile_tr  &win_max      &trans     &kp N7  &kp N8  &kp N9  &kp N0  &trans
-&trans     &win_scr_l  &win_tile_l   &dsk_show    &win_tile_r   &win_scr_r    &win_hide  &kp N4  &kp N5  &kp N6  &trans  &trans
-&trans     &win_wks_l  &win_tile_bl  &win_tile_b  &win_tile_br  &win_wks_r    &wks_nxt   &kp N1  &kp N2  &kp N3  &trans  &trans
-                                     &trans       &trans        &trans        &trans     &trans  &trans
             >;
         };
 
