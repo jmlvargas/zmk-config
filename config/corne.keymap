@@ -346,10 +346,10 @@
 
         fun {
             bindings = <
-&kp F12  &kp F1      &kp F2           &kp F3           &kp F4        &kp F5          &kp F6         &kp F7       &kp F8       &kp F9       &kp F10               &kp F11
-&trans   &kp ENTER   &kp PRINTSCREEN  &kp DEL          &kp C_VOL_UP  &kp CAPSLOCK    &kp ES_LBKT    &kp ES_LBRC  &kp ES_LPAR  &kp ES_RPAR  &kp ES_DOUBLE_QUOTES  &trans
-&trans   &kp INSERT  &kp C_MUTE       &kp PAUSE_BREAK  &kp C_VOL_DN  &mo 6           &kp ES_RBKT    &kp ES_RBRC  &kp ES_LT    &kp ES_GT    &kp ES_SINGLE_QUOTE   &trans
-                                      &trans           &trans        &trans          &kp BACKSPACE  &trans       &mo 5
+&kp F7  &kp F8     &kp F9           &kp F10  &kp F11     &kp F12    &kp C_VOLUME_DOWN  &kp C_VOL_UP  &kp INSERT   &kp CAPSLOCK  &kp ES_SINGLE_QUOTE   &kp PAUSE_BREAK
+&trans  &kp ENTER  &kp PRINTSCREEN  &kp DEL  &kp C_MUTE  &mo 5      &kp ES_LBKT        &kp ES_LBRC   &kp ES_LPAR  &kp ES_RPAR   &kp ES_DOUBLE_QUOTES  &trans
+&trans  &kp F2     &kp F3           &kp F4   &kp F5      &kp F6     &kp ES_RBKT        &kp ES_RBRC   &kp ES_LT    &kp ES_GT     &kp F1                &trans
+                                    &trans   &trans      &trans     &trans             &trans        &trans
             >;
         };
 
@@ -358,25 +358,16 @@
 &kp ES_QMARK  &kp ES_N1     &kp ES_N2     &kp ES_N3    &kp ES_N4     &kp ES_N5       &kp ES_N6    &kp ES_N7       &kp ES_N8     &kp ES_N9        &kp ES_N0  &trans
 &trans        &kp ES_EXCL   &kp ES_MINUS  &kp ES_AMPS  &kp ES_EQUAL  &kp ES_PLUS     &kp LEFT     &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT_ARROW  &trans     &mo 4
 &trans        &kp ES_GRAVE  &kp ES_STAR   &kp ES_PIPE  &kp ES_SLASH  &kp ES_TILDE    &kp PAGE_UP  &kp PAGE_DOWN   &kp HOME      &kp END          &trans     &trans
-                                          &trans       &trans        &kp TAB         &trans       &trans          &trans
+                                          &trans       &trans        &trans          &trans       &trans          &trans
             >;
         };
 
         xsm {
             bindings = <
-&kp ES_IQMARK  &kp ES_CARET  &kp ES_AT     &kp ES_POUND  &kp ES_DOLLAR  &kp ES_PERCENT    &trans  &trans  &trans  &trans  &trans  &trans
+&kp ES_IQMARK  &kp ES_EXCL   &kp ES_AT     &kp ES_POUND  &kp ES_DOLLAR  &kp ES_PERCENT    &trans  &trans  &trans  &trans  &trans  &trans
 &trans         &kp ES_IEXCL  &kp ES_UNDER  &trans        &trans         &trans            &trans  &trans  &trans  &trans  &trans  &trans
-&trans         &trans        &trans        &trans        &kp ES_BSLH    &trans            &trans  &trans  &trans  &trans  &trans  &trans
+&trans         &kp ES_CARET  &trans        &trans        &kp ES_BSLH    &trans            &trans  &trans  &trans  &trans  &trans  &trans
                                            &trans        &trans         &trans            &trans  &trans  &trans
-            >;
-        };
-
-        wkp {
-            bindings = <
-&win_roll  &win_close  &win_tile_tl  &win_tile_t  &win_tile_tr  &win_max      &trans     &kp N7  &kp N8  &kp N9  &kp N0  &trans
-&trans     &win_scr_l  &win_tile_l   &dsk_show    &win_tile_r   &win_scr_r    &win_hide  &kp N4  &kp N5  &kp N6  &trans  &trans
-&trans     &win_wks_l  &win_tile_bl  &win_tile_b  &win_tile_br  &win_wks_r    &wks_nxt   &kp N1  &kp N2  &kp N3  &trans  &trans
-                                     &trans       &trans        &trans        &trans     &trans  &trans
             >;
         };
 
