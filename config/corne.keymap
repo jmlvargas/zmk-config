@@ -56,11 +56,18 @@
             label = "AS";
         };
 
-        la_grave: tildegrave {
+        GRAVE_: GRAVE_ {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&kp RA(BACKSLASH) &kp SPACE>;
-            label = "TILDEGRAVE";
+            label = "GRAVE_";
+        };
+
+        CARET_: CARET_ {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp ES_CARET &kp SPACE>;
+            label = "CARET_";
         };
     };
 
@@ -207,19 +214,19 @@
 
         sym {
             bindings = <
-&la_grave  &kp ES_EXCL          &kp ES_AT     &kp ES_POUND  &kp ES_DOLLAR    &kp ES_PERCENT          &kp ES_STAR  &trans       &kp ES_LBKT       &kp ES_RBKT          &kp N0        &trans
-&trans     &kp ES_SINGLE_QUOTE  &kp ES_PIPE   &kp ES_AMPS   &kp ES_EQUAL     &kp ES_DOUBLE_QUOTES    &kp ES_PLUS  &kp ES_LBRC  &kp ES_LPAR       &kp ES_RPAR          &kp ES_MINUS  &trans
-&trans     &kp ES_BSLH          &kp ES_TILDE  &kp ES_CARET  &kp ES_QUESTION  &kp ES_UNDER            &kp ES_DOT   &kp ES_RBRC  &kp ES_LESS_THAN  &kp ES_GREATER_THAN  &kp ES_SLASH  &trans
-                                              &trans        &trans           &trans                  &trans       &trans       &trans
+&GRAVE_  &kp ES_EXCL          &kp ES_AT     &kp ES_POUND  &kp ES_DOLLAR    &kp ES_PERCENT          &kp ES_STAR  &trans       &kp ES_LBKT       &kp ES_RBKT          &kp N0        &trans
+&trans   &kp ES_SINGLE_QUOTE  &kp ES_PIPE   &kp ES_AMPS   &kp ES_EQUAL     &kp ES_DOUBLE_QUOTES    &kp ES_PLUS  &kp ES_LBRC  &kp ES_LPAR       &kp ES_RPAR          &kp ES_MINUS  &trans
+&trans   &kp ES_BSLH          &kp ES_TILDE  &CARET_       &kp ES_QUESTION  &kp ES_UNDER            &kp ES_DOT   &kp ES_RBRC  &kp ES_LESS_THAN  &kp ES_GREATER_THAN  &kp ES_SLASH  &trans
+                                            &trans        &trans           &trans                  &trans       &trans       &trans
             >;
         };
 
         xsm {
             bindings = <
-&trans  &kp ES_IEXCL         &kp ES_AT     &kp ES_POUND  &kp ES_DOLLAR  &kp ES_PERCENT          &kp ES_STAR  &kp N7  &kp N8  &kp N9  &kp N0        &trans
-&trans  &kp ES_SINGLE_QUOTE  &kp ES_PIPE   &kp ES_AMPS   &kp ES_EQUAL   &kp ES_DOUBLE_QUOTES    &kp ES_PLUS  &kp N4  &kp N5  &kp N6  &kp ES_MINUS  &trans
-&trans  &kp ES_BACKSLASH     &kp ES_TILDE  &kp ES_CARET  &kp ES_IQMARK  &kp ES_UNDER            &kp ES_DOT   &kp N1  &kp N2  &kp N3  &kp ES_SLASH  &trans
-                                           &trans        &trans         &trans                  &trans       &trans  &trans
+&kp GRAVE  &kp ES_IEXCL         &kp ES_AT     &kp ES_POUND  &kp ES_DOLLAR  &kp ES_PERCENT          &kp ES_STAR  &kp N7  &kp N8  &kp N9  &kp N0        &trans
+&trans     &kp ES_SINGLE_QUOTE  &kp ES_PIPE   &kp ES_AMPS   &kp ES_EQUAL   &kp ES_DOUBLE_QUOTES    &kp ES_PLUS  &kp N4  &kp N5  &kp N6  &kp ES_MINUS  &trans
+&trans     &kp ES_BACKSLASH     &kp ES_TILDE  &kp ES_CARET  &kp ES_IQMARK  &kp ES_UNDER            &kp ES_DOT   &kp N1  &kp N2  &kp N3  &kp ES_SLASH  &trans
+                                              &trans        &trans         &trans                  &trans       &trans  &trans
             >;
         };
 
