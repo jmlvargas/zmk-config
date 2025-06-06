@@ -59,7 +59,7 @@
         GRAVE_: GRAVE_ {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp RA(BACKSLASH) &kp SPACE>;
+            bindings = <&kp ES_GRAVE &kp SPACE>;
             label = "GRAVE_";
         };
 
