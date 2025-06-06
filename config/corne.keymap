@@ -157,18 +157,18 @@
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
-        TDFMODR: TDFMODR {
+        Ctrl_Win: Ctrl_Win {
             compatible = "zmk,behavior-tap-dance";
-            label = "TDFMODR";
+            label = "Ctrl_Win";
             #binding-cells = <0>;
             bindings = <&kp RIGHT_CONTROL>, <&kp LWIN>;
 
             tapping-term-ms = <250>;
         };
 
-        TDFMODL: TDFMODL {
+        XSM_Alt: XSM_Alt {
             compatible = "zmk,behavior-tap-dance";
-            label = "TDFMODL";
+            label = "XSM_Alt";
             #binding-cells = <0>;
             bindings = <&mo 4>, <&kp LALT>;
 
@@ -190,7 +190,7 @@
 &kp TAB                   &kp Q  &kp W  &kp E     &kp R  &kp T        &kp Y      &kp U  &kp I      &kp O       &kp P           &kp BACKSPACE
 &kp LSHIFT                &kp A  &kp S  &kp D     &kp F  &kp G        &kp H      &kp J  &kp K      &kp L       &kp ES_N_TILDE  &kp RSHIFT
 &HHT LEFT_CONTROL ESCAPE  &kp Z  &kp X  &kp C     &kp V  &kp B        &kp N      &kp M  &kp COMMA  &kp PERIOD  &kp ES_ACUTE    &HHT RIGHT_CONTROL ESCAPE
-                                        &TDFMODL  &mo 2  &kp SPACE    &kp ENTER  &mo 3  &TDFMODR
+                                        &XSM_Alt  &mo 2  &kp SPACE    &kp ENTER  &mo 3  &Ctrl_Win
             >;
         };
 
