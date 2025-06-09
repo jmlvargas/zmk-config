@@ -214,19 +214,19 @@
 
         sym {
             bindings = <
-&GRAVE_  &kp ES_EXCL          &kp ES_AT     &kp ES_POUND  &kp ES_DOLLAR    &kp ES_PERCENT          &kp ES_STAR   &none        &kp ES_LBKT       &kp ES_RBKT          &kp N0        &trans
-&trans   &kp ES_SINGLE_QUOTE  &kp ES_PIPE   &kp ES_AMPS   &kp ES_EQUAL     &kp ES_DOUBLE_QUOTES    &kp ES_PLUS   &kp ES_LBRC  &kp ES_LPAR       &kp ES_RPAR          &kp ES_MINUS  &trans
-&trans   &kp ES_BSLH          &kp ES_TILDE  &CARET_       &kp ES_QUESTION  &kp ES_UNDER            &kp ES_ASTRK  &kp ES_RBRC  &kp ES_LESS_THAN  &kp ES_GREATER_THAN  &kp ES_SLASH  &trans
-                                            &trans        &trans           &trans                  &trans        &trans       &trans
+&GRAVE_  &kp ES_EXCL          &kp ES_AT     &kp ES_POUND  &kp ES_DOLLAR    &kp ES_PERCENT          &kp ES_STAR  &none        &kp ES_LBKT       &kp ES_RBKT          &kp N0        &trans
+&trans   &kp ES_SINGLE_QUOTE  &kp ES_PIPE   &kp ES_AMPS   &kp ES_EQUAL     &kp ES_DOUBLE_QUOTES    &kp ES_PLUS  &kp ES_LBRC  &kp ES_LPAR       &kp ES_RPAR          &kp ES_MINUS  &trans
+&trans   &kp ES_BSLH          &kp ES_TILDE  &CARET_       &kp ES_QUESTION  &kp ES_UNDER            &kp ES_DOT   &kp ES_RBRC  &kp ES_LESS_THAN  &kp ES_GREATER_THAN  &kp ES_SLASH  &trans
+                                            &trans        &trans           &trans                  &trans       &trans       &trans
             >;
         };
 
         syx {
             bindings = <
-&kp ES_GRAVE  &kp ES_IEXCL         &kp ES_AT     &kp ES_POUND  &kp ES_DOLLAR  &kp ES_PERCENT          &kp ES_STAR   &none        &kp ES_LBKT       &kp ES_RBKT          &kp N0        &trans
-&trans        &kp ES_SINGLE_QUOTE  &kp ES_PIPE   &kp ES_AMPS   &kp ES_EQUAL   &kp ES_DOUBLE_QUOTES    &kp ES_PLUS   &kp ES_LBRC  &kp ES_LPAR       &kp ES_RPAR          &kp ES_MINUS  &trans
-&trans        &kp ES_BSLH          &kp ES_TILDE  &kp ES_CARET  &kp ES_IQMARK  &kp ES_UNDER            &kp ES_ASTRK  &kp ES_RBRC  &kp ES_LESS_THAN  &kp ES_GREATER_THAN  &kp ES_SLASH  &trans
-                                                 &trans        &trans         &trans                  &trans        &trans       &trans
+&kp ES_GRAVE  &kp ES_IEXCL         &kp ES_AT     &kp ES_POUND  &kp ES_DOLLAR  &kp ES_PERCENT          &kp ES_STAR  &none        &kp ES_LBKT       &kp ES_RBKT          &kp N0        &trans
+&trans        &kp ES_SINGLE_QUOTE  &kp ES_PIPE   &kp ES_AMPS   &kp ES_EQUAL   &kp ES_DOUBLE_QUOTES    &kp ES_PLUS  &kp ES_LBRC  &kp ES_LPAR       &kp ES_RPAR          &kp ES_MINUS  &trans
+&trans        &kp ES_BSLH          &kp ES_TILDE  &kp ES_CARET  &kp ES_IQMARK  &kp ES_UNDER            &kp ES_DOT   &kp ES_RBRC  &kp ES_LESS_THAN  &kp ES_GREATER_THAN  &kp ES_SLASH  &trans
+                                                 &trans        &trans         &trans                  &trans       &trans       &trans
             >;
         };
 
@@ -241,10 +241,10 @@
 
         num {
             bindings = <
-&trans  &kp F1  &kp F2           &kp F3   &kp F4   &kp F5     &kp ES_STAR  &kp N7  &kp N8  &kp N9  &kp N0        &kp BACKSPACE
-&trans  &kp F6  &kp PRINTSCREEN  &kp DEL  &mo 6    &kp F7     &kp ES_PLUS  &kp N4  &kp N5  &kp N6  &kp ES_MINUS  &trans
-&trans  &kp F8  &kp F9           &kp F10  &kp F11  &kp F12    &kp ES_DOT   &kp N1  &kp N2  &kp N3  &kp ES_SLASH  &trans
-                                 &trans   &trans   &trans     &trans       &trans  &trans
+&trans  &kp N0        &kp N7  &kp N8  &kp N9  &kp ES_ASTRK    &kp ES_STAR  &kp N7  &kp N8  &kp N9  &kp N0        &kp BACKSPACE
+&trans  &kp ES_MINUS  &kp N4  &kp N5  &kp N6  &kp ES_PLUS     &kp ES_PLUS  &kp N4  &kp N5  &kp N6  &kp ES_MINUS  &trans
+&trans  &kp ES_SLASH  &kp N1  &kp N2  &kp N3  &kp ES_DOT      &kp ES_DOT   &kp N1  &kp N2  &kp N3  &kp ES_SLASH  &trans
+                              &trans  &trans  &trans          &trans       &trans  &trans
             >;
         };
 
