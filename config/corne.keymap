@@ -223,9 +223,9 @@
 
         nav {
             bindings = <
-&kp GRAVE  &kp ES_IEXCL         &kp ES_AT     &kp ES_POUND  &kp ES_DOLLAR  &kp ES_PERCENT          &kp C_PP        &kp C_MUTE      &kp INSERT  &kp CAPSLOCK     &kp PRINTSCREEN  &kp PAUSE_BREAK
-&trans     &kp ES_SINGLE_QUOTE  &kp ES_PIPE   &kp ES_AMPS   &kp ES_EQUAL   &kp ES_DOUBLE_QUOTES    &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP      &kp RIGHT_ARROW  &none            &trans
-&trans     &kp ES_BACKSLASH     &kp ES_TILDE  &kp ES_CARET  &kp ES_IQMARK  &kp ES_UNDER            &kp PAGE_UP     &kp PAGE_DOWN   &kp HOME    &kp END          &none            &trans
+&kp GRAVE  &kp ES_IEXCL         &kp ES_AT     &kp ES_POUND  &kp ES_DOLLAR  &kp ES_PERCENT          &kp PG_UP       &kp C_MUTE      &kp INSERT  &kp CAPSLOCK     &kp PRINTSCREEN  &kp PAUSE_BREAK
+&trans     &kp ES_SINGLE_QUOTE  &kp ES_PIPE   &kp ES_AMPS   &kp ES_EQUAL   &kp ES_DOUBLE_QUOTES    &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP      &kp RIGHT_ARROW  &kp ES_MINUS     &trans
+&trans     &kp ES_BACKSLASH     &kp ES_TILDE  &kp ES_CARET  &kp ES_IQMARK  &kp ES_UNDER            &kp PAGE_DOWN   &none           &kp HOME    &kp END          &kp ES_SLASH     &trans
                                               &trans        &trans         &trans                  &trans          &trans          &trans
             >;
         };
