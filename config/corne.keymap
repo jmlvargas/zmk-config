@@ -170,16 +170,16 @@
             compatible = "zmk,behavior-tap-dance";
             label = "NUM_ALT";
             #binding-cells = <0>;
-            bindings = <&mo 5>, <&kp LALT>;
+            bindings = <&mo 2>, <&kp LALT>;
 
             tapping-term-ms = <250>;
         };
 
-        SYM_SYX: SYM_SYX {
+        SYM_NUM: SYM_NUM {
             compatible = "zmk,behavior-tap-dance";
-            label = "SYM_SYX";
+            label = "SYM_NUM";
             #binding-cells = <0>;
-            bindings = <&mo 2>, <&mo 3>;
+            bindings = <&mo 1>, <&mo 2>;
 
             tapping-term-ms = <250>;
         };
@@ -188,7 +188,7 @@
             compatible = "zmk,behavior-tap-dance";
             label = "NAV_NUM";
             #binding-cells = <0>;
-            bindings = <&mo 4>, <&mo 5>;
+            bindings = <&mo 3>, <&mo 2>;
 
             tapping-term-ms = <250>;
         };
@@ -208,16 +208,7 @@
 &kp TAB       &kp Q  &kp W  &kp E                     &kp R     &kp T        &kp Y      &kp U     &kp I              &kp O       &kp P           &kp BACKSPACE
 &kp LSHIFT    &kp A  &kp S  &kp D                     &kp F     &kp G        &kp H      &kp J     &kp K              &kp L       &kp ES_N_TILDE  &kp RSHIFT
 &kp LEFT_GUI  &kp Z  &kp X  &kp C                     &kp V     &kp B        &kp N      &kp M     &kp COMMA          &kp PERIOD  &kp ES_ACUTE    &kp LALT
-                            &HHT LEFT_CONTROL ESCAPE  &NAV_NUM  &kp SPACE    &kp ENTER  &SYM_SYX  &kp RIGHT_CONTROL
-            >;
-        };
-
-        cmk {
-            bindings = <
-&trans  &kp Q  &kp W  &kp F   &kp P   &kp G     &kp J   &kp L   &kp U         &kp Y       &kp ES_N_TILDE  &trans
-&trans  &kp A  &kp R  &kp S   &kp T   &kp D     &kp H   &kp N   &kp E         &kp I       &kp O           &trans
-&trans  &kp Z  &kp X  &kp C   &kp V   &kp B     &kp K   &kp M   &kp ES_COMMA  &kp ES_DOT  &kp ES_ACUTE    &trans
-                      &trans  &trans  &trans    &trans  &trans  &trans
+                            &HHT LEFT_CONTROL ESCAPE  &NAV_NUM  &kp SPACE    &kp ENTER  &SYM_NUM  &kp RIGHT_CONTROL
             >;
         };
 
@@ -226,16 +217,16 @@
 &GRAVE_  &kp ES_EXCL          &kp ES_AT     &kp ES_POUND  &kp ES_DOLLAR    &kp ES_PERCENT          &kp ES_STAR  &none        &kp ES_LBKT       &kp ES_RBKT          &kp N0        &trans
 &trans   &kp ES_SINGLE_QUOTE  &kp ES_PIPE   &kp ES_AMPS   &kp ES_EQUAL     &kp ES_DOUBLE_QUOTES    &kp ES_PLUS  &kp ES_LBRC  &kp ES_LPAR       &kp ES_RPAR          &kp ES_MINUS  &trans
 &trans   &kp ES_BSLH          &kp ES_TILDE  &CARET_       &kp ES_QUESTION  &kp ES_UNDER            &kp ES_DOT   &kp ES_RBRC  &kp ES_LESS_THAN  &kp ES_GREATER_THAN  &kp ES_SLASH  &trans
-                                            &trans        &mo 5            &trans                  &trans       &trans       &trans
+                                            &trans        &mo 2            &trans                  &trans       &trans       &trans
             >;
         };
 
-        syx {
+        num {
             bindings = <
-&kp ES_GRAVE  &kp ES_IEXCL         &kp ES_AT     &kp ES_POUND  &kp ES_DOLLAR  &kp ES_PERCENT          &kp ES_STAR  &none        &kp ES_LBKT       &kp ES_RBKT          &kp N0        &trans
-&trans        &kp ES_SINGLE_QUOTE  &kp ES_PIPE   &kp ES_AMPS   &kp ES_EQUAL   &kp ES_DOUBLE_QUOTES    &kp ES_PLUS  &kp ES_LBRC  &kp ES_LPAR       &kp ES_RPAR          &kp ES_MINUS  &trans
-&trans        &kp ES_BSLH          &kp ES_TILDE  &kp ES_CARET  &kp ES_IQMARK  &kp ES_UNDER            &kp ES_DOT   &kp ES_RBRC  &kp ES_LESS_THAN  &kp ES_GREATER_THAN  &kp ES_SLASH  &trans
-                                                 &trans        &trans         &trans                  &trans       &trans       &trans
+&kp ES_GRAVE  &kp ES_IEXCL    &kp UP    &none            &none          &none     &kp ES_STAR  &kp N7  &kp N8  &kp N9  &kp N0        &kp BACKSPACE
+&trans        &kp LEFT_ARROW  &kp DOWN  &kp RIGHT_ARROW  &none          &none     &kp ES_PLUS  &kp N4  &kp N5  &kp N6  &kp ES_MINUS  &trans
+&trans        &none           &none     &kp ES_CARET     &kp ES_IQMARK  &mo 4     &kp ES_DOT   &kp N1  &kp N2  &kp N3  &kp ES_SLASH  &trans
+                                        &trans           &trans         &trans    &trans       &trans  &trans
             >;
         };
 
@@ -248,20 +239,11 @@
             >;
         };
 
-        num {
-            bindings = <
-&trans  &none           &kp UP    &none            &none   &none     &kp ES_STAR  &kp N7  &kp N8  &kp N9  &kp N0        &kp BACKSPACE
-&trans  &kp LEFT_ARROW  &kp DOWN  &kp RIGHT_ARROW  &none   &none     &kp ES_PLUS  &kp N4  &kp N5  &kp N6  &kp ES_MINUS  &trans
-&trans  &none           &none     &none            &none   &mo 6     &kp ES_DOT   &kp N1  &kp N2  &kp N3  &kp ES_SLASH  &trans
-                                  &trans           &trans  &trans    &trans       &trans  &trans
-            >;
-        };
-
         bth {
             bindings = <
 &none        &none         &none       &none       &none  &none    &none  &none  &none  &out OUT_TOG  &none  &none
 &none        &bt BT_SEL 0  &bt BT_NXT  &bt BT_CLR  &none  &none    &none  &none  &none  &none         &none  &none
-&bootloader  &tog 1        &none       &none       &none  &none    &none  &none  &none  &none         &none  &bootloader
+&bootloader  &none         &none       &none       &none  &none    &none  &none  &none  &none         &none  &bootloader
                                        &none       &none  &none    &none  &none  &none
             >;
         };
