@@ -183,6 +183,15 @@
 
             tapping-term-ms = <250>;
         };
+
+        NAV_NUM: NAV_NUM {
+            compatible = "zmk,behavior-tap-dance";
+            label = "NAV_NUM";
+            #binding-cells = <0>;
+            bindings = <&mo 4>, <&mo 5>;
+
+            tapping-term-ms = <250>;
+        };
     };
 
     keymap {
@@ -196,10 +205,10 @@
             //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
 
             bindings = <
-&kp TAB                   &kp Q  &kp W  &kp E  &kp R  &kp T        &kp Y      &kp U     &kp I      &kp O       &kp P           &kp BACKSPACE
-&kp LSHIFT                &kp A  &kp S  &kp D  &kp F  &kp G        &kp H      &kp J     &kp K      &kp L       &kp ES_N_TILDE  &kp RSHIFT
-&HHT LEFT_CONTROL ESCAPE  &kp Z  &kp X  &kp C  &kp V  &kp B        &kp N      &kp M     &kp COMMA  &kp PERIOD  &kp ES_ACUTE    &HHT RIGHT_CONTROL ESCAPE
-                                        &mo 5  &mo 4  &kp SPACE    &kp ENTER  &SYM_SYX  &ALT_Win
+&kp TAB                   &kp Q  &kp W  &kp E         &kp R     &kp T        &kp Y      &kp U     &kp I         &kp O       &kp P           &kp BACKSPACE
+&kp LSHIFT                &kp A  &kp S  &kp D         &kp F     &kp G        &kp H      &kp J     &kp K         &kp L       &kp ES_N_TILDE  &kp RSHIFT
+&HHT LEFT_CONTROL ESCAPE  &kp Z  &kp X  &kp C         &kp V     &kp B        &kp N      &kp M     &kp COMMA     &kp PERIOD  &kp ES_ACUTE    &HHT RIGHT_CONTROL ESCAPE
+                                        &kp LEFT_WIN  &NAV_NUM  &kp SPACE    &kp ENTER  &SYM_SYX  &kp LEFT_ALT
             >;
         };
 
