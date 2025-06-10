@@ -241,10 +241,10 @@
 
         bth {
             bindings = <
-&none        &none         &none       &none       &none  &none    &none  &none  &none  &out OUT_TOG  &none  &none
-&none        &bt BT_SEL 0  &bt BT_NXT  &bt BT_CLR  &none  &none    &none  &none  &none  &none         &none  &none
-&bootloader  &none         &none       &none       &none  &none    &none  &none  &none  &none         &none  &bootloader
-                                       &none       &none  &none    &none  &none  &none
+&none        &none         &none       &none       &none  &out OUT_TOG    &none  &none  &none  &none  &none  &none
+&none        &bt BT_SEL 0  &bt BT_NXT  &bt BT_CLR  &none  &none           &none  &none  &none  &none  &none  &none
+&bootloader  &none         &none       &none       &none  &none           &none  &none  &none  &none  &none  &bootloader
+                                       &none       &none  &none           &none  &none  &none
             >;
         };
     };
