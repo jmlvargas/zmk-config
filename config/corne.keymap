@@ -184,11 +184,11 @@
             tapping-term-ms = <250>;
         };
 
-        NAV_NUM: NAV_NUM {
+        NAV_CTL: NAV_CTL {
             compatible = "zmk,behavior-tap-dance";
-            label = "NAV_NUM";
+            label = "NAV_CTL";
             #binding-cells = <0>;
-            bindings = <&mo 2>, <&mo 3>;
+            bindings = <&mo 2>, <&kp LEFT_CONTROL>;
 
             tapping-term-ms = <250>;
         };
@@ -208,7 +208,7 @@
 &kp TAB                   &kp Q  &kp W  &kp E         &kp R     &kp T        &kp Y      &kp U     &kp I         &kp O       &kp P           &kp BACKSPACE
 &kp LSHIFT                &kp A  &kp S  &kp D         &kp F     &kp G        &kp H      &kp J     &kp K         &kp L       &kp ES_N_TILDE  &kp RSHIFT
 &HHT LEFT_CONTROL ESCAPE  &kp Z  &kp X  &kp C         &kp V     &kp B        &kp N      &kp M     &kp COMMA     &kp PERIOD  &kp ES_ACUTE    &HHT LEFT_CONTROL ESCAPE
-                                        &kp LEFT_WIN  &NAV_NUM  &kp SPACE    &kp ENTER  &SYM_NUM  &kp LEFT_ALT
+                                        &kp LEFT_WIN  &NAV_CTL  &kp SPACE    &kp ENTER  &SYM_NUM  &kp LEFT_ALT
             >;
         };
 
@@ -217,7 +217,7 @@
 &GRAVE_  &kp ES_EXCL          &kp ES_AT    &kp ES_POUND  &kp ES_DOLLAR  &kp ES_PERCENT          &kp ES_STAR  &kp ES_TILDE  &kp ES_LBKT   &kp ES_RBKT    &kp N0        &trans
 &trans   &kp ES_SINGLE_QUOTE  &kp ES_PIPE  &kp ES_AMPS   &kp ES_EQUAL   &kp ES_DOUBLE_QUOTES    &kp ES_PLUS  &kp ES_LBRC   &kp ES_LPAR   &kp ES_RPAR    &kp ES_MINUS  &trans
 &trans   &kp ES_LT            &kp ES_GT    &CARET_       &kp ES_UNDER   &kp ES_QMARK            &kp ES_BSLH  &kp ES_RBRC   &kp ES_COMMA  &kp ES_PERIOD  &kp ES_SLASH  &trans
-                                           &trans        &mo 3          &trans                  &trans       &trans        &trans
+                                           &trans        &mo 3          &kp TAB                 &trans       &trans        &trans
             >;
         };
 
@@ -232,10 +232,10 @@
 
         num {
             bindings = <
-&kp ES_GRAVE  &kp ES_IEXCL    &kp UP    &none            &none   &none            &kp ES_STAR       &kp N7  &kp N8  &kp N9  &kp N0        &kp BACKSPACE
-&trans        &kp LEFT_ARROW  &kp DOWN  &kp RIGHT_ARROW  &none   &none            &kp ES_PLUS       &kp N4  &kp N5  &kp N6  &kp ES_MINUS  &trans
-&trans        &none           &none     &kp ES_CARET     &none   &kp ES_IQMARK    &kp ES_BACKSLASH  &kp N1  &kp N2  &kp N3  &kp ES_SLASH  &trans
-                                        &trans           &trans  &trans           &trans            &trans  &trans
+&kp ES_GRAVE  &kp ES_IEXCL  &none  &none         &none   &none            &kp ES_STAR       &kp N7  &kp N8  &kp N9  &kp N0        &kp BACKSPACE
+&trans        &none         &none  &none         &none   &none            &kp ES_PLUS       &kp N4  &kp N5  &kp N6  &kp ES_MINUS  &trans
+&trans        &none         &none  &kp ES_CARET  &none   &kp ES_IQMARK    &kp ES_BACKSLASH  &kp N1  &kp N2  &kp N3  &kp ES_SLASH  &trans
+                                   &trans        &trans  &trans           &trans            &trans  &trans
             >;
         };
 
