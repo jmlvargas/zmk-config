@@ -214,10 +214,10 @@
 
         sym {
             bindings = <
-&trans  &kp ES_EXCL          &kp ES_AT    &kp ES_POUND  &kp ES_DOLLAR  &kp ES_PERCENT          &kp ES_STAR  &kp ES_TILDE  &kp ES_LBKT   &kp ES_RBKT    &GRAVE_       &trans
-&trans  &kp ES_SINGLE_QUOTE  &kp ES_PIPE  &kp ES_AMPS   &kp ES_EQUAL   &kp ES_DOUBLE_QUOTES    &kp ES_PLUS  &kp ES_LBRC   &kp ES_LPAR   &kp ES_RPAR    &kp ES_MINUS  &trans
-&trans  &kp ES_LT            &kp ES_GT    &CARET_       &kp ES_UNDER   &kp ES_QMARK            &kp ES_BSLH  &kp ES_RBRC   &kp ES_COMMA  &kp ES_PERIOD  &kp ES_SLASH  &trans
-                                          &trans        &mo 3          &kp TAB                 &trans       &trans        &trans
+&trans  &kp ES_EXCL          &kp ES_AT    &kp ES_POUND  &kp ES_DOLLAR  &kp ES_PERCENT          &CARET_       &kp ES_TILDE  &kp ES_LBKT   &kp ES_RBKT    &GRAVE_       &trans
+&trans  &kp ES_SINGLE_QUOTE  &kp ES_PIPE  &kp ES_AMPS   &kp ES_EQUAL   &kp ES_DOUBLE_QUOTES    &kp ES_PLUS   &kp ES_LBRC   &kp ES_LPAR   &kp ES_RPAR    &kp ES_MINUS  &trans
+&trans  &kp ES_BACKSLASH     &kp ES_LT    &kp ES_GT     &kp ES_UNDER   &kp ES_QMARK            &kp ES_ASTRK  &kp ES_RBRC   &kp ES_COMMA  &kp ES_PERIOD  &kp ES_SLASH  &trans
+                                          &trans        &mo 3          &kp TAB                 &trans        &trans        &trans
             >;
         };
 
