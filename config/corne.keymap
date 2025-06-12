@@ -170,7 +170,7 @@
             compatible = "zmk,behavior-tap-dance";
             label = "NUM_GUI";
             #binding-cells = <0>;
-            bindings = <&mo 4>, <&kp LWIN>;
+            bindings = <&mo 3>, <&kp LWIN>;
 
             tapping-term-ms = <250>;
         };
