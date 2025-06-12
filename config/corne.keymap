@@ -214,10 +214,10 @@
 
         sym {
             bindings = <
-&trans  &kp ES_EXCL          &kp ES_AT    &kp ES_POUND  &kp ES_DOLLAR    &kp ES_PERCENT          &CARET_       &kp ES_TILDE  &kp ES_LBKT   &kp ES_RBKT    &GRAVE_       &trans
-&trans  &kp ES_SINGLE_QUOTE  &kp ES_PIPE  &kp ES_AMPS   &kp ES_EQUAL     &kp ES_DOUBLE_QUOTES    &kp ES_PLUS   &kp ES_LBRC   &kp ES_LPAR   &kp ES_RPAR    &kp ES_MINUS  &trans
-&trans  &kp ES_BACKSLASH     &kp ES_LT    &kp ES_GT     &kp ES_QUESTION  &kp ES_UNDER            &kp ES_ASTRK  &kp ES_RBRC   &kp ES_COMMA  &kp ES_PERIOD  &kp ES_SLASH  &trans
-                                          &trans        &mo 3            &kp TAB                 &trans        &trans        &trans
+&trans  &kp ES_EXCL          &kp ES_AT    &kp ES_POUND  &kp ES_DOLLAR    &kp ES_PERCENT          &CARET_       &kp ES_TILDE  &kp ES_LBKT       &kp ES_RBKT  &GRAVE_       &trans
+&trans  &kp ES_SINGLE_QUOTE  &kp ES_PIPE  &kp ES_AMPS   &kp ES_EQUAL     &kp ES_DOUBLE_QUOTES    &kp ES_PLUS   &kp ES_LBRC   &kp ES_LPAR       &kp ES_RPAR  &kp ES_MINUS  &trans
+&trans  &kp ES_BACKSLASH     &none        &none         &kp ES_QUESTION  &kp ES_UNDER            &kp ES_ASTRK  &kp ES_RBRC   &kp ES_LESS_THAN  &kp ES_GT    &kp ES_SLASH  &trans
+                                          &trans        &trans           &kp TAB                 &trans        &trans        &trans
             >;
         };
 
@@ -226,7 +226,7 @@
 &trans  &kp F1  &kp F2      &kp F3   &kp F4   &kp F5     &kp PG_UP       &kp CAPSLOCK    &kp INSERT  &kp PSCRN        &kp PAUSE_BREAK  &trans
 &trans  &kp F6  &kp ESCAPE  &kp DEL  &mo 4    &kp F7     &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP      &kp RIGHT_ARROW  &kp ES_MINUS     &trans
 &trans  &kp F8  &kp F9      &kp F10  &kp F11  &kp F12    &kp PAGE_DOWN   &kp C_MUTE      &kp HOME    &kp END          &kp ES_SLASH     &trans
-                            &trans   &trans   &trans     &kp BACKSPACE   &mo 3           &trans
+                            &trans   &trans   &trans     &kp BACKSPACE   &trans          &trans
             >;
         };
 
@@ -249,5 +249,12 @@
         };
     };
 
-    conditional_layers { compatible = "zmk,conditional-layers"; };
+    conditional_layers {
+        compatible = "zmk,conditional-layers";
+
+        clnum {
+            if-layers = <1 2>;
+            then-layer = <3>;
+        };
+    };
 };
