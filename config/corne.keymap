@@ -214,19 +214,19 @@
 
         sym {
             bindings = <
-&trans  &kp ES_EXCL          &kp ES_AT     &kp ES_POUND   &kp ES_DOLLAR         &kp ES_PERCENT    &CARET_       &kp ES_UNDER  &kp ES_LBKT       &kp ES_RBKT  &GRAVE_       &trans
-&trans  &kp ES_SINGLE_QUOTE  &kp ES_PIPE   &kp ES_AMPS    &kp ES_DOUBLE_QUOTES  &kp ES_EQUAL      &kp ES_PLUS   &kp ES_LBRC   &kp ES_LPAR       &kp ES_RPAR  &kp ES_MINUS  &trans
-&trans  &kp ES_BACKSLASH     &kp ES_IEXCL  &kp ES_IQMARK  &kp ES_QUESTION       &kp ES_TILDE      &kp ES_ASTRK  &kp ES_RBRC   &kp ES_LESS_THAN  &kp ES_GT    &kp ES_SLASH  &trans
-                                           &trans         &trans                &kp TAB           &trans        &trans        &trans
+&trans  &kp ES_EXCL          &kp ES_AT     &kp ES_POUND   &kp ES_DOLLAR    &kp ES_PERCENT          &CARET_       &kp ES_UNDER  &kp ES_LBKT       &kp ES_RBKT  &GRAVE_       &trans
+&trans  &kp ES_SINGLE_QUOTE  &kp ES_PIPE   &kp ES_AMPS    &kp ES_EQUAL     &kp ES_DOUBLE_QUOTES    &kp ES_PLUS   &kp ES_LBRC   &kp ES_LPAR       &kp ES_RPAR  &kp ES_MINUS  &trans
+&trans  &kp ES_BACKSLASH     &kp ES_IEXCL  &kp ES_IQMARK  &kp ES_QUESTION  &kp ES_TILDE            &kp ES_ASTRK  &kp ES_RBRC   &kp ES_LESS_THAN  &kp ES_GT    &kp ES_SLASH  &trans
+                                           &trans         &trans           &kp TAB                 &trans        &trans        &trans
             >;
         };
 
         num {
             bindings = <
-&trans  &kp N1  &kp N2  &kp N3  &kp N4  &kp N5          &kp N6        &kp N7  &kp N8         &kp N9  &kp N0        &trans
-&trans  &trans  &trans  &trans  &trans  &kp ES_EQUAL    &kp ES_PLUS   &kp N4  &kp N5         &kp N6  &kp ES_MINUS  &trans
-&trans  &trans  &trans  &trans  &trans  &trans          &kp ES_ASTRK  &kp N1  &kp N2         &kp N3  &kp ES_SLASH  &trans
-                        &trans  &trans  &trans          &trans        &kp N0  &kp ES_PERIOD
+&trans  &kp N1  &kp N2  &kp N3  &kp N4        &kp N5    &kp N6        &kp N7         &kp N8  &kp N9  &kp N0        &trans
+&trans  &trans  &trans  &trans  &kp ES_EQUAL  &trans    &kp ES_PLUS   &kp N4         &kp N5  &kp N6  &kp ES_MINUS  &trans
+&trans  &trans  &trans  &trans  &trans        &trans    &kp ES_ASTRK  &kp N1         &kp N2  &kp N3  &kp ES_SLASH  &trans
+                        &trans  &trans        &trans    &kp N0        &kp ES_PERIOD  &trans
             >;
         };
 
