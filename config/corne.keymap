@@ -286,7 +286,7 @@
 
         num {
             bindings = <
-&trans  &kp F1  &kp F2           &kp F3   &kp F4        &kp F5     &CARET_       &kp N7      &EIGHT_BRK  &NINE_BKT   &kp N0        &trans
+&trans  &kp F1  &kp F2           &kp F3   &kp F4        &kp F5     &CARET_       &kp N7      &EIGHT_BRK  &NINE_BKT   &trans        &trans
 &trans  &kp F6  &kp PRINTSCREEN  &kp DEL  &kp ES_EQUAL  &kp F7     &kp ES_PLUS   &FOUR_BRC   &FIVE_PAR   &SIX_PAR    &kp ES_MINUS  &trans
 &trans  &kp F8  &kp F9           &kp F10  &kp F11       &kp F12    &kp ES_ASTRK  &ONE_BRC    &TWO_LTH    &THREE_GTH  &kp ES_SLASH  &trans
                                  &trans   &trans        &trans     &kp N0        &kp ES_DOT  &trans
@@ -295,10 +295,10 @@
 
         sym {
             bindings = <
-&trans  &kp ES_EXCL          &kp ES_AT     &kp ES_POUND   &kp ES_DOLLAR    &kp ES_PERCENT          &CARET_    &kp ES_TILDE  &kp ES_LBKT  &kp ES_RBKT  &GRAVE_       &trans
-&trans  &kp ES_SINGLE_QUOTE  &kp ES_PIPE   &kp ES_AMPS    &kp ES_EQUAL     &kp ES_DOUBLE_QUOTES    &kp LEFT   &kp DOWN      &kp UP       &kp RIGHT    &kp ES_MINUS  &trans
-&trans  &kp ES_BACKSLASH     &kp ES_IEXCL  &kp ES_IQMARK  &kp ES_QUESTION  &kp ES_TILDE            &kp PG_UP  &kp PG_DN     &kp HOME     &kp END      &kp ES_SLASH  &trans
-                                           &trans         &mo 3            &trans                  &trans     &trans        &trans
+&GRAVE_  &kp ES_EXCL          &kp ES_AT     &kp ES_POUND   &kp ES_DOLLAR    &kp ES_PERCENT          &trans     &trans     &trans    &trans     &trans  &trans
+&trans   &kp ES_SINGLE_QUOTE  &kp ES_PIPE   &kp ES_AMPS    &kp ES_EQUAL     &kp ES_DOUBLE_QUOTES    &kp LEFT   &kp DOWN   &kp UP    &kp RIGHT  &trans  &trans
+&trans   &kp ES_BACKSLASH     &kp ES_IEXCL  &kp ES_IQMARK  &kp ES_QUESTION  &kp ES_TILDE            &kp PG_UP  &kp PG_DN  &kp HOME  &kp END    &trans  &trans
+                                            &trans         &mo 3            &trans                  &trans     &trans     &trans
             >;
         };
 
