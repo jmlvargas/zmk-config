@@ -286,7 +286,7 @@
 
         num {
             bindings = <
-&trans  &kp F1  &kp F2           &kp F3   &kp F4        &kp F5     &CARET_       &kp N7      &EIGHT_BRK  &NINE_BKT   &trans        &trans
+&trans  &kp F1  &kp F2           &kp F3   &kp F4        &kp F5     &CARET_       &kp N7      &EIGHT_BRK  &NINE_BKT   &kp ES_EQUAL  &trans
 &trans  &kp F6  &kp PRINTSCREEN  &kp DEL  &kp ES_EQUAL  &kp F7     &kp ES_PLUS   &FOUR_BRC   &FIVE_PAR   &SIX_PAR    &kp ES_MINUS  &trans
 &trans  &kp F8  &kp F9           &kp F10  &kp F11       &kp F12    &kp ES_ASTRK  &ONE_BRC    &TWO_LTH    &THREE_GTH  &kp ES_SLASH  &trans
                                  &trans   &trans        &trans     &kp N0        &kp ES_DOT  &trans
