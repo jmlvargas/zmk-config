@@ -179,7 +179,7 @@
             compatible = "zmk,behavior-tap-dance";
             label = "SYM_CTRL";
             #binding-cells = <0>;
-            bindings = <&mo 1>, <&kp RIGHT_CONTROL>;
+            bindings = <&mo 2>, <&kp RIGHT_CONTROL>;
 
             tapping-term-ms = <250>;
         };
@@ -208,7 +208,16 @@
 &kp TAB                   &kp Q  &kp W  &kp E     &kp R  &kp T        &kp Y      &kp U  &kp I      &kp O       &kp P           &kp BACKSPACE
 &kp LSHIFT                &kp A  &kp S  &kp D     &kp F  &kp G        &kp H      &kp J  &kp K      &kp L       &kp ES_N_TILDE  &kp RSHIFT
 &HHT LEFT_CONTROL ESCAPE  &kp Z  &kp X  &kp C     &kp V  &kp B        &kp N      &kp M  &kp COMMA  &kp PERIOD  &kp ES_ACUTE    &HHT LEFT_CONTROL ESCAPE
-                                        &NUM_GUI  &mo 2  &kp SPACE    &kp ENTER  &mo 1  &ALT_GUI
+                                        &NUM_GUI  &mo 1  &kp SPACE    &kp ENTER  &mo 2  &ALT_GUI
+            >;
+        };
+
+        nav {
+            bindings = <
+&trans  &kp N1  &kp N2           &kp N3   &kp N4  &kp N5    &kp N6          &kp N7          &kp N8    &kp N9           &kp N0        &trans
+&trans  &trans  &kp PRINTSCREEN  &kp DEL  &mo 4   &trans    &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP    &kp RIGHT_ARROW  &kp ES_MINUS  &trans
+&trans  &trans  &trans           &trans   &trans  &trans    &kp PG_UP       &kp PAGE_DOWN   &kp HOME  &kp END          &kp ES_SLASH  &trans
+                                 &trans   &trans  &trans    &trans          &trans          &trans
             >;
         };
 
@@ -218,15 +227,6 @@
 &trans  &kp ES_SINGLE_QUOTE  &kp ES_PIPE   &kp ES_AMPS    &kp ES_EQUAL     &kp ES_DOUBLE_QUOTES    &kp ES_PLUS   &kp ES_LBRC   &kp ES_LPAR       &kp ES_RPAR  &kp ES_MINUS  &trans
 &trans  &kp ES_BACKSLASH     &kp ES_IEXCL  &kp ES_IQMARK  &kp ES_QUESTION  &kp ES_UNDER            &kp ES_ASTRK  &kp ES_RBRC   &kp ES_LESS_THAN  &kp ES_GT    &kp ES_SLASH  &trans
                                            &trans         &trans           &trans                  &trans        &trans        &trans
-            >;
-        };
-
-        nav {
-            bindings = <
-&trans  &kp N1  &kp N2           &kp N3   &kp N4  &kp N5    &kp N6          &kp N7          &kp N8    &kp N9           &kp N0        &trans
-&trans  &trans  &kp PRINTSCREEN  &kp DEL  &mo 4   &trans    &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP    &kp RIGHT_ARROW  &kp ES_MINUS  &trans
-&trans  &trans  &trans           &trans   &trans  &trans    &kp PG_UP       &kp PAGE_DOWN   &kp HOME  &kp END          &kp ES_SLASH  &trans
-                                 &trans   &trans  &trans    &trans          &kp ES_PERIOD   &trans
             >;
         };
 
