@@ -267,7 +267,7 @@
             bindings = <
 &GRAVE_  &kp ES_EXCL          &kp ES_AT     &kp ES_POUND   &kp ES_DOLLAR    &kp ES_PERCENT          &kp PG_UP  &kp CAPSLOCK  &kp INSERT  &kp PRINTSCREEN  &kp PAUSE_BREAK  &trans
 &trans   &kp ES_SINGLE_QUOTE  &kp ES_PIPE   &kp ES_AMPS    &kp ES_EQUAL     &kp ES_DOUBLE_QUOTES    &kp LEFT   &kp DOWN      &kp UP      &kp RIGHT        &none            &trans
-&trans   &kp ES_BACKSLASH     &kp ES_IEXCL  &kp ES_IQMARK  &kp ES_QUESTION  &kp ES_TILDE            &kp PG_DN  &kp C_MUTE    &kp HOME    &kp END          &none            &trans
+&trans   &kp ES_BACKSLASH     &kp ES_IEXCL  &kp ES_IQMARK  &kp ES_QUESTION  &TILDE_                 &kp PG_DN  &kp C_MUTE    &kp HOME    &kp END          &none            &trans
                                             &trans         &mo 3            &trans                  &trans     &trans        &trans
             >;
         };
