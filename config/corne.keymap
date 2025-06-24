@@ -107,38 +107,11 @@
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
-        ALT_GUI: ALT_GUI {
+        GUI_ALT: GUI_ALT {
             compatible = "zmk,behavior-tap-dance";
-            label = "ALT_GUI";
+            label = "GUI_ALT";
             #binding-cells = <0>;
-            bindings = <&kp LEFT_ALT>, <&kp LWIN>;
-
-            tapping-term-ms = <250>;
-        };
-
-        NUM_GUI: NUM_GUI {
-            compatible = "zmk,behavior-tap-dance";
-            label = "NUM_GUI";
-            #binding-cells = <0>;
-            bindings = <&mo 1>, <&kp LWIN>;
-
-            tapping-term-ms = <250>;
-        };
-
-        SYM_CTRL: SYM_CTRL {
-            compatible = "zmk,behavior-tap-dance";
-            label = "SYM_CTRL";
-            #binding-cells = <0>;
-            bindings = <&mo 3>, <&kp RIGHT_CONTROL>;
-
-            tapping-term-ms = <250>;
-        };
-
-        NAV_CTRL: NAV_CTRL {
-            compatible = "zmk,behavior-tap-dance";
-            label = "NAV_CTRL";
-            #binding-cells = <0>;
-            bindings = <&mo 3>, <&kp LEFT_CONTROL>;
+            bindings = <&kp LWIN>, <&kp LALT>;
 
             tapping-term-ms = <250>;
         };
@@ -230,7 +203,7 @@
 &kp TAB                   &kp Q  &kp W  &kp E     &kp R  &kp T        &kp Y      &kp U  &kp I      &kp O       &kp P           &kp BACKSPACE
 &kp LSHIFT                &kp A  &kp S  &kp D     &kp F  &kp G        &kp H      &kp J  &kp K      &kp L       &kp ES_ACUTE    &kp RSHIFT
 &HHT LEFT_CONTROL ESCAPE  &kp Z  &kp X  &kp C     &kp V  &kp B        &kp N      &kp M  &kp COMMA  &kp PERIOD  &kp ES_N_TILDE  &kp RCTRL
-                                        &ALT_GUI  &mo 1  &kp SPACE    &kp ENTER  &mo 2  &ALT_GUI
+                                        &GUI_ALT  &mo 1  &kp SPACE    &kp ENTER  &mo 2  &GUI_ALT
             >;
         };
 
