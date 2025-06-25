@@ -209,9 +209,9 @@
 
         num {
             bindings = <
-&mo 3   &kp F1  &kp F2           &kp F3   &kp F4        &kp F5     &CARET_       &kp N7      &EIGHT_BKT  &NINE_BKT   &kp ES_EQUAL  &trans
-&trans  &kp F6  &kp PRINTSCREEN  &kp DEL  &kp ES_EQUAL  &kp F7     &kp ES_PLUS   &FOUR_BRC   &FIVE_PAR   &SIX_PAR    &kp ES_MINUS  &trans
-&trans  &kp F8  &kp F9           &kp F10  &kp F11       &kp F12    &kp ES_ASTRK  &ONE_BRC    &TWO_LTH    &THREE_GTH  &kp ES_SLASH  &trans
+&mo 4   &kp F1  &kp F2           &kp F3   &kp F4        &kp F5     &CARET_       &kp N7      &kp N8  &kp N9  &kp ES_EQUAL  &trans
+&trans  &kp F6  &kp PRINTSCREEN  &kp DEL  &kp ES_EQUAL  &kp F7     &kp ES_PLUS   &kp N4      &kp N5  &kp N6  &kp ES_MINUS  &trans
+&trans  &kp F8  &kp F9           &kp F10  &kp F11       &kp F12    &kp ES_ASTRK  &kp N1      &kp N2  &kp N3  &kp ES_SLASH  &trans
                                  &trans   &trans        &trans     &kp N0        &kp ES_DOT  &trans
             >;
         };
@@ -225,6 +225,15 @@
             >;
         };
 
+        grp {
+            bindings = <
+&none  &none  &none  &none  &none  &none    &none  &none        &kp ES_LBKT  &kp ES_RBKT  &none  &none
+&none  &none  &none  &none  &none  &none    &none  &kp ES_LBRC  &kp ES_LPAR  &kp ES_RPAR  &none  &none
+&none  &none  &none  &none  &none  &none    &none  &kp ES_RBRC  &kp ES_LT    &kp ES_GT    &none  &none
+                     &none  &none  &none    &none  &none        &none
+            >;
+        };
+
         bth {
             bindings = <
 &none        &none         &none         &none       &none  &out OUT_TOG    &none  &none  &none  &none  &none  &none
@@ -235,5 +244,12 @@
         };
     };
 
-    conditional_layers { compatible = "zmk,conditional-layers"; };
+    conditional_layers {
+        compatible = "zmk,conditional-layers";
+
+        cnd_grp {
+            if-layers = <1 2>;
+            then-layer = <3>;
+        };
+    };
 };
