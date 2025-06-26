@@ -187,6 +187,24 @@
             #binding-cells = <0>;
             mods = <(MOD_LSFT)>;
         };
+
+        TILD_KRET: TILD_KRET {
+            compatible = "zmk,behavior-mod-morph";
+            label = "TILD_KRET";
+            bindings = <&kp ES_TILDE>, <&CARET_>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        POUN_PERC: POUN_PERC {
+            compatible = "zmk,behavior-mod-morph";
+            label = "POUN_PERC";
+            bindings = <&kp ES_POUND>, <&kp ES_PERCENT>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
     };
 
     keymap {
@@ -218,10 +236,10 @@
 
         sym {
             bindings = <
-&GRAVE_  &EXCMRKS       &kp ES_AT    &kp ES_LPAR  &kp ES_RPAR   &kp ES_PERCENT    &kp ES_TILDE  &kp ES_PLUS  &kp ES_MINUS  &kp ES_STAR  &QUEMRKS              &kp PG_UP
-&trans   &kp ES_DOLLAR  &kp ES_PIPE  &kp ES_AMPS  &kp ES_EQUAL  &kp ES_LBKT       &kp LEFT      &kp DOWN     &kp UP        &kp RIGHT    &kp ES_DOUBLE_QUOTES  &HHT RSHIFT ES_SINGLE_QUOTE
-&trans   &kp ES_LT      &kp ES_GT    &kp ES_LBRC  &kp ES_RBRC   &kp ES_RBKT       &CARET_       &DIV_SLH     &kp HOME      &kp END      &kp ES_POUND          &kp PAGE_DOWN
-                                     &trans       &trans        &trans            &trans        &trans       &trans
+&GRAVE_  &kp ES_EXCL    &kp ES_AT    &kp ES_LPAR  &kp ES_RPAR   &kp ES_IEXCL    &kp ES_IQMARK  &kp ES_PLUS  &kp ES_MINUS  &kp ES_STAR  &kp ES_QMARK          &kp PG_UP
+&trans   &kp ES_DOLLAR  &kp ES_PIPE  &kp ES_AMPS  &kp ES_EQUAL  &kp ES_LBKT     &kp LEFT       &kp DOWN     &kp UP        &kp RIGHT    &kp ES_DOUBLE_QUOTES  &kp ES_SINGLE_QUOTE
+&trans   &kp ES_LT      &kp ES_GT    &kp ES_LBRC  &kp ES_RBRC   &kp ES_RBKT     &TILD_KRET     &DIV_SLH     &kp HOME      &kp END      &POUN_PERC            &kp PAGE_DOWN
+                                     &trans       &trans        &trans          &trans         &trans       &trans
             >;
         };
 
