@@ -80,15 +80,6 @@
             hold-trigger-key-positions = <0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41>;
         };
 
-        TLD_CRT: TLD_CRT {
-            compatible = "zmk,behavior-mod-morph";
-            label = "TLD_CRT";
-            bindings = <&kp ES_TILDE>, <&kp ES_CARET>;
-
-            #binding-cells = <0>;
-            mods = <(MOD_LSFT|MOD_RSFT)>;
-        };
-
         QUOTES: QUOTES {
             compatible = "zmk,behavior-mod-morph";
             label = "QUOTES";
@@ -188,18 +179,18 @@
             mods = <(MOD_LSFT)>;
         };
 
-        TILD_KRET: TILD_KRET {
+        TLD_CRT: TLD_CRT {
             compatible = "zmk,behavior-mod-morph";
-            label = "TILD_KRET";
+            label = "TLD_CRT";
             bindings = <&kp ES_TILDE>, <&CARET_>;
 
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
-        POUN_PERC: POUN_PERC {
+        PND_PRC: PND_PRC {
             compatible = "zmk,behavior-mod-morph";
-            label = "POUN_PERC";
+            label = "PND_PRC";
             bindings = <&kp ES_POUND>, <&kp ES_PERCENT>;
 
             #binding-cells = <0>;
@@ -237,8 +228,8 @@
         sym {
             bindings = <
 &GRAVE_  &kp ES_EXCL    &kp ES_AT    &kp ES_LPAR  &kp ES_RPAR   &kp ES_IEXCL    &kp ES_IQMARK  &kp ES_PLUS  &kp ES_MINUS  &kp ES_STAR  &kp ES_QMARK          &kp PG_UP
-&trans   &kp ES_DOLLAR  &kp ES_PIPE  &kp ES_AMPS  &kp ES_EQUAL  &POUN_PERC      &kp LEFT       &kp DOWN     &kp UP        &kp RIGHT    &kp ES_DOUBLE_QUOTES  &HHT RSHIFT ES_SINGLE_QUOTE
-&trans   &kp ES_LT      &kp ES_GT    &kp ES_LBRC  &kp ES_RBRC   &kp ES_LBKT     &kp ES_RBKT    &DIV_SLH     &kp HOME      &kp END      &TILD_KRET            &kp PAGE_DOWN
+&trans   &kp ES_DOLLAR  &kp ES_PIPE  &kp ES_AMPS  &kp ES_EQUAL  &PND_PRC        &kp LEFT       &kp DOWN     &kp UP        &kp RIGHT    &kp ES_DOUBLE_QUOTES  &HHT RSHIFT ES_SINGLE_QUOTE
+&trans   &kp ES_LT      &kp ES_GT    &kp ES_LBRC  &kp ES_RBRC   &kp ES_LBKT     &kp ES_RBKT    &DIV_SLH     &kp HOME      &kp END      &TLD_CRT              &kp PAGE_DOWN
                                      &trans       &trans        &trans          &trans         &trans       &trans
             >;
         };
