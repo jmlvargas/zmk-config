@@ -237,7 +237,7 @@
         sym {
             bindings = <
 &GRAVE_  &kp ES_EXCL    &kp ES_AT    &kp ES_LPAR  &kp ES_RPAR   &kp ES_IEXCL    &kp ES_IQMARK  &kp ES_PLUS  &kp ES_MINUS  &kp ES_STAR  &kp ES_QMARK          &kp PG_UP
-&trans   &kp ES_DOLLAR  &kp ES_PIPE  &kp ES_AMPS  &kp ES_EQUAL  &POUN_PERC      &kp LEFT       &kp DOWN     &kp UP        &kp RIGHT    &kp ES_DOUBLE_QUOTES  &kp ES_SINGLE_QUOTE
+&trans   &kp ES_DOLLAR  &kp ES_PIPE  &kp ES_AMPS  &kp ES_EQUAL  &POUN_PERC      &kp LEFT       &kp DOWN     &kp UP        &kp RIGHT    &kp ES_DOUBLE_QUOTES  &HHT RSHIFT ES_SINGLE_QUOTE
 &trans   &kp ES_LT      &kp ES_GT    &kp ES_LBRC  &kp ES_RBRC   &kp ES_LBKT     &kp ES_RBKT    &DIV_SLH     &kp HOME      &kp END      &TILD_KRET            &kp PAGE_DOWN
                                      &trans       &trans        &trans          &trans         &trans       &trans
             >;
