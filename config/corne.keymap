@@ -41,24 +41,6 @@
     };
 
     behaviors {
-        EXCMRKS: EXCMRKS {
-            compatible = "zmk,behavior-mod-morph";
-            label = "EXCMRKS";
-            bindings = <&kp ES_EXCL>, <&kp ES_IEXCL>;
-
-            #binding-cells = <0>;
-            mods = <(MOD_LSFT|MOD_RSFT)>;
-        };
-
-        QUEMRKS: QUEMRKS {
-            compatible = "zmk,behavior-mod-morph";
-            label = "QUEMRKS";
-            bindings = <&kp ES_QMARK>, <&kp ES_IQMARK>;
-
-            #binding-cells = <0>;
-            mods = <(MOD_LSFT|MOD_RSFT)>;
-        };
-
         DIV_SLH: DIV_SLH {
             compatible = "zmk,behavior-mod-morph";
             label = "DIV_SLH";
@@ -89,15 +71,6 @@
             mods = <(MOD_LSFT)>;
         };
 
-        SEMCOL: SEMCOL {
-            compatible = "zmk,behavior-mod-morph";
-            label = "SEMCOL";
-            bindings = <&kp ES_SEMI>, <&kp ES_COLON>;
-
-            #binding-cells = <0>;
-            mods = <(MOD_LSFT|MOD_RSFT)>;
-        };
-
         GUI_ALT: GUI_ALT {
             compatible = "zmk,behavior-tap-dance";
             label = "GUI_ALT";
@@ -105,78 +78,6 @@
             bindings = <&kp LWIN>, <&kp LALT>;
 
             tapping-term-ms = <250>;
-        };
-
-        ONE_BRC: ONE_BRC {
-            compatible = "zmk,behavior-mod-morph";
-            label = "ONE_BRC";
-            bindings = <&kp ES_N1>, <&kp ES_RBRC>;
-
-            #binding-cells = <0>;
-            mods = <(MOD_LSFT)>;
-        };
-
-        TWO_LTH: TWO_LTH {
-            compatible = "zmk,behavior-mod-morph";
-            label = "TWO_LTH";
-            bindings = <&kp ES_N2>, <&kp ES_LESS_THAN>;
-
-            #binding-cells = <0>;
-            mods = <(MOD_LSFT)>;
-        };
-
-        THREE_GTH: THREE_GTH {
-            compatible = "zmk,behavior-mod-morph";
-            label = "THREE_GTH";
-            bindings = <&kp N3>, <&kp ES_GT>;
-
-            #binding-cells = <0>;
-            mods = <(MOD_LSFT)>;
-        };
-
-        FOUR_BRC: FOUR_BRC {
-            compatible = "zmk,behavior-mod-morph";
-            label = "FOUR_BRC";
-            bindings = <&kp N4>, <&kp ES_LBRC>;
-
-            #binding-cells = <0>;
-            mods = <(MOD_LSFT)>;
-        };
-
-        FIVE_PAR: FIVE_PAR {
-            compatible = "zmk,behavior-mod-morph";
-            label = "FIVE_PAR";
-            bindings = <&kp N5>, <&kp ES_LPAR>;
-
-            #binding-cells = <0>;
-            mods = <(MOD_LSFT)>;
-        };
-
-        SIX_PAR: SIX_PAR {
-            compatible = "zmk,behavior-mod-morph";
-            label = "SIX_PAR";
-            bindings = <&kp N6>, <&kp ES_RPAR>;
-
-            #binding-cells = <0>;
-            mods = <(MOD_LSFT)>;
-        };
-
-        EIGHT_BKT: EIGHT_BKT {
-            compatible = "zmk,behavior-mod-morph";
-            label = "EIGHT_BKT";
-            bindings = <&kp N8>, <&kp ES_LBKT>;
-
-            #binding-cells = <0>;
-            mods = <(MOD_LSFT)>;
-        };
-
-        NINE_BKT: NINE_BKT {
-            compatible = "zmk,behavior-mod-morph";
-            label = "NINE_BKT";
-            bindings = <&kp N9>, <&kp ES_RBKT>;
-
-            #binding-cells = <0>;
-            mods = <(MOD_LSFT)>;
         };
 
         TLD_CRT: TLD_CRT {
