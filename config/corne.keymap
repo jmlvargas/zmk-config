@@ -80,18 +80,18 @@
             tapping-term-ms = <250>;
         };
 
-        TLD_CRT: TLD_CRT {
+        TIL_CAR: TIL_CAR {
             compatible = "zmk,behavior-mod-morph";
-            label = "TLD_CRT";
+            label = "TIL_CAR";
             bindings = <&kp ES_TILDE>, <&CARET_>;
 
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
-        PND_PCT: PND_PCT {
+        POU_PER: POU_PER {
             compatible = "zmk,behavior-mod-morph";
-            label = "PND_PCT";
+            label = "POU_PER";
             bindings = <&kp ES_POUND>, <&kp ES_PERCENT>;
 
             #binding-cells = <0>;
@@ -119,18 +119,18 @@
 
         num {
             bindings = <
-&mo 3   &kp F1  &kp F2           &kp F3   &kp F4   &kp F5     &kp INSERT       &kp N7   &kp N8  &kp N9  &kp PRINTSCREEN       &trans
-&trans  &kp F6  &kp PRINTSCREEN  &kp DEL  &none    &kp F7     &kp CAPS         &kp N4   &kp N5  &kp N6  &kp ES_DOUBLE_QUOTES  &HHT RSHIFT ES_SINGLE_QUOTE
-&trans  &kp F8  &kp F9           &kp F10  &kp F11  &kp F12    &kp PAUSE_BREAK  &kp N1   &kp N2  &kp N3  &kp C_MUTE            &trans
+&mo 3   &kp F1  &kp F2           &kp F3   &kp F4   &kp F5     &kp INSERT       &kp N7   &kp N8  &kp N9  &kp PRINTSCREEN  &trans
+&trans  &kp F6  &kp PRINTSCREEN  &kp DEL  &none    &kp F7     &kp CAPS         &kp N4   &kp N5  &kp N6  &kp ES_POUND     &kp RSHIFT
+&trans  &kp F8  &kp F9           &kp F10  &kp F11  &kp F12    &kp PAUSE_BREAK  &kp N1   &kp N2  &kp N3  &kp C_MUTE       &trans
                                  &trans   &trans   &trans     &kp N0           &kp DOT  &trans
             >;
         };
 
         sym {
             bindings = <
-&GRAVE_  &kp ES_EXCL    &kp ES_AT    &kp ES_LPAR  &kp ES_RPAR   &kp ES_IEXCL    &kp ES_IQMARK  &kp ES_PLUS  &kp ES_MINUS  &kp ES_STAR  &kp ES_QMARK          &kp PG_UP
-&trans   &kp ES_DOLLAR  &kp ES_PIPE  &kp ES_AMPS  &kp ES_EQUAL  &PND_PCT        &kp LEFT       &kp DOWN     &kp UP        &kp RIGHT    &kp ES_DOUBLE_QUOTES  &HHT RSHIFT ES_SINGLE_QUOTE
-&trans   &kp ES_LT      &kp ES_GT    &kp ES_LBRC  &kp ES_RBRC   &kp ES_LBKT     &kp ES_RBKT    &DIV_SLH     &kp HOME      &kp END      &TLD_CRT              &kp PAGE_DOWN
+&GRAVE_  &kp ES_EXCL    &kp ES_AT    &kp ES_LPAR  &kp ES_RPAR   &kp ES_LBKT     &POU_PER       &kp ES_PLUS  &kp ES_MINUS  &kp ES_STAR  &kp ES_QMARK          &kp PG_UP
+&trans   &kp ES_DOLLAR  &kp ES_PIPE  &kp ES_AMPS  &kp ES_EQUAL  &kp ES_RBKT     &kp LEFT       &kp DOWN     &kp UP        &kp RIGHT    &kp ES_DOUBLE_QUOTES  &kp ES_SINGLE_QUOTE
+&trans   &kp ES_LT      &kp ES_GT    &kp ES_LBRC  &kp ES_RBRC   &kp ES_IEXCL    &kp ES_IQMARK  &DIV_SLH     &kp HOME      &kp END      &TIL_CAR              &kp PAGE_DOWN
                                      &trans       &trans        &trans          &trans         &trans       &trans
             >;
         };
