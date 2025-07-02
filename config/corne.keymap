@@ -155,9 +155,9 @@
 
         sym {
             bindings = <
-&GRAVE_  &kp ES_EXCL    &kp ES_AT    &kp ES_LPAR  &kp ES_RPAR   &kp ES_LBKT     &CARET_        &ADD_DOL      &DIV_SLH  &AST_PER   &kp ES_QMARK          &kp PG_UP
+&GRAVE_  &kp ES_EXCL    &kp ES_AT    &kp ES_LPAR  &kp ES_RPAR   &kp ES_LBKT     &POU_CAR       &ADD_DOL      &DIV_SLH  &AST_PER   &kp ES_QMARK          &kp PG_UP
 &trans   &kp ES_DOLLAR  &kp ES_PIPE  &kp ES_AMPS  &kp ES_EQUAL  &kp ES_RBKT     &kp LEFT       &kp DOWN      &kp UP    &kp RIGHT  &kp ES_DOUBLE_QUOTES  &kp ES_SINGLE_QUOTE
-&trans   &kp ES_LT      &kp ES_GT    &kp ES_LBRC  &kp ES_RBRC   &kp ES_POUND    &kp ES_IQMARK  &kp ES_MINUS  &kp HOME  &kp END    &kp ES_TILDE          &kp PAGE_DOWN
+&trans   &kp ES_LT      &kp ES_GT    &kp ES_LBRC  &kp ES_RBRC   &kp ES_IEXCL    &kp ES_IQMARK  &kp ES_MINUS  &kp HOME  &kp END    &kp ES_TILDE          &kp PAGE_DOWN
                                      &trans       &trans        &trans          &trans         &trans        &trans
             >;
         };
