@@ -97,6 +97,33 @@
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
+
+        POU_CAR: POU_CAR {
+            compatible = "zmk,behavior-mod-morph";
+            label = "POU_CAR";
+            bindings = <&kp ES_POUND>, <&CARET_>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        AST_PER: AST_PER {
+            compatible = "zmk,behavior-mod-morph";
+            label = "AST_PER";
+            bindings = <&kp ES_ASTRK>, <&kp ES_PERCENT>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        ADD_DOL: ADD_DOL {
+            compatible = "zmk,behavior-mod-morph";
+            label = "ADD_DOL";
+            bindings = <&kp ES_PLUS>, <&kp ES_DOLLAR>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
     };
 
     keymap {
@@ -128,10 +155,10 @@
 
         sym {
             bindings = <
-&GRAVE_  &kp ES_EXCL    &kp ES_AT    &kp ES_LPAR  &kp ES_RPAR   &kp ES_LBKT     &POU_PER       &kp ES_PLUS  &kp ES_MINUS  &kp ES_STAR  &kp ES_QMARK          &kp PG_UP
-&trans   &kp ES_DOLLAR  &kp ES_PIPE  &kp ES_AMPS  &kp ES_EQUAL  &kp ES_RBKT     &kp LEFT       &kp DOWN     &kp UP        &kp RIGHT    &kp ES_DOUBLE_QUOTES  &kp ES_SINGLE_QUOTE
-&trans   &kp ES_LT      &kp ES_GT    &kp ES_LBRC  &kp ES_RBRC   &kp ES_IEXCL    &kp ES_IQMARK  &DIV_SLH     &kp HOME      &kp END      &TIL_CAR              &kp PAGE_DOWN
-                                     &trans       &trans        &trans          &trans         &trans       &trans
+&GRAVE_  &kp ES_EXCL    &kp ES_AT    &kp ES_LPAR  &kp ES_RPAR   &kp ES_LBKT     &POU_CAR       &ADD_DOL      &DIV_SLH  &AST_PER   &kp ES_QMARK          &kp PG_UP
+&trans   &kp ES_DOLLAR  &kp ES_PIPE  &kp ES_AMPS  &kp ES_EQUAL  &kp ES_RBKT     &kp LEFT       &kp DOWN      &kp UP    &kp RIGHT  &kp ES_DOUBLE_QUOTES  &kp ES_SINGLE_QUOTE
+&trans   &kp ES_LT      &kp ES_GT    &kp ES_LBRC  &kp ES_RBRC   &kp ES_IEXCL    &kp ES_IQMARK  &kp ES_MINUS  &kp HOME  &kp END    &kp ES_TILDE          &kp PAGE_DOWN
+                                     &trans       &trans        &trans          &trans         &trans        &trans
             >;
         };
 
