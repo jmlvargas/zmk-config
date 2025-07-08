@@ -162,19 +162,19 @@
 
         sym_num {
             bindings = <
-&GRAVE_  &kp ES_EXCL  &kp ES_AT    &kp ES_LPAR  &kp ES_RPAR  &kp ES_POUND    &kp CLCK  &kp N7  &kp N8  &kp N9  &kp PRINTSCREEN  &trans
-&trans   &kp ES_AMPS  &kp ES_PIPE  &kp ES_LBRC  &kp ES_RBRC  &kp ES_EQUAL    &kp N0    &kp N4  &kp N5  &kp N6  &kp INS          &trans
-&trans   &kp ES_LT    &kp ES_GT    &kp ES_LBKT  &kp ES_RBKT  &kp ES_IEXCL    &none     &kp N1  &kp N2  &kp N3  &kp C_MUTE       &trans
-                                   &trans       &trans       &trans          &trans    &trans  &trans
+&GRAVE_  &kp ES_EXCL  &kp ES_AT    &kp ES_LPAR  &kp ES_RPAR  &kp ES_POUND    &trans  &kp N7  &kp N8  &kp N9  &trans  &trans
+&trans   &kp ES_AMPS  &kp ES_PIPE  &kp ES_LBRC  &kp ES_RBRC  &kp ES_EQUAL    &kp N0  &kp N4  &kp N5  &kp N6  &trans  &trans
+&trans   &kp ES_LT    &kp ES_GT    &kp ES_LBKT  &kp ES_RBKT  &kp ES_IEXCL    &trans  &kp N1  &kp N2  &kp N3  &trans  &trans
+                                   &trans       &trans       &trans          &trans  &trans  &trans
             >;
         };
 
         bth {
             bindings = <
-&none        &none         &none         &none       &none  &out OUT_TOG    &none  &none  &none  &none  &none  &none
-&none        &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_NXT  &none  &none           &none  &none  &none  &none  &none  &none
-&bootloader  &none         &none         &bt BT_CLR  &none  &none           &none  &none  &none  &none  &none  &bootloader
-                                         &none       &none  &none           &none  &none  &none
+&none        &none         &none         &none       &none  &out OUT_TOG    &none  &kp C_VOL_UP  &kp INSERT  &none  &kp PRINTSCREEN  &none
+&none        &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_NXT  &none  &none           &none  &kp C_VOL_DN  &none       &none  &none            &kp CLCK
+&bootloader  &none         &none         &bt BT_CLR  &none  &none           &none  &kp C_MUTE    &none       &none  &none            &bootloader
+                                         &none       &none  &none           &none  &none         &none
             >;
         };
     };
