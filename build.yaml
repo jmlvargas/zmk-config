@@ -26,17 +26,17 @@ include:
   # - board: nice_nano_v2
   #   shield: corne_right
   #   cmake-args: -DCONFIG_ZMK_KEYBOARD_NAME=\"JxCorneUL_CMX1\"
-  #   artifact-name: glp1_right
+  #   artifact-name: cmx1_right
 
   # GLP 1
   - board: nice_nano_v2
     shield: corne_left
-    cmake-args: -DCONFIG_ZMK_KEYBOARD_NAME=\"JxCorneUL_GLP1\"
+    cmake-args: -DCONFIG_ZMK_KEYBOARD_NAME=\"JxCorneUL_GLP1\" -DCONFIG_ZMK_BATTERY_REPORTING=n -DCONFIG_BT_BAS=n
     artifact-name: glp1_left
-  # - board: nice_nano_v2
-  #   shield: corne_right
-  #   cmake-args: -DCONFIG_ZMK_KEYBOARD_NAME=\"JxCorneUL_GLP1\"
-  #   artifact-name: glp1_right
+  - board: nice_nano_v2
+    shield: corne_right
+    cmake-args: -DCONFIG_ZMK_KEYBOARD_NAME=\"JxCorneUL_GLP1\" -DCONFIG_ZMK_BATTERY_REPORTING=n -DCONFIG_BT_BAS=n
+    artifact-name: glp1_right
 #
 #  # Settings reset
 #  - board: nice_nano_v2
