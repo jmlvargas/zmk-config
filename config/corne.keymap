@@ -98,10 +98,10 @@
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
-        POU_DOL: POU_DOL {
+        DOL_CAR: DOL_CAR {
             compatible = "zmk,behavior-mod-morph";
-            label = "POU_DOL";
-            bindings = <&kp ES_POUND>, <&kp ES_DOLLAR>;
+            label = "DOL_CAR";
+            bindings = <&kp ES_DOLLAR>, <&CARET_>;
 
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
@@ -153,10 +153,10 @@
 
         fun_nav {
             bindings = <
-&mo 3   &kp F1  &kp F2     &kp F3   &kp F4     &kp F5     &CARET_        &ADD_DOL  &kp ES_MINUS  &AST_PER   &kp ES_QMARK  &kp PAUSE_BREAK
-&trans  &kp F6  &kp PG_UP  &kp DEL  &kp PG_DN  &kp F7     &kp LEFT       &kp DOWN  &kp UP        &kp RIGHT  &QUOTES       &trans
-&trans  &kp F8  &kp F9     &kp F10  &kp F11    &kp F12    &kp ES_IQMARK  &DIV_SLH  &kp HOME      &kp END    &kp ES_TILDE  &trans
-                           &trans   &trans     &trans     &trans         &trans    &trans
+&mo 3   &kp F1  &kp F2     &kp F3   &kp F4     &kp F5     &DOL_CAR       &kp ES_PLUS  &kp ES_MINUS  &AST_PER   &kp ES_QMARK  &kp PAUSE_BREAK
+&trans  &kp F6  &kp PG_UP  &kp DEL  &kp PG_DN  &kp F7     &kp LEFT       &kp DOWN     &kp UP        &kp RIGHT  &QUOTES       &trans
+&trans  &kp F8  &kp F9     &kp F10  &kp F11    &kp F12    &kp ES_IQMARK  &DIV_SLH     &kp HOME      &kp END    &kp ES_TILDE  &trans
+                           &trans   &trans     &trans     &trans         &trans       &trans
             >;
         };
 
